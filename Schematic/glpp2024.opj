@@ -1,0 +1,164 @@
+(ExpressProject "CameraOverUART"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[02/29/24]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\libs\latticeplds.olb"
+        (Type "Schematic Library")
+        (DisplayName ".\libs\latticeplds.olb"))
+      (File ".\libs\library1.olb"
+        (Type "Schematic Library")
+        (DisplayName ".\libs\library1.olb")))
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\glpp2024.dsn"
+      (Type "Schematic Design")
+      (DisplayName ".\glpp2024.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Display_Online_DRC_Results "FALSE")
+    (Board_sim_option "VHDL_flow"))
+  (Folder "Layout")
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs")
+  (PartMRUSelector
+    (GND
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (SN74AXC1T45
+      (FullPartName "SN74AXC1T45.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SIP-1x10
+      (FullPartName "SIP-1x10.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (LED
+      (FullPartName "LED.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (SIP-1x8
+      (FullPartName "SIP-1x8.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SIP-1x4
+      (FullPartName "SIP-1x4.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (INDUCTOR
+      (FullPartName "INDUCTOR.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (LTC3336
+      (FullPartName "LTC3336.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPS7A0318PDBVR
+      (FullPartName "TPS7A0318PDBVR.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPS628301ARZER
+      (FullPartName "TPS628301ARZER.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SN74AUP1G08
+      (FullPartName "SN74AUP1G08.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TMUX1101
+      (FullPartName "TMUX1101.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (AND2
+      (FullPartName "AND2.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\GATE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("MOSFET P"
+      (FullPartName "MOSFET P.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("MOSFET N"
+      (FullPartName "MOSFET N.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (VCC_BAR
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    ("CAP NP"
+      (FullPartName "CAP NP.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("SW SPST"
+      (FullPartName "SW SPST.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (TMUX1309
+      (FullPartName "TMUX1309.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-R
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (STM32L031G6U3
+      (FullPartName "STM32L031G6U3.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (CRYSTAL
+      (FullPartName "CRYSTAL.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (STM32L031G6U7
+      (FullPartName "STM32L031G6U7.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "SNIPER")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\glpp2024.dsn")
+      (Path "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library" ".\libs\library1.olb")
+      (Select "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1" "2-SEQUENCE"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 695"))
+      (Tab 0)))
+  (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))
