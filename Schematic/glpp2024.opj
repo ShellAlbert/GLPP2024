@@ -37,6 +37,10 @@
     (GND
       (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
+    (SN74AXC4T774RSVR
+      (FullPartName "SN74AXC4T774RSVR.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
     (SN74AXC1T45
       (FullPartName "SN74AXC1T45.Normal")
       (LibraryName
@@ -140,21 +144,18 @@
     (CRYSTAL
       (FullPartName "CRYSTAL.Normal")
       (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
-      (DeviceIndex "0"))
-    (STM32L031G6U7
-      (FullPartName "STM32L031G6U7.Normal")
-      (LibraryName
-         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
       (DeviceIndex "0")))
   (MPSSessionName "SNIPER")
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\glpp2024.dsn")
-      (Path "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1")
-      (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library" ".\libs\library1.olb")
-      (Select "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1" "2-SEQUENCE"))
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1")
+      (Select "Design Resources"
+         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1"
+         "5-IOMULTIPLEX"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
