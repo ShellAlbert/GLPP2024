@@ -1,6 +1,6 @@
 (ExpressProject "CameraOverUART"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[02/29/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/04/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -20,9 +20,39 @@
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
     (Display_Online_DRC_Results "FALSE")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "0")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\GLPP2024.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}")
+    (BOM_Header "Item\tQuantity\tReference\tPart\tPCBFootprint")
+    (BOM_Include_File "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\GLPP2024.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE")
     (Board_sim_option "VHDL_flow"))
   (Folder "Layout")
-  (Folder "Outputs")
+  (Folder "Outputs"
+    (File ".\glpp2024.bom"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (Folder "PSpice Resources"
     (Folder "Simulation Profiles")
@@ -34,6 +64,12 @@
       (Sort User)))
   (Folder "Logs")
   (PartMRUSelector
+    (TitleBlockANSISmall
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (TitleBlock0
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (GND
       (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
@@ -137,13 +173,6 @@
       (FullPartName "STM32L031G6U3.Normal")
       (LibraryName
          "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
-      (DeviceIndex "0"))
-    (OFFPAGELEFT-L
-      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (CRYSTAL
-      (FullPartName "CRYSTAL.Normal")
-      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
       (DeviceIndex "0")))
   (MPSSessionName "SNIPER")
   (GlobalState
@@ -153,9 +182,10 @@
          "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn")
       (Path "Design Resources"
          "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1")
+      (Path "Outputs")
       (Select "Design Resources"
          "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1"
-         "5-IOMULTIPLEX"))
+         "9-VISIBLE"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
