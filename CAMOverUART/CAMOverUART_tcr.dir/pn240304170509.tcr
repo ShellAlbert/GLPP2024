@@ -1,0 +1,26 @@
+#Start recording tcl command: 3/4/2024 15:55:24
+#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
+prj_create -name "CAMOverUART" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "synplify"
+prj_save 
+prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/CAMOverUART.v"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt -impl "impl_1" "top" "CAMOverUART"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1 -task Synplify_Synthesis
+prj_set_impl_opt synthesis "lse"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/Physical_IO.ldc"
+prj_remove_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/Physical_IO.ldc"
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1 -task Lattice_Synthesis
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc"
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc"
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+#Stop recording: 3/4/2024 17:05:09

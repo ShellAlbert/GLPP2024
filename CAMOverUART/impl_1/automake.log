@@ -1,0 +1,202 @@
+
+map -i "CAMOverUART_impl_1_syn.udb" -pdc "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc" -o "CAMOverUART_impl_1_map.udb" -mp "CAMOverUART_impl_1.mrp" -hierrpt     
+map:  version Radiant Software (64-bit) 2023.1.1.200.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:   map -i CAMOverUART_impl_1_syn.udb -pdc F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc -o CAMOverUART_impl_1_map.udb -mp CAMOverUART_impl_1.mrp -hierrpt -gui 
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+
+
+
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (14) : No port matched &apos;iIR_Data[0]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (15) : No port matched &apos;iIR_Data[1]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (16) : No port matched &apos;iIR_Data[2]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (17) : No port matched &apos;iIR_Data[3]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (18) : No port matched &apos;iIR_Data[4]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (19) : No port matched &apos;iIR_Data[5]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (20) : No port matched &apos;iIR_Data[6]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (21) : No port matched &apos;iIR_Data[7]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (22) : No port matched &apos;iIR_Data[10]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (23) : No port matched &apos;iIR_Data[11]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (24) : No port matched &apos;iIR_Data[12]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (25) : No port matched &apos;iIR_Data[13]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (40) : No port matched &apos;oDBG_UART_Rx&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (41) : No port matched &apos;iIR_Data[8]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (42) : No port matched &apos;iIR_Data[9]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (43) : No port matched &apos;iIR_Data[13]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (44) : No port matched &apos;iIR_Data[12]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (45) : No port matched &apos;iIR_Data[8]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (46) : No port matched &apos;iIR_Data[11]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (47) : No port matched &apos;iIR_Data[9]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (48) : No port matched &apos;iIR_Data[10]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (49) : No port matched &apos;iIR_Data[7]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (50) : No port matched &apos;iIR_Data[6]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (51) : No port matched &apos;iIR_Data[5]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (52) : No port matched &apos;iIR_Data[4]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (53) : No port matched &apos;iIR_Data[3]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (54) : No port matched &apos;iIR_Data[2]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (55) : No port matched &apos;iIR_Data[1]&apos;.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (56) : No port matched &apos;iIR_Data[0]&apos;.
+WARNING <1027013> - No port matched 'iIR_Data[0]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[0]' in constraint 'ldc_set_location -site {23} [get_ports {iIR_Data[0]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[1]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[1]' in constraint 'ldc_set_location -site {25} [get_ports {iIR_Data[1]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[2]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[2]' in constraint 'ldc_set_location -site {26} [get_ports {iIR_Data[2]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[3]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[3]' in constraint 'ldc_set_location -site {27} [get_ports {iIR_Data[3]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[4]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[4]' in constraint 'ldc_set_location -site {32} [get_ports {iIR_Data[4]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[5]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[5]' in constraint 'ldc_set_location -site {31} [get_ports {iIR_Data[5]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[6]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[6]' in constraint 'ldc_set_location -site {37} [get_ports {iIR_Data[6]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[7]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[7]' in constraint 'ldc_set_location -site {34} [get_ports {iIR_Data[7]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[10]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[10]' in constraint 'ldc_set_location -site {42} [get_ports {iIR_Data[10]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[11]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[11]' in constraint 'ldc_set_location -site {38} [get_ports {iIR_Data[11]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[12]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[12]' in constraint 'ldc_set_location -site {28} [get_ports {iIR_Data[12]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[13]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[13]' in constraint 'ldc_set_location -site {35} [get_ports {iIR_Data[13]}]'.
+WARNING <1027013> - No port matched 'oDBG_UART_Rx'.
+WARNING <1014301> - Can't resolve object 'oDBG_UART_Rx' in constraint 'ldc_set_location -site {14} [get_ports oDBG_UART_Rx]'.
+WARNING <1027013> - No port matched 'iIR_Data[8]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[8]' in constraint 'ldc_set_location -site {43} [get_ports {iIR_Data[8]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[9]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[9]' in constraint 'ldc_set_location -site {36} [get_ports {iIR_Data[9]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[13]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[13]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18 DRIVE=NA} [get_ports {iIR_Data[13]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[12]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[12]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[12]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[8]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[8]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[8]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[11]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[11]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[11]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[9]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[9]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[9]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[10]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[10]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[10]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[7]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[7]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[7]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[6]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[6]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[6]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[5]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[5]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[5]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[4]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[4]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[4]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[3]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[3]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[3]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[2]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[2]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[2]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[1]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[1]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[1]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[0]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[0]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[0]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {23} [get_ports {iIR_Data[0]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {25} [get_ports {iIR_Data[1]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {26} [get_ports {iIR_Data[2]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {27} [get_ports {iIR_Data[3]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {32} [get_ports {iIR_Data[4]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {31} [get_ports {iIR_Data[5]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {37} [get_ports {iIR_Data[6]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {34} [get_ports {iIR_Data[7]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {42} [get_ports {iIR_Data[10]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {38} [get_ports {iIR_Data[11]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {28} [get_ports {iIR_Data[12]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {35} [get_ports {iIR_Data[13]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {14} [get_ports oDBG_UART_Rx]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {43} [get_ports {iIR_Data[8]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {36} [get_ports {iIR_Data[9]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18 DRIVE=NA} [get_ports {iIR_Data[13]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[12]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[8]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[11]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[9]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[10]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[7]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[6]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[5]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[4]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[3]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[2]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[1]}]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[0]}]'.
+   Remove unused logic
+
+   Do not produce over sized UDBs.
+
+Design:  ZIRCAMOverUART
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+INFO <52291017> - Port 'oLED_Configuring' is located on BB_OD pad '39'. Its IO buffer is mapped to BB_OD accordingly. Please notice PULLMODE is not applicable to BB_OD.
+INFO <52291017> - Port 'oLED_Capturing' is located on BB_OD pad '40'. Its IO buffer is mapped to BB_OD accordingly. Please notice PULLMODE is not applicable to BB_OD.
+INFO <52291017> - Port 'oLED_Uploading' is located on BB_OD pad '41'. Its IO buffer is mapped to BB_OD accordingly. Please notice PULLMODE is not applicable to BB_OD.
+Running general design DRC...
+
+WARNING <71003020> - Top module port 'iDBG_UART_Rx' does not connect to anything.
+ERROR <71003031> - IO placement will fail due to Bank Vccio compatibility. To correct this issue, please use more Bank VCCIO compatible IO attribute combinations, reduce the number of different IO attribute combinations, and/or change to a larger device with more IO Banks.
+The following is information that can help with addressing the IO placement Bank VCCIO compatibility issue:
+Design has 38 IOs to be placed across 3 IO Banks
+	Bank 0 with capacity 17 can/should have Bank VCCIO value(s) [1.8] based on current design Constraints
+	Bank 1 with capacity 14 can/should have Bank VCCIO value(s) [1.8] based on current design Constraints
+	Bank 2 with capacity 8 can/should have Bank VCCIO value(s) [1.8] based on current design Constraints
+Port ioPSRAM_DATA[3] can have Bank Vccio value(s) [1.8]
+Port iIR_Data8 can have Bank Vccio value(s) [3.3]
+Port ioIR_Data3_UPLD_Done can have Bank Vccio value(s) [3.3]
+Port oPSRAM_RST can have Bank Vccio value(s) [1.8]
+Port oMUX_SEL[1] can have Bank Vccio value(s) [1.8]
+Port ioIR_Data5_CFG_UART_Tx can have Bank Vccio value(s) [3.3]
+Port iIR_Data9 can have Bank Vccio value(s) [3.3]
+Port iIR_VSync can have Bank Vccio value(s) [1.8]
+Port iIR_Data4 can have Bank Vccio value(s) [3.3]
+Port iIR_HSync can have Bank Vccio value(s) [1.8]
+Port iIR_UART_Rx can have Bank Vccio value(s) [1.8]
+Port ioPSRAM_DATA[2] can have Bank Vccio value(s) [1.8]
+Port iIR_Data7 can have Bank Vccio value(s) [3.3]
+Port iIR_Data12 can have Bank Vccio value(s) [3.3]
+Port ioPSRAM_DATA[1] can have Bank Vccio value(s) [1.8]
+Port oLED_Configuring can have Bank Vccio value(s) [1.8]
+Port oLED_Uploading can have Bank Vccio value(s) [1.8]
+Port oPSRAM_CLK can have Bank Vccio value(s) [1.8]
+Port ioPSRAM_DATA[6] can have Bank Vccio value(s) [1.8]
+Port oPSRAM_DQS can have Bank Vccio value(s) [1.8]
+Port ioIR_Data1_UP_UART_Tx can have Bank Vccio value(s) [3.3]
+Port iIR_Data2_UP_UART_Rx can have Bank Vccio value(s) [3.3]
+Port iIR_Data14 can have Bank Vccio value(s) [3.3]
+Port oIR_UART_Tx can have Bank Vccio value(s) [1.8]
+Port oPSRAM_CE can have Bank Vccio value(s) [1.8]
+Port ioPSRAM_DATA[0] can have Bank Vccio value(s) [1.8]
+Port oIR_Shutdown can have Bank Vccio value(s) [1.8]
+Port ioPSRAM_DATA[7] can have Bank Vccio value(s) [1.8]
+Port iIR_Data13 can have Bank Vccio value(s) [3.3]
+Port iIR_Data11 can have Bank Vccio value(s) [3.3]
+Port ioPSRAM_DATA[5] can have Bank Vccio value(s) [1.8]
+Port ioPSRAM_DATA[4] can have Bank Vccio value(s) [1.8]
+Port oMUX_SEL[0] can have Bank Vccio value(s) [1.8]
+Port oLED_Capturing can have Bank Vccio value(s) [1.8]
+Port oDBG_UART_Tx can have Bank Vccio value(s) [1.8]
+Port iIR_PClk can have Bank Vccio value(s) [1.8]
+Port iIR_Data10 can have Bank Vccio value(s) [3.3]
+Port iIR_Data6_CFG_UART_Rx can have Bank Vccio value(s) [3.3]
+
+Errors detected in general drc.
+
+INFO <51001088> - Errors found in user's design.  Output files not written. Check map report for more details.
+ 
+
+   Number of warnings:  117
+   Number of errors:    1
+

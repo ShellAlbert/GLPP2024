@@ -1,0 +1,11 @@
+#Start recording tcl command: 3/7/2024 08:16:06
+#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
+prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunicationi.v"
+prj_remove_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunicationi.v"
+prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunication.v"
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+#Stop recording: 3/7/2024 10:55:47

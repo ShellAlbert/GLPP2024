@@ -1,6 +1,6 @@
 (ExpressProject "CameraOverUART"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/04/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/11/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -64,13 +64,21 @@
       (Sort User)))
   (Folder "Logs")
   (PartMRUSelector
+    (SN74AUP1G08
+      (FullPartName "SN74AUP1G08.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SN74LVC1G32DBVR
+      (FullPartName "SN74LVC1G32DBVR.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (TitleBlockANSISmall
       (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (TitleBlock0
-      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (GND
       (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (SN74AXC4T774RSVR
@@ -121,11 +129,6 @@
       (LibraryName
          "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
       (DeviceIndex "0"))
-    (SN74AUP1G08
-      (FullPartName "SN74AUP1G08.Normal")
-      (LibraryName
-         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
-      (DeviceIndex "0"))
     (TMUX1101
       (FullPartName "TMUX1101.Normal")
       (LibraryName
@@ -168,11 +171,6 @@
       (DeviceIndex "0"))
     (OFFPAGELEFT-R
       (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (STM32L031G6U3
-      (FullPartName "STM32L031G6U3.Normal")
-      (LibraryName
-         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
       (DeviceIndex "0")))
   (MPSSessionName "SNIPER")
   (GlobalState
@@ -182,14 +180,26 @@
          "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn")
       (Path "Design Resources"
          "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library"
+         "f:\mytemporary\github\glpp2024\schematic\libs\library1.olb")
       (Path "Outputs")
       (Select "Design Resources"
-         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1"
-         "9-VISIBLE"))
+         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "Design Cache"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 695"))
-      (Tab 0)))
+        (Placement "44 0 1 -1 -1 -1 -1 0 273 0 695"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 5 24 5 985 24 713")
+        (Scroll "0 602")
+        (Zoom "156")
+        (Occurrence "/"))
+      (Path "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\GLPP2024.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "6-POWER")))
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))

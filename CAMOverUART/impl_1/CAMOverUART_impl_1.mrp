@@ -1,0 +1,338 @@
+                         Lattice Mapping Report File
+Design:  ZIRCAMOverUART
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 2023.1.1.200.1
+Mapped on: Thu Mar  7 10:26:42 2024
+
+Design Information
+------------------
+
+Command line:   map -i CAMOverUART_impl_1_syn.udb -pdc
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc -o
+     CAMOverUART_impl_1_map.udb -mp CAMOverUART_impl_1.mrp -hierrpt -gui
+
+
+
+
+   Number of warnings:  117
+   Number of errors:    1
+
+Design Errors/Warnings
+----------------------
+
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (14) : No
+     port matched 'iIR_Data[0]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (15) : No
+     port matched 'iIR_Data[1]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (16) : No
+     port matched 'iIR_Data[2]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (17) : No
+     port matched 'iIR_Data[3]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (18) : No
+     port matched 'iIR_Data[4]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (19) : No
+     port matched 'iIR_Data[5]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (20) : No
+     port matched 'iIR_Data[6]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (21) : No
+     port matched 'iIR_Data[7]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (22) : No
+     port matched 'iIR_Data[10]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (23) : No
+     port matched 'iIR_Data[11]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (24) : No
+     port matched 'iIR_Data[12]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (25) : No
+
+                                    Page 1
+
+
+
+
+
+Design Errors/Warnings (cont)
+-----------------------------
+     port matched 'iIR_Data[13]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (40) : No
+     port matched 'oDBG_UART_Rx'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (41) : No
+     port matched 'iIR_Data[8]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (42) : No
+     port matched 'iIR_Data[9]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (43) : No
+     port matched 'iIR_Data[13]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (44) : No
+     port matched 'iIR_Data[12]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (45) : No
+     port matched 'iIR_Data[8]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (46) : No
+     port matched 'iIR_Data[11]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (47) : No
+     port matched 'iIR_Data[9]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (48) : No
+     port matched 'iIR_Data[10]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (49) : No
+     port matched 'iIR_Data[7]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (50) : No
+     port matched 'iIR_Data[6]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (51) : No
+     port matched 'iIR_Data[5]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (52) : No
+     port matched 'iIR_Data[4]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (53) : No
+     port matched 'iIR_Data[3]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (54) : No
+     port matched 'iIR_Data[2]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (55) : No
+     port matched 'iIR_Data[1]'.
+WARNING <1026001> - map:
+     F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc (56) : No
+     port matched 'iIR_Data[0]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[0]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[0]' in constraint
+     'ldc_set_location -site {23} [get_ports {iIR_Data[0]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[1]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[1]' in constraint
+
+                                    Page 2
+
+
+
+
+
+Design Errors/Warnings (cont)
+-----------------------------
+     'ldc_set_location -site {25} [get_ports {iIR_Data[1]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[2]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[2]' in constraint
+     'ldc_set_location -site {26} [get_ports {iIR_Data[2]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[3]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[3]' in constraint
+     'ldc_set_location -site {27} [get_ports {iIR_Data[3]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[4]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[4]' in constraint
+     'ldc_set_location -site {32} [get_ports {iIR_Data[4]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[5]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[5]' in constraint
+     'ldc_set_location -site {31} [get_ports {iIR_Data[5]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[6]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[6]' in constraint
+     'ldc_set_location -site {37} [get_ports {iIR_Data[6]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[7]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[7]' in constraint
+     'ldc_set_location -site {34} [get_ports {iIR_Data[7]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[10]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[10]' in constraint
+     'ldc_set_location -site {42} [get_ports {iIR_Data[10]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[11]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[11]' in constraint
+     'ldc_set_location -site {38} [get_ports {iIR_Data[11]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[12]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[12]' in constraint
+     'ldc_set_location -site {28} [get_ports {iIR_Data[12]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[13]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[13]' in constraint
+     'ldc_set_location -site {35} [get_ports {iIR_Data[13]}]'.
+WARNING <1027013> - map: No port matched 'oDBG_UART_Rx'.
+WARNING <1014301> - map: Can't resolve object 'oDBG_UART_Rx' in constraint
+     'ldc_set_location -site {14} [get_ports oDBG_UART_Rx]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[8]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[8]' in constraint
+     'ldc_set_location -site {43} [get_ports {iIR_Data[8]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[9]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[9]' in constraint
+     'ldc_set_location -site {36} [get_ports {iIR_Data[9]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[13]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[13]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18 DRIVE=NA} [get_ports
+     {iIR_Data[13]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[12]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[12]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[12]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[8]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[8]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[8]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[11]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[11]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[11]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[9]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[9]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[9]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[10]'.
+
+                                    Page 3
+
+
+
+
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[10]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[10]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[7]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[7]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[7]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[6]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[6]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[6]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[5]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[5]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[5]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[4]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[4]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[4]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[3]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[3]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[3]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[2]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[2]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[2]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[1]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[1]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[1]}]'.
+WARNING <1027013> - map: No port matched 'iIR_Data[0]'.
+WARNING <1014301> - map: Can't resolve object 'iIR_Data[0]' in constraint
+     'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[0]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {23}
+     [get_ports {iIR_Data[0]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {25}
+     [get_ports {iIR_Data[1]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {26}
+     [get_ports {iIR_Data[2]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {27}
+     [get_ports {iIR_Data[3]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {32}
+     [get_ports {iIR_Data[4]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {31}
+     [get_ports {iIR_Data[5]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {37}
+     [get_ports {iIR_Data[6]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {34}
+     [get_ports {iIR_Data[7]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {42}
+     [get_ports {iIR_Data[10]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {38}
+     [get_ports {iIR_Data[11]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {28}
+     [get_ports {iIR_Data[12]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {35}
+     [get_ports {iIR_Data[13]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {14}
+     [get_ports oDBG_UART_Rx]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {43}
+     [get_ports {iIR_Data[8]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {36}
+     [get_ports {iIR_Data[9]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+
+                                    Page 4
+
+
+
+
+
+Design Errors/Warnings (cont)
+-----------------------------
+     {IO_TYPE=LVCMOS18 DRIVE=NA} [get_ports {iIR_Data[13]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[12]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[8]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[11]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[9]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[10]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[7]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[6]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[5]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[4]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[3]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[2]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[1]}]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_port -iobuf
+     {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[0]}]'.
+WARNING <71003020> - map: Top module port 'iDBG_UART_Rx' does not connect to
+     anything.
+ERROR <71003031> - map: IO placement will fail due to Bank Vccio compatibility.
+     To correct this issue, please use more Bank VCCIO compatible IO attribute
+     combinations, reduce the number of different IO attribute combinations,
+     and/or change to a larger device with more IO Banks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 5
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor
+     Corporation,  All rights reserved.

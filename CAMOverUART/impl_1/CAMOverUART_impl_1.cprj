@@ -1,0 +1,7 @@
+-ver "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd"
+-ver "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgOV5640BySTM32.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgM3256LByFPGA.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgM3256LBySTM32.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgOV5640ByFPGA.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZClkDivider4SCCB.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZGPIOMultiplexer.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZIRTaskSchedule.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZDataCapture.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZOctalRAMOperator.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZIRCAMOverUART.v" "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunication.v"
+-path "F:/MyTemporary/Github/GLPP2024/CAMOverUART"
+-top ZIRCAMOverUART
+-isTop
+-a "iCE40UP"

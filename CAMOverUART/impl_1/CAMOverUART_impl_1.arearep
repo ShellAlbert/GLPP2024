@@ -1,0 +1,173 @@
+----------------------------------------------------------------------
+Report for cell ZIRCAMOverUART.TECH
+Register bits:  78 of 5280 (1.477%)
+I/O cells:      29
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               BB_B         9          100.0
+                              EBR_B         1          100.0
+                               CCU2         6          100.0
+                            FD1P3XZ        78          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB        17          100.0
+                               LUT4       130          100.0
+                                 OB        12          100.0
+                              PLL_B         1          100.0
+SUB MODULES
+                            My_FIFO         1
+My_FIFO_ipgen_lscc_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+My_FIFO_ipgen_lscc_fifo_dc_main(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_soft_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+                             My_PLL         1
+My_PLL_ipgen_lscc_pll(DIVR="2",DIVF="49",DIVQ="2",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")         1
+                   ZCfgM3256LByFPGA         1
+                       ZDataCapture         1
+                    ZIRTaskSchedule         1
+                  ZOctalRAMOperator         1
+                 ZUARTCommunication         1
+                              TOTAL       269
+----------------------------------------------------------------------
+Report for cell ZIRTaskSchedule.v1
+Instance Path : taskSchedule
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               BB_B         9          100.0
+                              EBR_B         1          100.0
+                                FA2         6          100.0
+                            FD1P3XZ        78          100.0
+                               LUT4       125           96.2
+SUB MODULES
+                            My_FIFO         1
+My_FIFO_ipgen_lscc_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+My_FIFO_ipgen_lscc_fifo_dc_main(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_soft_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+                   ZCfgM3256LByFPGA         1
+                       ZDataCapture         1
+                  ZOctalRAMOperator         1
+                 ZUARTCommunication         1
+                              TOTAL       230
+----------------------------------------------------------------------
+Report for cell secured_cell.secured_netlist
+Instance Path : secured_path
+                              TOTAL         0
+----------------------------------------------------------------------
+Report for cell secured_cell.secured_netlist
+Instance Path : secured_path
+                              TOTAL         0
+----------------------------------------------------------------------
+Report for cell secured_cell.secured_netlist
+Instance Path : secured_path
+                              TOTAL         0
+----------------------------------------------------------------------
+Report for cell secured_cell.secured_netlist
+Instance Path : secured_path
+                              TOTAL         0
+----------------------------------------------------------------------
+Report for cell My_FIFO.v1
+Instance Path : taskSchedule.buffering_FIFO
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                            FD1P3XZ        59           75.6
+                               LUT4        72           55.4
+SUB MODULES
+My_FIFO_ipgen_lscc_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+My_FIFO_ipgen_lscc_fifo_dc_main(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_soft_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+                              TOTAL       138
+----------------------------------------------------------------------
+Report for cell My_FIFO_ipgen_lscc_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP").v1
+Instance Path : taskSchedule.buffering_FIFO.lscc_fifo_dc_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                            FD1P3XZ        59           75.6
+                               LUT4        72           55.4
+SUB MODULES
+My_FIFO_ipgen_lscc_fifo_dc_main(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_soft_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+                              TOTAL       137
+----------------------------------------------------------------------
+Report for cell My_FIFO_ipgen_lscc_fifo_dc_main(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP").v1
+Instance Path : taskSchedule.buffering_FIFO.lscc_fifo_dc_inst.fifo_dc0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                            FD1P3XZ        59           75.6
+                               LUT4        72           55.4
+SUB MODULES
+My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_soft_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP")         1
+                              TOTAL       136
+----------------------------------------------------------------------
+Report for cell My_FIFO_ipgen_lscc_soft_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP").v1
+Instance Path : taskSchedule.buffering_FIFO.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                            FD1P3XZ        59           75.6
+                               LUT4        72           55.4
+SUB MODULES
+My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1)         1
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1)         1
+                              TOTAL       135
+----------------------------------------------------------------------
+Report for cell My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1).v1
+Instance Path : taskSchedule.buffering_FIFO.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.EBR.EBR_OTHER.u_fifo_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                            FD1P3XZ        16           20.5
+SUB MODULES
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1)         1
+                              TOTAL        19
+----------------------------------------------------------------------
+Report for cell My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1).v1
+Instance Path : taskSchedule.buffering_FIFO.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.EBR.EBR_OTHER.u_fifo_mem0.mem_main
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                            FD1P3XZ        16           20.5
+SUB MODULES
+My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+                              TOTAL        18
+----------------------------------------------------------------------
+Report for cell My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0).v1
+Instance Path : taskSchedule.buffering_FIFO.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.EBR.EBR_OTHER.u_fifo_mem0.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                            FD1P3XZ        16           20.5
+                              TOTAL        17
+----------------------------------------------------------------------
+Report for cell My_PLL.v1
+Instance Path : my_PLL_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+SUB MODULES
+My_PLL_ipgen_lscc_pll(DIVR="2",DIVF="49",DIVQ="2",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell My_PLL_ipgen_lscc_pll(DIVR="2",DIVF="49",DIVQ="2",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000").v1
+Instance Path : my_PLL_inst.lscc_pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+                              TOTAL         1

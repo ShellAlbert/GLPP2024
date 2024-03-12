@@ -1,0 +1,7 @@
+-ver "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd"
+-ver "F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_FIFO/rtl/My_FIFO.v"
+-sdc "F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_FIFO/constraints/My_FIFO.ldc"
+-path "F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_FIFO" "F:/MyTemporary/Github/GLPP2024/CAMOverUART"
+-top My_FIFO
+-a "iCE40UP"

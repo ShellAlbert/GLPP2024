@@ -1,0 +1,45 @@
+POSTSYN: Post Synthesis Process Radiant Software (64-bit) 2023.1.1.200.1
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o CAMOverUART_impl_1_syn.udb -ldc F:/MyTemporary/Github/GLPP2024/CAMOverUART/impl_1/CAMOverUART_impl_1.ldc -gui -msgset F:/MyTemporary/Github/GLPP2024/CAMOverUART/promote.xml CAMOverUART_impl_1.vm 
+   Architecture:     iCE40UP
+   Device:           iCE40UP5K
+   Package:          SG48
+   Performance:      High-Performance_1.2V
+Reading input file 'CAMOverUART_impl_1.vm' ...
+Reading constraint file 'F:/MyTemporary/Github/GLPP2024/CAMOverUART/impl_1/CAMOverUART_impl_1.ldc' ...
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/impl_1/CAMOverUART_impl_1.ldc (2) : No pin matched 'taskSchedule/uart_Upload/iRst_N taskSchedule/ram_Operator/iRst_N taskSchedule/data_Capture/iRst_N taskSchedule/cfg_by_FPGA/iRst_N'.
+WARNING <1026001> - F:/MyTemporary/Github/GLPP2024/CAMOverUART/impl_1/CAMOverUART_impl_1.ldc (3) : No pin matched 'taskSchedule/uart_Upload/iRst_N taskSchedule/ram_Operator/iRst_N taskSchedule/data_Capture/iRst_N taskSchedule/cfg_by_FPGA/iRst_N'.
+Removing unused logic ...
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.u_mem0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_1__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_2__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_3__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_4__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_5__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_6__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_7__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_8__I_0 is optimized away.
+INFO <35811145> - Instance taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_9__I_0 is optimized away.
+INFO <35811148> - ... More instances are optimized away.
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[15] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[14] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[13] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[12] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[11] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[10] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[9] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[8] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[7] undriven or does not drive anything - clipped
+INFO <35811146> - Signal taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rdData_FIFO[6] undriven or does not drive anything - clipped
+INFO <35811149> - ... More signals are undriven or does not drive anything - clipped
+Starting design annotation....
+ 
+Constraint Summary:
+   Total number of constraints: 4
+   Total number of constraints dropped: 0
+   Total number of constraints duplicated: 1
+ 
+Writing output file 'CAMOverUART_impl_1_syn.udb'.
+POSTSYN finished successfully.
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 38 MB

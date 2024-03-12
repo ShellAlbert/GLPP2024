@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<ipxact:design xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:lattice="http://www.latticesemi.com/lattice" xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+    <ipxact:vendor>latticesemi.com</ipxact:vendor>
+    <ipxact:library>module</ipxact:library>
+    <ipxact:name>My_FIFO</ipxact:name>
+    <ipxact:version>1.4.0</ipxact:version>
+    <ipxact:componentInstances>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>lscc_fifo_dc_inst</ipxact:instanceName>
+            <ipxact:componentRef library="module" name="fifo_dc" vendor="latticesemi.com" version="1.4.0">
+                <ipxact:configurableElementValues>
+                    <ipxact:configurableElementValue referenceId="WADDR_DEPTH">16</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="WDATA_WIDTH">16</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RADDR_DEPTH">16</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RDATA_WIDTH">16</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="FIFO_CONTROLLER">FABRIC</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="FORCE_FAST_CONTROLLER">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="IMPLEMENTATION">EBR</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="Total Memory bits">256</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="WADDR_WIDTH">4</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RADDR_WIDTH">4</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="REGMODE">True</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="RESETMODE">async</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ENABLE_ALMOST_FULL_FLAG">True</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ALMOST_FULL_ASSERTION">static-dual</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ALMOST_FULL_ASSERT_LVL">15</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ALMOST_FULL_DEASSERT_LVL">14</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ENABLE_ALMOST_EMPTY_FLAG">True</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ALMOST_EMPTY_ASSERTION">static-dual</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ALMOST_EMPTY_ASSERT_LVL">1</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ALMOST_EMPTY_DEASSERT_LVL">2</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ENABLE_DATA_COUNT_WR">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="ENABLE_DATA_COUNT_RD">False</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="FAMILY">iCE40UP</ipxact:configurableElementValue>
+                    <ipxact:configurableElementValue referenceId="T_FAMILY">iCE40UP</ipxact:configurableElementValue>
+                </ipxact:configurableElementValues>
+            </ipxact:componentRef>
+        </ipxact:componentInstance>
+    </ipxact:componentInstances>
+    <ipxact:adHocConnections>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.wr_clk_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="wr_clk_i"/>
+                <ipxact:externalPortReference portRef="wr_clk_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.rd_clk_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="rd_clk_i"/>
+                <ipxact:externalPortReference portRef="rd_clk_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.rst_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="rst_i"/>
+                <ipxact:externalPortReference portRef="rst_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.rp_rst_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="rp_rst_i"/>
+                <ipxact:externalPortReference portRef="rp_rst_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.wr_en_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="wr_en_i"/>
+                <ipxact:externalPortReference portRef="wr_en_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.rd_en_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="rd_en_i"/>
+                <ipxact:externalPortReference portRef="rd_en_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.wr_data_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="wr_data_i"/>
+                <ipxact:externalPortReference portRef="wr_data_i">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>15</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.almost_full_th_i</ipxact:name>
+            <ipxact:tiedValue>1'b1</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="almost_full_th_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.almost_full_clr_th_i</ipxact:name>
+            <ipxact:tiedValue>1'b1</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="almost_full_clr_th_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.almost_empty_th_i</ipxact:name>
+            <ipxact:tiedValue>1'b1</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="almost_empty_th_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.almost_empty_clr_th_i</ipxact:name>
+            <ipxact:tiedValue>1'b1</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="almost_empty_clr_th_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.full_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="full_o"/>
+                <ipxact:externalPortReference portRef="full_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.empty_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="empty_o"/>
+                <ipxact:externalPortReference portRef="empty_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.almost_full_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="almost_full_o"/>
+                <ipxact:externalPortReference portRef="almost_full_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.almost_empty_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="almost_empty_o"/>
+                <ipxact:externalPortReference portRef="almost_empty_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.wr_data_cnt_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="wr_data_cnt_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.rd_data_cnt_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="rd_data_cnt_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.rd_data_o</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="rd_data_o"/>
+                <ipxact:externalPortReference portRef="rd_data_o">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>15</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.one_err_det_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="one_err_det_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>My_FIFO.two_err_det_o</ipxact:name>
+            <ipxact:tiedValue>open</ipxact:tiedValue>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="My_FIFO" portRef="two_err_det_o"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+    </ipxact:adHocConnections>
+</ipxact:design>

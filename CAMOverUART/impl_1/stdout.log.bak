@@ -1,0 +1,70 @@
+Running in Lattice mode
+
+                               Synplify Pro (R) 
+
+                Version U-2023.03LR-1 for win64 - May 29, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    F:\MySoftware\Lattice\radiant\synpbase\bin64\mbin\synbatch.exe
+Install:     F:\MySoftware\Lattice\radiant\synpbase
+Hostname:    DESKTOP-R1EC6M9
+Date:        Mon Mar  4 16:11:31 2024
+Version:     U-2023.03LR-1
+
+Arguments:   -product synplify_base -batch CAMOverUART_impl_1_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+"force_gsr" is unrecognized option for current device
+log file: "F:\MyTemporary\Github\GLPP2024\CAMOverUART\impl_1\CAMOverUART_impl_1.srr"
+Running: impl_1 in foreground
+
+Running proj_1|impl_1
+
+Running Flow: compile (Compile) on proj_1|impl_1
+# Mon Mar  4 16:11:32 2024
+
+Running Flow: compile_flow (Compile Process) on proj_1|impl_1
+# Mon Mar  4 16:11:32 2024
+
+Running: compiler (Compile Input) on proj_1|impl_1
+# Mon Mar  4 16:11:32 2024
+compiler exited with errors
+Job failed on: proj_1|impl_1
+
+Job: "compiler" terminated with error status: 2
+See log file: "F:\MyTemporary\Github\GLPP2024\CAMOverUART\impl_1\synlog\CAMOverUART_impl_1_compiler.srr"
+# Mon Mar  4 16:11:33 2024
+
+Return Code: 2
+Run Time:00h:00m:01s
+Complete: Compile Process on proj_1|impl_1
+Complete: Compile on proj_1|impl_1
+Complete: Logic Synthesis on proj_1|impl_1
+Copied F:\MyTemporary\Github\GLPP2024\CAMOverUART\impl_1\CAMOverUART_impl_1.srr to F:\MyTemporary\Github\GLPP2024\CAMOverUART\impl_1\CAMOverUART_impl_1.srf
+Error: At line 60 while processing "CAMOverUART_impl_1_synplify.tcl"
+2
+TCL script complete: "CAMOverUART_impl_1_synplify.tcl"
+TCL script had errors: "CAMOverUART_impl_1_synplify.tcl"
+exit status=9
+exit status=9
+Save changes for project:
+F:\MyTemporary\Github\GLPP2024\CAMOverUART\impl_1\proj_1.prj
+batch mode default:no

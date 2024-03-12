@@ -1,0 +1,522 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 2023.1.1.200.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Mar  7 10:26:33 2024
+
+
+Command Line:  F:\MySoftware\Lattice\radiant\ispfpga\bin\nt64\synthesis.exe -f CAMOverUART_impl_1_lattice.synproj -gui -msgset F:/MyTemporary/Github/GLPP2024/CAMOverUART/promote.xml 
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO <35001786> - synthesis: User-Selected Strategy Settings
+Optimization goal = Area
+Top-level module name = ZIRCAMOverUART.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3 (default)
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = CAMOverUART_impl_1.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-sdc option: SDC file input is CAMOverUART_impl_1_cpe.ldc.
+-path F:/MySoftware/Lattice/radiant/ispfpga/ice40tp/data (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/CAMOverUART (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_FIFO (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_PLL (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/CAMOverUART/impl_1 (searchpath added)
+Mixed language design
+Verilog design file = F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgOV5640BySTM32.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgM3256LByFPGA.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgM3256LBySTM32.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCfgOV5640ByFPGA.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZClkDivider4SCCB.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZGPIOMultiplexer.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_FIFO/rtl/My_FIFO.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZIRTaskSchedule.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_PLL/rtl/My_PLL.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZDataCapture.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZOctalRAMOperator.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZIRCAMOverUART.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunication.v
+VHDL library = pmi
+VHDL design file = F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM7 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM6 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM5 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM4 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM3 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM2 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM1 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM0 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port I is not connected on this instance. VDB-5050
+Compile design.
+Compile Design Begin
+Analyzing Verilog file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(1): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_addsub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_addsub.v(40): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(2): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_add.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_add.v(50): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(3): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_complex_mult.v(52): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(4): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_counter.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_counter.v(39): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(5): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo.v(44): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/fifo/rtl/lscc_fifo.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(6): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo_dc.v(47): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(7): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_mac.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_mac.v(52): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(8): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsubsum.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(9): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsub.v(52): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(10): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_mult.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_mult.v(51): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(11): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp.v(48): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(12): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq.v(45): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(13): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_rom.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_rom.v(45): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/rom/rtl/lscc_rom.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(14): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_sub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_sub.v(50): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(15): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp_be.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(16): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq_be.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(17): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_dsp.v. VERI-1328
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zcfgov5640bystm32.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zcfgm3256lbyfpga.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zcfgm3256lbystm32.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zcfgov5640byfpga.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zclkdivider4sccb.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zgpiomultiplexer.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_pll/rtl/my_pll.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zdatacapture.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zoctalramoperator.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zircamoveruart.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zuartcommunication.v. VERI-1482
+Analyzing VHDL file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd
+
+INFO <35921014> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
+INFO <35921504> - synthesis: The default VHDL library search path is now "F:/MyTemporary/Github/GLPP2024/CAMOverUART/impl_1". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): ZIRCAMOverUART
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zircamoveruart.v(1): compiling module ZIRCAMOverUART. VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_pll/rtl/my_pll.v(11): compiling module My_PLL. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_pll/rtl/my_pll.v(107): compiling module My_PLL_ipgen_lscc_pll(DIVR="2",DIVF="49",DIVQ="2",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000"). VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(428): compiling module PLL_B(PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",DIVR="2",DIVF="49",DIVQ="2",FILTER_RANGE="1",FREQUENCY_PIN_REFERENCECLK="48.000000"). VERI-1018
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(1): compiling module ZIRTaskSchedule. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zcfgm3256lbystm32.v(1): compiling module ZCfgM3256LBySTM32. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zcfgm3256lbyfpga.v(1): compiling module ZCfgM3256LByFPGA. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v(11): compiling module My_FIFO. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v(132): compiling module My_FIFO_ipgen_lscc_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP"). VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v(302): compiling module My_FIFO_ipgen_lscc_fifo_dc_main(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP"). VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v(2763): compiling module My_FIFO_ipgen_lscc_soft_fifo_dc(WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,ALMOST_FULL_ASSERT_LVL=15,ALMOST_FULL_DEASSERT_LVL=14,FAMILY="iCE40UP"). VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v(3726): compiling module My_FIFO_ipgen_lscc_fifo_mem(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_WIDTH=1). VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v(4128): compiling module My_FIFO_ipgen_lscc_fifo_mem_main(FAMILY="iCE40UP",WADDR_DEPTH=16,WADDR_WIDTH=4,WDATA_WIDTH=16,RADDR_DEPTH=16,RADDR_WIDTH=4,RDATA_WIDTH=16,RESETMODE="async",BYTE_ENABLE=0,BYTE_SIZE=9,BYTE_WIDTH=1). VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_fifo/rtl/my_fifo.v(7448): compiling module My_FIFO_ipgen_lscc_fifo_mem_core(MEM_SIZE="18,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b010000,DATA_WIDTH_R=32'b010000,RESETMODE="async",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0). VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(693): compiling module PDP4K(DATA_WIDTH_W="16",DATA_WIDTH_R="16"). VERI-1018
+Removed duplicate sequential element wr_addr_arith_r(5 bit), because it is equivalent to wr_addr_r
+
+Removed duplicate sequential element rd_addr_arith_r(5 bit), because it is equivalent to rd_addr_r
+
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zdatacapture.v(1): compiling module ZDataCapture. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zoctalramoperator.v(1): compiling module ZOctalRAMOperator. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zuartcommunication.v(1): compiling module ZUARTCommunication. VERI-1018
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(253): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(263): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(272): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(294): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(305): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(317): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(323): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(66): net CFG_UART_Tx does not have a driver. VDB-1002
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+CRITICAL <35002028> - synthesis: I/O Port oMUX_SEL[1] 's net has no driver and is unused.
+CRITICAL <35002028> - synthesis: I/O Port oDBG_UART_Tx 's net has no driver and is unused.
+CRITICAL <35002028> - synthesis: I/O Port iDBG_UART_Rx 's net has no driver and is unused.
+CRITICAL <35002028> - synthesis: I/O Port oLED_Configuring 's net has no driver and is unused.
+CRITICAL <35002028> - synthesis: I/O Port oLED_Capturing 's net has no driver and is unused.
+CRITICAL <35002028> - synthesis: I/O Port oLED_Uploading 's net has no driver and is unused.
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_pll/rtl/my_pll.v(141): net \my_PLL_inst/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_pll/rtl/my_pll.v(142): net \my_PLL_inst/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+######## Missing driver on net oMUX_SEL[1]. Patching with GND.
+######## Missing driver on net oDBG_UART_Tx. Patching with GND.
+######## Missing driver on net oLED_Configuring. Patching with GND.
+######## Missing driver on net oLED_Capturing. Patching with GND.
+######## Missing driver on net oLED_Uploading. Patching with GND.
+######## Missing driver on net \taskSchedule/CFG_UART_Tx. Patching with GND.
+######## Missing driver on net \my_PLL_inst/lscc_pll_inst/sclk_i. Patching with GND.
+######## Missing driver on net \my_PLL_inst/lscc_pll_inst/sdi_i. Patching with GND.
+WARNING <35935040> - synthesis: Register \taskSchedule/cfgEn0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \taskSchedule/cfg_by_STM32/oCfgDone clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \taskSchedule/cfg_by_STM32/oUART_Txd clock is stuck at One. VDB-5040
+
+
+
+WARNING <35935040> - synthesis: Register \taskSchedule/UPLD_Done clock is stuck at One. VDB-5040
+WARNING <35935040> - synthesis: Register \taskSchedule/oMUX_SEL[0] clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \taskSchedule/OutFlag_ioIR_Data1_UP_UART_Tx clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \taskSchedule/OutFlag_ioIR_Data5_CFG_UART_Tx clock is stuck at Zero. VDB-5040
+######## Converting I/O port ioIR_Data1_UP_UART_Tx to input.
+######## Converting I/O port ioIR_Data5_CFG_UART_Tx to input.
+CRITICAL <35002028> - synthesis: I/O Port iDBG_UART_Rx 's net has no driver and is unused.
+Optimized async. reset : rst_n on data cone feeding flop : 
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i0
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i0
+
+
+Optimized async. reset : rst_n on data cone feeding flop : 
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i1
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i0
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1
+
+
+Optimized async. reset : rst_n on data cone feeding flop : 
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i2
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i1
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i2
+
+
+Optimized async. reset : rst_n on data cone feeding flop : 
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i3
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i2
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i3
+
+
+Optimized async. reset : rst_n on data cone feeding flop : 
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i4
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i3
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i4
+
+
+Optimized async. reset : rst_n on data cone feeding flop : 
+
+
+ \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/full_ext_r
+
+
+Duplicate register/latch removal. \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i4 is a one-to-one match with \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i4.
+Duplicate register/latch removal. \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i4 is a one-to-one match with \taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_grey_sync_r_i4.
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (ZIRCAMOverUART)######################
+Number of register bits => 78 of 5280 (1 % )
+BB_B => 9
+EBR_B => 1
+CCU2 => 6
+FD1P3XZ => 78
+HSOSC_CORE => 1
+IB => 17
+LUT4 => 130
+OB => 12
+PLL_B => 1
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 1
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : clk_48MHz, loads : 1
+  Net : iIR_PClk_c, loads : 0
+  Net : my_PLL_inst/lscc_pll_inst/clk_main, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : my_PLL_inst/lscc_pll_inst/LOCK, loads : 66
+  Net : taskSchedule/step_i[0], loads : 20
+  Net : taskSchedule/step_i[2], loads : 16
+  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/cfgEn1_N_66, loads : 15
+  Net : taskSchedule/step_i[1], loads : 15
+  Net : taskSchedule/step_i_0__N_47, loads : 10
+  Net : taskSchedule/n296, loads : 10
+  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r[0], loads : 9
+  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r[1], loads : 9
+  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r[2], loads : 9
+################### End Clock Report ##################
+
+Peak Memory Usage: 108 MB
+
+--------------------------------------------------------------
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+
