@@ -1,6 +1,6 @@
 (ExpressProject "CameraOverUART"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/11/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[03/18/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -176,30 +176,16 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn")
-      (Path "Design Resources"
-         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1")
+      (Path "Design Resources" ".\glpp2024.dsn")
+      (Path "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library"
-         "f:\mytemporary\github\glpp2024\schematic\libs\library1.olb")
+      (Path "Design Resources" "Library" ".\libs\library1.olb")
       (Path "Outputs")
-      (Select "Design Resources"
-         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "Design Cache"))
+      (Select "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1" "7-PROCESS"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 273 0 695"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 5 24 5 985 24 713")
-        (Scroll "0 602")
-        (Zoom "156")
-        (Occurrence "/"))
-      (Path "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\GLPP2024.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "6-POWER")))
+        (Placement "44 0 1 -1 -1 -1 -1 0 361 0 557"))
+      (Tab 0)))
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))
