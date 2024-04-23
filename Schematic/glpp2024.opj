@@ -176,16 +176,18 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\glpp2024.dsn")
-      (Path "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\schematic\glpp2024.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library" ".\libs\library1.olb")
-      (Path "Outputs")
-      (Select "Design Resources" ".\glpp2024.dsn" "SCHEMATIC1" "7-PROCESS"))
+      (Path "Design Resources" "Library"
+         "f:\mytemporary\github\glpp2024\schematic\libs\library1.olb")
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 361 0 557"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 538"))
       (Tab 0)))
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))

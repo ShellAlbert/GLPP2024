@@ -1,0 +1,257 @@
+(ExpressProject "CameraOverUART"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[04/23/24]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\libs\latticeplds.olb"
+        (Type "Schematic Library")
+        (DisplayName ".\libs\latticeplds.olb"))
+      (File ".\libs\library1.olb"
+        (Type "Schematic Library")
+        (DisplayName ".\libs\library1.olb")))
+    ("Allegro Netlist Directory" "F:\MyTemporary\Github\GLPP2024\1-PSU\Netlist")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\glpp_psu.dsn"
+      (Type "Schematic Design")
+      (DisplayName ".\glpp_psu.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Display_Online_DRC_Results "FALSE")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "0")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File "F:\MyTemporary\Github\GLPP2024\1-PSU\PSU.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}\t{JLC}")
+    (BOM_Header "Item\tQuantity\tReference\tPart\tPCBFootprint\tJLC")
+    (BOM_Include_File "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\GLPP2024.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" ".\allegro\glpp_psu.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "255")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Board_sim_option "VHDL_flow")
+    ("Allegro Backannotation Run Genfeed" "TRUE")
+    ("Allegro Backannotation Board File"
+       "F:\MyTemporary\Github\GLPP2024\1-PSU\PSU.brd")
+    ("Allegro Backannotation Netlist Directory"
+       "F:\MyTemporary\Github\GLPP2024\1-PSU\Netlist")
+    ("Allegro Backannotation Output File" "allegro\GLPP_PSU.swp")
+    ("Allegro Backannotation Update Schematic" "TRUE")
+    ("Allegro Backannotation View Output" "FALSE")
+    ("Allegro Setup Output Warnings" "FALSE")
+    (Backannotation_TAB "0"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\glpp2024.bom"
+      (Type "Report")
+      (DisplayName ".\glpp2024.bom"))
+    (File ".\psu.bom"
+      (Type "Report"))
+    (File ".\netlist\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\netlist\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\netlist\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\netlist\pinview.dat"
+      (Type "Report")
+      (DisplayName "pinView.dat"))
+    (File ".\netlist\netview.dat"
+      (Type "Report")
+      (DisplayName "netView.dat"))
+    (File ".\netlist\funcview.dat"
+      (Type "Report")
+      (DisplayName "funcView.dat"))
+    (File ".\netlist\compview.dat"
+      (Type "Report")
+      (DisplayName "compView.dat"))
+    (File ".\allegro\glpp_psu.swp"
+      (Type "Report")
+      (DisplayName "GLPP_PSU.swp")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs"
+    (File ".\netlist\swp.log"
+      (Type "Log File")
+      (LogFile "F:\MyTemporary\Github\GLPP2024\1-PSU\Netlist\swp.log")))
+  (PartMRUSelector
+    ("T POINT S"
+      (FullPartName "T POINT S.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (SN74AHC1G14DBVR
+      (FullPartName "SN74AHC1G14DBVR.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (Photodiode
+      (FullPartName "Photodiode.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TLV365DBVR
+      (FullPartName "TLV365DBVR.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TXS0108ERGYR
+      (FullPartName "TXS0108ERGYR.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (STM32L051C8T6
+      (FullPartName "STM32L051C8T6.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (SN74AUP1G08
+      (FullPartName "SN74AUP1G08.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SN74LVC1G32DBVR
+      (FullPartName "SN74LVC1G32DBVR.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TitleBlockANSISmall
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (TitleBlock0
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (SN74AXC4T774RSVR
+      (FullPartName "SN74AXC4T774RSVR.Normal")
+      (LibraryName "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SN74AXC1T45
+      (FullPartName "SN74AXC1T45.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SIP-1x10
+      (FullPartName "SIP-1x10.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (LED
+      (FullPartName "LED.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (SIP-1x8
+      (FullPartName "SIP-1x8.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SIP-1x4
+      (FullPartName "SIP-1x4.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (INDUCTOR
+      (FullPartName "INDUCTOR.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (LTC3336
+      (FullPartName "LTC3336.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPS7A0318PDBVR
+      (FullPartName "TPS7A0318PDBVR.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPS628301ARZER
+      (FullPartName "TPS628301ARZER.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TMUX1101
+      (FullPartName "TMUX1101.Normal")
+      (LibraryName
+         "F:\1--SENSING_INSTITUTE_RELEVANT\5-CAMERAOVERUART\LIBS\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (AND2
+      (FullPartName "AND2.Normal")
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\GATE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "SNIPER")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\glpp_psu.dsn")
+      (Path "Design Resources" ".\glpp_psu.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library" ".\libs\library1.olb")
+      (Path "Outputs")
+      (Path "Logs")
+      (Select "Design Resources" ".\glpp_psu.dsn"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 298 0 538"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 960 24 556")
+        (Scroll "-114 -5")
+        (Zoom "42")
+        (Occurrence "/"))
+      (Path "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU\GLPP_PSU.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PSU")))
+  (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library")
+  (ISPCBBASICLICENSE "false"))
