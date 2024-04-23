@@ -119,13 +119,13 @@
       (Type "Log File")
       (LogFile "F:\MyTemporary\Github\GLPP2024\1-PSU\Netlist\swp.log")))
   (PartMRUSelector
+    (GND
+      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     ("T POINT S"
       (FullPartName "T POINT S.Normal")
       (LibraryName
          "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
-      (DeviceIndex "0"))
-    (GND
-      (LibraryName "F:\MYSOFTWARE\CADENCE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (SN74AHC1G14DBVR
       (FullPartName "SN74AHC1G14DBVR.Normal")
@@ -230,28 +230,22 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\glpp_psu.dsn")
-      (Path "Design Resources" ".\glpp_psu.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\1-psu\glpp_psu.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\1-psu\glpp_psu.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Design Resources" "Library" ".\libs\library1.olb")
+      (Path "Design Resources" "Library"
+         "f:\mytemporary\github\glpp2024\1-psu\libs\library1.olb")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\glpp_psu.dsn"))
+      (Select "Design Resources"
+         "f:\mytemporary\github\glpp2024\1-psu\glpp_psu.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 298 0 538"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 960 24 556")
-        (Scroll "-114 -5")
-        (Zoom "42")
-        (Occurrence "/"))
-      (Path "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU\GLPP_PSU.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PSU")))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 538"))
+      (Tab 0)))
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library")
   (ISPCBBASICLICENSE "false"))
