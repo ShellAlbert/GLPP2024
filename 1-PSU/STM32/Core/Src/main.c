@@ -145,44 +145,21 @@ int main(void)
 		  //waiting, until rx done.
 	  }
 #endif
-
-#if 0 //4-wires mode.
-	  //Step1: SDI (keeps HIGH).
-	  uint16_t SDI_Data1=0xFFFF;
-	  //Transmit an amount of data in blocking mode.
-	  //HAL_SPI_Transmit(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout)
-	  HAL_SPI_Transmit(&hspi2,(uint8_t*)&SDI_Data1,1,0xFFFF);
-
-	  //Step2: Pull up CNV to generate a rising edge.
-	  HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_SET);
-	  //Delay 10ms.
-	  HAL_Delay(10);
-
-	  //Step3: Pull down SDI, start to read data.
-	  uint16_t SDI_Data2=0x0000;
-	  HAL_SPI_Transmit(&hspi2,(uint8_t*)&SDI_Data2,1,0xFFFF);
-	  HAL_Delay(10);
-
-	  //Step4: Pull-down CNV, start to read data.
-	  HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_RESET);
-	  HAL_Delay(10);
-
-	  //Only receive single 16-bits.
-	  HAL_SPI_Receive_IT(&hspi2,(uint8_t*)gBuffer_SPI,1);
-	  while(!gSPIRxDone)
-	  {
-		  //waiting, until rx done.
-	  }
-
-	  //Step4: Pull-down CNV.
-	  HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_RESET);
-#endif
-
+	  //https://github.com/CieNTi/serial_port_plotter
+	  //We use this open-source project to draw realtime curve on PC screen.
+	  //So we send data with expected format.
 	  //pc.printf("$%d %d;", rawData, filteredData);
+
 	  //HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)
 	  //sprintf((char*)buffer_string,"$%d %d;",gBuffer_SPI[0],gBuffer_SPI[0]);
+	  //Turn PMOS Switch On to Enable Tx Power before sending.
+	  HAL_GPIO_WritePin(GPIOB, TX_EN_Pin, GPIO_PIN_RESET);
 	  sprintf((char*)buffer_string,"$%d;",gBuffer_SPI[0]);
 	  HAL_UART_Transmit(&hlpuart1,buffer_string,strlen((char*)buffer_string),0xFFFF);
+	  //Turn PMOS Switch Off to Disable Tx Power after sending.
+	  HAL_Delay(10);
+	  HAL_GPIO_WritePin(GPIOB, TX_EN_Pin, GPIO_PIN_SET);
+
 	  //LED Flash Indicator.
 	  HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_SET);
 	  HAL_Delay(100);
@@ -191,15 +168,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  /*
-	  while(1)
-	  {
-		  HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_RESET);
-		  HAL_Delay(200);
-	  }
-	 */
   }
   /* USER CODE END 3 */
 }
@@ -503,7 +471,10 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, ROUTE_A0_Pin|ROUTE_A1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, TX_EN_Pin|IAM_ALIVE_Pin|ADC_CNV_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(TX_EN_GPIO_Port, TX_EN_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin|ADC_CNV_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : ROUTE_A0_Pin ROUTE_A1_Pin */
   GPIO_InitStruct.Pin = ROUTE_A0_Pin|ROUTE_A1_Pin;
