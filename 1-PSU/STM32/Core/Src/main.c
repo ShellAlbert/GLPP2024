@@ -21,7 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <string.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -81,7 +82,7 @@ static void MX_SPI2_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	uint8_t buffer_string[32];
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -109,7 +110,8 @@ int main(void)
   MX_SPI1_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-
+  //Route UART to LPUART1.
+  HAL_GPIO_WritePin(GPIOA, ROUTE_A0_Pin|ROUTE_A1_Pin, GPIO_PIN_RESET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -176,11 +178,16 @@ int main(void)
 	  HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_RESET);
 #endif
 
+	  //pc.printf("$%d %d;", rawData, filteredData);
+	  //HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)
+	  //sprintf((char*)buffer_string,"$%d %d;",gBuffer_SPI[0],gBuffer_SPI[0]);
+	  sprintf((char*)buffer_string,"$%d;",gBuffer_SPI[0]);
+	  HAL_UART_Transmit(&hlpuart1,buffer_string,strlen((char*)buffer_string),0xFFFF);
 	  //LED Flash Indicator.
 	  HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_SET);
-	  HAL_Delay(1000);
+	  HAL_Delay(100);
 	  HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_RESET);
-	  HAL_Delay(1000);
+	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -311,8 +318,8 @@ static void MX_LPUART1_UART_Init(void)
 
   /* USER CODE END LPUART1_Init 1 */
   hlpuart1.Instance = LPUART1;
-  hlpuart1.Init.BaudRate = 209700;
-  hlpuart1.Init.WordLength = UART_WORDLENGTH_7B;
+  hlpuart1.Init.BaudRate = 1000000;
+  hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
   hlpuart1.Init.StopBits = UART_STOPBITS_1;
   hlpuart1.Init.Parity = UART_PARITY_NONE;
   hlpuart1.Init.Mode = UART_MODE_TX_RX;
