@@ -6,8 +6,8 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="0">
-            <Task name="Map" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="Map" build_result="2" build_time="1715756410">
+            <Task name="Map" build_result="2" update_result="0" update_time="1715756410"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
         <Milestone name="PAR" build_result="0" build_time="0">
@@ -15,9 +15,9 @@
             <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="0">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="3" update_time="0"/>
-            <Task name="LSE_Compile" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1715755617">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1715755617"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1715755617"/>
             <Task name="SynTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
@@ -25,8 +25,8 @@
         <Report name="CAMOverUART_impl_1.bin" last_build_time="1709605816" last_build_size="104156"/>
         <Report name="CAMOverUART_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
         <Report name="CAMOverUART_impl_1.udb" last_build_time="1709710908" last_build_size="11985"/>
-        <Report name="CAMOverUART_impl_1_map.udb" last_build_time="1709712361" last_build_size="9402"/>
-        <Report name="CAMOverUART_impl_1_rtl.udb" last_build_time="1709778396" last_build_size="20716"/>
-        <Report name="CAMOverUART_impl_1_syn.udb" last_build_time="1709778396" last_build_size="8640"/>
+        <Report name="CAMOverUART_impl_1_map.udb" last_build_time="1715756410" last_build_size="10566"/>
+        <Report name="CAMOverUART_impl_1_rtl.udb" last_build_time="1715755616" last_build_size="21339"/>
+        <Report name="CAMOverUART_impl_1_syn.udb" last_build_time="1715755617" last_build_size="9347"/>
     </Strategy>
 </BuildStatus>

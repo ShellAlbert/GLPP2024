@@ -1,26 +1,32 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2023.1.1.200.1
-Wed Mar  6 15:41:24 2024
+Wed May 15 15:00:15 2024
 
-WARNING <71003020> - Top module port 'oDBG_UART_Rx' does not connect to anything.
-WARNING <1027013> - No pin matched 'taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_nxt_c_4__I_0/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_2__I_0/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_nxt_c_1__I_0_2/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_ins   ....   ring_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_0__I_0/SR'.
-WARNING <1014301> - Can't resolve object 'taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_nxt_c_4__I_0/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_2__I_0/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_nxt_c_1__I_0_2/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_ins   ....   ring_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_0__I_0/SR' in constraint 'set_false_path -through [get_pins {taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_nxt_c_4__I_0/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_2__I_0/SR taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_nxt_c_1__I_0_2/SR taskSched   ....   ng_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.rd_data_w_0__I_0/SR}]'.
-WARNING <1027013> - No port matched 'LED[1]'.
-WARNING <1014301> - Can't resolve object 'LED[1]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {LED[1]}]'.
-WARNING <1027013> - No port matched 'LED[0]'.
-WARNING <1014301> - Can't resolve object 'LED[0]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {LED[0]}]'.
-WARNING <1027013> - No port matched 'LED[2]'.
-WARNING <1014301> - Can't resolve object 'LED[2]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {LED[2]}]'.
-WARNING <1027013> - No port matched 'MUX_SEL[0]'.
-WARNING <1014301> - Can't resolve object 'MUX_SEL[0]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {MUX_SEL[0]}]'.
-WARNING <1027013> - No port matched 'MUX_SEL[1]'.
-WARNING <1014301> - Can't resolve object 'MUX_SEL[1]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {MUX_SEL[1]}]'.
-WARNING <1027013> - No port matched 'PSRAM_CE'.
-WARNING <1014301> - Can't resolve object 'PSRAM_CE' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports PSRAM_CE]'.
-WARNING <1027013> - No port matched 'PSRAM_CLK'.
-WARNING <1014301> - Can't resolve object 'PSRAM_CLK' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports PSRAM_CLK]'.
-WARNING <1027013> - No port matched 'PSRAM_DQS'.
-WARNING <1014301> - Can't resolve object 'PSRAM_DQS' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports PSRAM_DQS]'.
-WARNING <1027013> - No port matched 'PSRAM_RST'.
-WARNING <1014301> - Can't resolve object 'PSRAM_RST' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports PSRAM_RST]'.
-WARNING <1027013> - No port matched 'UART_TXD'.
-WARNING <1014301> - Can't resolve object 'UART_TXD' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports UART_TXD]'.
+WARNING <71003020> - Top module port 'iDBG_UART_Rx' does not connect to anything.
+WARNING <1027013> - No port matched 'iIR_Data[13]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[13]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18 DRIVE=NA} [get_ports {iIR_Data[13]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[12]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[12]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[12]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[8]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[8]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[8]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[11]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[11]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[11]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[9]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[9]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[9]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[10]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[10]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[10]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[7]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[7]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[7]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[6]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[6]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[6]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[5]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[5]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[5]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[4]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[4]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[4]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[3]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[3]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[3]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[2]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[2]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[2]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[1]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[1]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[1]}]'.
+WARNING <1027013> - No port matched 'iIR_Data[0]'.
+WARNING <1014301> - Can't resolve object 'iIR_Data[0]' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18} [get_ports {iIR_Data[0]}]'.

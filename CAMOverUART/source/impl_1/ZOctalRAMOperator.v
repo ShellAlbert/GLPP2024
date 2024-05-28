@@ -29,4 +29,31 @@ module ZOctalRAMOperator(
     output oWrFrameDone,
     output oRdFrameDone
 );
+
+//single bit output DDR
+reg ddrout_n;
+reg ddrout_p;
+wire ddrout; 
+wire clk;
+assign clk=iClk;
+IOL_B
+ #(
+  .DDROUT ("YES")
+ ) u_ddr_IOL_B (
+  .PADDI  (1'b0),   // I
+  .DO1    (ddrout_n), // I, falling edge data from fabric
+  .DO0    (ddrout_p), // I, rising edge data from fabric
+  .CE     (1'b1),   
+  // I, clock enabled
+  .IOLTO  (1'b1),   
+  .HOLD   (1'b0),   
+  .INCLK  (clk),    
+  .OUTCLK (clk),    
+  .PADDO  (ddrout), 
+  .PADDT  (),       
+  .DI1    (),       
+  .DI0    ()        
+);
+
+
 endmodule

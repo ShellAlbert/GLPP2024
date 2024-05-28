@@ -55,6 +55,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern UART_HandleTypeDef hlpuart1;
 extern SPI_HandleTypeDef hspi2;
 /* USER CODE BEGIN EV */
 
@@ -153,6 +154,20 @@ void SPI2_IRQHandler(void)
   /* USER CODE END SPI2_IRQn 1 */
 }
 
+/**
+  * @brief This function handles LPUART1 global interrupt / LPUART1 wake-up interrupt through EXTI line 28.
+  */
+void LPUART1_IRQHandler(void)
+{
+  /* USER CODE BEGIN LPUART1_IRQn 0 */
+
+  /* USER CODE END LPUART1_IRQn 0 */
+  HAL_UART_IRQHandler(&hlpuart1);
+  /* USER CODE BEGIN LPUART1_IRQn 1 */
+
+  /* USER CODE END LPUART1_IRQn 1 */
+}
+
 /* USER CODE BEGIN 1 */
 #if 0
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
@@ -174,14 +189,19 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
 {
 	if(hspi->Instance==SPI2)
 	{
-		gBuffer_SPI2[g_SpiRxCnt]=gBuffer_SPI[0];
-		g_SpiRxCnt++;
-		if(g_SpiRxCnt>=10)
-		{
-			g_SpiRxCnt=0;
-		}
-		//set RxDone Flag.
-		gSPIRxDone=1;
+		//temporary moving SPI data to a big buffer.
+		//if(gSPI_RxCnt<1024-1)
+		//{
+			//gSPI_Buffer[gSPI_RxCnt++]=gSPI_Data;
+		//}
+		gSPI_RxDone=1; //Set RxDone Flag.
+	}
+}
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if(huart->Instance==LPUART1)
+	{
+		gUART_TxDone=1; //Set TxDone Flag.
 	}
 }
 /* USER CODE END 1 */

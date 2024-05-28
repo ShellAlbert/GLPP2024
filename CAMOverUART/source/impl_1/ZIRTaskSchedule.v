@@ -53,6 +53,8 @@ module ZIRTaskSchedule(
     output oLED_Uploading //Uploading LED.
 );
 
+
+
 //Triangle-State Gate Control for ioIR_Data1_UP_UART_Tx.
 reg OutFlag_ioIR_Data1_UP_UART_Tx;
 wire UP_UART_Tx;
@@ -244,6 +246,12 @@ else begin
         oIR_Shutdown<=1'b1;
         //IO Multiplex GPIO=>Image Sensor
         oMUX_SEL[0]<=1'b0; //SEL=0, SxA=>Dx
+
+        //enable this line to disable synthesis error.
+        //oMUX_SEL[1] should be driven by valid logic.
+        oMUX_SEL[1]<=1'b1;
+        /**debug above line****/
+
         //Choose iIR_Data1
         OutFlag_ioIR_Data1_UP_UART_Tx<=1'b0;
         //Choose iIR_Data3.

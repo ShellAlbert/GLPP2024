@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Mar  7 10:26:33 2024
+Wed May 15 14:46:54 2024
 
 
 Command Line:  F:\MySoftware\Lattice\radiant\ispfpga\bin\nt64\synthesis.exe -f CAMOverUART_impl_1_lattice.synproj -gui -msgset F:/MyTemporary/Github/GLPP2024/CAMOverUART/promote.xml 
@@ -182,15 +182,18 @@ Removed duplicate sequential element rd_addr_arith_r(5 bit), because it is equiv
 
 INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zdatacapture.v(1): compiling module ZDataCapture. VERI-1018
 INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zoctalramoperator.v(1): compiling module ZOctalRAMOperator. VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(339): compiling module IOL_B(DDROUT="YES"). VERI-1018
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zoctalramoperator.v(34): net ddrout_n does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zoctalramoperator.v(35): net ddrout_p does not have a driver. VDB-1002
 INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zuartcommunication.v(1): compiling module ZUARTCommunication. VERI-1018
-WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(253): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(263): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(272): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(294): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(305): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(317): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(323): expression size 32 truncated to fit in target size 10. VERI-1209
-WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(66): net CFG_UART_Tx does not have a driver. VDB-1002
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(261): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(271): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(280): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(302): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(313): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(325): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35901209> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(331): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/source/impl_1/zirtaskschedule.v(68): net CFG_UART_Tx does not have a driver. VDB-1002
                                                          
 
 
@@ -217,7 +220,6 @@ WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/sourc
 
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
-CRITICAL <35002028> - synthesis: I/O Port oMUX_SEL[1] 's net has no driver and is unused.
 CRITICAL <35002028> - synthesis: I/O Port oDBG_UART_Tx 's net has no driver and is unused.
 CRITICAL <35002028> - synthesis: I/O Port iDBG_UART_Rx 's net has no driver and is unused.
 CRITICAL <35002028> - synthesis: I/O Port oLED_Configuring 's net has no driver and is unused.
@@ -225,7 +227,6 @@ CRITICAL <35002028> - synthesis: I/O Port oLED_Capturing 's net has no driver an
 CRITICAL <35002028> - synthesis: I/O Port oLED_Uploading 's net has no driver and is unused.
 WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_pll/rtl/my_pll.v(141): net \my_PLL_inst/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
 WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/camoveruart/ipcores/my_pll/rtl/my_pll.v(142): net \my_PLL_inst/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
-######## Missing driver on net oMUX_SEL[1]. Patching with GND.
 ######## Missing driver on net oDBG_UART_Tx. Patching with GND.
 ######## Missing driver on net oLED_Configuring. Patching with GND.
 ######## Missing driver on net oLED_Capturing. Patching with GND.
@@ -239,8 +240,9 @@ WARNING <35935040> - synthesis: Register \taskSchedule/cfg_by_STM32/oUART_Txd cl
 
 
 
+CRITICAL <35001748> - synthesis: Bit 1 of Register \taskSchedule/oMUX_SEL is stuck at One
+CRITICAL <35001747> - synthesis: Bit 0 of Register \taskSchedule/oMUX_SEL is stuck at Zero
 WARNING <35935040> - synthesis: Register \taskSchedule/UPLD_Done clock is stuck at One. VDB-5040
-WARNING <35935040> - synthesis: Register \taskSchedule/oMUX_SEL[0] clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \taskSchedule/OutFlag_ioIR_Data1_UP_UART_Tx clock is stuck at Zero. VDB-5040
 WARNING <35935040> - synthesis: Register \taskSchedule/OutFlag_ioIR_Data5_CFG_UART_Tx clock is stuck at Zero. VDB-5040
 ######## Converting I/O port ioIR_Data1_UP_UART_Tx to input.
@@ -320,7 +322,7 @@ CCU2 => 6
 FD1P3XZ => 78
 HSOSC_CORE => 1
 IB => 17
-LUT4 => 130
+LUT4 => 124
 OB => 12
 PLL_B => 1
 ################### End Area Report ##################
@@ -337,21 +339,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : my_PLL_inst/lscc_pll_inst/LOCK, loads : 66
-  Net : taskSchedule/step_i[0], loads : 20
-  Net : taskSchedule/step_i[2], loads : 16
-  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/cfgEn1_N_66, loads : 15
+  Net : my_PLL_inst/lscc_pll_inst/LOCK, loads : 68
   Net : taskSchedule/step_i[1], loads : 15
+  Net : taskSchedule/step_i[0], loads : 15
+  Net : taskSchedule/step_i[2], loads : 15
+  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/cfgEn1_N_66, loads : 13
+  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r[0], loads : 11
   Net : taskSchedule/step_i_0__N_47, loads : 10
-  Net : taskSchedule/n296, loads : 10
-  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r[0], loads : 9
-  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r[1], loads : 9
-  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r[2], loads : 9
+  Net : taskSchedule/n307, loads : 10
+  Net : taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_sig_wr_w[2], loads : 10
+  Net : taskSchedule/step_i[4], loads : 9
 ################### End Clock Report ##################
 
-Peak Memory Usage: 108 MB
+Peak Memory Usage: 106 MB
 
 --------------------------------------------------------------
 Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
+Total REAL Time: 2 secs 
 --------------------------------------------------------------
