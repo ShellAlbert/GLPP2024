@@ -189,12 +189,15 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
 {
 	if(hspi->Instance==SPI2)
 	{
-		//temporary moving SPI data to a big buffer.
-		//if(gSPI_RxCnt<1024-1)
-		//{
-			//gSPI_Buffer[gSPI_RxCnt++]=gSPI_Data;
-		//}
 		gSPI_RxDone=1; //Set RxDone Flag.
+
+		//Increase Write Pointer to Next Position.
+//		if(gSPI_WrPtr==2048-1)
+//		{
+//			gSPI_WrPtr=0;
+//		}else{
+//			gSPI_WrPtr++;
+//		}
 	}
 }
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
@@ -202,6 +205,24 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 	if(huart->Instance==LPUART1)
 	{
 		gUART_TxDone=1; //Set TxDone Flag.
+
+		//Increase Read Pointer to Next Position.
+//		if(gSPI_RdPtr==1024-1)
+//		{
+//			gSPI_RdPtr=0;
+//		}else{
+//			gSPI_RdPtr++;
+//		}
+	}
+}
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance==TIM6)
+	{
+
+	}else if(htim->Instance==TIM22)
+	{
+
 	}
 }
 /* USER CODE END 1 */

@@ -67,10 +67,18 @@ void Error_Handler(void);
 #define IAM_ALIVE_GPIO_Port GPIOB
 #define ADC_CNV_Pin GPIO_PIN_12
 #define ADC_CNV_GPIO_Port GPIOB
+#define TEST_SIG_Pin GPIO_PIN_7
+#define TEST_SIG_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 extern uint16_t gSPI_Data;
-extern uint16_t gSPI_Buffer[1024];
+extern uint16_t gSPI_Buffer1[1024];
+extern uint16_t gSPI_Buffer2[1024];
+extern uint16_t gSPI_RdPtr1;
+extern uint16_t gSPI_RdPtr2;
+extern uint16_t gSPI_WrPtr1;
+extern uint16_t gSPI_WrPtr2;
+
 extern uint16_t gSPI_RxCnt;
 extern uint8_t gSPI_RxDone;
 extern uint8_t gUART_TxDone;
