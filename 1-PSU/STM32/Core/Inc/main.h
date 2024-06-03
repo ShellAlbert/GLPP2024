@@ -72,12 +72,9 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN Private defines */
 extern uint16_t gSPI_Data;
-extern uint16_t gSPI_Buffer1[1024];
-extern uint16_t gSPI_Buffer2[1024];
-extern int16_t gSPI_RdPtr1;
-extern int16_t gSPI_RdPtr2;
-extern int16_t gSPI_WrPtr1;
-extern int16_t gSPI_WrPtr2;
+extern uint16_t gSPI_Buffer[1024];
+extern int16_t gSPI_RdPtr;
+extern int16_t gSPI_WrPtr;
 
 extern uint16_t gSPI_RxCnt;
 extern uint8_t gSPI_RxDone;
