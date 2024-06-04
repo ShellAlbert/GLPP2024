@@ -159,7 +159,7 @@ int main(void)
 
 	//WORKING_MODE=0: Sample1 -> Transmit1 -> Sample2 -> Transmit2 ... ...
 	//WORKING_MODE=1: Sample 1024 Points -> Transmit -> Sample 1024 Points -> Transmit ... ...
-#if 0
+#if 1
 	while(1)
 	{
 		//Step2: Pull up CNV to generate a rising edge.

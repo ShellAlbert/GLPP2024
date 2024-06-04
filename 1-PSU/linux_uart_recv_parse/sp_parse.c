@@ -29,6 +29,7 @@ int main() {
 
   while(!gExitFlag) 
   {
+    int start_symbol_index;
     char read_buf [4];
   	int rd_bytes = read(fd, &read_buf, sizeof(read_buf));
   	// n is the number of bytes read. n may be 0 if no bytes were received, and can also be -1 to signal an error.
@@ -39,6 +40,30 @@ int main() {
       printf("reaches file end!\r\n");
       gExitFlag=1;
     }
+    //searching start symbol '$'.
+    for(int i=0; i<4; i++)
+    {
+      if(read_buf[i]=='$')
+      {
+        start_symbol_index=i;
+        break;
+      }
+    }
+    //situation-1: $xx! index=0,
+    //situation-2: x$xx index=1, memmove=3, lack=1, fill_addr=3(4-1)
+    //situation-3: xx$x index=2, memmove=2, lack=2, fill_addr=2(4-2)
+    //situation-4: xxx$ index=3, memmove=1, lack=3, fill_addr=1(4-3)
+    if(start_symbol_index!=0)
+    {
+      memmove(&read_buf[0],&read_buf[start_symbol_index],4-start_symbol_index);
+      int rd_bytes = read(fd, &read_buf[4-start_symbol_index], start_symbol_index);
+      if (rd_bytes < 0) {
+      	printf("Error reading: %s", strerror(errno)); 
+        gExitFlag=1;
+        break;
+      }
+    }
+
     if(read_buf[0]=='$' && read_buf[3]=='!')
     {
       rd_count++;
