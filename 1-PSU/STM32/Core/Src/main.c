@@ -157,6 +157,8 @@ int main(void)
 	HAL_SPI_Transmit(&hspi2, (uint8_t*) &SDI_Data1, 1, 0xFFFF);
 	HAL_Delay(1);
 
+	//Enable Tx Power.
+	HAL_GPIO_WritePin(TX_EN_GPIO_Port, TX_EN_Pin, GPIO_PIN_RESET);
 	//WORKING_MODE=0: Sample1 -> Transmit1 -> Sample2 -> Transmit2 ... ...
 	//WORKING_MODE=1: Sample 1024 Points -> Transmit -> Sample 1024 Points -> Transmit ... ...
 #if 1

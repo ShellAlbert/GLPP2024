@@ -40,36 +40,6 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
-<A name="pn240304170509"></A><B><U><big>pn240304170509</big></U></B>
-#Start recording tcl command: 3/4/2024 15:55:24
-#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
-prj_create -name "CAMOverUART" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "synplify"
-prj_save 
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/CAMOverUART.v"
-prj_run PAR -impl impl_1
-prj_run Export -impl impl_1
-prj_set_impl_opt -impl "impl_1" "top" "CAMOverUART"
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1 -task Synplify_Synthesis
-prj_set_impl_opt synthesis "lse"
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/Physical_IO.ldc"
-prj_remove_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/Physical_IO.ldc"
-prj_run Export -impl impl_1
-prj_run Synthesis -impl impl_1 -task Lattice_Synthesis
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc"
-prj_enable_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/PhysicalIO.pdc"
-prj_run Map -impl impl_1
-prj_run PAR -impl impl_1
-#Stop recording: 3/4/2024 17:05:09
-
-
-
 <A name="pn240305170420"></A><B><U><big>pn240305170420</big></U></B>
 #Start recording tcl command: 3/5/2024 08:46:15
 #Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
@@ -223,11 +193,18 @@ prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
 
 
 
+<A name="pn240517160301"></A><B><U><big>pn240517160301</big></U></B>
+#Start recording tcl command: 5/17/2024 07:22:36
+#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
+prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
+#Stop recording: 5/17/2024 16:03:01
+
+
+
 </PRE></DIV>
 
 <DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
 <UL id="toc_list">
-<LI><A href=#pn240304170509>pn240304170509</A></LI>
 <LI><A href=#pn240305170420>pn240305170420</A></LI>
 <LI><A href=#pn240306174331>pn240306174331</A></LI>
 <LI><A href=#pn240307105547>pn240307105547</A></LI>
@@ -237,6 +214,7 @@ prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
 <LI><A href=#pn240515143915>pn240515143915</A></LI>
 <LI><A href=#pn240515173157>pn240515173157</A></LI>
 <LI><A href=#pn240516172634>pn240516172634</A></LI>
+<LI><A href=#pn240517160301>pn240517160301</A></LI>
 </UL>
 </DIV>
 
