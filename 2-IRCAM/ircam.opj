@@ -1,6 +1,6 @@
 (ExpressProject "CameraOverUART"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[06/14/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[06/18/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -10,7 +10,8 @@
       (File ".\libs\library1.olb"
         (Type "Schematic Library")
         (DisplayName ".\libs\library1.olb")))
-    ("Allegro Netlist Directory" "allegro")
+    ("Allegro Netlist Directory"
+       "F:\MyTemporary\Github\GLPP2024\2-IRCAM\Netlist")
     (DOCKED "TRUE")
     (DOCKING_POSITION "59420")
     (NoModify)
@@ -48,12 +49,36 @@
     (BOM_One_Part_Per_Line "FALSE")
     (Open_BOM_in_Excel "TRUE")
     (BOM_View_Output "FALSE")
-    (Board_sim_option "VHDL_flow"))
+    (Board_sim_option "VHDL_flow")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "FALSE")
+    ("Allegro Netlist Output Board File" "allegro\IRCAM.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "255")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE"))
   (Folder "Layout")
   (Folder "Outputs"
     (File ".\glpp2024.bom"
       (Type "Report")
-      (DisplayName ".\glpp2024.bom")))
+      (DisplayName ".\glpp2024.bom"))
+    (File ".\netlist\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\netlist\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\netlist\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
   (Folder "Referenced Projects")
   (Folder "PSpice Resources"
     (Folder "Simulation Profiles")
@@ -66,8 +91,7 @@
   (Folder "Logs")
   (PartMRUSelector
     (GND
-      (LibraryName
-         "C:\CADENCE\CADENCE_SPB_17.4-2019\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (LibraryName "C:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
     (TPS63030DSKR
       (FullPartName "TPS63030DSKR.Normal")
@@ -179,15 +203,16 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\ircam.dsn")
-      (Path "Design Resources" ".\ircam.dsn" "SCHEMATIC1")
-      (Path "Design Resources" "Library")
-      (Path "Outputs")
-      (Select "Design Resources" "Library" ".\libs\library1.olb"))
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\2-ircam\ircam.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\2-ircam\ircam.dsn" "SCHEMATIC1")
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 261 0 613"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 500 0 407"))
       (Tab 0)))
-  (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library"))
+  (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library")
+  (ISPCBBASICLICENSE "false"))
