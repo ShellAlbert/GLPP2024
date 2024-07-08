@@ -1,0 +1,116 @@
+\t (00:00:03) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:03)     Journal start - Fri Jun 21 15:52:59 2024
+\t (00:00:03)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=5976 CPUs=12
+\t (00:00:03) CmdLine= C:\Cadence\SPB_22.1\tools\bin\allegro.exe
+\t (00:00:03) 
+   (00:00:03) Loading axlcore.cxt 
+\t (00:00:06) Starting new design...
+\i (00:00:06) trapsize 116667
+\i (00:00:06) placementedit 
+\i (00:00:09) trapsize 699
+\i (00:00:09) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged unnamed
+\i (00:00:09) opencd F:/MyTemporary/Github/GLPP2024/2-IRCAM/PCB/IRCAM-1.brd 
+\t (00:00:09) Opening existing design...
+\i (00:00:10) trapsize 5046
+\d (00:00:10) Design opened: F:/MyTemporary/Github/GLPP2024/2-IRCAM/PCB/IRCAM-1.brd
+\i (00:00:10) placementedit 
+\i (00:00:10) zoom in 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom in 54.5387 -17.5797
+\i (00:00:10) trapsize 2523
+\i (00:00:12) zoom in 1 
+\i (00:00:12) setwindow pcb
+\i (00:00:12) zoom in 51.4608 -10.6670
+\i (00:00:12) trapsize 1261
+\i (00:00:12) zoom out 1 
+\i (00:00:12) setwindow pcb
+\i (00:00:12) zoom out 52.5708 -11.1211
+\i (00:00:12) trapsize 2523
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 45.1537 -11.6256
+\i (00:00:14) trapsize 1261
+\i (00:00:15) zoom out 1 
+\i (00:00:15) setwindow pcb
+\i (00:00:15) zoom out 41.7479 -13.7952
+\i (00:00:15) trapsize 2523
+\i (00:00:24) zoom in 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom in 37.4591 -14.9558
+\i (00:00:24) trapsize 1261
+\i (00:00:25) zoom out 1 
+\i (00:00:25) setwindow pcb
+\i (00:00:25) zoom out 43.5391 -11.8779
+\i (00:00:25) trapsize 2523
+\i (00:00:25) zoom out 1 
+\i (00:00:25) setwindow pcb
+\i (00:00:25) zoom out 46.7180 -17.7309
+\i (00:00:25) trapsize 5046
+\i (00:01:13) save 
+\i (00:01:14) fillin yes 
+\i (00:01:14) placementedit 
+\i (00:01:14) save 
+\i (00:01:15) fillin yes 
+\i (00:01:15) placementedit 
+\i (00:01:15) save 
+\i (00:01:15) fillin yes 
+\i (00:01:15) placementedit 
+\i (00:01:15) save 
+\i (00:01:15) fillin yes 
+\i (00:01:15) placementedit 
+\i (00:01:16) save 
+\i (00:01:16) fillin yes 
+\i (00:01:16) placementedit 
+\i (00:01:16) save 
+\i (00:01:16) fillin yes 
+\i (00:01:16) placementedit 
+\i (00:01:17) save 
+\i (00:01:17) fillin yes 
+\i (00:01:17) placementedit 
+\i (00:01:17) save 
+\i (00:01:17) fillin yes 
+\i (00:01:17) placementedit 
+\i (00:01:17) save 
+\i (00:01:17) fillin yes 
+\i (00:01:18) placementedit 
+\i (00:01:18) save 
+\i (00:01:18) fillin yes 
+\i (00:01:18) placementedit 
+\i (00:01:19) zoom in 1 
+\i (00:01:19) setwindow pcb
+\i (00:01:19) zoom in 85.7718 -19.7492
+\i (00:01:19) trapsize 2523
+\i (00:01:20) zoom in 1 
+\i (00:01:20) setwindow pcb
+\i (00:01:20) zoom in 50.8051 -19.2446
+\i (00:01:20) trapsize 1261
+\i (00:01:21) zoom out 1 
+\i (00:01:21) setwindow pcb
+\i (00:01:21) zoom out 60.6947 -24.6183
+\i (00:01:21) trapsize 2523
+\i (00:01:21) zoom out 1 
+\i (00:01:21) setwindow pcb
+\i (00:01:21) zoom out 60.7956 -24.3659
+\i (00:01:21) trapsize 5046
+\i (00:01:21) zoom in 1 
+\i (00:01:21) setwindow pcb
+\i (00:01:21) zoom in 51.7134 -23.6596
+\i (00:01:21) trapsize 2523
+\i (00:01:21) zoom in 1 
+\i (00:01:21) setwindow pcb
+\i (00:01:21) zoom in 52.2684 -23.2559
+\i (00:01:21) trapsize 1261
+\i (00:01:22) zoom out 1 
+\i (00:01:22) setwindow pcb
+\i (00:01:22) zoom out 49.9978 -17.2011
+\i (00:01:22) trapsize 2523
+\i (00:01:23) zoom out 1 
+\i (00:01:23) setwindow pcb
+\i (00:01:23) zoom out 47.8787 -19.1184
+\i (00:01:23) trapsize 5046
+\i (00:01:23) zoom in 1 
+\i (00:01:23) setwindow pcb
+\i (00:01:23) zoom in 31.4297 -14.7790
+\i (00:01:23) trapsize 2523
+\i (00:01:26) exit 
+\t (00:01:26)     Journal end - Fri Jun 21 15:54:22 2024
