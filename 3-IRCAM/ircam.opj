@@ -1,6 +1,6 @@
 (ExpressProject "CameraOverUART"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[07/08/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[07/10/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -39,11 +39,11 @@
     (width_End "80")
     (BOM_Scope "0")
     (BOM_Mode "0")
-    (BOM_Report_File "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\GLPP2024.BOM")
+    (BOM_Report_File "F:\MyTemporary\Github\GLPP2024\3-IRCAM\bom.BOM")
     (BOM_Merge_Include "FALSE")
     (BOM_Property_Combine_7.0
-       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}")
-    (BOM_Header "Item\tQuantity\tReference\tPart\tPCBFootprint")
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}\t{JLC}")
+    (BOM_Header "Item\tQuantity\tReference\tPart\tPCBFootprint\tSZLCSZ")
     (BOM_Include_File "F:\MYTEMPORARY\GITHUB\GLPP2024\SCHEMATIC\GLPP2024.INC")
     (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
     (BOM_One_Part_Per_Line "FALSE")
@@ -103,7 +103,9 @@
       (DisplayName "compView.dat"))
     (File ".\allegro\ircam.swp"
       (Type "Report")
-      (DisplayName "IRCAM.swp")))
+      (DisplayName "IRCAM.swp"))
+    (File ".\bom.bom"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (Folder "PSpice Resources"
     (Folder "Simulation Profiles")
@@ -226,16 +228,30 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources" ".\ircam.dsn")
-      (Path "Design Resources" ".\ircam.dsn" "SCHEMATIC1")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\3-ircam\ircam.dsn")
+      (Path "Design Resources"
+         "f:\mytemporary\github\glpp2024\3-ircam\ircam.dsn" "SCHEMATIC1")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\ircam.dsn" "SCHEMATIC1" "8-INFRARED"))
+      (Select "Design Resources"
+         "f:\mytemporary\github\glpp2024\3-ircam\ircam.dsn" "SCHEMATIC1"
+         "8-INFRARED"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 613"))
-      (Tab 0)))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 477"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1071 24 495")
+        (Scroll "2811 967")
+        (Zoom "424")
+        (Occurrence "/"))
+      (Path "F:\MYTEMPORARY\GITHUB\GLPP2024\3-IRCAM\IRCAM.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "8-INFRARED")))
   (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_22.1\tools\capture\library")
   (ISPCBBASICLICENSE "false"))
