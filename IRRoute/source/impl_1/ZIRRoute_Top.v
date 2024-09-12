@@ -199,7 +199,8 @@ parameter CMD_GBL_RST=8'hFF;
 reg [7:0] CNT_i;
 reg [31:0] CNT_Delay;
 //Read Fixed Data at the beginning address 0x0 of HyperRAM, they're 96'h090110140323871986191320.
-reg [95:0] Temp_DR; 
+reg [95:0] Temp_DR;
+reg [31:0] Rd_Addr; 
 reg [7:0] Rd_Bytes;
 reg [7:0] Rd_Retry;
 reg Rd_Data_Valid;
@@ -213,7 +214,7 @@ if(!rst_n) begin
 	triState_DQS_DM<=1; //Output direction.
 	wrData_ADQ<=0;
 	RAM_CLK_i<=0; RAM_CE_i<=1; //CLK=0 at default, CE=1 at default.
-	Temp_DR<=0; Rd_Bytes<=0; Rd_Retry<=0; Rd_Data_Valid<=0;
+	Temp_DR<=0; Rd_Addr<=0; Rd_Bytes<=0; Rd_Retry<=0; Rd_Data_Valid<=0;
 
 	oLED1<=0; oLED2<=0;
 	//IO Multiplex
@@ -301,20 +302,20 @@ else begin
 			begin RAM_CLK_i<=0; CNT_i<=CNT_i+1; end
 /////////////////////////////////////////////////////////////////////////////////
 		10: //prepare rising edge data. //iAddress[31:24]
-			begin wrData_ADQ<=0; CNT_i<=CNT_i+1; end
+			begin wrData_ADQ<=Rd_Addr[31:24]; CNT_i<=CNT_i+1; end
 		11: //Pull up CLK. (2nd Rising Edge)
 			begin RAM_CLK_i<=1; CNT_i<=CNT_i+1; end
 		12: //Prepare falling edge data. //iAddress[23:16]
-			begin wrData_ADQ<=0; CNT_i<=CNT_i+1; end
+			begin wrData_ADQ<=Rd_Addr[23:16]; CNT_i<=CNT_i+1; end
 		13: //Pull down CLK. (2nd Falling Edge)
 			begin RAM_CLK_i<=0; CNT_i<=CNT_i+1; end
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 		14: //prepare rising edge data. //iAddress[15:8]
-			begin wrData_ADQ<=0; CNT_i<=CNT_i+1; end
+			begin wrData_ADQ<=Rd_Addr[15:8]; CNT_i<=CNT_i+1; end
 		15: //Pull up CLK. (3rd Rising Edge)
 			begin RAM_CLK_i<=1; CNT_i<=CNT_i+1; end
 		16: //Prepare data. //iAddress[7:0]
-			begin wrData_ADQ<=0; CNT_i<=CNT_i+1; end 
+			begin wrData_ADQ<=Rd_Addr[7:0]; CNT_i<=CNT_i+1; end 
 		17: //Pull down CLK. (3rd Falling Edge)  
 			begin RAM_CLK_i<=0; CNT_i<=CNT_i+1; end //Latency=1.
 	//////////////////////////////////////////////////////////////////////////////////////////////////
@@ -370,10 +371,20 @@ else begin
 			if(CNT_Delay==12-1) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
 			else begin CNT_Delay<=CNT_Delay+1; Temp_DR<={Temp_DR[87:0],8'd0}; CNT_i<=CNT_i-1; end
 /////////////////////////////////////////////////////////////////////////////////
-		29: //retry after 1s.
-			//begin CNT_i<=2; end 
-			//begin oLED2<=1; CNT_i<=6; end 
-			if(CNT_Delay==32'h2DC6C00) begin CNT_Delay<=0; CNT_i<=6; end
+		29: 
+			//Because maximum CE Low Width is 2uS. 
+			//And now I measured with an oscilloscope, reading 12 bytes each time takes up 1.6uS.
+			//so we repeat 1024bytes/12bytes=85.3333 times, so we read 1032/12=86.
+			if(Rd_Data_Valid) begin
+				if(Rd_Addr>=1024) begin Rd_Addr<=0; CNT_i<=CNT_i+1; end
+				else begin Rd_Addr<=Rd_Addr+12; CNT_i<=6; end //read next address.
+			end
+			else begin
+					CNT_i<=6; //previous failed, try one more time.
+			end
+////////////////////////////////////////////////////////////////////////////////
+		30: //retry after 5s.
+			if(CNT_Delay==32'hE4E1C00) begin CNT_Delay<=0; CNT_i<=6; end
 			else begin CNT_Delay<=CNT_Delay+1; end 
 	endcase
 end
