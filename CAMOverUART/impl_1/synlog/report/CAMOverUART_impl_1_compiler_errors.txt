@@ -1,3 +1,0 @@
-@E: CS187 :"F:\MyTemporary\Github\GLPP2024\CAMOverUART\source\impl_1\CAMOverUART.v":24:10:24:10|Expecting =
-@E::Verilog compiler failed
-

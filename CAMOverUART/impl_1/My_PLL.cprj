@@ -1,6 +1,0 @@
--ver "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v"
--lib pmi -vhd "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd"
--ver "F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_PLL/rtl/My_PLL.v"
--path "F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_PLL" "F:/MyTemporary/Github/GLPP2024/CAMOverUART"
--top My_PLL
--a "iCE40UP"

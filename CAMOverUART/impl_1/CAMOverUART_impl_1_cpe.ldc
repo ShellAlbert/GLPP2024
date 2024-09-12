@@ -1,6 +1,0 @@
-###File created by Lattice CPE. Do not modify.###
-set_hierarchy_separator /
-set_false_path -through [get_pins {taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/rst_i }]
-##Original File: F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_FIFO/constraints/My_FIFO.ldc
-set_false_path -through [get_pins {taskSchedule/buffering_FIFO/lscc_fifo_dc_inst/rp_rst_i }]
-##Original File: F:/MyTemporary/Github/GLPP2024/CAMOverUART/IPCores/My_FIFO/constraints/My_FIFO.ldc

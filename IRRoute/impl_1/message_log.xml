@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Synthesis">
+        <Message>
+            <ID>35001786</ID>
+            <Severity>1</Severity>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM9</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM8</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM7</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM6</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM3</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>TRIM0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935050</ID>
+            <Severity>16</Severity>
+            <Dynamic>I</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd(4): </Dynamic>
+            <Dynamic>components</Dynamic>
+            <Navigation>f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zirroute_top.v(4): </Dynamic>
+            <Dynamic>ZIRRoute_Top</Dynamic>
+            <Navigation>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zirroute_top.v</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC</Dynamic>
+            <Navigation>F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zresetgenerator.v(4): </Dynamic>
+            <Dynamic>ZResetGenerator</Dynamic>
+            <Navigation>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zresetgenerator.v</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zhyperrammux_b.v(2): </Dynamic>
+            <Dynamic>ZHyperRAMMux_B</Dynamic>
+            <Navigation>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zhyperrammux_b.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zuart_tx.v(3): </Dynamic>
+            <Dynamic>ZUART_Tx(Freq_divider=24)</Dynamic>
+            <Navigation>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zuart_tx.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zirsensor_controller.v(2): </Dynamic>
+            <Dynamic>ZIRSensor_Controller</Dynamic>
+            <Navigation>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zirsensor_controller.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zuart_tx.v(3): </Dynamic>
+            <Dynamic>ZUART_Tx</Dynamic>
+            <Navigation>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zuart_tx.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zircfg_data.v(2): </Dynamic>
+            <Dynamic>ZIRCfg_Data</Dynamic>
+            <Navigation>f:/mytemporary/github/glpp2024/irroute/source/impl_1/zircfg_data.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+    </Task>
+</BaliMessageLog>

@@ -1,4 +1,0 @@
-###File created by Lattice CPE. Do not modify.###
-set_hierarchy_separator /
-create_clock -name {clk_48MHz} -period 20.8333333333333 [get_nets clk_48MHz]
-##Original File: F:/MyTemporary/Github/GLPP2024/RevealTest/clock_constraints.sdc
