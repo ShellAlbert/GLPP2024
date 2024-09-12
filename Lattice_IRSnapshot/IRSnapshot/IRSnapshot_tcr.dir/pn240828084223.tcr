@@ -1,0 +1,5 @@
+#Start recording tcl command: 8/28/2024 08:42:15
+#Project Location: F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot; Project name: IRSnapshot
+prj_open "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rdf"
+prj_close
+#Stop recording: 8/28/2024 08:42:23

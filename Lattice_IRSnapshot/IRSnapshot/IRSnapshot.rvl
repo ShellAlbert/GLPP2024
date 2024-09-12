@@ -1,0 +1,20 @@
+<Project ModBy="Inserter" Date="2024-08-26" SigType="0" Name="F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Verilog HDL" JTAG="soft" DeviceName="iCE40UP5K" DesignName="IRSnapshot" Synthesis="synplify" DeviceFamily="iCE40UP"/>
+    <Core ID="0" Insert="1" InsertDataset="0" Reveal_sig="573876566" Name="ZIRSnapshot_LA0">
+        <Setting>
+            <Clock EnableClk_Pri="0" SampleEnable="0" SampleClk="clk_100MHz" EnableClk=""/>
+            <TraceBuffer hasTimeStamp="0" BufferDepth="256" IncTrigSig="1" BitTimeStamp="0" Implementation="0"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event MaxEventCnt="8" CntEnable="0"/>
+            <TrigOut TrigOutNet="reveal_debug_ZIRSnapshot_LA0_net" EnableTrigOut="0" TrigOutNetType="0" Polarity="0" MinPulseWidth="0"/>
+            <DistRAM Disable="1"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trigger>
+                <TU ID="1" Sig="UART_Tx_Done," Type="0" Serialbits="0"/>
+                <TE ID="1" Resource="0" MaxSequence="2" MaxEvnCnt="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

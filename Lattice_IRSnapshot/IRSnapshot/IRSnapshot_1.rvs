@@ -1,0 +1,15 @@
+<Project Name="F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot_1.rvl" ModBy="Inserter" Date="2024-08-23">
+    <Core Name="ZIRSnapshot_LA0">
+        <Setting>
+            <Capture NumTrigsCap="" SamplesPerTrig="1"/>
+            <Event CntEnableRun="" EventCnt=""/>
+            <TrigSetting TURadix="0" PreTrgSamples="" AND_ALL="" PostTrgSamples=""/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trigger>
+                <TU ID="1" Operator="0" Value="000" Name="TU1" Index="1" Radix="0"/>
+                <TE ID="1" Expression="TU1" Enable="1" Name="TE1" Index="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

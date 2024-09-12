@@ -1,0 +1,195 @@
+----------------------------------------------------------------------
+Report for cell ZIRStore_Top.TECH
+Register bits:  212 of 5280 (4.015%)
+I/O cells:      9
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               BB_B         9          100.0
+                              EBR_B         4          100.0
+                               CCU2        84          100.0
+                            FD1P3XZ       212          100.0
+                         HSOSC_CORE         1          100.0
+                                INV         1          100.0
+                              IOL_B        16          100.0
+                               LUT4       659          100.0
+                                 OB         9          100.0
+                              PLL_B         1          100.0
+SUB MODULES
+               ZIRSensor_Controller         1
+                    ZIRStore_Bottom         1
+                       ZOctalRAMCfg         1
+                  ZOctalRAMOperator         1
+                               ZPLL         1
+ZPLL_ipgen_lscc_pll(DIVR="0",DIVF="15",DIVQ="4",FILTER_RANGE="4",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")         1
+                            ZRAM_DP         1
+ZRAM_DP_ipgen_lscc_ram_dp(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",INIT_DATA_TYPE=1,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_main(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                         ZSyncReset         1
+                           ZUART_Tx         1
+          ZUART_Tx(Freq_divider=24)         1
+                              TOTAL      1012
+----------------------------------------------------------------------
+Report for cell ZIRStore_Bottom.v1
+Instance Path : ic_Bottom
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               BB_B         9          100.0
+                              EBR_B         4          100.0
+                                FA2        84          100.0
+                            FD1P3XZ       210           99.1
+                              IOL_B        16          100.0
+                               LUT4       641           97.3
+SUB MODULES
+               ZIRSensor_Controller         1
+                       ZOctalRAMCfg         1
+                  ZOctalRAMOperator         1
+                            ZRAM_DP         1
+ZRAM_DP_ipgen_lscc_ram_dp(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",INIT_DATA_TYPE=1,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_main(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                           ZUART_Tx         1
+          ZUART_Tx(Freq_divider=24)         1
+                              TOTAL       976
+----------------------------------------------------------------------
+Report for cell ZRAM_DP.v1
+Instance Path : ic_Bottom.ic_RAM_DP
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         4          100.0
+SUB MODULES
+ZRAM_DP_ipgen_lscc_ram_dp(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",INIT_DATA_TYPE=1,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_main(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell ZRAM_DP_ipgen_lscc_ram_dp(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",INIT_DATA_TYPE=1,BYTE_ENABLE=0,BYTE_SIZE=8,BYTE_WIDTH=1).v1
+Instance Path : ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         4          100.0
+SUB MODULES
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_main(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",BYTE_SIZE=8,BYTE_WIDTH=1)         1
+                              TOTAL         9
+----------------------------------------------------------------------
+Report for cell ZRAM_DP_ipgen_lscc_ram_dp_main(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",WADDR_DEPTH=1024,WADDR_WIDTH=10,WDATA_WIDTH=16,RADDR_DEPTH=1024,RADDR_WIDTH=10,RDATA_WIDTH=16,REGMODE="noreg",INIT_FILE_FORMAT="hex",BYTE_SIZE=8,BYTE_WIDTH=1).v1
+Instance Path : ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         4          100.0
+SUB MODULES
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0)         1
+ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01100,POSy=32'b0)         1
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01100,POSy=32'b0).v1
+Instance Path : ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1           25.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b01000,POSy=32'b0).v1
+Instance Path : ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1           25.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0100,POSy=32'b0).v1
+Instance Path : ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1           25.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell ZRAM_DP_ipgen_lscc_ram_dp_core(MEM_ID="ZRAM_DP",MEM_SIZE="16,1024",FAMILY="iCE40UP",DATA_WIDTH_W=32'b0100,DATA_WIDTH_R=32'b0100,REGMODE="noreg",BYTE_ENABLE=1'b0,POSx=32'b0,POSy=32'b0).v1
+Instance Path : ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1           25.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell ZOctalRAMOperator.v1
+Instance Path : ic_Bottom.ic_OctalRAM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               BB_B         9          100.0
+                                FA2        23           27.4
+                            FD1P3XZ        76           35.8
+                              IOL_B        16          100.0
+                               LUT4       293           44.5
+SUB MODULES
+                       ZOctalRAMCfg         1
+                              TOTAL       418
+----------------------------------------------------------------------
+Report for cell ZOctalRAMCfg.v1
+Instance Path : ic_Bottom.ic_OctalRAM.ic_cfg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        13            2.0
+                              TOTAL        13
+----------------------------------------------------------------------
+Report for cell ZIRSensor_Controller.v1
+Instance Path : ic_Bottom.ic_IRSensor_Controller
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         1            0.2
+SUB MODULES
+                           ZUART_Tx         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ZUART_Tx.v1
+Instance Path : ic_Bottom.ic_IRSensor_Controller.ic_IR_UART_Tx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         1            0.2
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell ZUART_Tx(Freq_divider=24).v1
+Instance Path : ic_Bottom.ic_DBG_UART_Tx
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        19           22.6
+                            FD1P3XZ        35           16.5
+                               LUT4        65            9.9
+                              TOTAL       119
+----------------------------------------------------------------------
+Report for cell ZPLL.v1
+Instance Path : ic_PLL
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+SUB MODULES
+ZPLL_ipgen_lscc_pll(DIVR="0",DIVF="15",DIVQ="4",FILTER_RANGE="4",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell ZPLL_ipgen_lscc_pll(DIVR="0",DIVF="15",DIVQ="4",FILTER_RANGE="4",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000").v1
+Instance Path : ic_PLL.lscc_pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell ZSyncReset.v1
+Instance Path : ic_SyncRst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         2            0.9
+                               LUT4         1            0.2
+                              TOTAL         3

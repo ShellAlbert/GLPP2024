@@ -1,0 +1,54 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03LR-1
+Install: F:\MySoftware\Lattice\radiant\synpbase
+OS: Windows 10 or later
+Hostname: DESKTOP-R1EC6M9
+
+Implementation : impl_1
+
+# Written on Mon Sep  9 11:26:55 2024
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "F:\MyTemporary\Github\GLPP2024\IRStore\impl_1\IRStore_impl_1_cpe.ldc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start            Requested     Requested     Clock                          Clock                Clock
+Level     Clock            Frequency     Period        Type                           Group                Load 
+----------------------------------------------------------------------------------------------------------------
+0 -       clk_48MHz        48.0 MHz      20.833        declared                       default_clkgroup     0    
+1 .         clk_Global     48.0 MHz      20.833        generated (from clk_48MHz)     default_clkgroup     202  
+1 .         oPSRAM_CLK     48.0 MHz      20.833        generated (from clk_48MHz)     default_clkgroup     0    
+                                                                                                                
+0 -       System           200.0 MHz     5.000         system                         system_clkgroup      0    
+================================================================================================================
+
+
+Clock Load Summary
+******************
+
+               Clock     Source                                            Clock Pin                 Non-clock Pin     Non-clock Pin               
+Clock          Load      Pin                                               Seq Example               Seq Example       Comb Example                
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clk_48MHz      0         my_HSOSC.CLKHF(HSOSC)                             -                         -                 -                           
+clk_Global     202       ic_PLL.lscc_pll_inst.u_PLL_B.OUTGLOBAL(PLL_B)     ic_Bottom.EBR_Rd_En.C     -                 ic_Bottom.un1_iClk.I[0](inv)
+oPSRAM_CLK     0         -                                                 -                         -                 -                           
+                                                                                                                                                   
+System         0         -                                                 -                         -                 -                           
+===================================================================================================================================================

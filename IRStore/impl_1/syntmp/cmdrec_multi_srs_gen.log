@@ -1,0 +1,7 @@
+F:\MySoftware\Lattice\radiant\synpbase\bin64\syn_nfilter.exe  -link  -top  ZIRStore_Top  -multisrs  F:\MyTemporary\Github\GLPP2024\IRStore\impl_1\synwork\IRStore_impl_1_comp.srs  -osyn  F:\MyTemporary\Github\GLPP2024\IRStore\impl_1\synwork\IRStore_impl_1_mult.srs  -log  F:\MyTemporary\Github\GLPP2024\IRStore\impl_1\synlog\IRStore_impl_1_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\MySoftware\Lattice\radiant\synpbase\bin64\syn_nfilter.exe -link -top ZIRStore_Top -multisrs ..\synwork\IRStore_impl_1_comp.srs -osyn ..\synwork\IRStore_impl_1_mult.srs -log ..\synlog\IRStore_impl_1_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:..\synwork\irstore_impl_1_comp.srs|io:i|time:1725852413|size:67575|exec:0|csum:6E1CB05752EBD70519B6CC9AE4148756
+file:..\synwork\irstore_impl_1_mult.srs|io:o|time:1725852414|size:4290|exec:0|csum:
+file:..\synlog\irstore_impl_1_multi_srs_gen.srr|io:o|time:1725852414|size:1056|exec:0|csum:
+file:..\..\..\..\..\..\mysoftware\lattice\radiant\synpbase\bin64\syn_nfilter.exe|io:i|time:1685564428|size:10600960|exec:1|csum:5D87BCE07D7E863695AC28DD65895E86

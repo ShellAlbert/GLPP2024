@@ -42,6 +42,9 @@
         <Source name="source/impl_1/ZUARTCommunication.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
         <Source name="source/PhysicalIO.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>

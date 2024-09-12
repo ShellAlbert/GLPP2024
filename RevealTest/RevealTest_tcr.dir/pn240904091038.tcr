@@ -1,0 +1,147 @@
+#Start recording tcl command: 9/4/2024 07:28:24
+#Project Location: F:/MyTemporary/Github/GLPP2024/RevealTest; Project name: RevealTest
+prj_create -name "RevealTest" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/ZRevealTest.v"
+prj_run Synthesis -impl impl_1
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/phypins.pdc"
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/phypins.pdc"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+rvl_new_project
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_add_trace  {oLED1}
+rvl_add_trace  {oLED2}
+rvl_close_project -force
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+rvl_new_project
+rvl_add_trace  {clk_48MHz}
+rvl_del_trace {clk_48MHz}
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_add_trace  {{CNT[15:0]}}
+rvl_add_trace  {oLED1}
+rvl_add_trace  {oLED2}
+rvl_set_traceoptn BufferDepth=64
+rvl_set_traceoptn BufferDepth=256
+rvl_set_tu -name TU1 -set_sig {oLED1 oLED2 }
+rvl_set_tu -name TU1 -val 11
+rvl_set_te -expression TU1 TE1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_close_project -force
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl"
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+rva_new_project -rva "untitled" -cable USB2 -rvl "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl" -dev "" -port 0 -xcf ""
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_run
+rva_set_core -name "ZRevealTest_LA0" -run off
+rva_set_core -name "ZRevealTest_LA0" -run on
+rva_save_project "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_close_controller
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_del_trace {oLED2}
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_set_traceoptn BufferDepth=512
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_set_traceoptn CaptureMode=multiple
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+prj_run Export -impl impl_1
+rvl_close_project -force
+rva_open_project "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_set_trigoptn -samples 32
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_close_controller
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_add_trace  {oLED2}
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_close_project -force
+prj_remove_source "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl"
+rvl_new_project
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_add_trace  {oLED1}
+rvl_add_trace  {oLED2}
+rvl_add_trace  {{CNT[15:0]}}
+rvl_set_tu -name TU1 -set_sig {{CNT[15:0]} oLED1 oLED2 }
+rvl_set_tu -name TU1 -op .RE.
+rvl_set_te -expression TU1 TE1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+prj_add_source -exclude "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl"
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl"
+prj_run Export -impl impl_1
+rvl_close_project -force
+prj_run Synthesis -impl impl_1
+prj_set_impl_opt -impl "impl_1" "top" "ZRevealTest"
+prj_run Synthesis -impl impl_1
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_close_project
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+rva_open_project "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_close_controller
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_close_project -force
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/clock_constraints.sdc"
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/RevealTest/clock_constraints.sdc"
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_close_project -force
+prj_run Export -impl impl_1
+prj_remove_source "F:/MyTemporary/Github/GLPP2024/RevealTest/untitled.rva"
+rva_new_project -rva "mydebug" -cable USB2 -rvl "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl" -dev "" -port 0 -xcf ""
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/mydebug.rva"
+rva_set_trigoptn -position center
+rva_set_trigoptn -position pre
+rva_set_trigoptn -position center
+rva_run
+rva_close_controller
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_close_project -force
+prj_add_source "F:/MyTemporary/Github/GLPP2024/RevealTest/ZPLL/ZPLL.ipx"
+prj_run Export -impl impl_1
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_close_project -force
+prj_disable_source "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl"
+prj_run Export -impl impl_1
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl"
+rvl_open_project F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+rvl_del_trace {oLED1}
+rvl_del_trace {oLED2}
+rvl_set_traceoptn SampleClk={}
+rvl_set_traceoptn SampleClk={}
+rvl_set_traceoptn SampleClk=clk_Global
+rvl_add_trace  {oLED1}
+rvl_add_trace  {oLED2}
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/RevealTest/RevealTest.rvl
+prj_run Export -impl impl_1
+rvl_close_project -force
+prj_run Synthesis -impl impl_1
+prj_run Export -impl impl_1
+rva_open_project "F:/MyTemporary/Github/GLPP2024/RevealTest/mydebug.rva"
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/RevealTest/mydebug.rva"
+rva_close_controller
+prj_run Export -impl impl_1
+rva_open_project "F:/MyTemporary/Github/GLPP2024/RevealTest/mydebug.rva"
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/RevealTest/mydebug.rva"
+rva_close_controller
+rva_open_project "F:/MyTemporary/Github/GLPP2024/RevealTest/mydebug.rva"
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/RevealTest/mydebug.rva"
+#Stop recording: 9/4/2024 09:10:38

@@ -114,7 +114,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	char buffer_string[32];
+	char buffer_string[128];
 	int iSampleCnt=0;
   /* USER CODE END 1 */
 
@@ -148,6 +148,14 @@ int main(void)
 	//            ---- MCU LPUART1. (Photo-voltaic Cell: Power Supply Unit)
 	//In TMR project, route Fiber_UART to MCU LPUART.
 	HAL_GPIO_WritePin(GPIOA, ROUTE_A0_Pin | ROUTE_A1_Pin, GPIO_PIN_RESET);
+
+	//Using PSU 1.8V to 3.3V Level Translator to dump data from Lattice 1.8V to TTL-USB(3.3V).
+//	HAL_GPIO_WritePin(GPIOA, ROUTE_A1_Pin, GPIO_PIN_SET);
+//	HAL_GPIO_WritePin(GPIOA, ROUTE_A0_Pin, GPIO_PIN_RESET);
+
+
+	//IAM_ALIVE=1.
+	HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_SET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -155,14 +163,12 @@ int main(void)
 	//Step1: SDI (always keeps HIGH).
 	uint16_t SDI_Data1 = 0xFFFF;
 	//Transmit an amount of data in blocking mode.
-	//HAL_SPI_Transmit(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout)
 	HAL_SPI_Transmit(&hspi2, (uint8_t*) &SDI_Data1, 1, 0xFFFF);
 	HAL_Delay(1);
 
 	//Enable Tx Power.
 	HAL_GPIO_WritePin(TX_EN_GPIO_Port, TX_EN_Pin, GPIO_PIN_RESET);
-	//WORKING_MODE=0: Sample1 -> Transmit1 -> Sample2 -> Transmit2 ... ...
-	//WORKING_MODE=1: Sample 1024 Points -> Transmit -> Sample 1024 Points -> Transmit ... ...
+
 #if 1
 	while(1)
 	{
@@ -199,8 +205,16 @@ int main(void)
 		//gSPI_WrPtr=(gSPI_WrPtr>=1023)?(0):(gSPI_WrPtr++); //Loop buffer to avoid overflow.
 		gSPI_Data=hspi2.Instance->DR; //Read
 
-		//Using sprintf().
-		sprintf((char*)buffer_string,"$%d;",gSPI_Data);
+		//Test Code.
+//		buffer_string[0]=0x20;
+//		buffer_string[1]=0x24;
+//		buffer_string[2]=0x08;
+//		buffer_string[3]=0x06;
+//		buffer_string[4]=0x16;
+//		buffer_string[5]=0x33;
+//		buffer_string[6]=0x11;
+		iSampleCnt++;
+		sprintf((char*)buffer_string,"%s, ADC:%d, CNT: %d\r\n","Technology Leading The World",gSPI_Data,iSampleCnt);
 		for(i=0;i<strlen(buffer_string);i++)
 		{
 			hlpuart1.Instance->TDR=buffer_string[i];
@@ -208,7 +222,19 @@ int main(void)
 			while(!(hlpuart1.Instance->ISR & USART_ISR_TXE))
 			{}
 		}
+		HAL_Delay(10);
 
+		/*
+		//Using sprintf().
+		//sprintf((char*)buffer_string,"$%d;",gSPI_Data);
+		for(i=0;i<strlen(buffer_string);i++)
+		{
+			hlpuart1.Instance->TDR=buffer_string[i];
+			//Waiting for Transmit Data Register Empty.
+			while(!(hlpuart1.Instance->ISR & USART_ISR_TXE))
+			{}
+		}
+		*/
 #if 0
 		//Transmit $(0x24) Symbol.
 		hlpuart1.Instance->TDR='$';
@@ -237,297 +263,6 @@ int main(void)
 	}
 #endif
 
-#if 0
-	//We sample data continuously to fill buffer, then send data out to find out where the bottleneck is.
-	gSPI_WrPtr=0;
-	gSPI_RdPtr=0;
-	do {
-		//Step2: Pull up CNV to generate a rising edge.
-		//HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_SET);
-		GPIOB->BSRR |= ADC_CNV_Pin; //Using Register Operation replace of HAL library.
-
-		//Step3: Waiting ADC Conversion time:>=9.5uS.
-		//My_Delay_us(5); //HAL_Delay(1) Depreciated, it takes up much time.
-		//__NOP(); __NOP(); __NOP(); __NOP(); __NOP(); //2.2uS*5=11uS.
-		//My_NOP_Delay(5);
-
-		//Step4:Pull-down CNV, start to read data.
-		//HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_RESET);
-		GPIOB->BRR |= ADC_CNV_Pin; //Using Register Operation replace of HAL library.
-		//My_Delay_us(1); //HAL_Delay(1) Depreciated, it takes up much time.
-		//__NOP();
-		//My_NOP_Delay(1);
-
-		//Step5: Read Data In.
-		//HAL_SPI_Receive_IT(&hspi2,(uint8_t*)gBuffer_SPI,1);
-		//HAL_SPI_TransmitReceive_IT(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)
-		//HAL_SPI_TransmitReceive_IT(&hspi2, ///<
-		//		(uint8_t*) &SDI_Data1, ///<
-		//		(uint8_t*) &gSPI_Buffer1[gSPI_WrPtr1++], ///<
-		//		2);
-		hspi2.Instance->DR=0xFFFF; //MOSI keeps HIGH while reading MISO.
-		while(!(hspi2.Instance->SR & SPI_FLAG_RXNE))
-		{
-			//Waiting for Receive Buffer Not Empty.
-		}
-		gSPI_Buffer[gSPI_WrPtr]=hspi2.Instance->DR; //Read
-		//break do{}while(1) if sample counts reaches 1024.
-		if (gSPI_WrPtr >= (1024 - 1)) {
-			break;
-		}else{
-			gSPI_WrPtr++;
-		}
-	} while (1);
-
-	//Send data out via LPUART1, check SIN wave in Serial Plotter to see if we get a perfect SIN wave.
-	for (uint16_t i = 0; i <= (1024-1); i++) {
-		//Transmit $(0x24) Symbol.
-		hlpuart1.Instance->TDR='$';
-		//Waiting for Transmit Data Register Empty.
-		while(!(hlpuart1.Instance->ISR & USART_ISR_TXE))
-		{}
-
-		//Transmit 16-bits ADC Data - HIGH Byte.
-		hlpuart1.Instance->TDR=(gSPI_Buffer[gSPI_RdPtr]>>8);
-		//Waiting for Transmit Data Register Empty.
-		while(!(hlpuart1.Instance->ISR & USART_ISR_TXE))
-		{}
-
-		//Transmit 16-bits ADC Data - LOW Byte.
-		hlpuart1.Instance->TDR=(gSPI_Buffer[gSPI_RdPtr]&0x00FF);
-		//Waiting for Transmit Data Register Empty.
-		while(!(hlpuart1.Instance->ISR & USART_ISR_TXE))
-		{}
-
-		//Transmit !(0x21) Symbol.
-		hlpuart1.Instance->TDR='!';
-		//Waiting for Transmit Data Register Empty.
-		while(!(hlpuart1.Instance->ISR & USART_ISR_TXE))
-		{}
-		gSPI_RdPtr++;
-	}
-#endif
-
-	//Stop Here.
-	 //HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_SET);
-	//////////////////////////////////////////////////////////////////////////////////////////
-#if 0
-	while (1) {
-		uint8_t buffer_format[32]; //Maximum value: strlen($65535;)=8
-		//gSPI_WrPtr1 = 0;
-		//		do {
-		//Step2: Pull up CNV to generate a rising edge.
-		//HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_SET);
-		GPIOB->BSRR |= ADC_CNV_Pin; //Using Register Operation replace of HAL library.
-
-		//Step3: Waiting ADC Conversion time:>=9.5uS.
-		//My_Delay_us(5); //HAL_Delay(1) Depreciated, it takes up much time.
-		__NOP();
-		__NOP();
-		__NOP();
-		__NOP();
-		__NOP(); //2.2uS*5=11uS.
-		//My_NOP_Delay(5);
-
-		//Step4:Pull-down CNV, start to read data.
-		//HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_RESET);
-		GPIOB->BRR |= ADC_CNV_Pin; //Using Register Operation replace of HAL library.
-		//My_Delay_us(1); //HAL_Delay(1) Depreciated, it takes up much time.
-		//__NOP();
-		My_NOP_Delay(1);
-
-		//Only receive single 16-bits.
-		//HAL_SPI_Receive_IT(&hspi2,(uint8_t*)gBuffer_SPI,1);
-		//HAL_SPI_TransmitReceive_IT(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)
-		HAL_SPI_TransmitReceive_IT(&hspi2, ///<
-				(uint8_t*) &SDI_Data1, ///<
-				(uint8_t*) &gSPI_Data1/*gSPI_Buffer1[gSPI_WrPtr1++]*/, ///<
-				2);
-
-		//Here we can't start next sample & transfer immediately.
-		//we can't break the data output transfer progress, until we receive Interrupt.
-		while (!gSPI_RxDone) {
-		}
-		gSPI_RxDone = 0;
-
-		//Un-comment this line will cause abnormal SIN wave.
-		//Enable this line to keep enough tDIS safe time.
-		//My_Delay_us(1);
-		__NOP();
-		//My_NOP_Delay(1);
-
-		//			if (gSPI_WrPtr1 >= (1024 - 1)) {
-		//				break;
-		//			}
-		//		} while (1);
-
-		//Send data out via LPUART1.
-		//		gSPI_RdPtr1 = 0;
-		//		for (i = 0; i < (1024 - 1); i++) {
-		//			uint8_t buffer_format[32]; //Maximum value: strlen($65535;)=8
-		//			sprintf((char*) buffer_format, "$%d;", gSPI_Buffer1[gSPI_RdPtr1++]);
-		//			HAL_UART_Transmit(&hlpuart1, ///<
-		//					(const uint8_t*) buffer_format, ///<
-		//					strlen((char*) buffer_format), 0xFFFF);
-		//
-		//		}
-		sprintf((char*) buffer_format, "$%d;", gSPI_Data1);
-		HAL_UART_Transmit(&hlpuart1, ///<
-				(const uint8_t*) buffer_format, ///<
-				strlen((char*) buffer_format), 0xFFFF);
-		//Stop Here to Check data with Serial Plotter to see if we get a perfect SIN wave.
-		//gSPI_RdPtr1 = 0;
-	}
-#if 0
-	while(1){
-		//CAUTION HERE! So weird, What the fucking is going on???
-		//Two HAL_GPIO_WritePin() lines take up 4uS, one line takes 2uS!
-
-		//HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(GPIOB, TEST_SIG_Pin, GPIO_PIN_SET);
-		//Alarming Here, Function Calling will take additional time.
-		//Likely, __NOP() takes up 2.2us, but My_NOP_Delay(1) takes up 3.8uS.
-		__NOP();
-
-		//HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(GPIOB, TEST_SIG_Pin, GPIO_PIN_RESET);
-		__NOP();
-	}
-#endif
-#endif
-
-#if 0 //Ping-Pong operation.
-	do {
-		if (gPingPong_Flag) {
-			/////////////////////////////////////////////////////
-			//Write to gSPI_Data1, Read from gSPI_Data2.
-			/////////////////////////////////////////////////////
-
-			//3-wires mode.
-			//Step2: Pull up CNV to generate a rising edge.
-			HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_SET);
-
-			//Step3: Waiting ADC Conversion time:>=9.5uS.
-			My_Delay_us(5); //HAL_Delay(1) Depreciated, it takes much time.
-			//Here I use sprintf() to replicate the effect of My_Delay_us().
-			//sprintf((char*) buffer_format, "$%d;", gSPI_Data2);
-			//HAL_UART_Transmit_IT(&hlpuart1, ///<
-			//		(const uint8_t*) buffer_format, ///<
-			//		strlen((char*) buffer_format));
-
-			//Step4:Pull-down CNV, start to read data.
-			HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_RESET);
-			My_Delay_us(1); //HAL_Delay(1) Depreciated, it takes much time.
-
-			//Only receive single 16-bits.
-			//HAL_SPI_Receive_IT(&hspi2,(uint8_t*)gBuffer_SPI,1);
-			//HAL_SPI_TransmitReceive_IT(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)
-			HAL_SPI_TransmitReceive_IT(&hspi2, ///<
-					(uint8_t*) &SDI_Data1, ///<
-					(uint8_t*) &gSPI_Buffer1[gSPI_WrPtr1++], ///<
-					2);
-			//Actually we can't start next sample & transfer immediately,
-			//we can't break the data output progress,
-			//until we get an Transfer Done Interrupt.
-			//ADC starts conversion with a rising edge of CNV.
-
-		} else {
-			/////////////////////////////////////////////////////////
-			//Write to gSPI_Data2, Read from gSPI_Data1.
-			/////////////////////////////////////////////////////////
-
-			//Step2: Pull up CNV to generate a rising edge.
-			HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_SET);
-
-			//Step3: Waiting ADC Conversion time:>=9.5uS.
-			My_Delay_us(5); //HAL_Delay(1) Depreciated, it takes much time.
-			//Here I use sprintf() to replicate the effect of My_Delay_us().
-			//sprintf((char*) buffer_format, "$%d;", gSPI_Data1);
-			//HAL_UART_Transmit_IT(&hlpuart1, ///<
-			//		(const uint8_t*) buffer_format, ///<
-			//		strlen((char*) buffer_format));
-
-			//Step4:Pull-down CNV, start to read data.
-			HAL_GPIO_WritePin(GPIOB, ADC_CNV_Pin, GPIO_PIN_RESET);
-			My_Delay_us(1); //HAL_Delay(1) Depreciated, it takes much time.
-
-			//Only receive single 16-bits.
-			//HAL_SPI_Receive_IT(&hspi2,(uint8_t*)gBuffer_SPI,1);
-			//HAL_SPI_TransmitReceive_IT(SPI_HandleTypeDef *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)
-			HAL_SPI_TransmitReceive_IT(&hspi2, ///<
-					(uint8_t*) &SDI_Data1, ///<
-					(uint8_t*) &gSPI_Buffer2[gSPI_WrPtr2++], ///<
-					2);
-		}
-		//switching buffer dynamically.
-		gPingPong_Flag = !gPingPong_Flag;
-		if(gSPI_WrPtr1==1020) //Buffer was filled full, dump data out via LPUART1.
-		{
-			uint16_t i;
-			gSPI_RdPtr1=0;
-			gSPI_RdPtr2=0;
-			for(i=0;i<1020;i++)
-			{
-				uint8_t buffer_format[32]; //Maximum value: strlen($65535;)=8
-				sprintf((char*) buffer_format, "$%d;", gSPI_Buffer1[gSPI_RdPtr1++]);
-				HAL_UART_Transmit_IT(&hlpuart1, ///<
-						(const uint8_t*) buffer_format, ///<
-						strlen((char*) buffer_format));
-				sprintf((char*) buffer_format, "$%d;", gSPI_Buffer2[gSPI_RdPtr2++]);
-				HAL_UART_Transmit_IT(&hlpuart1, ///<
-						(const uint8_t*) buffer_format, ///<
-						strlen((char*) buffer_format));
-			}
-			gSPI_RdPtr1=0;
-			gSPI_RdPtr2=0;
-		}
-
-
-#if 0
-		//Dump data out via LPUART1.
-		if (gUART_TxDone) {
-
-			gUART_TxDone = 0; //Reset flag.
-			//HAL_UART_Transmit(&hlpuart1, (const uint8_t*) &gSPI_Data,2,0xFFFF);
-			sprintf((char*) buffer_format, "$%d;", gSPI_Data2);
-			HAL_UART_Transmit_IT(&hlpuart1, ///<
-					(const uint8_t*) buffer_format, ///<
-					strlen((char*) buffer_format));
-		}
-#endif
-	} while (1);
-#endif
-
-#if 0
-	//https://github.com/CieNTi/serial_port_plotter
-	//We use this open-source project to draw realtime curve on PC screen.
-	//So we send data with expected format.
-	//pc.printf("$%d %d;", rawData, filteredData);
-
-	//HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout)
-	//sprintf((char*)buffer_string,"$%d %d;",gBuffer_SPI[0],gBuffer_SPI[0]);
-	//Turn PMOS Switch On to Enable Tx Power before sending.
-	HAL_GPIO_WritePin(GPIOB, TX_EN_Pin, GPIO_PIN_RESET);
-	for (i = 0; i < 1024; i++) {
-		//Maximum value: strlen($65535;)=8
-		uint8_t buffer_string[32];
-		sprintf((char*) buffer_string, "$%d;", gSPI_Buffer[i]);
-		HAL_UART_Transmit(&hlpuart1, (const uint8_t*) buffer_string,
-				strlen((char*) buffer_string), 0xFFFF);
-		//HAL_UART_Transmit(&hlpuart1,"Hello\r\n",strlen("Hello\r\n"),0xFFFF);
-	}
-	//Turn PMOS Switch Off to Disable Tx Power after sending.
-	HAL_Delay(1);
-	HAL_GPIO_WritePin(GPIOB, TX_EN_Pin, GPIO_PIN_SET);
-
-	//LED Flash Indicator.
-	/*
-		 HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_SET);
-		 HAL_Delay(100);
-		 HAL_GPIO_WritePin(GPIOB, IAM_ALIVE_Pin, GPIO_PIN_RESET);
-		 HAL_Delay(100);
-	 */
-#endif
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

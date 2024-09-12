@@ -46,13 +46,30 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Mar  5 10:30:15 2024
+Thu Aug  8 17:35:34 2024
 
 
 Command: bitgen -w -freq 0 -gui CAMOverUART_impl_1.udb 
 
 Running DRC.
-DRC detected 0 errors and 0 warnings.
+WARNING <71001209> - Disconnected tail of routing path on signal ioIR_Data1_UP_UART_Tx_c from driver R20C33_JPADDIA_I3C tail R20C33_JPADDIA_I3C.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data2_UP_UART_Rx_c from driver R20C33_JPADDIB_I3C tail R20C33_JPADDIB_I3C.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data4_c from driver R19C33_JPADDIB_PIO tail R19C33_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal ioIR_Data5_CFG_UART_Tx_c from driver R17C33_JPADDIA_PIO tail R17C33_JPADDIA_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data6_CFG_UART_Rx_c from driver R17C33_JPADDIB_PIO tail R17C33_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data7_c from driver R14C33_JPADDIA_PIO tail R14C33_JPADDIA_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data8_c from driver R14C33_JPADDIB_PIO tail R14C33_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data9_c from driver R10C33_JPADDIA_PIO tail R10C33_JPADDIA_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data10_c from driver R10C33_JPADDIB_PIO tail R10C33_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data11_c from driver R9C33_JPADDIA_PIO tail R9C33_JPADDIA_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data12_c from driver R9C33_JPADDIB_PIO tail R9C33_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data13_c from driver R18C33_JPADDIA_PIO tail R18C33_JPADDIA_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_Data14_c from driver R13C33_JPADDIB_PIO tail R13C33_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_PClk_c from driver R19C0_JPADDIA_PIO tail R19C0_JPADDIA_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_VSync_c from driver R19C0_JPADDIB_PIO tail R19C0_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_HSync_c from driver R20C0_JPADDIB_PIO tail R20C0_JPADDIB_PIO.
+WARNING <71001209> - Disconnected tail of routing path on signal iIR_UART_Rx_c from driver R20C0_JPADDIA_PIO tail R20C0_JPADDIA_PIO.
+DRC detected 0 errors and 17 warnings.
 
 <A name="bgn_ps"></A>
 <B><U><big>Preference Summary:</big></U></B>
@@ -66,6 +83,7 @@ DRC detected 0 errors and 0 warnings.
 
 Creating bit map...
 Saving bit stream in "F:\MyTemporary\Github\GLPP2024\CAMOverUART\impl_1\CAMOverUART_impl_1.bin".
+INFO <1081100> - Bitstream authenticated.
 Bitstream generation complete!
 
 

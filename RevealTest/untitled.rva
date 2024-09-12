@@ -1,0 +1,59 @@
+<!DOCTYPE ispTLA>
+<ispTLA>
+ <CreationDate>Wed Sep 4 07:38:40 2024</CreationDate>
+ <XCFFileName/>
+ <CableSetting>
+  <IsTRSTConnected val="false"/>
+  <TRSTSetting val="0"/>
+  <IsBSCANConnected val="false"/>
+  <BSCANSetting val="0"/>
+  <CableType val="USB2"/>
+  <PortAddress val="0"/>
+  <PortSetting val="0"/>
+  <TCKDelay val="10"/>
+ </CableSetting>
+ <DeviceCount>0</DeviceCount>
+ <Device>
+  <DeviceIndex>0</DeviceIndex>
+  <DeviceName/>
+  <DeviceID/>
+  <HasIspTRACY>true</HasIspTRACY>
+  <HasJTAG2WB>false</HasJTAG2WB>
+  <SERDES/>
+  <IRBypassLen>8</IRBypassLen>
+  <RVLFileName>RevealTest.rvl</RVLFileName>
+  <RVSFileName>RevealTest.rvs</RVSFileName>
+  <LACoreCount>1</LACoreCount>
+  <WinUI CoreType="LA" CoreIndex="0">
+   <TraceSigTreeData>
+    <TraceSignal Name="CNT" Color="" PortIndex="-1" NodeType="1" IsHidden="false">
+     <BusRadix Radix="0"/>
+     <IsExpanded Expand="false"/>
+    </TraceSignal>
+    <TraceSignal Name="CNT:15" Color="" PortIndex="17" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:14" Color="" PortIndex="16" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:13" Color="" PortIndex="15" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:12" Color="" PortIndex="14" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:11" Color="" PortIndex="13" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:10" Color="" PortIndex="12" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:9" Color="" PortIndex="11" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:8" Color="" PortIndex="10" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:7" Color="" PortIndex="9" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:6" Color="" PortIndex="8" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:5" Color="" PortIndex="7" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:4" Color="" PortIndex="6" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:3" Color="" PortIndex="5" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:2" Color="" PortIndex="4" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:1" Color="" PortIndex="3" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="CNT:0" Color="" PortIndex="2" NodeType="2" IsHidden="false"/>
+    <TraceSignal Name="oLED1" Color="" PortIndex="1" NodeType="0" IsHidden="false"/>
+    <TraceSignal Name="oLED2" Color="" PortIndex="0" NodeType="0" IsHidden="false"/>
+   </TraceSigTreeData>
+   <TriggerUI UserSelectPos="0" PreSelectType="0" PreSelect="1" UserSelect="0"/>
+   <CoreRun Run="true"/>
+   <CoreWndUIData>
+    <ClockFrequency Frequency="-1.0" Unit="ns"/>
+   </CoreWndUIData>
+  </WinUI>
+ </Device>
+</ispTLA>

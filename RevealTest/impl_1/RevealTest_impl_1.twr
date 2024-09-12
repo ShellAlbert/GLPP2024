@@ -1,0 +1,1881 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2023.1.1.200.1
+
+Wed Sep  4 08:55:32 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt RevealTest_impl_1.twr RevealTest_impl_1.udb -gui
+
+-----------------------------------------
+Design:          ZRevealTest
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+**Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  DESIGN CHECKING
+        1.1  SDC Constraints
+        1.2  Constraint Coverage
+        1.3  Overall Summary
+        1.4  Unconstrained Report
+        1.5  Combinational Loop
+        1.6  Error/Warning Messages
+    2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+        2.1  Clock Summary
+        2.2  Endpoint slacks
+        2.3  Detailed Report
+    3  Hold at Speed Grade m Corner at -40 Degrees
+        3.1  Endpoint slacks
+        3.2  Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  DESIGN CHECKING
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_generated_clock -name {clk_Global} -source [get_pins {ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 5 -divide_by 4 [get_pins {ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+create_clock -name {clk_48MHz} -period 20.8333333333333 [get_nets clk_48MHz]
+create_clock -name {rvltck} -period 100 [get_ports JTAG_TCK]
+set_false_path -to [get_clocks rvltck]
+
+1.2  Constraint Coverage
+---------------------------
+Constraint Coverage: 99.3915%
+
+
+1.3  Overall Summary
+---------------------------
+ Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees     Timing Errors: 7 endpoints;  Total Negative Slack: 3.089 ns 
+ Hold at Speed Grade m Corner at -40 Degrees                          Timing Errors: 2 endpoints;  Total Negative Slack: 2.092 ns 
+
+1.4  Unconstrained Report
+===========================
+
+1.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+         Listing 2 Start Points         |           Type           
+-------------------------------------------------------------------
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_0/secured_instance_5_16/Q                           
+                                        |          No required time
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_1/secured_instance_4_11/PADDO                           
+                                        |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                         2
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+--------------------------------------------------
+There is no end point satisfying reporting criteria
+
+
+1.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 3 Start or End Points      |           Type           
+-------------------------------------------------------------------
+JTAG_TDO                                |                    output
+oLED1                                   |                    output
+oLED2                                   |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                         3
+                                        |                          
+-------------------------------------------------------------------
+
+Nets without clock definition
+Define a clock on a top level port or a generated clock on a clock divider pin associated with this net(s).
+--------------------------------------------------
+There is no instance satisfying reporting criteria
+
+
+
+1.5  Combinational Loop
+========================
+None
+
+
+1.6  Error/Warning Messages
+============================
+WARNING "70009502" - The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+===============================================================
+2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+===============================================================
+
+2.1  Clock Summary
+=======================
+
+2.1.1 Clock "clk_Global"
+=======================
+create_generated_clock -name {clk_Global} -source [get_pins {ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 5 -divide_by 4 [get_pins {ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+            Clock clk_Global            |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From clk_Global                        |             Target |          16.667 ns |         60.000 MHz 
+                                        | Actual (all paths) |          17.600 ns |         56.818 MHz 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_319/secured_instance_9_1/WCLK (MPW)                                                                
+                                        |   (50% duty cycle) |           1.336 ns |        748.503 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+            Clock clk_Global            |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From clk_48MHz                         |                     4.166 ns |             slack = 5.254 ns 
+ From rvltck                            |                    16.666 ns |             slack = 0.067 ns 
+------------------------------------------------------------------------------------------------------
+
+2.1.2 Clock "clk_48MHz"
+=======================
+create_clock -name {clk_48MHz} -period 20.8333333333333 [get_nets clk_48MHz]
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+            Clock clk_48MHz             |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From clk_48MHz                         |             Target |          20.833 ns |         48.000 MHz 
+                                        | Actual (all paths) |          20.792 ns |         48.095 MHz 
+my_HSOSC/CLKHF (MPW)                    |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+            Clock clk_48MHz             |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From clk_Global                        |                         ---- |                      No path 
+ From rvltck                            |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+2.1.3 Clock "rvltck"
+=======================
+create_clock -name {rvltck} -period 100 [get_ports JTAG_TCK]
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+              Clock rvltck              |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From rvltck                            |             Target |         100.000 ns |         10.000 MHz 
+                                        | Actual (all paths) |           1.336 ns |        748.503 MHz 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_319/secured_instance_9_1/RCLK (MPW)                                                                
+                                        |   (50% duty cycle) |           1.336 ns |        748.503 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+              Clock rvltck              |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From clk_Global                        |                         ---- |                   False path 
+ From clk_48MHz                         |                         ---- |                   False path 
+------------------------------------------------------------------------------------------------------
+
+2.2  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_174/D              
+                                         |   -0.934 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_161/D              
+                                         |   -0.738 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_173/D              
+                                         |   -0.657 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_172/D              
+                                         |   -0.380 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_160/D              
+                                         |   -0.144 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/D              
+                                         |   -0.131 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_171/D              
+                                         |   -0.103 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_7/SP              
+                                         |    0.068 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_10/SP              
+                                         |    0.068 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_38/D              
+                                         |    0.133 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           7 
+                                         |             
+-------------------------------------------------------
+
+2.3  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q  (SLICE_R11C20A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_174/D  (SLICE_R11C20C)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 13
+Delay Ratio      : 67.4% (route), 32.6% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : -0.934 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                     0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q
+                                          SLICE_R11C20A      CLK_TO_Q0_DELAY         1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_119
+                                                             NET DELAY               2.141                 14.531  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/D->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/Z
+                                          SLICE_R10C21B      A0_TO_F0_DELAY          0.449                 14.980  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_343
+                                                             NET DELAY               2.168                 17.148  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/Z
+                                          SLICE_R9C20A       D1_TO_F1_DELAY          0.449                 17.597  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_40
+                                                             NET DELAY               2.432                 20.029  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/C0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO0
+                                          SLICE_R10C20A      C0_TO_COUT0_DELAY       0.343                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_436
+                                                             NET DELAY               0.000                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO1
+                                          SLICE_R10C20A      CIN1_TO_COUT1_DELAY     0.277                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_434
+                                                             NET DELAY               0.000                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO0
+                                          SLICE_R10C20B      CIN0_TO_COUT0_DELAY     0.277                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_435
+                                                             NET DELAY               0.000                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO1
+                                          SLICE_R10C20B      CIN1_TO_COUT1_DELAY     0.277                 21.203  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_431
+                                                             NET DELAY               0.000                 21.203  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CO0
+                                          SLICE_R10C20C      CIN0_TO_COUT0_DELAY     0.277                 21.480  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_432
+                                                             NET DELAY               0.000                 21.480  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CO1
+                                          SLICE_R10C20C      CIN1_TO_COUT1_DELAY     0.277                 21.757  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_429
+                                                             NET DELAY               0.000                 21.757  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_308/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_308/CO0
+                                          SLICE_R10C20D      CIN0_TO_COUT0_DELAY     0.277                 22.034  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_430
+                                                             NET DELAY               0.661                 22.695  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_308/D1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_308/S1
+                                          SLICE_R10C20D      D1_TO_F1_DELAY          0.449                 23.144  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_128
+                                                             NET DELAY               2.168                 25.312  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_309/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_309/Z
+                                          SLICE_R11C19C      D0_TO_F0_DELAY          0.449                 25.761  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_121
+                                                             NET DELAY               2.168                 27.929  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_310/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_310/Z
+                                          SLICE_R11C20C      D1_TO_F1_DELAY          0.476                 28.405  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_377
+                                                             NET DELAY               0.000                 28.405  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_174/D
+                                                                                     0.000                 28.405  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 27.668  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_173/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_174/CK}
+                                                                                     0.000                 27.668  1       
+                                                             Uncertainty          -(0.000)                 27.668  
+                                                             Setup time           -(0.198)                 27.470  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              27.470  
+Arrival Time                                                                                            -(28.404)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -0.934  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q  (SLICE_R11C20A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_161/D  (SLICE_R9C21A)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 9
+Delay Ratio      : 73.5% (route), 26.5% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : -0.738 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                     0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q
+                                          SLICE_R11C20A      CLK_TO_Q0_DELAY         1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_119
+                                                             NET DELAY               2.141                 14.531  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/D->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/Z
+                                          SLICE_R10C21B      A0_TO_F0_DELAY          0.449                 14.980  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_343
+                                                             NET DELAY               2.168                 17.148  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/Z
+                                          SLICE_R9C20A       D1_TO_F1_DELAY          0.449                 17.597  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_40
+                                                             NET DELAY               2.432                 20.029  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/C0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO0
+                                          SLICE_R10C20A      C0_TO_COUT0_DELAY       0.343                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_436
+                                                             NET DELAY               0.000                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO1
+                                          SLICE_R10C20A      CIN1_TO_COUT1_DELAY     0.277                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_434
+                                                             NET DELAY               0.000                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO0
+                                          SLICE_R10C20B      CIN0_TO_COUT0_DELAY     0.277                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_435
+                                                             NET DELAY               0.661                 21.587  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/D1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/S1
+                                          SLICE_R10C20B      D1_TO_F1_DELAY          0.449                 22.036  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_132
+                                                             NET DELAY               2.763                 24.799  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_25/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_25/Z
+                                          SLICE_R10C21A      D0_TO_F0_DELAY          0.449                 25.248  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_123
+                                                             NET DELAY               2.485                 27.733  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_26/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_26/Z
+                                          SLICE_R9C21A       B1_TO_F1_DELAY          0.476                 28.209  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_209
+                                                             NET DELAY               0.000                 28.209  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_161/D
+                                                                                     0.000                 28.209  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 27.668  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_160/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_161/CK}
+                                                                                     0.000                 27.668  1       
+                                                             Uncertainty          -(0.000)                 27.668  
+                                                             Setup time           -(0.198)                 27.470  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              27.470  
+Arrival Time                                                                                            -(28.208)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -0.738  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q  (SLICE_R11C20A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_173/D  (SLICE_R11C20C)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 12
+Delay Ratio      : 68.5% (route), 31.5% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : -0.657 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                     0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q
+                                          SLICE_R11C20A      CLK_TO_Q0_DELAY         1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_119
+                                                             NET DELAY               2.141                 14.531  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/D->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/Z
+                                          SLICE_R10C21B      A0_TO_F0_DELAY          0.449                 14.980  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_343
+                                                             NET DELAY               2.168                 17.148  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/Z
+                                          SLICE_R9C20A       D1_TO_F1_DELAY          0.449                 17.597  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_40
+                                                             NET DELAY               2.432                 20.029  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/C0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO0
+                                          SLICE_R10C20A      C0_TO_COUT0_DELAY       0.343                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_436
+                                                             NET DELAY               0.000                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO1
+                                          SLICE_R10C20A      CIN1_TO_COUT1_DELAY     0.277                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_434
+                                                             NET DELAY               0.000                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO0
+                                          SLICE_R10C20B      CIN0_TO_COUT0_DELAY     0.277                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_435
+                                                             NET DELAY               0.000                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO1
+                                          SLICE_R10C20B      CIN1_TO_COUT1_DELAY     0.277                 21.203  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_431
+                                                             NET DELAY               0.000                 21.203  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CO0
+                                          SLICE_R10C20C      CIN0_TO_COUT0_DELAY     0.277                 21.480  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_432
+                                                             NET DELAY               0.000                 21.480  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CO1
+                                          SLICE_R10C20C      CIN1_TO_COUT1_DELAY     0.277                 21.757  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_429
+                                                             NET DELAY               0.661                 22.418  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_308/D0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_308/S0
+                                          SLICE_R10C20D      D0_TO_F0_DELAY          0.449                 22.867  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_129
+                                                             NET DELAY               2.168                 25.035  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_312/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_312/Z
+                                          SLICE_R11C19D      D0_TO_F0_DELAY          0.449                 25.484  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_433
+                                                             NET DELAY               2.168                 27.652  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_317/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_317/Z
+                                          SLICE_R11C20C      D0_TO_F0_DELAY          0.476                 28.128  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_376
+                                                             NET DELAY               0.000                 28.128  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_173/D
+                                                                                     0.000                 28.128  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 27.668  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_173/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_174/CK}
+                                                                                     0.000                 27.668  1       
+                                                             Uncertainty          -(0.000)                 27.668  
+                                                             Setup time           -(0.198)                 27.470  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              27.470  
+Arrival Time                                                                                            -(28.127)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -0.657  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q  (SLICE_R11C20A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_172/D  (SLICE_R9C20C)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 11
+Delay Ratio      : 69.7% (route), 30.3% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : -0.380 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                     0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q
+                                          SLICE_R11C20A      CLK_TO_Q0_DELAY         1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_119
+                                                             NET DELAY               2.141                 14.531  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/D->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/Z
+                                          SLICE_R10C21B      A0_TO_F0_DELAY          0.449                 14.980  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_343
+                                                             NET DELAY               2.168                 17.148  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/Z
+                                          SLICE_R9C20A       D1_TO_F1_DELAY          0.449                 17.597  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_40
+                                                             NET DELAY               2.432                 20.029  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/C0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO0
+                                          SLICE_R10C20A      C0_TO_COUT0_DELAY       0.343                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_436
+                                                             NET DELAY               0.000                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO1
+                                          SLICE_R10C20A      CIN1_TO_COUT1_DELAY     0.277                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_434
+                                                             NET DELAY               0.000                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO0
+                                          SLICE_R10C20B      CIN0_TO_COUT0_DELAY     0.277                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_435
+                                                             NET DELAY               0.000                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO1
+                                          SLICE_R10C20B      CIN1_TO_COUT1_DELAY     0.277                 21.203  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_431
+                                                             NET DELAY               0.000                 21.203  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/CO0
+                                          SLICE_R10C20C      CIN0_TO_COUT0_DELAY     0.277                 21.480  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_432
+                                                             NET DELAY               0.661                 22.141  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/D1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/S1
+                                          SLICE_R10C20C      D1_TO_F1_DELAY          0.449                 22.590  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_130
+                                                             NET DELAY               2.168                 24.758  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_318/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_318/Z
+                                          SLICE_R10C19C      D1_TO_F1_DELAY          0.449                 25.207  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_122
+                                                             NET DELAY               2.168                 27.375  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_0/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_0/Z
+                                          SLICE_R9C20C       D1_TO_F1_DELAY          0.476                 27.851  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_127
+                                                             NET DELAY               0.000                 27.851  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_172/D
+                                                                                     0.000                 27.851  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 27.668  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_171/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_172/CK}
+                                                                                     0.000                 27.668  1       
+                                                             Uncertainty          -(0.000)                 27.668  
+                                                             Setup time           -(0.198)                 27.470  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              27.470  
+Arrival Time                                                                                            -(27.850)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -0.380  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q  (SLICE_R11C20A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_160/D  (SLICE_R9C21A)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 8
+Delay Ratio      : 74.2% (route), 25.8% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : -0.144 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                     0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q
+                                          SLICE_R11C20A      CLK_TO_Q0_DELAY         1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_119
+                                                             NET DELAY               2.141                 14.531  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/D->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/Z
+                                          SLICE_R10C21B      A0_TO_F0_DELAY          0.449                 14.980  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_343
+                                                             NET DELAY               2.168                 17.148  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/Z
+                                          SLICE_R9C20A       D1_TO_F1_DELAY          0.449                 17.597  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_40
+                                                             NET DELAY               2.432                 20.029  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/C0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO0
+                                          SLICE_R10C20A      C0_TO_COUT0_DELAY       0.343                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_436
+                                                             NET DELAY               0.000                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO1
+                                          SLICE_R10C20A      CIN1_TO_COUT1_DELAY     0.277                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_434
+                                                             NET DELAY               0.661                 21.310  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/D0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/S0
+                                          SLICE_R10C20B      D0_TO_F0_DELAY          0.449                 21.759  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_133
+                                                             NET DELAY               2.168                 23.927  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_29/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_29/Z
+                                          SLICE_R11C21A      D0_TO_F0_DELAY          0.449                 24.376  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_124
+                                                             NET DELAY               2.763                 27.139  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_30/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_30/Z
+                                          SLICE_R9C21A       D0_TO_F0_DELAY          0.476                 27.615  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_217
+                                                             NET DELAY               0.000                 27.615  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_160/D
+                                                                                     0.000                 27.615  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 27.668  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_160/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_161/CK}
+                                                                                     0.000                 27.668  1       
+                                                             Uncertainty          -(0.000)                 27.668  
+                                                             Setup time           -(0.198)                 27.470  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              27.470  
+Arrival Time                                                                                            -(27.614)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -0.144  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q  (SLICE_R11C20A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/D  (SLICE_R11C20A)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 7
+Delay Ratio      : 75.9% (route), 24.1% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : -0.131 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name         Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -----------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                   0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name         Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -----------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q
+                                          SLICE_R11C20A      CLK_TO_Q0_DELAY       1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_119
+                                                             NET DELAY             2.141                 14.531  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/D->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/Z
+                                          SLICE_R10C21B      A0_TO_F0_DELAY        0.449                 14.980  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_343
+                                                             NET DELAY             2.168                 17.148  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/Z
+                                          SLICE_R9C20A       D1_TO_F1_DELAY        0.449                 17.597  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_40
+                                                             NET DELAY             2.432                 20.029  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/C0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO0
+                                          SLICE_R10C20A      C0_TO_COUT0_DELAY     0.343                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_436
+                                                             NET DELAY             0.661                 21.033  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/D1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/S1
+                                          SLICE_R10C20A      D1_TO_F1_DELAY        0.449                 21.482  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_134
+                                                             NET DELAY             2.763                 24.245  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_34/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_34/Z
+                                          SLICE_R12C20A      D0_TO_F0_DELAY        0.449                 24.694  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_125
+                                                             NET DELAY             2.432                 27.126  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_35/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_35/Z
+                                          SLICE_R11C20A      C0_TO_F0_DELAY        0.476                 27.602  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_223
+                                                             NET DELAY             0.000                 27.602  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/D
+                                                                                   0.000                 27.602  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name         Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -----------------  --------  ---------------------  ------  
+                                                             CONSTRAINT            0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             5.499                 27.668  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                   0.000                 27.668  1       
+                                                             Uncertainty        -(0.000)                 27.668  
+                                                             Setup time         -(0.198)                 27.470  
+----------------------------------------  -----------------  -----------------  --------  ---------------------  ------  
+Required Time                                                                                            27.470  
+Arrival Time                                                                                          -(27.601)  
+----------------------------------------  -----------------  -----------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                     -0.131  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q  (SLICE_R11C20A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_171/D  (SLICE_R9C20C)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 10
+Delay Ratio      : 70.8% (route), 29.2% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : -0.103 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_208/CK}
+                                                                                     0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_157/Q
+                                          SLICE_R11C20A      CLK_TO_Q0_DELAY         1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_119
+                                                             NET DELAY               2.141                 14.531  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/D->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_100/Z
+                                          SLICE_R10C21B      A0_TO_F0_DELAY          0.449                 14.980  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_343
+                                                             NET DELAY               2.168                 17.148  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_101/Z
+                                          SLICE_R9C20A       D1_TO_F1_DELAY          0.449                 17.597  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_40
+                                                             NET DELAY               2.432                 20.029  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/C0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO0
+                                          SLICE_R10C20A      C0_TO_COUT0_DELAY       0.343                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_436
+                                                             NET DELAY               0.000                 20.372  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_314/CO1
+                                          SLICE_R10C20A      CIN1_TO_COUT1_DELAY     0.277                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_434
+                                                             NET DELAY               0.000                 20.649  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO0
+                                          SLICE_R10C20B      CIN0_TO_COUT0_DELAY     0.277                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_435
+                                                             NET DELAY               0.000                 20.926  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CI1->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_313/CO1
+                                          SLICE_R10C20B      CIN1_TO_COUT1_DELAY     0.277                 21.203  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_431
+                                                             NET DELAY               0.661                 21.864  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/D0->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_311/S0
+                                          SLICE_R10C20C      D0_TO_F0_DELAY          0.449                 22.313  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_131
+                                                             NET DELAY               2.168                 24.481  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_1/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_1/Z
+                                          SLICE_R9C20B       D0_TO_F0_DELAY          0.449                 24.930  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_137
+                                                             NET DELAY               2.168                 27.098  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_3/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_3/Z
+                                          SLICE_R9C20C       D0_TO_F0_DELAY          0.476                 27.574  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_140
+                                                             NET DELAY               0.000                 27.574  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_171/D
+                                                                                     0.000                 27.574  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY               5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                             0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                             0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY               5.499                 27.668  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_171/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_172/CK}
+                                                                                     0.000                 27.668  1       
+                                                             Uncertainty          -(0.000)                 27.668  
+                                                             Setup time           -(0.198)                 27.470  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              27.470  
+Arrival Time                                                                                            -(27.573)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Failed)                                                                                       -0.103  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/Q  (SLICE_R22C14D)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_7/SP  (SLICE_R16C19C)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 5
+Delay Ratio      : 82.9% (route), 17.1% (logic)
+Clock Skew       : 2.169 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : 0.067 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY            0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY                0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY     0.770                  0.770  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY                8.063                  8.833  120     
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/CK
+                                                                                      0.000                  8.833  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/Q
+                                          SLICE_R22C14D      CLK_TO_Q1_DELAY          1.388                 10.221  26      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_0
+                                                             NET DELAY                2.948                 13.169  26      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_172/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_172/Z
+                                          SLICE_R18C15A      D0_TO_F0_DELAY           0.449                 13.618  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_20
+                                                             NET DELAY                3.080                 16.698  5       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.jtag_int_u.wen_I_0/C->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.jtag_int_u.wen_I_0/Z
+                                          SLICE_R16C15A      B1_TO_F1_DELAY           0.449                 17.147  7       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_71
+                                                             NET DELAY                3.357                 20.504  7       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_332/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_332/Z
+                                          SLICE_R17C18A      D0_TO_F0_DELAY           0.449                 20.953  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_396
+                                                             NET DELAY                2.168                 23.121  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_315/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_315/Z
+                                          SLICE_R16C18A      D0_TO_F0_DELAY           0.449                 23.570  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_144
+                                                             NET DELAY                3.833                 27.403  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_7/SP
+                                                                                      0.000                 27.403  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT               0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY            0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY                5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                              0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                              0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY                5.499                 27.668  96      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_7/CK
+                                                                                      0.000                 27.668  1       
+                                                             Uncertainty           -(0.000)                 27.668  
+                                                             Setup time            -(0.198)                 27.470  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+Required Time                                                                                               27.470  
+Arrival Time                                                                                             -(27.403)  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                         0.067  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/Q  (SLICE_R22C14D)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_10/SP  (SLICE_R16C19B)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 5
+Delay Ratio      : 82.9% (route), 17.1% (logic)
+Clock Skew       : 2.169 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : 0.067 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY            0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY                0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY     0.770                  0.770  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY                8.063                  8.833  120     
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/CK
+                                                                                      0.000                  8.833  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_115/Q
+                                          SLICE_R22C14D      CLK_TO_Q1_DELAY          1.388                 10.221  26      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_0
+                                                             NET DELAY                2.948                 13.169  26      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_172/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_172/Z
+                                          SLICE_R18C15A      D0_TO_F0_DELAY           0.449                 13.618  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_20
+                                                             NET DELAY                3.080                 16.698  5       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.jtag_int_u.wen_I_0/C->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.jtag_int_u.wen_I_0/Z
+                                          SLICE_R16C15A      B1_TO_F1_DELAY           0.449                 17.147  7       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_71
+                                                             NET DELAY                3.357                 20.504  7       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_332/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_332/Z
+                                          SLICE_R17C18A      D0_TO_F0_DELAY           0.449                 20.953  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_396
+                                                             NET DELAY                2.168                 23.121  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_315/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_315/Z
+                                          SLICE_R16C18A      D0_TO_F0_DELAY           0.449                 23.570  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_144
+                                                             NET DELAY                3.833                 27.403  2       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_10/SP
+                                                                                      0.000                 27.403  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT               0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY            0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY                5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                              0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                              0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY                5.499                 27.668  96      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_10/CK
+                                                                                      0.000                 27.668  1       
+                                                             Uncertainty           -(0.000)                 27.668  
+                                                             Setup time            -(0.198)                 27.470  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+Required Time                                                                                               27.470  
+Arrival Time                                                                                             -(27.403)  
+----------------------------------------  -----------------  --------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                         0.067  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_176/Q  (SLICE_R8C17A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_38/D  (SLICE_R9C17D)
+Source Clock     : clk_Global (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 6
+Delay Ratio      : 77.6% (route), 22.4% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 16.666 ns 
+Path Slack       : 0.132 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY           5.353                  5.353  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                         0.000                  5.353  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                         0.150                  5.503  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY           5.499                 11.002  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_176/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_177/CK}
+                                                                                 0.000                 11.002  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_176/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_176/Q
+                                          SLICE_R8C17A       CLK_TO_Q0_DELAY     1.388                 12.390  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_186
+                                                             NET DELAY           2.617                 15.007  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_197/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_197/Z
+                                          SLICE_R9C19D       C0_TO_F0_DELAY      0.449                 15.456  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_386
+                                                             NET DELAY           2.168                 17.624  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_202/B->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_202/Z
+                                          SLICE_R10C18A      D1_TO_F1_DELAY      0.449                 18.073  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_149
+                                                             NET DELAY           2.432                 20.505  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_8/C->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_8/Z
+                                          SLICE_R11C18D      C0_TO_F0_DELAY      0.449                 20.954  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_150
+                                                             NET DELAY           3.027                 23.981  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_272/C->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_272/Z
+                                          SLICE_R10C17C      C0_TO_F0_DELAY      0.449                 24.430  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_375
+                                                             NET DELAY           2.432                 26.862  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_143/A->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_143/Z
+                                          SLICE_R9C17D       C1_TO_F1_DELAY      0.476                 27.338  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_235
+                                                             NET DELAY           0.000                 27.338  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_38/D
+                                                                                 0.000                 27.338  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 16.666  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 16.666  19      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY           5.353                 22.019  19      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                         0.000                 22.019  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                         0.150                 22.169  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY           5.499                 27.668  96      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_38/CK
+                                                                                 0.000                 27.668  1       
+                                                             Uncertainty      -(0.000)                 27.668  
+                                                             Setup time       -(0.198)                 27.470  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          27.470  
+Arrival Time                                                                                        -(27.337)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                    0.132  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
+===============================================================
+3  Hold at Speed Grade m Corner at -40 Degrees
+===============================================================
+
+3.1  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_9/D              
+                                         |   -1.046 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_60/D              
+                                         |   -1.046 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_25/D              
+                                         |    0.454 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_45/D              
+                                         |    0.454 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_46/D              
+                                         |    0.454 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_41/D              
+                                         |    0.454 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_42/D              
+                                         |    0.454 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_39/D              
+                                         |    0.454 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_40/D              
+                                         |    0.454 ns 
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_2/D              
+                                         |    0.624 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           2 
+                                         |             
+-------------------------------------------------------
+
+3.2  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : oLED1_c_I_0_2/Q  (SLICE_R15C24A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_9/D  (SLICE_R14C23C)
+Source Clock     : clk_48MHz (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 51.0% (route), 49.0% (logic)
+Clock Skew       : 3.152 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : -1.046 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY        3.084                  3.084  20      
+{oLED1_c_I_0_2/CK   oLED2_c_I_0_2/CK}                                         0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+oLED1_c_I_0_2/CK->oLED1_c_I_0_2/Q         SLICE_R15C24A      CLK_TO_Q0_DELAY  0.779                  3.863  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_signal_15_11
+                                                             NET DELAY        1.075                  4.938  3       
+SLICE_65/D0->SLICE_65/F0                  SLICE_R14C23C      D0_TO_F0_DELAY   0.252                  5.190  1       
+oLED1_N.sig_003.FeedThruLUT                                  NET DELAY        0.000                  5.190  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_9/D
+                                                                              0.000                  5.190  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY        3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                      0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                      0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY        3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_9/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_60/CK}
+                                                                              0.000                  6.236  1       
+                                                             Uncertainty      0.000                  6.236  
+                                                             Hold time        0.000                  6.236  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -6.236  
+Arrival Time                                                                                         5.190  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Failed)                                                                                -1.046  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : oLED2_c_I_0_2/Q  (SLICE_R15C24A)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_60/D  (SLICE_R14C23C)
+Source Clock     : clk_48MHz (R)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 51.0% (route), 49.0% (logic)
+Clock Skew       : 3.152 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : -1.046 ns  (Failed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY        3.084                  3.084  20      
+{oLED1_c_I_0_2/CK   oLED2_c_I_0_2/CK}                                         0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+oLED2_c_I_0_2/CK->oLED2_c_I_0_2/Q         SLICE_R15C24A      CLK_TO_Q1_DELAY  0.779                  3.863  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_signal_10_23
+                                                             NET DELAY        1.075                  4.938  3       
+SLICE_65/D1->SLICE_65/F1                  SLICE_R14C23C      D1_TO_F1_DELAY   0.252                  5.190  1       
+oLED2_N.sig_051.FeedThruLUT                                  NET DELAY        0.000                  5.190  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_60/D
+                                                                              0.000                  5.190  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY        3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                      0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                      0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY        3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/tu_0/secured_instance_15_9/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/secured_instance_10_60/CK}
+                                                                              0.000                  6.236  1       
+                                                             Uncertainty      0.000                  6.236  
+                                                             Hold time        0.000                  6.236  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -6.236  
+Arrival Time                                                                                         5.190  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Failed)                                                                                -1.046  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_243/Q  (SLICE_R19C17C)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_25/D  (SLICE_R18C17B)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.453 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_192/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_243/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_243/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_243/Q
+                                          SLICE_R19C17C      CLK_TO_Q1_DELAY       0.779                  5.726  17      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_43
+                                                             NET DELAY             0.712                  6.438  17      
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.trig_u.te_0.SLICE_482/D1->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.trig_u.te_0.SLICE_482/F1
+                                          SLICE_R18C17B      D1_TO_F1_DELAY        0.252                  6.690  1       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.wr_din[0].sig_013.FeedThruLUT
+                                                             NET DELAY             0.000                  6.690  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_25/D
+                                                                                   0.000                  6.690  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_25/CK
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.690  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.453  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_199/Q  (SLICE_R22C17C)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_45/D  (SLICE_R21C18C)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.453 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_196/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_199/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_199/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_199/Q
+                                          SLICE_R22C17C      CLK_TO_Q1_DELAY       0.779                  5.726  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_38
+                                                             NET DELAY             0.712                  6.438  5       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_96/D0->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_96/F0
+                                          SLICE_R21C18C      D0_TO_F0_DELAY        0.252                  6.690  1       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.wr_din[5].sig_024.FeedThruLUT
+                                                             NET DELAY             0.000                  6.690  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_45/D
+                                                                                   0.000                  6.690  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_45/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_46/CK}
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.690  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.453  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_196/Q  (SLICE_R22C17C)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_46/D  (SLICE_R21C18C)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.453 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_196/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_199/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_196/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_196/Q
+                                          SLICE_R22C17C      CLK_TO_Q0_DELAY       0.779                  5.726  5       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_39
+                                                             NET DELAY             0.712                  6.438  5       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_96/D1->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_96/F1
+                                          SLICE_R21C18C      D1_TO_F1_DELAY        0.252                  6.690  1       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.wr_din[4].sig_025.FeedThruLUT
+                                                             NET DELAY             0.000                  6.690  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_46/D
+                                                                                   0.000                  6.690  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_45/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_46/CK}
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.690  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.453  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_233/Q  (SLICE_R22C18D)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_41/D  (SLICE_R21C18A)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.453 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_227/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_233/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_233/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_233/Q
+                                          SLICE_R22C18D      CLK_TO_Q1_DELAY       0.779                  5.726  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_34
+                                                             NET DELAY             0.712                  6.438  3       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_92/D0->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_92/F0
+                                          SLICE_R21C18A      D0_TO_F0_DELAY        0.252                  6.690  1       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.wr_din[9].sig_020.FeedThruLUT
+                                                             NET DELAY             0.000                  6.690  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_41/D
+                                                                                   0.000                  6.690  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_41/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_42/CK}
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.690  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.453  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_227/Q  (SLICE_R22C18D)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_42/D  (SLICE_R21C18A)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.453 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_227/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_233/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_227/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_227/Q
+                                          SLICE_R22C18D      CLK_TO_Q0_DELAY       0.779                  5.726  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_35
+                                                             NET DELAY             0.712                  6.438  3       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_92/D1->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_92/F1
+                                          SLICE_R21C18A      D1_TO_F1_DELAY        0.252                  6.690  1       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.wr_din[8].sig_021.FeedThruLUT
+                                                             NET DELAY             0.000                  6.690  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_42/D
+                                                                                   0.000                  6.690  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_41/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_42/CK}
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.690  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.453  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_236/Q  (SLICE_R23C18C)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_39/D  (SLICE_R23C17A)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.453 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_234/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_236/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_236/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_236/Q
+                                          SLICE_R23C18C      CLK_TO_Q1_DELAY       0.779                  5.726  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_32
+                                                             NET DELAY             0.712                  6.438  3       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_90/D0->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_90/F0
+                                          SLICE_R23C17A      D0_TO_F0_DELAY        0.252                  6.690  1       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.wr_din[11].sig_018.FeedThruLUT
+                                                             NET DELAY             0.000                  6.690  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_39/D
+                                                                                   0.000                  6.690  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_39/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_40/CK}
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.690  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.453  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_234/Q  (SLICE_R23C18C)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_40/D  (SLICE_R23C17A)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.453 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_234/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_236/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_234/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_234/Q
+                                          SLICE_R23C18C      CLK_TO_Q0_DELAY       0.779                  5.726  3       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_33
+                                                             NET DELAY             0.712                  6.438  3       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_90/D1->ZRevealTest_reveal_coretop_instance.core_la0_inst_0.SLICE_90/F1
+                                          SLICE_R23C17A      D1_TO_F1_DELAY        0.252                  6.690  1       
+ZRevealTest_reveal_coretop_instance.core_la0_inst_0.wr_din[10].sig_019.FeedThruLUT
+                                                             NET DELAY             0.000                  6.690  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_40/D
+                                                                                   0.000                  6.690  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_39/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/secured_instance_14_40/CK}
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.690  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.453  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_77/Q  (SLICE_R16C9D)
+Path End         : ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_2/D  (SLICE_R17C9A)
+Source Clock     : rvltck (F)
+Destination Clock: clk_Global (R)
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 1.289 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 0.623 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+JTAG_TCK                                  ZRevealTest        CLOCK LATENCY         0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_signal_7_0
+                                                             NET DELAY             0.000                  0.000  1       
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/B->ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_10/O
+                                          PIO_15             IOPAD_TO_PADDI_DELAY  0.425                  0.425  120     
+ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/secured_instance_7_9/secured_instance_6_2/secured_signal_3_11
+                                                             NET DELAY             4.522                  4.947  120     
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_76/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_77/CK}
+                                                                                   0.000                  4.947  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_77/CK->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_77/Q
+                                          SLICE_R16C9D       CLK_TO_Q1_DELAY       0.779                  5.726  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_175
+                                                             NET DELAY             0.882                  6.608  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_1/C->ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_1/Z
+                                          SLICE_R17C9A       C0_TO_F0_DELAY        0.252                  6.860  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_signal_8_177
+                                                             NET DELAY             0.000                  6.860  1       
+ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_2/D
+                                                                                   0.000                  6.860  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name            Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT            0.000                  0.000  1       
+my_HSOSC/CLKHF                            HFOSC_HFOSC_R1C32  CLOCK LATENCY         0.000                  0.000  20      
+ic_PLL/lscc_pll_inst/REFERENCECLK                            NET DELAY             3.002                  3.002  20      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                           0.000                  3.002  96      
+ic_PLL/lscc_pll_inst/u_PLL_B/REFERENCECLK->ic_PLL/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                           0.150                  3.152  96      
+ic_PLL/lscc_pll_inst/clk_Global                              NET DELAY             3.084                  6.236  96      
+{ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_2/CK   ZRevealTest_reveal_coretop_instance/core_la0_inst_0/jtag_int_u/secured_instance_8_154/CK}
+                                                                                   0.000                  6.236  1       
+                                                             Uncertainty           0.000                  6.236  
+                                                             Hold time             0.000                  6.236  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Required Time                                                                                            -6.236  
+Arrival Time                                                                                              6.860  
+----------------------------------------  -----------------  --------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                      0.623  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+

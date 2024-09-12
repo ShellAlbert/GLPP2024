@@ -1,0 +1,21 @@
+<top name = "ZIRStore_Top"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "clk_48MHz"  type = "net" />
+    <clockitem name = "oPSRAM_CLK"  type = "net" />
+    <clockitem name = "clk_Global"  type = "net" />
+    <clockitem name = "ic_PLL/lscc_pll_inst/outcoreb_o"  type = "net" />
+    <clockitem name = "ic_PLL/lscc_pll_inst/outglobalb_o"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 5
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+</top>

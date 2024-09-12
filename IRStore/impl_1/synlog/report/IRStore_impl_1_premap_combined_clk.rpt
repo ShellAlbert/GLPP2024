@@ -1,0 +1,21 @@
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 202 clock pin(s) of sequential element(s)
+0 instances converted, 202 sequential instances remain driven by gated/generated clocks
+
+============================================================ Gated/Generated Clocks ============================================================
+Clock Tree ID     Driving Element        Drive Element Type     Unconverted Fanout     Sample Instance            Explanation                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_12      ic_PLL.outglobal_o     ZPLL                   202                    ic_SyncRst.oRst_N_Sync     Clock Optimization not enabled
+================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+

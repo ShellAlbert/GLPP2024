@@ -1,0 +1,144 @@
+A!FUNC_LOGICAL_PATH!COMP_DEVICE_TYPE!REFDES!FUNC_PRIM_FILE!COMP_PARENT_PPT!COMP_PARENT_PPT_PART!COMP_PARENT_PART_TYPE!FUNC_SCH_SIZE!FUNC_HAS_FIXED_SIZE!FUNC_DES!FUNC_GROUP!FUNC_ROOM!FUNC_CDS_FSP_UID!FUNC_NO_SWAP_PIN!FUNC_HARD_LOCATION!FUNC_NO_SWAP_GATE_EXT!FUNC_CDS_FSP_MAPPED_CELL!FUNC_CDS_FSP_FPGA_SYMBOL!FUNC_CDS_FSP_TERM_TYPE!FUNC_CDS_FSP_TERM_NAME!FUNC_ROOM!FUNC_GROUP!FUNC_CDS_FSP_TERM_INDEX!FUNC_CDS_FSP_INSTANCE_ID!FUNC_NO_SWAP_GATE!FUNC_NO_XNET_CONNECTION!FUNC_CDS_FSP_IS_FPGA!
+J!F:/MyTemporary/Github/GLPP2024/1-PSU-B/PCB/PSU-B1-2.brd!Sun Sep  1 10:12:04 2024!-945.0400!-685.8141!2054.9600!1314.1859!0.0001!millimeters!GLPP_PSU!40.204724 mil!4!OUT OF DATE!
+S!@glpp_psu.schematic1(sch_1):ins742874@discrete.\led.normal\(chips)!LED_LED0402_LED!D1!.\pstchip.dat!!!!!!F91!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins744320@library1.\conn-24p.normal\(chips)!CONN-24P_SMD_CONN_2X12P_1D27_CONN-24P!J2!.\pstchip.dat!!!!!!F88!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins742958@library1.\conn-24p.normal\(chips)!CONN-24P_SMD_CONN_2X12P_1D27_CONN-24P!J3!.\pstchip.dat!!!!!!F89!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527440@discrete.\r.normal\(chips)!R_R0402_560!R33!.\pstchip.dat!!!!!!F42!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527468@discrete.\r.normal\(chips)!R_R0402_51!R35!.\pstchip.dat!!!!!!F38!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527094@discrete.\r.normal\(chips)!R_R0402_51!R43!.\pstchip.dat!!!!!!F37!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins554352@discrete.\r.normal\(chips)!R_R0402_20K!R6!.\pstchip.dat!!!!!!F33!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins541143@discrete.\r.normal\(chips)!R_R0402_20K!R10!.\pstchip.dat!!!!!!F32!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527270@discrete.\r.normal\(chips)!R_R0402_5.1K!R9!.\pstchip.dat!!!!!!F30!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins756524@discrete.\t point s.normal\(chips)!T POINT S_TP_SMD_1D0_NP_T POINT S!TP3!.\pstchip.dat!!!!!!F26!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins605610@discrete.\t point s.normal\(chips)!T POINT S_TP_SMD_1D0_NP_T POINT S!TP12!.\pstchip.dat!!!!!!F27!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins605448@discrete.\t point s.normal\(chips)!T POINT S_TP_SMD_1D0_NP_T POINT S!TP7!.\pstchip.dat!!!!!!F25!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins605488@discrete.\t point s.normal\(chips)!T POINT S_TP_SMD_1D0_NP_T POINT S!TP13!.\pstchip.dat!!!!!!F24!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins605556@discrete.\t point s.normal\(chips)!T POINT S_TP_SMD_1D0_NP_T POINT S!TP4!.\pstchip.dat!!!!!!F23!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins742906@discrete.\t point r.normal\(chips)!T POINT R_TP_THR_1D8_1D2_T POINT R!TP5!.\pstchip.dat!!!!!!F22!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins742918@discrete.\t point r.normal\(chips)!T POINT R_TP_THR_1D8_1D2_T POINT R!TP2!.\pstchip.dat!!!!!!F21!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins743150@discrete.\t point r.normal\(chips)!T POINT R_TP_THR_1D8_1D2_T POINT R!TP6!.\pstchip.dat!!!!!!F20!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins743186@discrete.\t point r.normal\(chips)!T POINT R_TP_THR_1D8_1D2_T POINT R!TP1!.\pstchip.dat!!!!!!F19!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491119@discrete.\r.normal\(chips)!R_R0402_22.9K?!R45!.\pstchip.dat!!!!!!F45!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490475@discrete.\r.normal\(chips)!R_R0402_378K?!R46!.\pstchip.dat!!!!!!F44!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490883@discrete.\r.normal\(chips)!R_R0402_998K?!R42!.\pstchip.dat!!!!!!F36!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins555297@discrete.\led.normal\(chips)!LED_LED0402_GREEN LED!D4!.\pstchip.dat!!!!!!F94!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins554368@discrete.\led.normal\(chips)!LED_LED0402_GREEN LED!D2!.\pstchip.dat!!!!!!F93!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins541127@discrete.\led.normal\(chips)!LED_LED0402_GREEN LED!D3!.\pstchip.dat!!!!!!F92!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins481597@discrete.\inductor.normal\(chips)!INDUCTOR_IND_SMD_4D4X4D2_4.7UH/1A!L7!.\pstchip.dat!!!!!!F81!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527008@library1.\fh3415a.normal\(chips)!FH3415A_SOT23-3_SI2301BDS-HXY!Q1!.\pstchip.dat!!!!!!F78!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins557907@discrete.\cap np.normal\(chips)!CAP NP_SUC_THR_5D0_21D5_4.2V/1F!C10!.\pstchip.dat!!!!!!F96!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins558382@discrete.\cap np.normal\(chips)!CAP NP_SUC_THR_5D0_21D5_4.2V/1F!C11!.\pstchip.dat!!!!!!F95!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins546816@discrete.\cap np.normal\(chips)!CAP NP_C0402_DNI!C12!.\pstchip.dat!!!!!!F121!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492073@discrete.\inductor.normal\(chips)!INDUCTOR_IND_SMD_7D0X6D6_33UH/1A!L1!.\pstchip.dat!!!!!!F87!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527110@library1.\laserdiode.normal\(chips)!LASERDIODE_AXIAL_2D0_4P_LASERDIODE!LD1!.\pstchip.dat!!!!!!F80!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins546318@library1.\photodiode.normal\(chips)!PHOTODIODE_PD-THR-2P_PHOTODIODE!PD1!.\pstchip.dat!!!!!!F79!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527286@library1.\2sc1815.normal\(chips)!2SC1815_SOT23-3_2SC1815!Q3!.\pstchip.dat!!!!!!F76!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527316@library1.\2sc1815.normal\(chips)!2SC1815_SOT23-3_2SC1815!Q2!.\pstchip.dat!!!!!!F77!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527078@discrete.\r.normal\(chips)!R_R0402_510!R38!.\pstchip.dat!!!!!!F40!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527416@discrete.\r.normal\(chips)!R_R0402_510!R44!.\pstchip.dat!!!!!!F39!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527154@discrete.\r.normal\(chips)!R_R0402_510!R34!.\pstchip.dat!!!!!!F41!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins500911@library1.\stm32l051c8t6.normal\(chips)!STM32L051C8T6_LQFP-48_STM32L051C8T6!U1!.\pstchip.dat!!!!!!F16!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins534484@library1.\txs0108ergyr.normal\(chips)!TXS0108ERGYR_VQFN-20_TXS0108ERGYR!U5!.\pstchip.dat!!!!!!F4!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins545827@library1.\tlv365dbvr.normal\(chips)!TLV365DBVR_SOT-23-5_TLV365DBVR!U4!.\pstchip.dat!!!!!!F6!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins548217@library1.\sn74ahc1g14dbvr.normal\(chips)!SN74AHC1G14DBVR_SOT-23-5_SN74AHC1G14DBVR!U3!.\pstchip.dat!!!!!!F8!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins549453@library1.\sn74ahc1g14dbvr.normal\(chips)!SN74AHC1G14DBVR_SOT-23-5_SN74AHC1G14DBVR!U10!.\pstchip.dat!!!!!!F7!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479421@discrete.\inductor.normal\(chips)!INDUCTOR_IND_SMD_4D4X4D2_10UH/1A!L5!.\pstchip.dat!!!!!!F83!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485057@discrete.\inductor.normal\(chips)!INDUCTOR_IND_SMD_4D4X4D2_10UH/1A!L4!.\pstchip.dat!!!!!!F84!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480409@discrete.\t point a.normal\(chips)!T POINT A_TP_THR_1D8_1D2_SOLAR CELL V+!TP8!.\pstchip.dat!!!!!!F28!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485091@discrete.\t point a.normal\(chips)!T POINT A_TP_THR_1D8_1D2_SOLAR CELL V+!TP9!.\pstchip.dat!!!!!!F29!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479205@discrete.\t point a.normal\(chips)!T POINT A_TP_THR_1D8_1D2_SOLAR CELL V-!TP11!.\pstchip.dat!!!!!!F17!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485339@discrete.\t point a.normal\(chips)!T POINT A_TP_THR_1D8_1D2_SOLAR CELL V-!TP10!.\pstchip.dat!!!!!!F18!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins756014@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C27!.\pstchip.dat!!!!!!F110!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins756030@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C29!.\pstchip.dat!!!!!!F109!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins754899@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C32!.\pstchip.dat!!!!!!F111!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins754373@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C30!.\pstchip.dat!!!!!!F112!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins753845@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C1!.\pstchip.dat!!!!!!F113!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479377@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C16!.\pstchip.dat!!!!!!F119!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins481449@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C33!.\pstchip.dat!!!!!!F114!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480177@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C25!.\pstchip.dat!!!!!!F115!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485275@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C15!.\pstchip.dat!!!!!!F120!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485379@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C24!.\pstchip.dat!!!!!!F116!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485545@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C18!.\pstchip.dat!!!!!!F118!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480133@discrete.\cap np.normal\(chips)!CAP NP_C0805_10UF!C19!.\pstchip.dat!!!!!!F117!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490595@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C36!.\pstchip.dat!!!!!!F131!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490627@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C43!.\pstchip.dat!!!!!!F128!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490663@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C41!.\pstchip.dat!!!!!!F127!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490983@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C37!.\pstchip.dat!!!!!!F129!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491429@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C42!.\pstchip.dat!!!!!!F126!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491983@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C8!.\pstchip.dat!!!!!!F122!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492277@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C40!.\pstchip.dat!!!!!!F140!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492293@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C44!.\pstchip.dat!!!!!!F125!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492309@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C28!.\pstchip.dat!!!!!!F134!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492325@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C17!.\pstchip.dat!!!!!!F138!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492341@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C20!.\pstchip.dat!!!!!!F141!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins518121@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C21!.\pstchip.dat!!!!!!F137!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins538579@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C4!.\pstchip.dat!!!!!!F136!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins539020@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C45!.\pstchip.dat!!!!!!F124!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins547315@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C34!.\pstchip.dat!!!!!!F130!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins550237@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C31!.\pstchip.dat!!!!!!F132!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins551067@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C13!.\pstchip.dat!!!!!!F133!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins524680@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C14!.\pstchip.dat!!!!!!F139!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins508243@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C26!.\pstchip.dat!!!!!!F135!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins512283@discrete.\cap np.normal\(chips)!CAP NP_C0402_0.1UF!C6!.\pstchip.dat!!!!!!F123!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491915@discrete.\cap np.normal\(chips)!CAP NP_C0603_10UF!C7!.\pstchip.dat!!!!!!F97!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins750516@discrete.\cap np.normal\(chips)!CAP NP_C1206_33UF!C9!.\pstchip.dat!!!!!!F101!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492357@discrete.\cap np.normal\(chips)!CAP NP_C1206_33UF!C2!.\pstchip.dat!!!!!!F102!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins504714@discrete.\cap np.normal\(chips)!CAP NP_C0402_12PF!C3!.\pstchip.dat!!!!!!F108!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins504352@discrete.\cap np.normal\(chips)!CAP NP_C0402_12PF!C5!.\pstchip.dat!!!!!!F107!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485529@discrete.\cap np.normal\(chips)!CAP NP_C0402_1UF!C22!.\pstchip.dat!!!!!!F106!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479765@discrete.\cap np.normal\(chips)!CAP NP_C0402_1UF!C23!.\pstchip.dat!!!!!!F105!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins481061@discrete.\cap np.normal\(chips)!CAP NP_C0402_33PF!C35!.\pstchip.dat!!!!!!F100!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins481281@discrete.\cap np.normal\(chips)!CAP NP_C1206_22UF!C47!.\pstchip.dat!!!!!!F98!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480917@discrete.\cap np.normal\(chips)!CAP NP_C1206_22UF!C46!.\pstchip.dat!!!!!!F99!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491023@discrete.\cap np.normal\(chips)!CAP NP_C0402_2.2UF!C39!.\pstchip.dat!!!!!!F103!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490359@discrete.\cap np.normal\(chips)!CAP NP_C0402_2.2UF!C38!.\pstchip.dat!!!!!!F104!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins523953@library1.\sip-1x4.normal\(chips)!SIP-1X4_SMD-1D25-4P-DEG0_SIP-1X4!J1!.\pstchip.dat!!!!!!F90!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins500426@discrete.\inductor.normal\(chips)!INDUCTOR_L0603_2.2UH/500MA!L3!.\pstchip.dat!!!!!!F82!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins508207@discrete.\inductor.normal\(chips)!INDUCTOR_L0603_2.2UH!L6!.\pstchip.dat!!!!!!F85!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins512251@discrete.\inductor.normal\(chips)!INDUCTOR_L0603_2.2UH!L2!.\pstchip.dat!!!!!!F86!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins602734@discrete.\r.normal\(chips)!R_R0402_0R!R2!.\pstchip.dat!!!!!!F52!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins575682@discrete.\r.normal\(chips)!R_R0402_0R!R19!.\pstchip.dat!!!!!!F53!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins481619@discrete.\r.normal\(chips)!R_R0402_0R!R22!.\pstchip.dat!!!!!!F55!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins514599@discrete.\r.normal\(chips)!R_R0402_0R!R4!.\pstchip.dat!!!!!!F54!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins486388@discrete.\r.normal\(chips)!R_R0402_0R!R21!.\pstchip.dat!!!!!!F56!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479399@discrete.\r.normal\(chips)!R_R0402_100K!R28!.\pstchip.dat!!!!!!F47!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480559@discrete.\r.normal\(chips)!R_R0402_100K!R37!.\pstchip.dat!!!!!!F46!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480799@discrete.\r.normal\(chips)!R_R0402_562K!R32!.\pstchip.dat!!!!!!F43!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490319@discrete.\r.normal\(chips)!R_R0402_1M!R24!.\pstchip.dat!!!!!!F62!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490335@discrete.\r.normal\(chips)!R_R0402_1M!R25!.\pstchip.dat!!!!!!F61!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490559@discrete.\r.normal\(chips)!R_R0402_1M!R23!.\pstchip.dat!!!!!!F63!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490575@discrete.\r.normal\(chips)!R_R0402_1M!R26!.\pstchip.dat!!!!!!F60!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485513@discrete.\r.normal\(chips)!R_R0402_1M!R15!.\pstchip.dat!!!!!!F65!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479443@discrete.\r.normal\(chips)!R_R0402_1M!R27!.\pstchip.dat!!!!!!F59!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480493@discrete.\r.normal\(chips)!R_R0402_1M!R16!.\pstchip.dat!!!!!!F64!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490375@discrete.\r.normal\(chips)!R_R0402_3.3K!R30!.\pstchip.dat!!!!!!F49!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491039@discrete.\r.normal\(chips)!R_R0402_3.3K!R31!.\pstchip.dat!!!!!!F48!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490763@discrete.\r.normal\(chips)!R_R0402_200K!R41!.\pstchip.dat!!!!!!F69!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485497@discrete.\r.normal\(chips)!R_R0402_200K!R12!.\pstchip.dat!!!!!!F68!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480471@discrete.\r.normal\(chips)!R_R0402_200K!R13!.\pstchip.dat!!!!!!F70!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins481193@discrete.\r.normal\(chips)!R_R0402_2.26M!R18!.\pstchip.dat!!!!!!F57!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485317@discrete.\r.normal\(chips)!R_R0402_2.26M!R17!.\pstchip.dat!!!!!!F58!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491559@discrete.\r.normal\(chips)!R_R0402_3.01K!R39!.\pstchip.dat!!!!!!F35!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491711@discrete.\r.normal\(chips)!R_R0402_4.99K!R40!.\pstchip.dat!!!!!!F34!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins742890@discrete.\r.normal\(chips)!R_R0402_2K!R5!.\pstchip.dat!!!!!!F31!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins575656@discrete.\r.normal\(chips)!R_R0402_DNP!R20!.\pstchip.dat!!!!!!F50!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins512299@discrete.\r.normal\(chips)!R_R0402_DNP!R3!.\pstchip.dat!!!!!!F51!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins602760@discrete.\r.normal\(chips)!R_R0402_DNI!R1!.\pstchip.dat!!!!!!F72!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins546742@discrete.\r.normal\(chips)!R_R0402_DNI!R7!.\pstchip.dat!!!!!!F71!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins555277@discrete.\r.normal\(chips)!R_R0402_DNI!R11!.\pstchip.dat!!!!!!F75!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479355@discrete.\r.normal\(chips)!R_R0402_DNI!R36!.\pstchip.dat!!!!!!F73!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins480449@discrete.\r.normal\(chips)!R_R0402_DNI!R29!.\pstchip.dat!!!!!!F74!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins527130@discrete.\r.normal\(chips)!R_R0402_10K!R8!.\pstchip.dat!!!!!!F66!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins518089@discrete.\r.normal\(chips)!R_R0402_10K!R14!.\pstchip.dat!!!!!!F67!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins479945@library1.\ltc3105edd#pbf.normal\(chips)!LTC3105EDD#PBF_DFN-10_LTC3105EDD#PBF!U8!.\pstchip.dat!!!!!!F2!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins485191@library1.\ltc3105edd#pbf.normal\(chips)!LTC3105EDD#PBF_DFN-10_LTC3105EDD#PBF!U7!.\pstchip.dat!!!!!!F3!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins492089@library1.\ltc3336.normal\(chips)!LTC3336_LQFN-12-2D0X2D0MM_LTC3336EV#TRPBF!U2!.\pstchip.dat!!!!!!F9!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins524700@library1.\tmux1309.normal\(chips)!TMUX1309_WQFN-16-3D5X2D5MM_TMUX1309BQBR!U6!.\pstchip.dat!!!!!!F5!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins481325@library1.\ltc3539edcb#pbf.normal\(chips)!LTC3539EDCB#PBF_DFN-8_LTC3539EDCB#PBF!U12!.\pstchip.dat!!!!!!F10!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490499@library1.\adcmp380-1acbz-rl7.normal\(chips)!ADCMP380-1ACBZ-RL7_WLCSP-6_ADCMP380-1ACBZ-RL7!U13!.\pstchip.dat!!!!!!F14!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491253@library1.\adcmp380-1acbz-rl7.normal\(chips)!ADCMP380-1ACBZ-RL7_WLCSP-6_ADCMP380-1ACBZ-RL7!U14!.\pstchip.dat!!!!!!F13!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490719@library1.\ada4051-2armz.normal\(chips)!ADA4051-2ARMZ_MSOP-8_ADA4051-2ARMZ!U9!.\pstchip.dat!!!!!!F15!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins490801@library1.\sn74aup1g08.normal\(chips)!SN74AUP1G08_SOT-23-5_SN74AUP1G08DBVR!U11!.\pstchip.dat!!!!!!F11!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins491135@library1.\sn74lvc1g32dbvr.normal\(chips)!SN74LVC1G32DBVR_SOT-23-5_SN74LVC1G32DBVR!U15!.\pstchip.dat!!!!!!F12!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins504304@discrete.\crystal.normal\(chips)!CRYSTAL_SMD3215-2P_32.768KHZ!Y1!.\pstchip.dat!!!!!!F1!!!!!!!!!!!!!!!!!!
+S!@glpp_psu.schematic1(sch_1):ins512183@library1.\oscillator.normal\(chips)!OSCILLATOR_SMD2520-4P_32.0MHZ_X1G0041710040!Y2!.\pstchip.dat!!!!!!F0!!!!!!!!!!!!!!!!!!

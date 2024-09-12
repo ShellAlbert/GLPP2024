@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RadiantProject version="4.2" radiant="2023.1.1.200.1" title="IRStore" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" default_implementation="impl_1">
+    <Options/>
+    <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="ZIRStore_Top" top="ZIRStore_Top"/>
+        <Source name="source/impl_1/ZIRStore_Top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="ZIRStore_Top"/>
+        </Source>
+        <Source name="source/impl_1/ZIRCfg_Data.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="IPCores/ZPLL/ZPLL.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZUART_Tx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZIRSensor_Controller.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="IPCores/ZRAM_DP/ZRAM_DP.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZOctalRAMOperator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZOctalRAMCfg.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZIRStore_Bottom.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZSynReset.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="IRStore.rvl" type="Reveal" type_short="Reveal" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/IRStore_Constraints.sdc" type="Pre-Synthesis Constraints File" type_short="SDC">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZPhysicalPinAssignment.pdc" type="Physical Constraints File" type_short="PDC">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="IRStore1.sty"/>
+</RadiantProject>

@@ -1,0 +1,228 @@
+m255
+K4
+z2
+!s11f vlog 2021.4 2021.10, Oct 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/MyTemporary/Github/GLPP2024/IRCapture
+vZCDS3_Capture
+!s110 1726016510
+!i10b 1
+!s100 5QaF?zdg;35R1ebNEV0Uj3
+I^bDAA<@^Oo1_=70UFaIPA0
+Z0 dF:/MyTemporary/Github/GLPP2024/IRCapture/ModelSim
+w1726016502
+8F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture.v
+FF:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture.v
+!i122 40
+L0 3 339
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 OT;L;2021.4;73
+r1
+!s85 0
+31
+!s108 1726016510.000000
+!s107 F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZPortableDefine.v|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture.v|
+!s101 -O0
+!i113 1
+Z3 o-work work -O0
+Z4 tCvgOpt 0
+n@z@c@d@s3_@capture
+vZCDS3_Capture_Tb
+Z5 !s110 1726015485
+!i10b 1
+!s100 O:10BZ87Y9Uz`B9>TTih33
+Ijokdoea0BF@2nW7DA_O1J3
+R0
+w1724810080
+8F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture_Tb.v
+FF:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture_Tb.v
+!i122 32
+L0 2 55
+R1
+R2
+r1
+!s85 0
+31
+Z6 !s108 1726015485.000000
+!s107 F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture_Tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZCDS3_Capture_Tb.v|
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@c@d@s3_@capture_@tb
+vZIRCapture_Top
+R5
+!i10b 1
+!s100 n:JjzYE?jg1leVLgjl<me1
+I6KgC4gz`d59Hli>2Ul8kJ3
+R0
+w1726015354
+8F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZIRCapture_Top.v
+FF:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZIRCapture_Top.v
+!i122 33
+L0 5 226
+R1
+R2
+r1
+!s85 0
+31
+R6
+!s107 F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZPortableDefine.v|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZIRCapture_Top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZIRCapture_Top.v|
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@i@r@capture_@top
+vZOctalRAMCfg
+R5
+!i10b 1
+!s100 Kcz?Sc>]7SgV`Q=bbeXjY3
+IQb@3Fb:WzzT8e:1RczhBZ3
+R0
+w1724912750
+8F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZOctalRAMCfg.v
+FF:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZOctalRAMCfg.v
+!i122 34
+L0 3 62
+R1
+R2
+r1
+!s85 0
+31
+R6
+!s107 F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZOctalRAMCfg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZOctalRAMCfg.v|
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@octal@r@a@m@cfg
+vZPLL
+!s125 LATTICE_CONN
+Z7 !s110 1726015486
+!i10b 1
+!s100 ?5c]L[G4z6[33d[>Z2B073
+IUfG17?TbAG]YZ45MR^=Ja0
+R0
+Z8 w1725941799
+Z9 8F:/MyTemporary/Github/GLPP2024/IRCapture/IPCores/ZPLL/rtl/ZPLL.v
+Z10 FF:/MyTemporary/Github/GLPP2024/IRCapture/IPCores/ZPLL/rtl/ZPLL.v
+!i122 38
+L0 11 41
+R1
+R2
+r1
+!s85 0
+31
+Z11 !s108 1726015486.000000
+Z12 !s107 F:/MyTemporary/Github/GLPP2024/IRCapture/IPCores/ZPLL/rtl/ZPLL.v|
+Z13 !s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/IPCores/ZPLL/rtl/ZPLL.v|
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@p@l@l
+vZPLL_ipgen_lscc_pll
+R7
+!i10b 1
+!s100 CR:VUQL2MV3Gi^ljzU`jn2
+IBPK<eAhMA`?G^]i6lMI>^0
+R0
+R8
+R9
+R10
+!i122 38
+L0 107 120
+R1
+R2
+r1
+!s85 0
+31
+R11
+R12
+R13
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@p@l@l_ipgen_lscc_pll
+vZResetGenerator
+R5
+!i10b 1
+!s100 IjnOW1TVOWgDM9i2aUzSc3
+IDYHdQ0=5gV;J7R`Mg>Fgz1
+R0
+w1725862968
+8F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZResetGenerator.v
+FF:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZResetGenerator.v
+!i122 35
+L0 3 16
+R1
+R2
+r1
+!s85 0
+31
+R6
+!s107 F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZResetGenerator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZResetGenerator.v|
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@reset@generator
+vZUART_Tx
+R7
+!i10b 1
+!s100 XaAgfl@oTN_f>7T5YQk;10
+I]M<cZQoXhahlFU7mB<1GN0
+R0
+w1724896185
+8F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx.v
+FF:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx.v
+!i122 36
+L0 3 80
+R1
+R2
+r1
+!s85 0
+31
+R11
+!s107 F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx.v|
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@u@a@r@t_@tx
+vZUART_Tx_TB
+R7
+!i10b 1
+!s100 lo]j?<g>mo>dR<bKVa9kV1
+I0I_c=Oe1ZNkWgC`JB]`ND2
+R0
+w1723789508
+8F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx_TB.v
+FF:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx_TB.v
+!i122 37
+L0 4 52
+R1
+R2
+r1
+!s85 0
+31
+R11
+!s107 F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx_TB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx_TB.v|
+!s101 -O0
+!i113 1
+R3
+R4
+n@z@u@a@r@t_@tx_@t@b

@@ -1,6 +1,6 @@
 (ExpressProject "CameraOverUART"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[07/10/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[08/30/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -228,30 +228,25 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "f:\mytemporary\github\glpp2024\3-ircam\ircam.dsn")
-      (Path "Design Resources"
-         "f:\mytemporary\github\glpp2024\3-ircam\ircam.dsn" "SCHEMATIC1")
+      (Path "Design Resources" ".\ircam.dsn")
+      (Path "Design Resources" ".\ircam.dsn" "SCHEMATIC1")
       (Path "Outputs")
-      (Path "Logs")
-      (Select "Design Resources"
-         "f:\mytemporary\github\glpp2024\3-ircam\ircam.dsn" "SCHEMATIC1"
-         "8-INFRARED"))
+      (Path "Logs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 477"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 630"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1071 24 495")
-        (Scroll "2811 967")
-        (Zoom "424")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1290 24 671")
+        (Scroll "0 1254")
+        (Zoom "208")
         (Occurrence "/"))
       (Path "F:\MYTEMPORARY\GITHUB\GLPP2024\3-IRCAM\IRCAM.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "8-INFRARED")))
+      (Page "7-PROCESS")))
   (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_22.1\tools\capture\library")
   (ISPCBBASICLICENSE "false"))

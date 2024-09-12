@@ -1,0 +1,539 @@
+<HTML>
+<HEAD>
+<TITLE>Lattice TCL Log</TITLE>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="pn240903121344"></A><B><U><big>pn240903121344</big></U></B>
+#Start recording tcl command: 9/3/2024 09:38:06
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/3/2024 12:13:44
+
+
+
+<A name="pn240903181321"></A><B><U><big>pn240903181321</big></U></B>
+#Start recording tcl command: 9/3/2024 12:15:07
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+rvl_new_project
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_add_trace  {ioPSRAM_DQS}
+rvl_add_trace  {{ioPSRAM_DATA[7:0]}}
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} ioPSRAM_DQS }
+rvl_set_te -expression T TE1
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} }
+rvl_set_te -expression TU1 TE1
+rvl_set_tu -name TU1 -op .RE.
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+prj_add_source -exclude "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl"
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl"
+prj_run Export -impl impl_1
+rvl_rename_trace -bus ioPSRAM_DATA ioPSRAM_DATA
+rvl_del_trace {ioPSRAM_DATA}
+rvl_del_tu TU1
+rvl_add_trace  {ic_OctalRAM/oPSRAM_CE}
+rvl_group_trace -bus Bus0 {ioPSRAM_DQS}
+rvl_del_trace {Bus0}
+rvl_del_trace {ic_OctalRAM/oPSRAM_CE}
+rvl_add_trace  {{ic_OctalRAM/iPSRAM_DATA[7:0]}}
+rvl_add_trace  {{ic_OctalRAM/oPSRAM_DATA[7:0]}}
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU1 -set_sig {{ic_OctalRAM/iPSRAM_DATA[7:0]} }
+rvl_set_tu -name TU1 -op .RE.
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+prj_run Export -impl impl_1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+prj_run PAR -impl impl_1
+rvl_close_project -force
+prj_disable_source "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZClockDomainCrossing.v"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/3/2024 18:13:21
+
+
+
+<A name="pn240904103411"></A><B><U><big>pn240904103411</big></U></B>
+#Start recording tcl command: 9/4/2024 09:10:49
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/4/2024 10:34:11
+
+
+
+<A name="pn240904145818"></A><B><U><big>pn240904145818</big></U></B>
+#Start recording tcl command: 9/4/2024 10:43:55
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt synthesis "synplify"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt synthesis "lse"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/4/2024 14:58:18
+
+
+
+<A name="pn240904163139"></A><B><U><big>pn240904163139</big></U></B>
+#Start recording tcl command: 9/4/2024 15:21:10
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/4/2024 16:31:39
+
+
+
+<A name="pn240905155013"></A><B><U><big>pn240905155013</big></U></B>
+#Start recording tcl command: 9/5/2024 09:08:55
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/5/2024 15:50:13
+
+
+
+<A name="pn240905180027"></A><B><U><big>pn240905180027</big></U></B>
+#Start recording tcl command: 9/5/2024 15:51:28
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/5/2024 18:00:27
+
+
+
+<A name="pn240906151324"></A><B><U><big>pn240906151324</big></U></B>
+#Start recording tcl command: 9/6/2024 08:27:38
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZSynReset.v"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZClockDomainCrossing.v"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/6/2024 15:13:24
+
+
+
+<A name="pn240906175738"></A><B><U><big>pn240906175738</big></U></B>
+#Start recording tcl command: 9/6/2024 15:16:30
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_remove_source "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZClockDomainCrossing.v"
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/6/2024 17:57:38
+
+
+
+<A name="pn240909112810"></A><B><U><big>pn240909112810</big></U></B>
+#Start recording tcl command: 9/9/2024 08:25:14
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_set_impl_opt synthesis "synplify"
+prj_run Export -impl impl_1
+#Stop recording: 9/9/2024 11:28:10
+
+
+
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#pn240903121344>pn240903121344</A></LI>
+<LI><A href=#pn240903181321>pn240903181321</A></LI>
+<LI><A href=#pn240904103411>pn240904103411</A></LI>
+<LI><A href=#pn240904145818>pn240904145818</A></LI>
+<LI><A href=#pn240904163139>pn240904163139</A></LI>
+<LI><A href=#pn240905155013>pn240905155013</A></LI>
+<LI><A href=#pn240905180027>pn240905180027</A></LI>
+<LI><A href=#pn240906151324>pn240906151324</A></LI>
+<LI><A href=#pn240906175738>pn240906175738</A></LI>
+<LI><A href=#pn240909112810>pn240909112810</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

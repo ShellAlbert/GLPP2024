@@ -1,0 +1,8 @@
+-ver "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd"
+-ver "F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/ZRevealTest.v"
+-sdc "F:/MyTemporary/Github/GLPP2024/RevealTest/clock_constraints.sdc"
+-path "F:/MyTemporary/Github/GLPP2024/RevealTest"
+-top ZRevealTest
+-isTop
+-a "iCE40UP"

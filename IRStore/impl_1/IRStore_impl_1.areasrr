@@ -1,0 +1,501 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03LR-1
+Install: F:\MySoftware\Lattice\radiant\synpbase
+OS: Windows 10 or later
+Hostname: DESKTOP-R1EC6M9
+
+Implementation : impl_1
+
+#### START OF AREA REPORT #####[
+
+Part:			ICE40UP5KSG48I-6 (Lattice)
+
+----------------------------------------------------------------------------
+########   Utilization report for  Top level view:   ZIRStore_Top   ########
+============================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         189                                     
+FD1P3BZ         4                                       
+                                                        
+Total FLOPS     193                100 %                
+========================================================
+Total SEQUENTIAL ELEMENTS in the block ZIRStore_Top:	193 (30.68 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+INV                    1                                       
+LUT4                   291                                     
+CCU2_B                 76                                      
+                                                               
+Total LUTS             292                100 %                
+Total CARRY CHAINS     76                 100 %                
+===============================================================
+Total COMBINATIONAL LOGIC in the block ZIRStore_Top:	368 (58.51 % Utilization)
+
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              4                                       
+                                                           
+Total BLOCKRAM     4                  100 %                
+===========================================================
+Total MEMORY ELEMENTS in the block ZIRStore_Top:	4 (0.64 % Utilization)
+
+
+IO PADS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+BB_B         9                                       
+OB           9                                       
+                                                     
+TOTAL IO     18                 100 %                
+=====================================================
+Total IO PADS in the block ZIRStore_Top:	18 (2.86 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+HSOSC               1                                       
+VLO                 14                                      
+VHI                 14                                      
+PLL_B               1                                       
+IOL_B               16                                      
+                                                            
+Total BLACK BOX     46                 100 %                
+============================================================
+Total BLACKBOX in the block ZIRStore_Top:	46 (7.31 % Utilization)
+
+---------------------------------------------------------------------
+########   Utilization report for  cell:   ZIRStore_Bottom   ########
+Instance path:   ic_Bottom                                           
+=====================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         187                                     
+FD1P3BZ         4                                       
+                                                        
+Total FLOPS     191                99 %                 
+========================================================
+Total SEQUENTIAL ELEMENTS in the block ic_Bottom:	191 (30.37 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+LUT4                   289                                     
+CCU2_B                 76                                      
+                                                               
+Total LUTS             289                99 %                 
+Total CARRY CHAINS     76                 100 %                
+===============================================================
+Total COMBINATIONAL LOGIC in the block ic_Bottom:	365 (58.03 % Utilization)
+
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              4                                       
+                                                           
+Total BLOCKRAM     4                  100 %                
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom:	4 (0.64 % Utilization)
+
+
+IO PADS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+BB_B         1                                       
+                                                     
+TOTAL IO     1                  5.56 %               
+=====================================================
+Total IO PADS in the block ic_Bottom:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 10                                      
+VHI                 10                                      
+IOL_B               16                                      
+                                                            
+Total BLACK BOX     36                 78.3 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom:	36 (5.72 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   ZOctalRAMOperator   ########
+Instance path:   ic_Bottom.ic_OctalRAM                                 
+Parent Instance:   ic_Bottom                                           
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         61                                      
+FD1P3BZ         3                                       
+                                                        
+Total FLOPS     64                 33.2 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block ic_Bottom.ic_OctalRAM:	64 (10.17 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+LUT4                   119                                     
+CCU2_B                 14                                      
+                                                               
+Total LUTS             119                40.8 %               
+Total CARRY CHAINS     14                 18.4 %               
+===============================================================
+Total COMBINATIONAL LOGIC in the block ic_Bottom.ic_OctalRAM:	133 (21.14 % Utilization)
+
+
+IO PADS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+BB_B         1                                       
+                                                     
+TOTAL IO     1                  5.56 %               
+=====================================================
+Total IO PADS in the block ic_Bottom.ic_OctalRAM:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+IOL_B               16                                      
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     18                 39.1 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_OctalRAM:	18 (2.86 % Utilization)
+
+-------------------------------------------------------------
+########   Utilization report for  cell:   ZRAM_DP   ########
+Instance path:   ic_Bottom.ic_RAM_DP                         
+Parent Instance:   ic_Bottom                                 
+=============================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              4                                       
+                                                           
+Total BLOCKRAM     4                  100 %                
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom.ic_RAM_DP:	4 (0.64 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 7                                       
+VHI                 7                                       
+                                                            
+Total BLACK BOX     14                 30.4 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_RAM_DP:	14 (2.23 % Utilization)
+
+-----------------------------------------------------------------------------------------
+########   Utilization report for  cell:   ZRAM_DP_ipgen_lscc_ram_dp_Z7_layer0   ########
+Instance path:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst                                    
+Parent Instance:   ic_Bottom.ic_RAM_DP                                                   
+=========================================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              4                                       
+                                                           
+Total BLOCKRAM     4                  100 %                
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst:	4 (0.64 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 6                                       
+VHI                 6                                       
+                                                            
+Total BLACK BOX     12                 26.1 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst:	12 (1.91 % Utilization)
+
+----------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   ZRAM_DP_ipgen_lscc_ram_dp_main_Z2_layer0   ########
+Instance path:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main                                
+Parent Instance:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst                                       
+==============================================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              4                                       
+                                                           
+Total BLOCKRAM     4                  100 %                
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main:	4 (0.64 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 5                                       
+VHI                 5                                       
+                                                            
+Total BLACK BOX     10                 21.7 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main:	10 (1.59 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   ZRAM_DP_ipgen_lscc_ram_dp_core_Z3_layer0   ########                   
+Instance path:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0
+Parent Instance:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main                                                 
+=================================================================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              1                                       
+                                                           
+Total BLOCKRAM     1                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  4.35 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0:	2 (0.32 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   ZRAM_DP_ipgen_lscc_ram_dp_core_Z4_layer0   ########                   
+Instance path:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].no_init.u_mem0
+Parent Instance:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main                                                 
+=================================================================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              1                                       
+                                                           
+Total BLOCKRAM     1                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].no_init.u_mem0:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  4.35 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[1].no_init.u_mem0:	2 (0.32 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   ZRAM_DP_ipgen_lscc_ram_dp_core_Z5_layer0   ########                   
+Instance path:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].no_init.u_mem0
+Parent Instance:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main                                                 
+=================================================================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              1                                       
+                                                           
+Total BLOCKRAM     1                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].no_init.u_mem0:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  4.35 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[2].no_init.u_mem0:	2 (0.32 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   ZRAM_DP_ipgen_lscc_ram_dp_core_Z6_layer0   ########                   
+Instance path:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].no_init.u_mem0
+Parent Instance:   ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main                                                 
+=================================================================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              1                                       
+                                                           
+Total BLOCKRAM     1                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].no_init.u_mem0:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  4.35 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[3].no_init.u_mem0:	2 (0.32 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   ZUART_Tx_24s   ########
+Instance path:   ic_Bottom.ic_DBG_UART_Tx                         
+Parent Instance:   ic_Bottom                                      
+==================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         29                                      
+FD1P3BZ         1                                       
+                                                        
+Total FLOPS     30                 15.5 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block ic_Bottom.ic_DBG_UART_Tx:	30 (4.77 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+LUT4                   36                                      
+CCU2_B                 14                                      
+                                                               
+Total LUTS             36                 12.3 %               
+Total CARRY CHAINS     14                 18.4 %               
+===============================================================
+Total COMBINATIONAL LOGIC in the block ic_Bottom.ic_DBG_UART_Tx:	50 (7.95 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  4.35 %               
+============================================================
+Total BLACKBOX in the block ic_Bottom.ic_DBG_UART_Tx:	2 (0.32 % Utilization)
+
+----------------------------------------------------------
+########   Utilization report for  cell:   ZPLL   ########
+Instance path:   ic_PLL                                   
+==========================================================
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           1                                       
+                                                       
+Total LUTS     1                  0.3420 %             
+=======================================================
+Total COMBINATIONAL LOGIC in the block ic_PLL:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 2                                       
+VHI                 2                                       
+PLL_B               1                                       
+                                                            
+Total BLACK BOX     5                  10.9 %               
+============================================================
+Total BLACKBOX in the block ic_PLL:	5 (0.79 % Utilization)
+
+-----------------------------------------------------------------------------------
+########   Utilization report for  cell:   ZPLL_ipgen_lscc_pll_Z1_layer0   ########
+Instance path:   ic_PLL.lscc_pll_inst                                              
+Parent Instance:   ic_PLL                                                          
+===================================================================================
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           1                                       
+                                                       
+Total LUTS     1                  0.3420 %             
+=======================================================
+Total COMBINATIONAL LOGIC in the block ic_PLL.lscc_pll_inst:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+PLL_B               1                                       
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     3                  6.52 %               
+============================================================
+Total BLACKBOX in the block ic_PLL.lscc_pll_inst:	3 (0.48 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   ZSyncReset   ########
+Instance path:   ic_SyncRst                                     
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         2                                       
+                                                        
+Total FLOPS     2                  1.04 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block ic_SyncRst:	2 (0.32 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           1                                       
+                                                       
+Total LUTS     1                  0.3420 %             
+=======================================================
+Total COMBINATIONAL LOGIC in the block ic_SyncRst:	1 (0.16 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  4.35 %               
+============================================================
+Total BLACKBOX in the block ic_SyncRst:	2 (0.32 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

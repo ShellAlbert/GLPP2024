@@ -1,0 +1,145 @@
+#Start recording tcl command: 8/26/2024 08:39:34
+#Project Location: F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot; Project name: IRSnapshot
+prj_open "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rdf"
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+rvl_new_project
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_set_traceoptn Timestamp=on
+rvl_set_traceoptn Timestamp=off
+rvl_set_traceoptn IncludeTrigger=on
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} ioPSRAM_DQS }
+rvl_set_tu -name TU1 -val X
+rvl_set_tu -name TU1 -val XXXXXXXXX
+rvl_set_tu -name TU1 -op .RE.
+rvl_del_tu TU1
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} ioPSRAM_DQS }
+rvl_set_tu -name TU1 -op .RE.
+rvl_set_trigoptn DefaultRadix=Hex
+rvl_set_trigoptn DefaultRadix=Bin
+rvl_set_te -expression TU1 TE1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_set_trigoptn TriggerOut=on
+rvl_set_trigoptn TriggerOut=off
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_set_traceoptn Timestamp=on
+rvl_set_traceoptn Timestamp=off
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_add_source -exclude "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+prj_run Export -impl impl_1
+rvl_del_core ZIRSnapshot_LA0
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_run Export -impl impl_1
+rvl_add_core ZIRSnapshot_LA0
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} }
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU2 -set_sig {ioPSRAM_DQS }
+rvl_set_tu -name TU1 -op .RE.
+rvl_set_tu -name TU2 -op .RE.
+rvl_add_te
+rvl_set_te -expression TU1 TE1
+rvl_set_te -expression TU2 TE1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_set_traceoptn IncludeTrigger=on
+rvl_set_traceoptn Timestamp=on
+rvl_set_traceoptn Timestamp=off
+rvl_set_traceoptn Timestamp=on
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_run Export -impl impl_1
+rvl_close_project -force
+prj_disable_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+prj_run Export -impl impl_1
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+rvl_open_project F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_del_tu TU1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_del_tu TU2
+rvl_del_te TE1
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU1 -set_sig {UART_Tx_Done }
+rvl_add_te
+rvl_set_te -expression TU1 TE1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+rva_open_project "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+prj_add_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rva_set_tu -name TU1 -operator "rising edge"
+rva_save_project "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rvl_close_project
+rvl_open_project F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rva_run
+rva_close_controller
+rva_open_project "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rva_set_tu -name TU1 -operator "=="
+rva_set_tu -name TU1 -value "1"
+rva_save_project "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rvl_close_project
+rvl_open_project F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rva_close_controller
+rvl_close_project -force
+prj_run Export -impl impl_1
+prj_disable_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+prj_remove_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rvl_open_project F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_set_traceoptn SampleClk=clk_100MHz
+rvl_set_traceoptn Timestamp=off
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_run Export -impl impl_1
+rvl_close_project -force
+rva_open_project "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+prj_add_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rva_run
+rva_save_project "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/Dbg2024.rva"
+rva_close_controller
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_disable_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+rvl_open_project F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_run Export -impl impl_1
+rvl_close_project -force
+prj_remove_source "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_save 
+prj_close
+#Stop recording: 8/26/2024 14:22:26

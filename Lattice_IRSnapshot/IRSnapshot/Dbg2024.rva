@@ -1,0 +1,38 @@
+<!DOCTYPE ispTLA>
+<ispTLA>
+ <CreationDate>Fri Aug 23 14:40:37 2024</CreationDate>
+ <XCFFileName/>
+ <CableSetting>
+  <IsTRSTConnected val="false"/>
+  <TRSTSetting val="0"/>
+  <IsBSCANConnected val="false"/>
+  <BSCANSetting val="0"/>
+  <CableType val="USB2"/>
+  <PortAddress val="0"/>
+  <PortSetting val="0"/>
+  <TCKDelay val="10"/>
+ </CableSetting>
+ <DeviceCount>0</DeviceCount>
+ <Device>
+  <DeviceIndex>0</DeviceIndex>
+  <DeviceName/>
+  <DeviceID/>
+  <HasIspTRACY>true</HasIspTRACY>
+  <HasJTAG2WB>false</HasJTAG2WB>
+  <SERDES/>
+  <IRBypassLen>8</IRBypassLen>
+  <RVLFileName>IRSnapshot.rvl</RVLFileName>
+  <RVSFileName>IRSnapshot.rvs</RVSFileName>
+  <LACoreCount>1</LACoreCount>
+  <WinUI CoreIndex="0" CoreType="LA">
+   <TraceSigTreeData>
+    <TraceSignal NodeType="0" PortIndex="0" IsHidden="false" Name="TU1" Color=""/>
+   </TraceSigTreeData>
+   <TriggerUI PreSelectType="0" UserSelectPos="0" PreSelect="1" UserSelect="0"/>
+   <CoreRun Run="true"/>
+   <CoreWndUIData>
+    <ClockFrequency Frequency="-1.0" Unit="ns"/>
+   </CoreWndUIData>
+  </WinUI>
+ </Device>
+</ispTLA>

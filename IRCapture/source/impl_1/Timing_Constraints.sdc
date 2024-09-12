@@ -1,0 +1,5 @@
+create_clock -name {clk_48MHz} -period 20.8333333333333 -waveform {0 10} [get_nets clk_48MHz]
+create_clock -name {clk_LocalFabric} -period 15.1515151515152 -waveform {0 7} [get_nets ic_pll/lscc_pll_inst/outcoreb_o]
+create_clock -name {clk_Global} -period 15.1515151515152 -waveform {0 7} [get_nets ic_pll/lscc_pll_inst/outglobalb_o]
+set_output_delay -clock [get_clocks clk_Global] -max 1 [get_ports {oRAM_CLK oRAM_CE oRAM_DQS oRAM_RST oRAM_ADQ[7] oRAM_ADQ[6] oRAM_ADQ[5] oRAM_ADQ[4] oRAM_ADQ[3] oRAM_ADQ[2] oRAM_ADQ[1] oRAM_ADQ[0]}]
+set_output_delay -clock [get_clocks clk_Global] -clock_fall -max -add_delay 1 [get_ports {oRAM_ADQ[7] oRAM_ADQ[6] oRAM_ADQ[5] oRAM_ADQ[4] oRAM_ADQ[3] oRAM_ADQ[2] oRAM_ADQ[1] oRAM_ADQ[0] oRAM_CE oRAM_DQS oRAM_RST oRAM_CLK}]

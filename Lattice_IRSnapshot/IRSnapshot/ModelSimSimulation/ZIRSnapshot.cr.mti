@@ -1,0 +1,39 @@
+F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IPCores/ZRAM_4K/rtl/ZRAM_4K.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IPCores/ZRAM_4K/rtl/ZRAM_4K.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZRAM_4K
+-- Compiling module ZRAM_4K_ipgen_lscc_ram_dp
+-- Compiling module ZRAM_4K_ipgen_lscc_ram_dp_main
+-- Compiling module ZRAM_4K_ipgen_lscc_ram_dp_core
+
+Top level modules:
+	ZRAM_4K
+
+} {} {}} F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZLEDIndicator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZLEDIndicator.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZLEDIndicator
+
+Top level modules:
+	ZLEDIndicator
+
+} {} {}} F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZResetGenerator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZResetGenerator.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZResetGenerator
+
+Top level modules:
+	ZResetGenerator
+
+} {} {}} F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZOctalRAMOperator.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZOctalRAMOperator.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZOctalRAMOperator
+
+Top level modules:
+	ZOctalRAMOperator
+
+} {} {}} F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZOctalRAMCfg.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/source/impl_1/ZOctalRAMCfg.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZOctalRAMCfg
+
+Top level modules:
+	ZOctalRAMCfg
+
+} {} {}}

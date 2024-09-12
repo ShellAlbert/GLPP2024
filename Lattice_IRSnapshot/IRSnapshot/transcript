@@ -1,0 +1,187 @@
+# Reading pref.tcl
+project open F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/ModelSimSimulation/ZIRSnapshot
+# Loading project ZIRSnapshot
+vsim work.ZIRSnapshot iCE40UP.HFOSC iCE40UP.IOL_B iCE40UP.PLL_B iCE40UP.BB_B
+# vsim work.ZIRSnapshot iCE40UP.HFOSC iCE40UP.IOL_B iCE40UP.PLL_B iCE40UP.BB_B 
+# Start time: 10:02:23 on Aug 27,2024
+# //  ModelSim - Lattice FPGA Edition 2021.4 Oct 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Lattice FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.ZIRSnapshot
+# Loading iCE40UP.HSOSC
+# Loading iCE40UP.VLO
+# Loading iCE40UP.HSOSC_CORE
+# Loading iCE40UP.HFOSC
+# Loading iCE40UP.HFOSC_CORE
+# Loading work.ZUART_Tx
+# Loading work.ZRAM_4K
+# Loading work.ZRAM_4K_ipgen_lscc_ram_dp
+# Loading work.ZRAM_4K_ipgen_lscc_ram_dp_main
+# Loading work.ZOctalRAMOperator
+# Loading iCE40UP.OB
+# Loading iCE40UP.VHI
+# Loading iCE40UP.BB_B
+# Loading iCE40UP.PIO
+# Loading work.ZOctalRAMCfg
+# Loading iCE40UP.IOL_B
+# Loading iCE40UP.IOLOGIC
+# Loading iCE40UP.PLL_B
+# Loading iCE40UP.PLL40_2F_CORE
+# Loading work.ZRAM_4K_ipgen_lscc_ram_dp_core
+# Loading iCE40UP.tSPLL40
+# Loading iCE40UP.ShiftReg427
+# Loading iCE40UP.mux4to1
+# Loading iCE40UP.FineDlyAdj
+# Loading iCE40UP.Delay4Buf
+# Loading iCE40UP.ABIWTCZ4
+# Loading iCE40UP.PDP4K
+# Loading iCE40UP.EBR_B
+# Loading iCE40UP.RAM40_4K
+# Loading iCE40UP.read_data_decoder
+# Loading iCE40UP.write_data_decoder
+# Loading iCE40UP.mask_decoder
+# Loading iCE40UP.RAM4K
+# Compile of ZIRSnapshot.v failed with 1 errors.
+# Compile of ZLEDIndicator.v was successful.
+# Compile of ZOctalRAMCfg.v was successful.
+# Compile of ZOctalRAMOperator.v was successful.
+# Compile of ZUART_Tx.v was successful.
+# Compile of ZIP_PLL.v was successful.
+# Compile of ZRAM_4K.v was successful.
+# Compile of ZResetGenerator.v was successful.
+# 8 compiles, 1 failed with 1 error.
+# Compile of ZIRSnapshot.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ZIRSnapshot
+# Loading work.ZIP_PLL
+# Loading work.ZIP_PLL_ipgen_lscc_pll
+# Loading work.ZLEDIndicator
+# Loading work.ZUART_Tx
+# Loading work.ZRAM_4K
+# Loading work.ZRAM_4K_ipgen_lscc_ram_dp
+# Loading work.ZRAM_4K_ipgen_lscc_ram_dp_main
+# Loading work.ZOctalRAMOperator
+# Loading work.ZOctalRAMCfg
+# Loading work.ZRAM_4K_ipgen_lscc_ram_dp_core
+add wave -position insertpoint  \
+sim:/ZIRSnapshot/oLED1 \
+sim:/ZIRSnapshot/oLED2 \
+sim:/ZIRSnapshot/oIOMux \
+sim:/ZIRSnapshot/oUART_TxD \
+sim:/ZIRSnapshot/oPSRAM_RST \
+sim:/ZIRSnapshot/oPSRAM_CE \
+sim:/ZIRSnapshot/oPSRAM_CLK \
+sim:/ZIRSnapshot/ioPSRAM_DQS \
+sim:/ZIRSnapshot/ioPSRAM_DATA \
+sim:/ZIRSnapshot/clk_48MHz \
+sim:/ZIRSnapshot/rst_n_POR \
+sim:/ZIRSnapshot/rst_n \
+sim:/ZIRSnapshot/clk_100MHz \
+sim:/ZIRSnapshot/clk_System \
+sim:/ZIRSnapshot/UART_Tx_DR \
+sim:/ZIRSnapshot/UART_Tx_En \
+sim:/ZIRSnapshot/UART_Tx_Done \
+sim:/ZIRSnapshot/EBR_Wr_En \
+sim:/ZIRSnapshot/EBR_Wr_Data \
+sim:/ZIRSnapshot/EBR_Wr_Addr \
+sim:/ZIRSnapshot/EBR_Rd_En \
+sim:/ZIRSnapshot/EBR_Rd_Data \
+sim:/ZIRSnapshot/EBR_Rd_Addr \
+sim:/ZIRSnapshot/Op_Code \
+sim:/ZIRSnapshot/Op_Done \
+sim:/ZIRSnapshot/ram_Addr \
+sim:/ZIRSnapshot/ram_Data_i \
+sim:/ZIRSnapshot/ram_Data_o \
+sim:/ZIRSnapshot/CNT_RAM \
+sim:/ZIRSnapshot/CNT_Delay \
+sim:/ZIRSnapshot/Temp_DR \
+sim:/ZIRSnapshot/CNT_Addr \
+sim:/ZIRSnapshot/Step_Go \
+sim:/ZIRSnapshot/UPLD_DR
+run 100us
+# ************************SBT : Info*****************************
+# Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
+# ***************************************************************
+# ************************SBT : Attention***************************
+# Since FEEDBACK_PATH="SIMPLE", the FDA_FEEDBACK value will be ignored
+# ******************************************************************
+# ************************SBT : Info*****************************
+# Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
+# ***************************************************************
+# ************************SBT : Attention***************************
+# Since FEEDBACK_PATH="SIMPLE", the FDA_FEEDBACK value will be ignored
+# ******************************************************************
+# ************************SBT : Attention***************************
+# The PLL output frequency will be divided by 4 or 7 and phase shifted.
+# To avoid this, please set PLLOUT_SELECT_PORTA/B = "GENCLK" 
+# ******************************************************************
+# 
+# 
+# ************************Attention************************
+# 
+#    The pulse of the RESET signal is too small! The min-  
+# 
+#    imum acceptable pulse width is 1us. The PLL verilog   
+# 
+#    model will continue to operate, but the current sim-  
+# 
+#    ulation results may not be accurate!                  
+# 
+# 
+# 
+#    Please check the RESET input signal, and rerun the    
+# 
+#    simulation.                                           
+# 
+# 
+# 
+#    Simulation time is                20000
+# 
+# ******************************************************** 
+# 
+# 
+# 
+# 
+# 
+# ************************Attention************************
+# 
+#    The frequency of the Post-divider Reference Clock is  
+# 
+#    out of range! Either the RANGE bits are not set cor-  
+# 
+#    rectly, or the DIVR divider is not programmed appro-  
+# 
+#    priately. The model will continue to operate, but     
+# 
+#    simulation results may not be accurate!                
+# 
+# 
+# 
+#    Please refer to the Analog Bits provided datasheet    
+# 
+#    for information on correctly programming the RANGE    
+# 
+#    pin values.  
+# 
+# 
+# 
+#    Simulation time is               156240
+# 
+# ******************************************************** 
+# 
+# 
+# 
+quit -sim
+# End time: 11:08:20 on Aug 27,2024, Elapsed time: 1:05:57
+# Errors: 0, Warnings: 1

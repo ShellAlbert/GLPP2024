@@ -1,0 +1,1702 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 22.1.0 d001Sep-01-2024 at 10:12:20 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='GLPP_PSU';
+ POST_TIME='Oct  6 2022 20:42:06';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C1 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS753845@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins753845@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins753845@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(770,420)',
+ SECTION='';
+
+PART_NAME
+ C10 'CAP NP_SUC_THR_5D0_21D5_4.2V/1F':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS557907@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins557907@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins557907@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(510,120)',
+ SECTION='';
+
+PART_NAME
+ C11 'CAP NP_SUC_THR_5D0_21D5_4.2V/1F':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS558382@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins558382@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins558382@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(520,350)',
+ SECTION='';
+
+PART_NAME
+ C12 'CAP NP_C0402_DNI':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS546816@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins546816@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins546816@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1480,670)',
+ SECTION='';
+
+PART_NAME
+ C13 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS551067@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins551067@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins551067@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1230,720)',
+ SECTION='';
+
+PART_NAME
+ C14 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS524680@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins524680@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins524680@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(650,950)',
+ SECTION='';
+
+PART_NAME
+ C15 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485275@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485275@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485275@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(180,320)',
+ SECTION='';
+
+PART_NAME
+ C16 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479377@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479377@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479377@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(180,90)',
+ SECTION='';
+
+PART_NAME
+ C17 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492325@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492325@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492325@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1250,150)',
+ SECTION='';
+
+PART_NAME
+ C18 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485545@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485545@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485545@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(370,410)',
+ SECTION='';
+
+PART_NAME
+ C19 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480133@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480133@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480133@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(370,180)',
+ SECTION='';
+
+PART_NAME
+ C2 'CAP NP_C1206_33UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492357@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492357@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492357@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1290,150)',
+ SECTION='';
+
+PART_NAME
+ C20 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492341@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492341@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492341@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1270,150)',
+ SECTION='';
+
+PART_NAME
+ C21 'CAP NP_C0402_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS518121@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins518121@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins518121@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(60,1070)',
+ SECTION='';
+
+PART_NAME
+ C22 'CAP NP_C0402_1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485529@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485529@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485529@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(210,410)',
+ SECTION='';
+
+PART_NAME
+ C23 'CAP NP_C0402_1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479765@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479765@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479765@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(210,180)',
+ SECTION='';
+
+PART_NAME
+ C24 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485379@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485379@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485379@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,350)',
+ SECTION='';
+
+PART_NAME
+ C25 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480177@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480177@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480177@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(460,120)',
+ SECTION='';
+
+PART_NAME
+ C26 'CAP NP_C0402_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS508243@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins508243@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins508243@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(140,1120)',
+ SECTION='';
+
+PART_NAME
+ C27 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS756014@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins756014@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins756014@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(860,420)',
+ SECTION='';
+
+PART_NAME
+ C28 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492309@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492309@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492309@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1230,150)',
+ SECTION='';
+
+PART_NAME
+ C29 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS756030@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins756030@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins756030@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(890,420)',
+ SECTION='';
+
+PART_NAME
+ C3 'CAP NP_C0402_12PF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS504714@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins504714@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins504714@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(50,850)',
+ SECTION='';
+
+PART_NAME
+ C30 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS754373@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins754373@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins754373@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(800,420)',
+ SECTION='';
+
+PART_NAME
+ C31 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS550237@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins550237@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins550237@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1030,720)',
+ SECTION='';
+
+PART_NAME
+ C32 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS754899@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins754899@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins754899@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(900,310)',
+ SECTION='';
+
+PART_NAME
+ C33 'CAP NP_C0805_10UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS481449@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins481449@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins481449@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_1e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(660,100)',
+ SECTION='';
+
+PART_NAME
+ C34 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS547315@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins547315@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins547315@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1480,710)',
+ SECTION='';
+
+PART_NAME
+ C35 'CAP NP_C0402_33PF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_33.000000pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS481061@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins481061@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins481061@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_33.000000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(960,140)',
+ SECTION='';
+
+PART_NAME
+ C36 'CAP NP_C0402_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490595@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490595@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490595@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(270,580)',
+ SECTION='';
+
+PART_NAME
+ C37 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490983@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490983@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490983@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(890,680)',
+ SECTION='';
+
+PART_NAME
+ C38 'CAP NP_C0402_2.2UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490359@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490359@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490359@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(430,540)',
+ SECTION='';
+
+PART_NAME
+ C39 'CAP NP_C0402_2.2UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+06pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491023@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491023@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491023@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+06pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(540,690)',
+ SECTION='';
+
+PART_NAME
+ C4 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS538579@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins538579@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins538579@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(960,1000)',
+ SECTION='';
+
+PART_NAME
+ C40 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492277@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492277@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492277@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1190,150)',
+ SECTION='';
+
+PART_NAME
+ C41 'CAP NP_C0402_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490663@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490663@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490663@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(380,590)',
+ SECTION='';
+
+PART_NAME
+ C42 'CAP NP_C0402_0.1UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491429@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491429@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491429@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_100000pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(490,740)',
+ SECTION='';
+
+PART_NAME
+ C43 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490627@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490627@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490627@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1010,550)',
+ SECTION='';
+
+PART_NAME
+ C44 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492293@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492293@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492293@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1210,150)',
+ SECTION='';
+
+PART_NAME
+ C45 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS539020@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins539020@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins539020@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1140,1000)',
+ SECTION='';
+
+PART_NAME
+ C46 'CAP NP_C1206_22UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480917@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480917@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480917@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1030,140)',
+ SECTION='';
+
+PART_NAME
+ C47 'CAP NP_C1206_22UF':
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+07pF_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS481281@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins481281@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins481281@discrete.\cap np.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_CAPACITOR_2.2e+07pF_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1000,140)',
+ SECTION='';
+
+PART_NAME
+ C5 'CAP NP_C0402_12PF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS504352@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins504352@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins504352@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(50,890)',
+ SECTION='';
+
+PART_NAME
+ C6 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS512283@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins512283@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins512283@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(150,980)',
+ SECTION='';
+
+PART_NAME
+ C7 'CAP NP_C0603_10UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491915@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491915@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491915@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1560,110)',
+ SECTION='';
+
+PART_NAME
+ C8 'CAP NP_C0402_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491983@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491983@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491983@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1560,130)',
+ SECTION='';
+
+PART_NAME
+ C9 'CAP NP_C1206_33UF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS750516@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins750516@discrete.\cap np.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins750516@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1160,150)',
+ SECTION='';
+
+PART_NAME
+ D1 'LED_LED0402_LED':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS742874@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins742874@discrete.\led.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins742874@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1280,480)',
+ SECTION='';
+
+PART_NAME
+ D2 'LED_LED0402_GREEN LED':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS554368@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins554368@discrete.\led.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins554368@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1070,200)',
+ SECTION='';
+
+PART_NAME
+ D3 'LED_LED0402_GREEN LED':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS541127@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins541127@discrete.\led.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins541127@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1180,1020)',
+ SECTION='';
+
+PART_NAME
+ D4 'LED_LED0402_GREEN LED':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS555297@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins555297@discrete.\led.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins555297@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(620,400)',
+ SECTION='';
+
+PART_NAME
+ J1 'SIP-1X4_SMD-1D25-4P-DEG0_SIP-1X4':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS523953@LIBRARY1.SIP-1X4.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins523953@library1.\sip-1x4.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins523953@library1.\sip-1x4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(50,780)',
+ SECTION='';
+
+PART_NAME
+ J2 'CONN-24P_SMD_CONN_2X12P_1D27_CONN-24P':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS744320@LIBRARY1.CONN-24P.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins744320@library1.\conn-24p.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins744320@library1.\conn-24p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1310,310)',
+ SECTION='';
+
+PART_NAME
+ J3 'CONN-24P_SMD_CONN_2X12P_1D27_CONN-24P':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS742958@LIBRARY1.CONN-24P.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins742958@library1.\conn-24p.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins742958@library1.\conn-24p.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1450,500)',
+ SECTION='';
+
+PART_NAME
+ L1 'INDUCTOR_IND_SMD_7D0X6D6_33UH/1A':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492073@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492073@discrete.\inductor.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492073@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1330,110)',
+ SECTION='';
+
+PART_NAME
+ L2 'INDUCTOR_L0603_2.2UH':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS512251@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins512251@discrete.\inductor.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins512251@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(80,970)',
+ SECTION='';
+
+PART_NAME
+ L3 'INDUCTOR_L0603_2.2UH/500MA':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS500426@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins500426@discrete.\inductor.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins500426@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1440,50)',
+ SECTION='';
+
+PART_NAME
+ L4 'INDUCTOR_IND_SMD_4D4X4D2_10UH/1A':
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_10000nH_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485057@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485057@discrete.\inductor.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485057@discrete.\inductor.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_10000nH_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(280,280)',
+ SECTION='';
+
+PART_NAME
+ L5 'INDUCTOR_IND_SMD_4D4X4D2_10UH/1A':
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_10000nH_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479421@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479421@discrete.\inductor.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479421@discrete.\inductor.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_10000nH_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(280,50)',
+ SECTION='';
+
+PART_NAME
+ L6 'INDUCTOR_L0603_2.2UH':
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_4700nH_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS508207@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins508207@discrete.\inductor.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins508207@discrete.\inductor.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_4700nH_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(60,1120)',
+ SECTION='';
+
+PART_NAME
+ L7 'INDUCTOR_IND_SMD_4D4X4D2_4.7UH/1A':
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_4700nH_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS481597@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins481597@discrete.\inductor.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins481597@discrete.\inductor.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_INDUCTOR_4700nH_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(790,60)',
+ SECTION='';
+
+PART_NAME
+ LD1 'LASERDIODE_AXIAL_2D0_4P_LASERDIODE':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527110@LIBRARY1.LASERDIODE.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527110@library1.\laserdiode.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527110@library1.\laserdiode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1500,870)',
+ SECTION='';
+
+PART_NAME
+ PD1 'PHOTODIODE_PD-THR-2P_PHOTODIODE':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS546318@LIBRARY1.PHOTODIODE.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins546318@library1.\photodiode.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins546318@library1.\photodiode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1540,720)',
+ SECTION='';
+
+PART_NAME
+ Q1 'FH3415A_SOT23-3_SI2301BDS-HXY':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527008@LIBRARY1.FH3415A.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527008@library1.\fh3415a.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527008@library1.\fh3415a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1350,840)',
+ SECTION='';
+
+PART_NAME
+ Q2 '2SC1815_SOT23-3_2SC1815':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527316@LIBRARY1.2SC1815.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527316@library1.\2sc1815.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527316@library1.\2sc1815.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1540,930)',
+ SECTION='';
+
+PART_NAME
+ Q3 '2SC1815_SOT23-3_2SC1815':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527286@LIBRARY1.2SC1815.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527286@library1.\2sc1815.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527286@library1.\2sc1815.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1420,930)',
+ SECTION='';
+
+PART_NAME
+ R1 'R_R0402_DNI':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS602760@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins602760@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins602760@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(250,800)',
+ SECTION='';
+
+PART_NAME
+ R10 'R_R0402_20K':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS541143@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins541143@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins541143@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1120,1020)',
+ SECTION='';
+
+PART_NAME
+ R11 'R_R0402_DNI':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS555277@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins555277@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins555277@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(620,330)',
+ SECTION='';
+
+PART_NAME
+ R12 'R_R0402_200K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_200000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485497@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485497@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485497@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_200000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(180,400)',
+ SECTION='';
+
+PART_NAME
+ R13 'R_R0402_200K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_200000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480471@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480471@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480471@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_200000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(180,170)',
+ SECTION='';
+
+PART_NAME
+ R14 'R_R0402_10K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS518089@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins518089@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins518089@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(50,1050)',
+ SECTION='';
+
+PART_NAME
+ R15 'R_R0402_1M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485513@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485513@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485513@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(410,400)',
+ SECTION='';
+
+PART_NAME
+ R16 'R_R0402_1M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480493@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480493@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480493@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(410,170)',
+ SECTION='';
+
+PART_NAME
+ R17 'R_R0402_2.26M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.00226OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485317@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485317@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485317@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.00226OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(410,330)',
+ SECTION='';
+
+PART_NAME
+ R18 'R_R0402_2.26M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.00226OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS481193@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins481193@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins481193@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.00226OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(410,100)',
+ SECTION='';
+
+PART_NAME
+ R19 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS575682@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins575682@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins575682@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(850,280)',
+ SECTION='';
+
+PART_NAME
+ R2 'R_R0402_0R':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS602734@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins602734@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins602734@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(250,810)',
+ SECTION='';
+
+PART_NAME
+ R20 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS575656@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins575656@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins575656@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(850,260)',
+ SECTION='';
+
+PART_NAME
+ R21 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS486388@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins486388@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins486388@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(560,300)',
+ SECTION='';
+
+PART_NAME
+ R22 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS481619@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins481619@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins481619@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(550,70)',
+ SECTION='';
+
+PART_NAME
+ R23 'R_R0402_1M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490559@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490559@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490559@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(90,670)',
+ SECTION='';
+
+PART_NAME
+ R24 'R_R0402_1M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490319@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490319@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490319@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(90,600)',
+ SECTION='';
+
+PART_NAME
+ R25 'R_R0402_1M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490335@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490335@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490335@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,510)',
+ SECTION='';
+
+PART_NAME
+ R26 'R_R0402_1M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490575@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490575@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490575@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,580)',
+ SECTION='';
+
+PART_NAME
+ R27 'R_R0402_1M':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479443@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479443@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479443@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_0.001OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(910,120)',
+ SECTION='';
+
+PART_NAME
+ R28 'R_R0402_100K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479399@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479399@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479399@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(760,190)',
+ SECTION='';
+
+PART_NAME
+ R29 'R_R0402_DNI':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480449@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480449@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480449@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(710,140)',
+ SECTION='';
+
+PART_NAME
+ R3 'R_R0402_DNP':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS512299@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins512299@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins512299@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(80,990)',
+ SECTION='';
+
+PART_NAME
+ R30 'R_R0402_3.3K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_3300OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490375@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490375@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490375@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_3300OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(490,540)',
+ SECTION='';
+
+PART_NAME
+ R31 'R_R0402_3.3K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_3300OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491039@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491039@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491039@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_3300OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(600,690)',
+ SECTION='';
+
+PART_NAME
+ R32 'R_R0402_562K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_562000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480799@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480799@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480799@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_562000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(910,190)',
+ SECTION='';
+
+PART_NAME
+ R33 'R_R0402_560':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527440@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527440@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527440@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1580,960)',
+ SECTION='';
+
+PART_NAME
+ R34 'R_R0402_510':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527154@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527154@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527154@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1580,880)',
+ SECTION='';
+
+PART_NAME
+ R35 'R_R0402_51':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_40.000000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527468@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527468@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527468@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_40.000000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1480,990)',
+ SECTION='';
+
+PART_NAME
+ R36 'R_R0402_DNI':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479355@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479355@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479355@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(690,90)',
+ SECTION='';
+
+PART_NAME
+ R37 'R_R0402_100K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480559@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480559@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480559@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(690,160)',
+ SECTION='';
+
+PART_NAME
+ R38 'R_R0402_510':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527078@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527078@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527078@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1380,870)',
+ SECTION='';
+
+PART_NAME
+ R39 'R_R0402_3.01K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_36000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491559@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491559@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491559@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_36000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(480,760)',
+ SECTION='';
+
+PART_NAME
+ R4 'R_R0402_0R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS514599@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins514599@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins514599@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(80,1010)',
+ SECTION='';
+
+PART_NAME
+ R40 'R_R0402_4.99K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_147000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491711@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491711@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491711@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_147000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(520,790)',
+ SECTION='';
+
+PART_NAME
+ R41 'R_R0402_200K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_36000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490763@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490763@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490763@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_36000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(370,610)',
+ SECTION='';
+
+PART_NAME
+ R42 'R_R0402_998K?':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_147000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490883@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490883@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490883@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_147000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(410,640)',
+ SECTION='';
+
+PART_NAME
+ R43 'R_R0402_51':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_40.000000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527094@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527094@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527094@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_40.000000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1430,870)',
+ SECTION='';
+
+PART_NAME
+ R44 'R_R0402_510':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527416@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527416@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527416@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1380,960)',
+ SECTION='';
+
+PART_NAME
+ R45 'R_R0402_22.9K?':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491119@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491119@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491119@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(680,710)',
+ SECTION='';
+
+PART_NAME
+ R46 'R_R0402_378K?':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490475@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490475@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490475@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(570,560)',
+ SECTION='';
+
+PART_NAME
+ R5 'R_R0402_2K':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS742890@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins742890@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins742890@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1360,480)',
+ SECTION='';
+
+PART_NAME
+ R6 'R_R0402_20K':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS554352@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins554352@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins554352@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1070,130)',
+ SECTION='';
+
+PART_NAME
+ R7 'R_R0402_DNI':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS546742@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins546742@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins546742@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1470,690)',
+ SECTION='';
+
+PART_NAME
+ R8 'R_R0402_10K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527130@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527130@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527130@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_10000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1290,880)',
+ SECTION='';
+
+PART_NAME
+ R9 'R_R0402_5.1K':
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1';
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS527270@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins527270@discrete.\r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins527270@discrete.\r.normal\(chips)',
+ SIGNAL_MODEL='DEFAULT_RESISTOR_510.000000OHM_2_1',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1340,930)',
+ SECTION='';
+
+PART_NAME
+ TP1 'T POINT R_TP_THR_1D8_1D2_T POINT R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS743186@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins743186@discrete.\t point r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins743186@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1550,570)',
+ SECTION='';
+
+PART_NAME
+ TP10 'T POINT A_TP_THR_1D8_1D2_SOLAR CELL V-':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485339@DISCRETE.T POINT A.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485339@discrete.\t point a.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485339@discrete.\t point a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,340)',
+ SECTION='';
+
+PART_NAME
+ TP11 'T POINT A_TP_THR_1D8_1D2_SOLAR CELL V-':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479205@DISCRETE.T POINT A.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479205@discrete.\t point a.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479205@discrete.\t point a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,110)',
+ SECTION='';
+
+PART_NAME
+ TP12 'T POINT S_TP_SMD_1D0_NP_T POINT S':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS605610@DISCRETE.T POINT S.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins605610@discrete.\t point s.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins605610@discrete.\t point s.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(900,590)',
+ SECTION='';
+
+PART_NAME
+ TP13 'T POINT S_TP_SMD_1D0_NP_T POINT S':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS605488@DISCRETE.T POINT S.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins605488@discrete.\t point s.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins605488@discrete.\t point s.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(770,720)',
+ SECTION='';
+
+PART_NAME
+ TP2 'T POINT R_TP_THR_1D8_1D2_T POINT R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS742918@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins742918@discrete.\t point r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins742918@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1510,480)',
+ SECTION='';
+
+PART_NAME
+ TP3 'T POINT S_TP_SMD_1D0_NP_T POINT S':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS756524@DISCRETE.T POINT S.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins756524@discrete.\t point s.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins756524@discrete.\t point s.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(570,920)',
+ SECTION='';
+
+PART_NAME
+ TP4 'T POINT S_TP_SMD_1D0_NP_T POINT S':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS605556@DISCRETE.T POINT S.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins605556@discrete.\t point s.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins605556@discrete.\t point s.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1100,490)',
+ SECTION='';
+
+PART_NAME
+ TP5 'T POINT R_TP_THR_1D8_1D2_T POINT R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS742906@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins742906@discrete.\t point r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins742906@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1420,480)',
+ SECTION='';
+
+PART_NAME
+ TP6 'T POINT R_TP_THR_1D8_1D2_T POINT R':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS743150@DISCRETE.T POINT R.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins743150@discrete.\t point r.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins743150@discrete.\t point r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1380,570)',
+ SECTION='';
+
+PART_NAME
+ TP7 'T POINT S_TP_SMD_1D0_NP_T POINT S':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS605448@DISCRETE.T POINT S.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins605448@discrete.\t point s.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins605448@discrete.\t point s.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(810,830)',
+ SECTION='';
+
+PART_NAME
+ TP8 'T POINT A_TP_THR_1D8_1D2_SOLAR CELL V+':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS480409@DISCRETE.T POINT A.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins480409@discrete.\t point a.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins480409@discrete.\t point a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,60)',
+ SECTION='';
+
+PART_NAME
+ TP9 'T POINT A_TP_THR_1D8_1D2_SOLAR CELL V+':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485091@DISCRETE.T POINT A.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485091@discrete.\t point a.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485091@discrete.\t point a.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(130,290)',
+ SECTION='';
+
+PART_NAME
+ U1 'STM32L051C8T6_LQFP-48_STM32L051C8T6':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS500911@LIBRARY1.STM32L051C8T6.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins500911@library1.\stm32l051c8t6.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins500911@library1.\stm32l051c8t6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(230,880)',
+ SECTION='';
+
+PART_NAME
+ U10 'SN74AHC1G14DBVR_SOT-23-5_SN74AHC1G14DBVR':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS549453@LIBRARY1.SN74AHC1G14DBVR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins549453@library1.\sn74ahc1g14dbvr.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins549453@library1.\sn74ahc1g14dbvr.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1080,720)',
+ SECTION='';
+
+PART_NAME
+ U11 'SN74AUP1G08_SOT-23-5_SN74AUP1G08DBVR':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490801@LIBRARY1.SN74AUP1G08.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490801@library1.\sn74aup1g08.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490801@library1.\sn74aup1g08.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(980,580)',
+ SECTION='';
+
+PART_NAME
+ U12 'LTC3539EDCB#PBF_DFN-8_LTC3539EDCB#PBF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS481325@LIBRARY1.LTC3539EDCB#PBF.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins481325@library1.\ltc3539edcb#pbf.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins481325@library1.\ltc3539edcb#pbf.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(770,90)',
+ SECTION='';
+
+PART_NAME
+ U13 'ADCMP380-1ACBZ-RL7_WLCSP-6_ADCMP380-1ACBZ-RL7':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490499@LIBRARY1.ADCMP380-1ACBZ-RL7.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490499@library1.\adcmp380-1acbz-rl7.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490499@library1.\adcmp380-1acbz-rl7.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(440,570)',
+ SECTION='';
+
+PART_NAME
+ U14 'ADCMP380-1ACBZ-RL7_WLCSP-6_ADCMP380-1ACBZ-RL7':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491253@LIBRARY1.ADCMP380-1ACBZ-RL7.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491253@library1.\adcmp380-1acbz-rl7.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491253@library1.\adcmp380-1acbz-rl7.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(550,720)',
+ SECTION='';
+
+PART_NAME
+ U15 'SN74LVC1G32DBVR_SOT-23-5_SN74LVC1G32DBVR':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS491135@LIBRARY1.SN74LVC1G32DBVR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins491135@library1.\sn74lvc1g32dbvr.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins491135@library1.\sn74lvc1g32dbvr.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(840,710)',
+ SECTION='';
+
+PART_NAME
+ U2 'LTC3336_LQFN-12-2D0X2D0MM_LTC3336EV#TRPBF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS492089@LIBRARY1.LTC3336.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins492089@library1.\ltc3336.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins492089@library1.\ltc3336.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1410,110)',
+ SECTION='';
+
+PART_NAME
+ U3 'SN74AHC1G14DBVR_SOT-23-5_SN74AHC1G14DBVR':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS548217@LIBRARY1.SN74AHC1G14DBVR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins548217@library1.\sn74ahc1g14dbvr.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins548217@library1.\sn74ahc1g14dbvr.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1290,720)',
+ SECTION='';
+
+PART_NAME
+ U4 'TLV365DBVR_SOT-23-5_TLV365DBVR':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS545827@LIBRARY1.TLV365DBVR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins545827@library1.\tlv365dbvr.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins545827@library1.\tlv365dbvr.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1420,730)',
+ SECTION='';
+
+PART_NAME
+ U5 'TXS0108ERGYR_VQFN-20_TXS0108ERGYR':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS534484@LIBRARY1.TXS0108ERGYR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins534484@library1.\txs0108ergyr.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins534484@library1.\txs0108ergyr.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(1010,1000)',
+ SECTION='';
+
+PART_NAME
+ U6 'TMUX1309_WQFN-16-3D5X2D5MM_TMUX1309BQBR':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS524700@LIBRARY1.TMUX1309.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins524700@library1.\tmux1309.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins524700@library1.\tmux1309.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(710,950)',
+ SECTION='';
+
+PART_NAME
+ U7 'LTC3105EDD#PBF_DFN-10_LTC3105EDD#PBF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS485191@LIBRARY1.LTC3105EDD#PBF.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins485191@library1.\ltc3105edd#pbf.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins485191@library1.\ltc3105edd#pbf.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(250,310)',
+ SECTION='';
+
+PART_NAME
+ U8 'LTC3105EDD#PBF_DFN-10_LTC3105EDD#PBF':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS479945@LIBRARY1.LTC3105EDD#PBF.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins479945@library1.\ltc3105edd#pbf.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins479945@library1.\ltc3105edd#pbf.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(250,80)',
+ SECTION='';
+
+PART_NAME
+ U9 'ADA4051-2ARMZ_MSOP-8_ADA4051-2ARMZ':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS490719@LIBRARY1.ADA4051-2ARMZ.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins490719@library1.\ada4051-2armz.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins490719@library1.\ada4051-2armz.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(200,610)',
+ SECTION='';
+
+PART_NAME
+ Y1 'CRYSTAL_SMD3215-2P_32.768KHZ':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS504304@DISCRETE.CRYSTAL.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins504304@discrete.\crystal.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins504304@discrete.\crystal.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(90,870)',
+ SECTION='';
+
+PART_NAME
+ Y2 'OSCILLATOR_SMD2520-4P_32.0MHZ_X1G0041710040':;
+
+SECTION_NUMBER 1
+ '@GLPP_PSU.SCHEMATIC1(SCH_1):INS512183@LIBRARY1.OSCILLATOR.NORMAL(CHIPS)':
+ C_PATH='@glpp_psu.schematic1(sch_1):ins512183@library1.\oscillator.normal\(chips)',
+ P_PATH='@glpp_psu.schematic1(sch_1):page1_ins512183@library1.\oscillator.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ XY='(50,930)',
+ SECTION='';
+
+END.

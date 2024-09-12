@@ -1,0 +1,96 @@
+#Start recording tcl command: 9/3/2024 12:15:07
+#Project Location: F:/MyTemporary/Github/GLPP2024/IRStore; Project name: IRStore
+prj_open "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+rvl_new_project
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_add_trace  {ioPSRAM_DQS}
+rvl_add_trace  {{ioPSRAM_DATA[7:0]}}
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} ioPSRAM_DQS }
+rvl_set_te -expression T TE1
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} }
+rvl_set_te -expression TU1 TE1
+rvl_set_tu -name TU1 -op .RE.
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+prj_add_source -exclude "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl"
+prj_enable_source "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl"
+prj_run Export -impl impl_1
+rvl_rename_trace -bus ioPSRAM_DATA ioPSRAM_DATA
+rvl_del_trace {ioPSRAM_DATA}
+rvl_del_tu TU1
+rvl_add_trace  {ic_OctalRAM/oPSRAM_CE}
+rvl_group_trace -bus Bus0 {ioPSRAM_DQS}
+rvl_del_trace {Bus0}
+rvl_del_trace {ic_OctalRAM/oPSRAM_CE}
+rvl_add_trace  {{ic_OctalRAM/iPSRAM_DATA[7:0]}}
+rvl_add_trace  {{ic_OctalRAM/oPSRAM_DATA[7:0]}}
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU1 -set_sig {{ic_OctalRAM/iPSRAM_DATA[7:0]} }
+rvl_set_tu -name TU1 -op .RE.
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+prj_run Export -impl impl_1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl
+prj_run PAR -impl impl_1
+rvl_close_project -force
+prj_disable_source "F:/MyTemporary/Github/GLPP2024/IRStore/IRStore.rvl"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZClockDomainCrossing.v"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Map -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/3/2024 18:13:21

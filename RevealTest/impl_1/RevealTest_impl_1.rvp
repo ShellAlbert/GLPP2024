@@ -1,0 +1,36 @@
+#-- Lattice Semiconductor Corporation Ltd.
+#-- Bali Reveal project file
+
+#device options
+[Device]
+part = iCE40UP5K-SG48I
+family = iCE40UP
+device = iCE40UP5K
+speed = High-Performance_1.2V
+package = SG48
+operation = Industrial
+
+#design options
+[Design]
+title = RevealTest
+path = F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1
+core_generate = F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1
+search_path = F:/MyTemporary/Github/GLPP2024/RevealTest
+top = ZRevealTest
+synthesis = lse
+
+#strategy options
+VHDL2008 = false
+
+#HDLs options
+[HDLs]
+F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/ZRevealTest.v = Verilog
+F:/MyTemporary/Github/GLPP2024/RevealTest/ZPLL/rtl/ZPLL.v = Verilog
+[HDL_Defines]
+SBP_SYNTHESIS=
+[HDL_Param]
+[Generated]
+F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/core_la0_trig_gen.v=Verilog
+F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/core_la0_gen.v=Verilog
+F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/ZRevealTest_rvl_top.v=Verilog,work
+F:/MySoftware/Lattice/radiant/data/reveal/src/ertl/reveal_constraint_JTAGSOFT.sdc=SDC

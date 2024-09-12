@@ -1,0 +1,564 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 2023.1.1.200.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Sep  4 08:30:41 2024
+
+
+Command Line:  F:\MySoftware\Lattice\radiant\ispfpga\bin\nt64\synthesis.exe -f RevealTest_impl_1_lattice.synproj -gui -msgset F:/MyTemporary/Github/GLPP2024/RevealTest/promote.xml 
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO <35001786> - synthesis: User-Selected Strategy Settings
+Optimization goal = Area
+Top-level module name = ZRevealTest.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3 (default)
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = RevealTest_impl_1.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+Key file = F:/MySoftware/Lattice/radiant/data/reveal/document/reveal_test.dat
+-sdc option: SDC file input is RevealTest_impl_1_cpe.ldc.
+-sdc option: SDC file input is F:/MySoftware/Lattice/radiant/data/reveal/src/ertl/reveal_constraint_JTAGSOFT.sdc.
+-path F:/MySoftware/Lattice/radiant/ispfpga/ice40tp/data (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/RevealTest (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/RevealTest/ZPLL (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1 (searchpath added)
+-path F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/RevealTest (searchpath added)
+Mixed language design
+Verilog design file = F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v
+Verilog design file = F:/MySoftware/Lattice/radiant/data/reveal/src/ertl/ertl_iCE40UP.v
+Verilog design file = F:/MySoftware/Lattice/radiant/data/reveal/src/ertl/JTAG_SOFT.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/core_la0_trig_gen.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/core_la0_gen.v
+Verilog design file = F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/ZRevealTest_rvl_top.v
+VHDL library = pmi
+VHDL design file = F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM7 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM6 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM5 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM4 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM3 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM2 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM1 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM0 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port I is not connected on this instance. VDB-5050
+Compile design.
+Compile Design Begin
+WARNING <35002045> - synthesis: No Lattice Encryption Key found for encrypted module.
+WARNING <35002045> - synthesis: No Lattice Encryption Key found for encrypted module.
+Analyzing Verilog file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(1): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_addsub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_addsub.v(40): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(2): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_add.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_add.v(50): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(3): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_complex_mult.v(52): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(4): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_counter.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_counter.v(39): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(5): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo.v(44): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/fifo/rtl/lscc_fifo.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(6): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_fifo_dc.v(47): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(7): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_mac.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_mac.v(52): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(8): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsubsum.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(9): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_multaddsub.v(52): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(10): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_mult.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_mult.v(51): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(11): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp.v(48): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(12): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq.v(45): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(13): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_rom.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_rom.v(45): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/rom/rtl/lscc_rom.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(14): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_sub.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_sub.v(50): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(15): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp_be.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(16): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq_be.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.v(17): analyzing included file f:/mysoftware/lattice/radiant/ip/pmi/pmi_dsp.v. VERI-1328
+Analyzing Verilog file f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v. VERI-1482
+Analyzing Verilog file f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/core_la0_trig_gen.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/core_la0_gen.v. VERI-1482
+Analyzing Verilog file f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/zrevealtest_rvl_top.v. VERI-1482
+Analyzing VHDL file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd
+
+INFO <35921014> - synthesis: f:/mysoftware/lattice/radiant/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
+INFO <35921504> - synthesis: The default VHDL library search path is now "F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): ZRevealTest
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/zrevealtest_rvl_top.v(66): compiling module ZRevealTest. VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/zrevealtest_rvl_top.v(371): compiling module ZPLL_uniq_1. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/zrevealtest_rvl_top.v(465): compiling module ZPLL_ipgen_lscc_pll_uniq_1. VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(428): compiling module PLL_B(PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",DIVF="19",DIVQ="4",FILTER_RANGE="4",FREQUENCY_PIN_REFERENCECLK="48.000000"). VERI-1018
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(580): compiling module VHI. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/zrevealtest_rvl_top.v(2): compiling module reveal_coretop. VERI-1018
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/core_la0_gen.v(12): compiling module core_la0. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+WARNING <35901209> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): expression size 18 truncated to fit in target size 16. VERI-1209
+INFO <35901018> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/core_la0_trig_gen.v(11): compiling module core_la0_trig. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+WARNING <35901209> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): expression size 4 truncated to fit in target size 3. VERI-1209
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+WARNING <35901209> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): expression size 32 truncated to fit in target size 1. VERI-1209
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+WARNING <35901209> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+WARNING <35901209> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): expression size 32 truncated to fit in target size 1. VERI-1209
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/ertl_ice40up.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(670): compiling module OBZ_B. VERI-1018
+INFO <35901018> - synthesis: F:/MySoftware/Lattice/radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(658): compiling module IB. VERI-1018
+WARNING <35901209> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v(0): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v(0): compiling module protected. VERI-1018
+INFO <35901018> - synthesis: f:/mysoftware/lattice/radiant/data/reveal/src/ertl/jtag_soft.v(0): compiling module protected. VERI-1018
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING <35935047> - synthesis: Unused instance VHI_reset_u is removed. VDB-5047
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/zrevealtest_rvl_top.v(484): net \ic_PLL/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: f:/mytemporary/github/glpp2024/revealtest/impl_1/reveal_workspace/tmpreveal/zrevealtest_rvl_top.v(485): net \ic_PLL/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+######## Missing driver on net encrypted_port. Patching with GND.
+######## Missing driver on net encrypted_port. Patching with GND.
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/trace_dout_1st_bit clock is stuck at Zero. VDB-5040
+INFO <35001774> - synthesis: Extracted state machine for register 'encrypted_netlist' with one-hot encoding
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
+
+
+
+WARNING <35001313> - synthesis: Only read/clocked-write port supported, RAM encrypted_port.
+######## Found 1 RTL RAMs in the design.
+######## Mapping RTL RAM \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/tr_mem/mem to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+
+WARNING <35001313> - synthesis: Only read/clocked-write port supported, RAM encrypted_port.
+######## Missing driver on net encrypted_port. Patching with GND.
+######## Missing driver on net encrypted_port. Patching with GND.
+######## Missing driver on net encrypted_port. Patching with GND.
+######## Missing driver on net encrypted_port. Patching with GND.
+WARNING <35001263> - synthesis: Skipping pad insertion on encrypted_port due to black_box_pad_pin attribute.
+WARNING <35001263> - synthesis: Skipping pad insertion on encrypted_port due to black_box_pad_pin attribute.
+WARNING <35001263> - synthesis: Skipping pad insertion on encrypted_port due to black_box_pad_pin attribute.
+WARNING <35001263> - synthesis: Skipping pad insertion on encrypted_port due to black_box_pad_pin attribute.
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i15 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i14 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i13 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i12 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i11 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i10 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i9 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i8 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i7 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i6 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i5 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i4 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i3 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i2 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/pre_trig_cap_reg_i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/rd_dout_tm_i0_i14 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/rd_dout_tm_i0_i12 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/tm_u/rd_dout_tm_i0_i11 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \ZRevealTest_reveal_coretop_instance/core_la0_inst_0/trig_u/te_0/next_then_shift[0] clock is stuck at Zero. VDB-5040
+Duplicate register/latch removal. encrypted_netlist is a one-to-one match with encrypted_netlist.
+Duplicate register/latch removal. encrypted_netlist is a one-to-one match with encrypted_netlist.
+Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70001908> - synthesis: set_false_path -to [get_clocks rvltck] is being ignored due to errors
+
+Starting full timing analysis...
+Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+Starting design annotation....
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING <70009502> - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (ZRevealTest)######################
+Number of register bits => 383 of 5280 (7 % )
+EBR_B => 1
+CCU2 => 48
+FD1P3XZ => 383
+HSOSC_CORE => 1
+IB => 3
+INV => 3
+IOL_B => 1
+LUT4 => 601
+OB => 2
+OBZ_B => 1
+PLL_B => 1
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 7
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : clk_48MHz, loads : 1
+  Net : ZRevealTest_reveal_coretop_instance/JTAG_SOFT_inst_0/tck, loads : 0
+  Net : ic_PLL/lscc_pll_inst/clk_Global, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n37, loads : 162
+  Net : secured_path.secured_net, loads : 152
+  Net : secured_path.secured_net, loads : 127
+  Net : secured_path.secured_net, loads : 38
+  Net : oLED2_c_N_459, loads : 34
+  Net : n63, loads : 34
+  Net : secured_path.secured_net, loads : 31
+  Net : secured_path.secured_net, loads : 30
+  Net : secured_path.secured_net, loads : 25
+  Net : secured_path.secured_net, loads : 23
+################### End Clock Report ##################
+
+Peak Memory Usage: 116 MB
+
+--------------------------------------------------------------
+Total CPU Time: 4 secs 
+Total REAL Time: 5 secs 
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

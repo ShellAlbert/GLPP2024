@@ -1,0 +1,527 @@
+
+map -i "RevealTest_impl_1_syn.udb" -pdc "F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/phypins.pdc" -o "RevealTest_impl_1_map.udb" -mp "RevealTest_impl_1.mrp" -hierrpt     
+map:  version Radiant Software (64-bit) 2023.1.1.200.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:   map -i RevealTest_impl_1_syn.udb -pdc F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/phypins.pdc -o RevealTest_impl_1_map.udb -mp RevealTest_impl_1.mrp -hierrpt -gui 
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+
+
+
+   Remove unused logic
+
+   Do not produce over sized UDBs.
+
+Design:  ZRevealTest
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+INFO <52291016> - Port 'oLED1' is located on BB_OD pad '39' and defined in rgb_2_gpio attribute. Its IO buffer is mapped to BB_OD accordingly. Please notice PULLMODE is not applicable to BB_OD.
+INFO <52291016> - Port 'oLED2' is located on BB_OD pad '40' and defined in rgb_2_gpio attribute. Its IO buffer is mapped to BB_OD accordingly. Please notice PULLMODE is not applicable to BB_OD.
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+
+
+
+Design Summary:
+   Number of slice registers: 382 out of  5280 (7%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:           846 out of  5280 (16%)
+      Number of logic LUT4s:             593
+      Number of inserted feedthru LUT4s: 154
+      Number of replicated LUT4s:          3
+      Number of ripple logic:             48 (96 LUT4s)
+   Number of IO sites used:   6 out of 39 (15%)
+      Number of IO sites used for general PIO: 4
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 4 out of 36 (11%)
+      Number of IO sites used for OD+RGB IO buffers: 2 out of 3 (67%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 6 out of 39 (15%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             1 out of 30 (3%)
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  3
+      Net clk_48MHz: 35 loads, 35 rising, 0 falling (Driver: Pin my_HSOSC/CLKHF)
+      Net jtck[0]: 204 loads, 37 rising, 167 falling (Driver: Port JTAG_TCK)
+      Net clk_Global: 147 loads, 147 rising, 0 falling (Driver: Pin ic_PLL.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+   Number of Clock Enables:  42
+      Net VCC_reveal_N: 4 loads, 0 SLICEs
+      Net sample_en_d: 7 loads, 7 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.tr_dout_bit_cnt_0__N_190: 2 loads, 2 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.r_w_N_510: 2 loads, 2 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.compare_reg_0__0__N_367: 2 loads, 2 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.mask_val_0__N_369: 2 loads, 2 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.op_code_0__N_372: 3 loads, 3 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.jrstn[0]: 2 loads, 2 SLICEs
+      Net secured_signal_181: 2 loads, 2 SLICEs
+      Net secured_signal_196: 1 loads, 1 SLICEs
+      Net secured_signal_224: 1 loads, 1 SLICEs
+      Net secured_signal_232: 1 loads, 1 SLICEs
+      Net secured_signal_234: 1 loads, 1 SLICEs
+      Net secured_signal_237: 16 loads, 16 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.trig_u.te_precnt_val_0__N_397: 16 loads, 16 SLICEs
+      Net secured_signal_296: 1 loads, 1 SLICEs
+      Net secured_signal_336: 1 loads, 1 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.reg0_0__N_532: 2 loads, 2 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.reg2_0__N_452: 1 loads, 1 SLICEs
+      Net secured_signal_353: 1 loads, 1 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.reg1_0__N_451: 3 loads, 3 SLICEs
+      Net secured_signal_387: 1 loads, 1 SLICEs
+      Net secured_signal_399: 2 loads, 2 SLICEs
+      Net secured_signal_414: 1 loads, 1 SLICEs
+      Net secured_signal_415: 1 loads, 1 SLICEs
+      Net secured_signal_472: 8 loads, 8 SLICEs
+      Net secured_signal_482: 2 loads, 2 SLICEs
+      Net secured_signal_484: 9 loads, 8 SLICEs
+      Net secured_signal_496: 2 loads, 2 SLICEs
+      Net secured_signal_503: 8 loads, 8 SLICEs
+      Net secured_signal_509: 8 loads, 8 SLICEs
+      Net secured_signal_523: 2 loads, 2 SLICEs
+      Net secured_signal_530: 2 loads, 2 SLICEs
+      Net secured_signal_532: 2 loads, 2 SLICEs
+      Net secured_signal_567: 2 loads, 2 SLICEs
+      Net secured_signal_610: 2 loads, 2 SLICEs
+      Net secured_signal_612: 8 loads, 8 SLICEs
+      Net secured_signal_615: 8 loads, 8 SLICEs
+      Net secured_signal_899: 1 loads, 1 SLICEs
+      Net shift_reg_32__N_484: 20 loads, 20 SLICEs
+      Net secured_signal_1085: 8 loads, 8 SLICEs
+      Net secured_signal_1106: 8 loads, 8 SLICEs
+   Number of LSRs:  3
+      Net oLED2_c_N_459: 34 loads, 34 SLICEs
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.tr_bit_0_d2_N_555: 154 loads, 154 SLICEs
+      Net secured_signal_1048: 36 loads, 36 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.tr_bit_0_d2_N_555: 154 loads
+      Net VCC_reveal_N: 47 loads
+      Net secured_signal_1048: 38 loads
+      Net n63: 34 loads
+      Net oLED2_c_N_459: 34 loads
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.addr[0]: 32 loads
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.addr[1]: 31 loads
+      Net jshift_d1: 26 loads
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.addr_15: 26 loads
+      Net ZRevealTest_reveal_coretop_instance.core_la0_inst_0.addr[2]: 24 loads
+Running physical design DRC...
+
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Constraint Summary:
+   Total number of constraints: 17
+   Total number of constraints dropped: 0
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 70 MB
+
+
+par -f "RevealTest_impl_1.p2t" "RevealTest_impl_1_map.udb" "RevealTest_impl_1.udb"
+
+Lattice Place and Route Report for Design "RevealTest_impl_1_map.udb"
+Wed Sep  4 08:55:15 2024
+
+PAR: Place And Route Radiant Software (64-bit) 2023.1.1.200.1.
+Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON \
+	RevealTest_impl_1_map.udb RevealTest_impl_1_par.dir/5_1.udb 
+
+Loading RevealTest_impl_1_map.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  ZRevealTest
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+WARNING <70009502> - The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+Number of Signals: 1317
+Number of Connections: 3593
+Device utilization summary:
+
+   SLICE (est.)     455/2640         17% used
+     LUT            846/5280         16% used
+     REG            382/5280          7% used
+   PIO                4/56            7% used
+                      4/36           11% bonded
+   IOLOGIC            1/56            2% used
+   DSP                0/8             0% used
+   I2C                0/2             0% used
+   HFOSC              1/1           100% used
+   LFOSC              0/1             0% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR                1/30            3% used
+   PLL                1/1           100% used
+   RGBOUTBUF          0/3             0% used
+   I3C                0/2             0% used
+   OPENDRAIN          2/3            67% used
+
+Pin Constraint Summary:
+   4 out of 4 pins locked (100% locked).
+WARNING <67201027> - (user constraint primary clock) Signal "clk_48MHz" will be routed through the primary clock network, however according to the architecture the driver of this clock cannot drive the primary clock spine directly. General routing must be used to route this clock to the primary clock tree and this clock will have variable injection delay.
+
+Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
+
+
+................
+Finished Placer Phase 0 (AP).  CPU time: 2 secs , REAL time: 2 secs 
+
+Starting Placer Phase 1. CPU time: 2 secs , REAL time: 2 secs 
+..  ..
+....................
+
+Placer score = 289522.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE            452/2640         17% used
+
+WARNING <70009502> - The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+Finished Placer Phase 1. CPU time: 11 secs , REAL time: 11 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  162394
+Finished Placer Phase 2.  CPU time: 11 secs , REAL time: 11 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clocks :
+  PRIMARY "clk_48MHz" from comp "my_HSOSC" on site "HFOSC_R1C32", clk load = 18, ce load = 0, sr load = 0
+  PRIMARY "clk_Global" from OUTGLOBAL on comp "ic_PLL.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 96, ce load = 0, sr load = 0
+  PRIMARY "jtck[0]" from comp "JTAG_TCK" on PIO site "15 (PL25A)", clk load = 120, ce load = 0, sr load = 0
+  PRIMARY "ZRevealTest_reveal_coretop_instance.core_la0_inst_0.tr_bit_0_d2_N_555" from F0 on comp "ZRevealTest_reveal_coretop_instance.core_la0_inst_0.trig_u.te_0.SLICE_796" on site "R8C2A", clk load = 0, ce load = 0, sr load = 91
+
+  PRIMARY  : 4 out of 8 (50%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   4 out of 56 (7.1%) I/O sites used.
+   4 out of 36 (11.1%) bonded I/O sites used.
+   Number of I/O components: 4; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 0 / 14 (  0%) | OFF        |            |            |
+| 1        | 4 / 14 ( 28%) | 1.8V       |            |            |
+| 2        | 0 / 8 (  0%)  | OFF        |            |            |
++----------+---------------+------------+------------+------------+
+
+Total Placer CPU time: 11 secs , REAL time: 11 secs 
+
+Writing design to file RevealTest_impl_1_par.dir/5_1.udb ...
+
+
+Start NBR router at 08:55:26 09/04/24
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+CRITICAL <62202000> - Certain loads of primary clock signal clk_48MHz could not be routed to the primary clock tree with dedicated routing resources. This clock may suffer from excessive skew or delay.
+Preassignment Summary:
+--------------------------------------------------------------------------------
+464 connections routed with dedicated routing resources
+4 global clock signals routed
+788 connections routed (of 3283 total) (24.00%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (4 used out of 8 available):
+#0  Signal "jtck[0]"
+       Clock   loads: 120   out of   120 routed (100.00%)
+#4  Signal "clk_48MHz"
+       Clock   loads: 17    out of    18 routed ( 94.44%)
+#6  Signal "ZRevealTest_reveal_coretop_instance.core_la0_inst_0.tr_bit_0_d2_N_555"
+       Control loads: 91    out of    91 routed (100.00%)
+#7  Signal "clk_Global"
+       Clock   loads: 96    out of    96 routed (100.00%)
+Other clocks:
+    Signal "ic_PLL.lscc_pll_inst.feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
+WARNING <70009502> - The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+    TimerIf::skewscore 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Routing in Serial Mode ......
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Start NBR section for initial routing at 08:55:27 09/04/24
+Level 4, iteration 1
+156(0.06%) conflicts; 0(0.00%) untouched conn; 51533 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1.529ns/-51.534ns; real time: 3 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 08:55:29 09/04/24
+Level 4, iteration 1
+31(0.01%) conflicts; 0(0.00%) untouched conn; 23536 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -0.815ns/-23.537ns; real time: 3 secs 
+Level 4, iteration 2
+23(0.01%) conflicts; 0(0.00%) untouched conn; 18090 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -0.815ns/-18.091ns; real time: 3 secs 
+Level 4, iteration 3
+7(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -0.934ns/-22.696ns; real time: 3 secs 
+Level 4, iteration 4
+4(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -0.934ns/-22.696ns; real time: 3 secs 
+Level 4, iteration 5
+2(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -0.934ns/-22.696ns; real time: 4 secs 
+Level 4, iteration 6
+3(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -0.934ns/-22.696ns; real time: 4 secs 
+Level 4, iteration 7
+0(0.00%) conflict; 0(0.00%) untouched conn; 23012 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -0.934ns/-23.013ns; real time: 4 secs 
+
+Start NBR section for post-routing at 08:55:30 09/04/24
+
+End NBR router with 0 unrouted connection
+WARNING <70009502> - The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+Requested speed is the same as database speed
+Changing speed to M
+
+Starting full timing analysis...
+Changing speed to M;   changing temperature to -40
+Changing speed to 6;   changing temperature to 100
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Estimated worst slack<setup> : -0.934ns
+  Estimated worst slack<hold > : -1.046ns
+  Timing score<setup> : 3089
+  Timing score<hold > : 2092
+  Number of connections with timing violations<setup> : 40 (1.22%)
+  Number of connections with timing violations<hold > : 4 (0.12%)
+-----------
+
+
+Total CPU time 4 secs 
+Total REAL time: 5 secs 
+Completely routed.
+End of route.  3283 routed (100.00%); 0 unrouted.
+
+Writing design to file RevealTest_impl_1_par.dir/5_1.udb ...
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -0.934
+PAR_SUMMARY::Timing score<setup/<ns>> = 3.089
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -1.046
+PAR_SUMMARY::Timing score<hold /<ns>> = 2.092
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  Time: 15 secs 
+Total REAL Time: 16 secs 
+Peak Memory Usage: 138.98 MB
+
+
+par done!
+
+Note: user must run 'timing' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "RevealTest_impl_1.twr" "RevealTest_impl_1.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt RevealTest_impl_1.twr RevealTest_impl_1.udb -gui
+Starting design reading...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Loading udb::Database ...
+Design:  ZRevealTest
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+
+
+
+Successfully loading udb, 0.08 seconds
+
+Initializing timer
+Starting design annotation....
+WARNING <70009502> - The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+High-Performance_1.2V
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Connections ignored  234  counted  2958  covered  2940
+Changing speed to m;   changing temperature to -40
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 106 MB
+
+ 1.719555s wall, 1.578125s user + 0.140625s system = 1.718750s CPU (100.0%)
+
+
+tmcheck -par "RevealTest_impl_1.par" 
+
+bitgen -w "RevealTest_impl_1.udb" -f "RevealTest_impl_1.t2b" 
+Loading RevealTest_impl_1.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  ZRevealTest
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 2023.1.1.200.1
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "F:\MyTemporary\Github\GLPP2024\RevealTest\impl_1\RevealTest_impl_1.bin".
+INFO <1081100> - Bitstream authenticated.
+Bitstream generation complete!
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 120 MB
+
+
+ibisgen "RevealTest_impl_1.udb" "F:/MySoftware/Lattice/radiant/cae_library/ibis/iCE40UP.ibs"
+IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.1.200.1
+
+Wed Sep  4 08:55:36 2024
+
+Loading RevealTest_impl_1.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  ZRevealTest
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+Created design models.
+
+
+Generating: F:\MyTemporary\Github\GLPP2024\RevealTest\impl_1\IBIS\RevealTest_impl_1.ibs
+
+
+INFO <1191031> - Design IBIS models are generated for board level analysis.
+
+
+backanno "RevealTest_impl_1.udb"  -o "RevealTest_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
+backanno: version Radiant Software (64-bit) 2023.1.1.200.1
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Loading udb::Database ...
+Design:  ZRevealTest
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Writing a verilog netlist based on the RevealTest_impl_1 design file.
+
+Writing Verilog netlist to file RevealTest_impl_1_vo.vo
+INFO <35400233> - This design contains secured IP object(s), so output file RevealTest_impl_1_vo.vo has been encrypted.
+Writing SDF timing to file RevealTest_impl_1_vo.sdf
+Backanno finished with 0 posted error messages.
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 117 MB

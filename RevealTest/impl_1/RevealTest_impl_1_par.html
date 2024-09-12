@@ -1,0 +1,420 @@
+<HTML>
+<HEAD>
+<TITLE>Place & Route Report</TITLE>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///F:/MySoftware/Lattice/radiant/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Par"></A>Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+Wed Sep  4 08:55:15 2024
+
+Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
+	RevealTest_impl_1_map.udb RevealTest_impl_1.udb 
+
+
+<A name="par_cts"></A><B><U><big>Cost Table Summary</big></U></B>
+Level/       Number       Worst        Timing       Worst        Timing       Run          Run
+Cost [udb]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+<span style="background-color:red">5_1   *      0            -0.934       3089         -1.046       2092         16           Completed</span>
+* : Design saved.
+
+Total (real) run time for 1-seed: 16 secs 
+
+par done!
+
+Lattice Place and Route Report for Design &quot;RevealTest_impl_1_map.udb&quot;
+Wed Sep  4 08:55:15 2024
+
+
+<A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
+PAR: Place And Route Radiant Software (64-bit) 2023.1.1.200.1.
+Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON \
+	RevealTest_impl_1_map.udb RevealTest_impl_1_par.dir/5_1.udb 
+
+Loading RevealTest_impl_1_map.udb ...
+Loading device for application GENERIC from file &apos;itpa08.nph&apos; in environment: F:/MySoftware/Lattice/radiant/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  ZRevealTest
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+WARNING &lt;70009502&gt; - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+Number of Signals: 1317
+Number of Connections: 3593
+
+<A name="par_dus"></A><B><U><big>Device utilization summary:</big></U></B>
+
+   SLICE (est.)     455/2640         17% used
+     LUT            846/5280         16% used
+     REG            382/5280          7% used
+   PIO                4/56            7% used
+                      4/36           11% bonded
+   IOLOGIC            1/56            2% used
+   DSP                0/8             0% used
+   I2C                0/2             0% used
+   HFOSC              1/1           100% used
+   LFOSC              0/1             0% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR                1/30            3% used
+   PLL                1/1           100% used
+   RGBOUTBUF          0/3             0% used
+   I3C                0/2             0% used
+   OPENDRAIN          2/3            67% used
+
+Pin Constraint Summary:
+   4 out of 4 pins locked (100% locked).
+WARNING &lt;67201027&gt; - par: (user constraint primary clock) Signal &quot;clk_48MHz&quot; will be routed through the primary clock network, however according to the architecture the driver of this clock cannot drive the primary clock spine directly. General routing must be used to route this clock to the primary clock tree and this clock will have variable injection delay.
+
+Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
+
+
+................
+Finished Placer Phase 0 (AP).  CPU time: 2 secs , REAL time: 2 secs 
+
+Starting Placer Phase 1. CPU time: 2 secs , REAL time: 2 secs 
+..  ..
+....................
+
+Placer score = 289522.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE            452/2640         17% used
+
+WARNING &lt;70009502&gt; - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+Finished Placer Phase 1. CPU time: 11 secs , REAL time: 11 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  162394
+Finished Placer Phase 2.  CPU time: 11 secs , REAL time: 11 secs 
+
+
+
+<A name="par_clk"></A><B><U><big>Clock Report</big></U></B>
+
+Global Clocks :
+  PRIMARY &quot;clk_48MHz&quot; from comp &quot;my_HSOSC&quot; on site &quot;HFOSC_R1C32&quot;, clk load = 18, ce load = 0, sr load = 0
+  PRIMARY &quot;clk_Global&quot; from OUTGLOBAL on comp &quot;ic_PLL.lscc_pll_inst.u_PLL_B&quot; on site &quot;PLL_R13C32&quot;, clk load = 96, ce load = 0, sr load = 0
+  PRIMARY &quot;jtck[0]&quot; from comp &quot;JTAG_TCK&quot; on PIO site &quot;15 (PL25A)&quot;, clk load = 120, ce load = 0, sr load = 0
+  PRIMARY &quot;ZRevealTest_reveal_coretop_instance.core_la0_inst_0.tr_bit_0_d2_N_555&quot; from F0 on comp &quot;ZRevealTest_reveal_coretop_instance.core_la0_inst_0.trig_u.te_0.SLICE_796&quot; on site &quot;R8C2A&quot;, clk load = 0, ce load = 0, sr load = 91
+
+  PRIMARY  : 4 out of 8 (50%)
+
+
+
+
+I/O Usage Summary (final):
+   4 out of 56 (7.1%) I/O sites used.
+   4 out of 36 (11.1%) bonded I/O sites used.
+   Number of I/O components: 4; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 0 / 14 (  0%) | OFF        |            |            |
+| 1        | 4 / 14 ( 28%) | 1.8V       |            |            |
+| 2        | 0 / 8 (  0%)  | OFF        |            |            |
++----------+---------------+------------+------------+------------+
+
+Total Placer CPU time: 11 secs , REAL time: 11 secs 
+
+Writing design to file RevealTest_impl_1_par.dir/5_1.udb ...
+
+
+Start NBR router at 08:55:26 09/04/24
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+CRITICAL &lt;62202000&gt; - par: Certain loads of primary clock signal clk_48MHz could not be routed to the primary clock tree with dedicated routing resources. This clock may suffer from excessive skew or delay.
+Preassignment Summary:
+--------------------------------------------------------------------------------
+464 connections routed with dedicated routing resources
+4 global clock signals routed
+788 connections routed (of 3283 total) (24.00%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (4 used out of 8 available):
+#0  Signal &quot;jtck[0]&quot;
+       Clock   loads: 120   out of   120 routed (100.00%)
+#4  Signal &quot;clk_48MHz&quot;
+       Clock   loads: 17    out of    18 routed ( 94.44%)
+#6  Signal &quot;ZRevealTest_reveal_coretop_instance.core_la0_inst_0.tr_bit_0_d2_N_555&quot;
+       Control loads: 91    out of    91 routed (100.00%)
+#7  Signal &quot;clk_Global&quot;
+       Clock   loads: 96    out of    96 routed (100.00%)
+Other clocks:
+    Signal &quot;ic_PLL.lscc_pll_inst.feedback_w&quot;
+       Clock   loads: 1     out of     1 routed (100.00%)
+
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
+WARNING &lt;70009502&gt; - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Routing in Serial Mode ......
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Start NBR section for initial routing at 08:55:27 09/04/24
+Level 4, iteration 1
+156(0.06%) conflicts; 0(0.00%) untouched conn; 51533 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -1.529ns/-51.534ns; real time: 3 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 08:55:29 09/04/24
+Level 4, iteration 1
+31(0.01%) conflicts; 0(0.00%) untouched conn; 23536 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -0.815ns/-23.537ns; real time: 3 secs 
+Level 4, iteration 2
+23(0.01%) conflicts; 0(0.00%) untouched conn; 18090 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -0.815ns/-18.091ns; real time: 3 secs 
+Level 4, iteration 3
+7(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -0.934ns/-22.696ns; real time: 3 secs 
+Level 4, iteration 4
+4(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -0.934ns/-22.696ns; real time: 3 secs 
+Level 4, iteration 5
+2(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -0.934ns/-22.696ns; real time: 4 secs 
+Level 4, iteration 6
+3(0.00%) conflicts; 0(0.00%) untouched conn; 22695 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -0.934ns/-22.696ns; real time: 4 secs 
+Level 4, iteration 7
+0(0.00%) conflict; 0(0.00%) untouched conn; 23012 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: -0.934ns/-23.013ns; real time: 4 secs 
+
+Start NBR section for post-routing at 08:55:30 09/04/24
+
+End NBR router with 0 unrouted connection
+WARNING &lt;70009502&gt; - par: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+Starting full timing analysis...
+
+
+<A name="par_nbrsum"></A><B><U><big>NBR Summary</big></U></B>
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Estimated worst slack&lt;setup&gt; : -0.934ns
+  Estimated worst slack&lt;hold &gt; : -1.046ns
+  Timing score&lt;setup&gt; : 3089
+  Timing score&lt;hold &gt; : 2092
+  Number of connections with timing violations&lt;setup&gt; : 40 (1.22%)
+  Number of connections with timing violations&lt;hold &gt; : 4 (0.12%)
+-----------
+
+
+Total CPU time 4 secs 
+Total REAL time: 5 secs 
+Completely routed.
+End of route.  3283 routed (100.00%); 0 unrouted.
+
+Writing design to file RevealTest_impl_1_par.dir/5_1.udb ...
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = -0.934
+PAR_SUMMARY::Timing score&lt;setup/&lt;ns&gt;&gt; = 3.089
+PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = -1.046
+PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 2.092
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  Time: 15 secs 
+Total REAL Time: 16 secs 
+Peak Memory Usage: 138.98 MB
+
+
+par done!
+
+Note: user must run &apos;timing&apos; for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#par_cts>Cost Table Summary</A></LI>
+<LI><A href=#par_best>Best Par Run</A></LI>
+<LI><A href=#par_dus>Device utilization summary</A></LI>
+<LI><A href=#par_clk>Clock Report</A></LI>
+<LI><A href=#par_nbrsum>NBR Summary</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

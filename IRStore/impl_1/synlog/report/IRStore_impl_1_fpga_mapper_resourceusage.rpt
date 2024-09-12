@@ -1,0 +1,35 @@
+---------------------------------------
+Resource Usage Report for ZIRStore_Top 
+
+Mapping to part: ice40up5ksg48i-6
+Cell usage:
+CCU2_B          76 uses
+FD1P3BZ         4 uses
+FD1P3DZ         189 uses
+HSOSC           1 use
+INV             1 use
+IOL_B           16 uses
+PDP4K           4 uses
+PLL_B           1 use
+VHI             14 uses
+VLO             14 uses
+LUT4            291 uses
+
+I/O ports: 19
+I/O primitives: 18
+BB_B           9 uses
+OB             9 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   193 of 5280 (3%)
+
+RAM/ROM usage summary
+Block Rams : 4 of 30 (13%)
+
+
+@S |Mapping Summary:
+Total  LUTs: 291 (5%)
+
+Distribution of All Consumed LUTs = LUT4 
+Distribution of All Consumed LUTs 291 = 291 
+

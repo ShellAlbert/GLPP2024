@@ -1,0 +1,208 @@
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+WARNING: missing testbench HDL files.
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\rtl\ZPLL_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\ZPLL.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\misc\ZPLL_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\misc\ZPLL_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\rtl\ZPLL.v 
+Warning: No directory "ldc" in IP module(F:/MySoftware/Lattice/radiant/ip/iCE40UP/pll)
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\ZPLL.ipx 
+WARNING: missing testbench HDL files.
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\rtl\ZPLL_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\ZPLL.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\misc\ZPLL_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\misc\ZPLL_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\rtl\ZPLL.v 
+Warning: No directory "ldc" in IP module(F:/MySoftware/Lattice/radiant/ip/iCE40UP/pll)
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZPLL\ZPLL.ipx 
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+ERROR: ERROR -- Total Byte Width < 1, please use WDATA_WIDTH = 16 or greater
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR -- Total Byte Width < 1, please use WDATA_WIDTH = 16 or greater
+ERROR: ERROR -- Total Byte Width < 1, please use WDATA_WIDTH = 16 or greater
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+ERROR: ERROR  --  (Depth_W x Width_W) and (Depth_R x Width_R) must be equivalent!
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\misc\ZRAM_DP_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\rtl\ZRAM_DP.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\constraints\ZRAM_DP.ldc 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_params.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\testbench\dut_inst.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\design.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\component.xml 
+Writing F:\MyTemporary\Github\GLPP2024\IRCapture\IPCores\ZRAM_DP\ZRAM_DP.ipx 
+WARNING: missing testbench HDL files.
+WARNING: missing driver HDL files.
+Writing F:\MyTemporary\Github\GLPP2024\IRStore\IPCores\ZPLL\rtl\ZPLL_bb.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRStore\IPCores\ZPLL\ZPLL.cfg 
+Writing F:\MyTemporary\Github\GLPP2024\IRStore\IPCores\ZPLL\misc\ZPLL_tmpl.v 
+Writing F:\MyTemporary\Github\GLPP2024\IRStore\IPCores\ZPLL\misc\ZPLL_tmpl.vhd 
+Writing F:\MyTemporary\Github\GLPP2024\IRStore\IPCores\ZPLL\rtl\ZPLL.v 

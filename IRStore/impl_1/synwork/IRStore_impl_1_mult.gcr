@@ -1,0 +1,39 @@
+i clk_Global
+m 0 0
+u 41 202
+n ckid0_0 {t:ic_Bottom.ic_OctalRAM.CNT1[3:0].C} Clock Optimization not enabled
+p {p:ic_Bottom.ic_OctalRAM.iClk}{t:ic_Bottom.ic_OctalRAM.CNT1[3:0].C}
+e ckid0_0 {t:ic_Bottom.ic_OctalRAM.CNT1[3:0].C} dffr
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[0\]\.no_init\.u_mem0.rd_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[0\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR}
+e ckid0_1 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[0\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR} PDP4K
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[0\]\.no_init\.u_mem0.wr_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[0\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW}
+e ckid0_2 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[0\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW} PDP4K
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[1\]\.no_init\.u_mem0.rd_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[1\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR}
+e ckid0_3 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[1\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR} PDP4K
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[1\]\.no_init\.u_mem0.wr_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[1\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW}
+e ckid0_4 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[1\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW} PDP4K
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[2\]\.no_init\.u_mem0.rd_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[2\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR}
+e ckid0_5 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[2\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR} PDP4K
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[2\]\.no_init\.u_mem0.wr_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[2\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW}
+e ckid0_6 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[2\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW} PDP4K
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[3\]\.no_init\.u_mem0.rd_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[3\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR}
+e ckid0_7 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[3\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKR} PDP4K
+p {p:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[3\]\.no_init\.u_mem0.wr_clk_i}{t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[3\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW}
+e ckid0_8 {t:ic_Bottom.ic_RAM_DP.lscc_ram_dp_inst.mem_main.NON_MIX\.ADDR_ROUTE\[0\]\.DATA_ROUTE\[3\]\.no_init\.u_mem0.ICE_MEM\.u_mem0.CKW} PDP4K
+p {p:ic_Bottom.ic_DBG_UART_Tx.iClk}{t:ic_Bottom.ic_DBG_UART_Tx.CNT_Shift[8:0].C}
+e ckid0_9 {t:ic_Bottom.ic_DBG_UART_Tx.CNT_Shift[8:0].C} dffr
+p {t:ic_Bottom.un1_iClk.OUT[0]}{t:ic_Bottom.CNT_Falling[1:0].C}
+e ckid0_10 {t:ic_Bottom.CNT_Falling[1:0].C} dffr
+p {p:ic_Bottom.iClk}{t:ic_Bottom.CNT_Rising[7:0].C}
+e ckid0_11 {t:ic_Bottom.CNT_Rising[7:0].C} dffr
+p {p:ic_SyncRst.iClk}{t:ic_SyncRst.oRst_N_Sync.C}
+e ckid0_12 {t:ic_SyncRst.oRst_N_Sync.C} dffr
+d ckid0_0,ckid0_1,ckid0_2,ckid0_3,ckid0_4,ckid0_5,ckid0_6,ckid0_7,ckid0_8,ckid0_9,ckid0_10,ckid0_11,ckid0_12 {t:ic_PLL.outglobal_o} ZPLL Clock Optimization not enabled
+i clk_48MHz
+m 0 0
+u 0 0
+i ic_PLL.lscc_pll_inst.outglobal_o
+m 0 0
+u 0 0
+l 0 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

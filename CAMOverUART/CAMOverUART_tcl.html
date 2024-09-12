@@ -40,54 +40,6 @@ if (a)
 <BODY>
 
 <DIV id="content" onclick="hideTocList()"><PRE>
-<A name="pn240306174331"></A><B><U><big>pn240306174331</big></U></B>
-#Start recording tcl command: 3/6/2024 09:57:49
-#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
-prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/DataCapture.vm"
-prj_run Synthesis -impl impl_1
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCAMOverUART.v"
-prj_run Synthesis -impl impl_1
-prj_remove_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/DataCapture.vm"
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZDataCapture.v"
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZOctalRAMOperator.v"
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1 -task Lattice_Synthesis
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Map -impl impl_1
-prj_remove_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZCAMOverUART.v"
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZIRCAMOverUART.v"
-prj_set_impl_opt -impl "impl_1" "top" "ZIRCAMOverUART"
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_run Map -impl impl_1
-prj_run PAR -impl impl_1
-prj_run Map -impl impl_1
-#Stop recording: 3/6/2024 17:43:31
-
-
-
-<A name="pn240307105547"></A><B><U><big>pn240307105547</big></U></B>
-#Start recording tcl command: 3/7/2024 08:16:06
-#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
-prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
-prj_run Synthesis -impl impl_1
-prj_run Synthesis -impl impl_1
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunicationi.v"
-prj_remove_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunicationi.v"
-prj_add_source "F:/MyTemporary/Github/GLPP2024/CAMOverUART/source/impl_1/ZUARTCommunication.v"
-prj_run Synthesis -impl impl_1
-prj_run Map -impl impl_1
-#Stop recording: 3/7/2024 10:55:47
-
-
-
 <A name="pn240312111016"></A><B><U><big>pn240312111016</big></U></B>
 #Start recording tcl command: 3/12/2024 11:09:39
 #Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
@@ -172,12 +124,29 @@ prj_run Synthesis -impl impl_1
 
 
 
+<A name="pn240702180236"></A><B><U><big>pn240702180236</big></U></B>
+#Start recording tcl command: 7/2/2024 08:00:37
+#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
+prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
+#Stop recording: 7/2/2024 18:02:36
+
+
+
+<A name="pn240808173823"></A><B><U><big>pn240808173823</big></U></B>
+#Start recording tcl command: 8/8/2024 17:35:02
+#Project Location: F:/MyTemporary/Github/GLPP2024/CAMOverUART; Project name: CAMOverUART
+prj_open "F:/MyTemporary/Github/GLPP2024/CAMOverUART/CAMOverUART.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "F:/MySoftware/Lattice/radiant"
+#Stop recording: 8/8/2024 17:38:23
+
+
+
 </PRE></DIV>
 
 <DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
 <UL id="toc_list">
-<LI><A href=#pn240306174331>pn240306174331</A></LI>
-<LI><A href=#pn240307105547>pn240307105547</A></LI>
 <LI><A href=#pn240312111016>pn240312111016</A></LI>
 <LI><A href=#pn240426101630>pn240426101630</A></LI>
 <LI><A href=#pn240429143920>pn240429143920</A></LI>
@@ -186,6 +155,8 @@ prj_run Synthesis -impl impl_1
 <LI><A href=#pn240516172634>pn240516172634</A></LI>
 <LI><A href=#pn240517160301>pn240517160301</A></LI>
 <LI><A href=#pn240611171802>pn240611171802</A></LI>
+<LI><A href=#pn240702180236>pn240702180236</A></LI>
+<LI><A href=#pn240808173823>pn240808173823</A></LI>
 </UL>
 </DIV>
 

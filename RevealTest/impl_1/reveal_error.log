@@ -1,0 +1,8 @@
+-- all messages logged in file F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_error.log
+-- Analyzing Verilog file 'F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/ZRevealTest_reveal_coretop.v' (VERI-1482)
+-- Analyzing Verilog file 'F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/ZRevealTest.v' (VERI-1482)
+-- Analyzing Verilog file 'F:/MyTemporary/Github/GLPP2024/RevealTest/ZPLL/rtl/ZPLL.v' (VERI-1482)
+F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/ZRevealTest.v(1): INFO: compiling module 'ZRevealTest' (VERI-1018)
+F:/MyTemporary/Github/GLPP2024/RevealTest/source/impl_1/ZRevealTest.v(14): WARNING: instantiating unknown module 'HSOSC' (VERI-1063)
+F:/MyTemporary/Github/GLPP2024/RevealTest/ZPLL/rtl/ZPLL.v(225): WARNING: instantiating unknown module 'PLL_B' (VERI-1063)
+-- Printing library 'work' to file 'F:/MyTemporary/Github/GLPP2024/RevealTest/impl_1/reveal_workspace/tmpreveal/ZRevealTest_rvl_top.v' (VERI-1491)

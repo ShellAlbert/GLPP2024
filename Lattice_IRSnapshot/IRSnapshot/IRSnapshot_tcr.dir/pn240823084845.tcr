@@ -1,0 +1,39 @@
+#Start recording tcl command: 8/23/2024 08:30:31
+#Project Location: F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot; Project name: IRSnapshot
+prj_open "F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rdf"
+rvl_new_project
+rvl_set_traceoptn SampleClk=clk_48MHz
+rvl_set_traceoptn SampleEnable=on
+rvl_set_traceoptn SampleEnable=off
+rvl_set_traceoptn Timestamp=on
+rvl_set_traceoptn Timestamp=off
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU1 -set_sig {{ioPSRAM_DATA[7:0]} }
+rvl_set_tu -name TU1 -val 0
+rvl_add_te
+rvl_del_te TE1
+rvl_del_tu TU2
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_run Export -impl impl_1
+rvl_set_traceoptn IncludeTrigger=on
+rvl_set_traceoptn IncludeTrigger=off
+rvl_set_traceoptn IncludeTrigger=on
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+prj_run Map -impl impl_1
+prj_run Export -impl impl_1
+rvl_add_tu -radix Bin 
+rvl_set_tu -name TU2 -set_sig {ioPSRAM_DQS }
+rvl_set_tu -name TU1 -op .RE.
+rvl_set_tu -name TU2 -op .RE.
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_del_te TE2
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_add_te
+rvl_set_te -expression {ioPSRAM_DATA[7:0]} TE1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_set_te -expression {} TE1
+rvl_set_te -expression {} TE1
+rvl_del_te TE1
+rvl_save_project -overwrite F:/MyTemporary/Github/GLPP2024/Lattice_IRSnapshot/IRSnapshot/IRSnapshot.rvl
+rvl_close_project -force
+#Stop recording: 8/23/2024 08:48:45
