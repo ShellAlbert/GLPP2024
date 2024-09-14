@@ -5,6 +5,9 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	ZCDS3_Capture
 
+} {} {}} F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZPortableDefine.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZPortableDefine.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+
 } {} {}} F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx_TB.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx_TB.v
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module ZUART_Tx_TB
@@ -41,6 +44,13 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	ZResetGenerator
 
+} {} {}} F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZDDRWriter.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZDDRWriter.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZDDRWriter
+
+Top level modules:
+	ZDDRWriter
+
 } {} {}} F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZUART_Tx.v
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module ZUART_Tx
@@ -54,5 +64,12 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 
 Top level modules:
 	ZOctalRAMCfg
+
+} {} {}} F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZSinglePortRAM.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRCapture/source/impl_1/ZSinglePortRAM.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZSinglePortRAM
+
+Top level modules:
+	ZSinglePortRAM
 
 } {} {}}

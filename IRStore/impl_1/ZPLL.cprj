@@ -1,6 +1,0 @@
--ver "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v"
--lib pmi -vhd "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd"
--ver "F:/MyTemporary/Github/GLPP2024/IRStore/IPCores/ZPLL/rtl/ZPLL.v"
--path "F:/MyTemporary/Github/GLPP2024/IRStore/IPCores/ZPLL" "F:/MyTemporary/Github/GLPP2024/IRStore"
--top ZPLL
--a "iCE40UP"

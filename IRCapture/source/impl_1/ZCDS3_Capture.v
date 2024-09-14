@@ -9,19 +9,20 @@ module ZCDS3_Capture(
     input iIR_PCLK,
     input [7:0] iIR_Data,
 
-    //Interfactive signals.
-	output reg oWr_Req, //Write Request for HyperRAM.
-	output reg oWr_Done, //Write Done for HyperRAM.
-
-	//HyperRAM write interface.
-	output reg oRAM_CLK,
-	output reg oRAM_RST,
-	output reg oRAM_CE,
-	output reg oRAM_DQS,
-	output reg [7:0] oRAM_ADQ,
-
     //Capture one frame done?
-    output reg oFrame_Done
+    output reg oCap_Frame_Done,
+
+	//Write Single-Port RAM Interfaces.
+	output reg oWr_Which, //O, Write which SPRAM:0/1.
+    output reg [13:0] oWr_Addr, //O, Write Address.
+    output reg [15:0] oWr_Data, //O, Write Data.
+    output reg oWr_En, //O, Write Enable. 1:Write, 0:Read.
+
+    //Notify me that DDR-Writer has done initilization.
+    input iRAM_Init_Done,
+
+    //indicate which Single-Port RAM data is valid.
+    output reg [1:0] oRAM_Data_Valid
 );
 
 //Delay 2 clocks to sync to main clock.
@@ -61,287 +62,131 @@ wire IR_CLK_Rising_Edge;
 wire IR_CLK_Falling_Edge;
 assign IR_CLK_Rising_Edge=(!IR_PCLK_Delay[1]) & IR_PCLK_Delay[0];
 assign IR_CLK_Falling_Edge=(IR_PCLK_Delay[1]) & !IR_PCLK_Delay[0];
-
-//Command List.
-parameter CMD_SYNC_RD=8'h00;
-parameter CMD_SYNC_WR=8'h80;
-parameter CMD_LINEAR_BURST_RD=8'h20;
-parameter CMD_LINEAR_BURST_WR=8'hA0;
-parameter CMD_MODE_REG_RD=8'h40;
-parameter CMD_MODE_REG_WR=8'hC0;
-parameter CMD_GBL_RST=8'hFF;
-//Octal RAM Configuration before using.
-reg [7:0] cfg_No;
-wire [7:0] cfg_RegAddr;
-wire [7:0] cfg_RegData;
-ZOctalRAMCfg ic_cfg(
-    .iNo(cfg_No),
-    .oRegAddr(cfg_RegAddr),
-    .oRegData(cfg_RegData)
-);
+///////////////////////////////////////////
+//combine data bus, only use data delayed 2 clocks.
+wire [7:0] IR_Data_Bus;
+assign IR_Data_Bus={IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
 
 //We sample data at middle point to get a stable value.
-//Main clock is 48MHz, PCLK is 9.375MHz, the ratio is 48MHz/9.375MHz=5.12
+//Main clock is 66MHz, PCLK is 9.375MHz, the ratio is 66MHz/10MHz=6.6
 //In order to get a stable value, we sample at the middle point.
 //Here, we choose 2 as the middle point.
 reg [7:0] CNT_Step;
 reg [7:0] CNT_SubStep;
 reg [31:0] CNT_Delay;
-reg [7:0] CNT_Repeat;
+
 reg [7:0] Rx_DR0; //Receive Data Registers.
 reg [7:0] Rx_DR1;
 reg [7:0] Rx_DR2;
 reg [7:0] Rx_DR3;
-reg [15:0] CNT_Bytes; //one line contains 256*2 bytes pixel data and 256*2 bytes temperature data, 1024 bytes totally.
-reg [7:0] CNT_Lines; //one frame contains 192 lines.
-reg [95:0] HyperRAM_Fixed_Data; //'h198709011986101420160323 (12bytes in total, 12*8=96bits)
+reg [15:0] Temp_DR;
+reg [15:0] CNT_Bytes; 
+//one line contains 256*2 bytes pixel data and 256*2 bytes temperature data, 1024 bytes totally.
+reg [15:0] Captured_Bytes;
+
 always @(posedge iClk or negedge iRst_N)
 if(!iRst_N) begin
-    CNT_Step<=0; CNT_SubStep<=0; CNT_Delay<=0; CNT_Repeat<=0;
-    cfg_No<=0;
-    oRAM_CLK<=0; oRAM_RST<=1; oRAM_CE<=1; oRAM_DQS<=0; oRAM_ADQ<=0;
+    CNT_Step<=0; CNT_SubStep<=0; CNT_Delay<=0;
     //Initial Receive Data Registers.
     Rx_DR3<=0; Rx_DR2<=0; Rx_DR1<=0; Rx_DR0<=0;
 
-    oWr_Req<=0; oWr_Done<=0;
-    CNT_Bytes<=0; CNT_Lines<=0; oFrame_Done<=0;
+    oWr_Which<=0; //Write 0# Single-Port-RAM first.
+    oWr_Addr<=0; oWr_Data<=0; oWr_En<=0; oRAM_Data_Valid<=0;
+    Temp_DR<=0;
+    CNT_Bytes<=0; Captured_Bytes<=0; oCap_Frame_Done<=0;
 end
 else begin
     if(iEn) begin 
             case(CNT_Step)
-                0: //Because IRRoute FPGA delays 10s to wait for IR Image Sensor starts up. 
-                //So here we delay 15s to ensure it can receive WrReq Signal. //66MHz=32'h3EF1480
-                    `ifdef USING_MODELSIM //Delay less time in ModelSim.
-                        if(CNT_Delay==2) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end
-                        else begin CNT_Delay<=CNT_Delay+1; end
-                    `else //Delay long time in Lattice Radiant.
-                        if(CNT_Delay==32'h3EF1480) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end
-                        else begin CNT_Delay<=CNT_Delay+1; end
-                    `endif
-                1: //1second *10 times = 10 seconds.
-                    if(CNT_Repeat==2-1) begin CNT_Repeat<=0; CNT_Step<=CNT_Step+1; end
-                    else begin CNT_Repeat<=CNT_Repeat+1; CNT_Step<=CNT_Step-1; end
-/////////////////////////////////////////////////////////////////////////////////////////////
-                2: //Write Request for HyperRAM.
-                    begin oWr_Req<=1; CNT_Step<=CNT_Step+1; end
-                3: //Expand signal width to x6 clocks period to ensure to be captured by Another FPGA. //48MHz=32'h2DC6C00
-                    if(CNT_Delay==6) begin CNT_Delay<=0; oWr_Req<=0; CNT_Step<=CNT_Step+1; end //Enable this line in Radiant.
-                    //if(CNT_Delay==10) begin CNT_Delay<=0; oWr_Req<=0; CNT_Step<=CNT_Step+1; end//Enable this line in ModelSim.
-                    else begin CNT_Delay<=CNT_Delay+1; end
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                4: //HyperRAM: Reset.
-                    case(CNT_SubStep)
-                        0: //At default, CE=1, RST=1.
-                            begin oRAM_CE<=1; oRAM_RST<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        1: //Device Initialization, tPU>150uS.
-                        //Wait for OctalRAM to be stable after power on.
-                        //f=100MHz, t=1/100MHz(s)=1000/100MHz(ms)=1000_000/100MHz(us)=10uS
-                        //Here we wait 2 times of tPU, 300uS/10uS=30.
-                            if(CNT_Delay==100) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                            else begin CNT_Delay<=CNT_Delay+1; end
-                        2:  //pull down RST while CE=1, tRP>1uS,
-                            begin oRAM_RST<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        3: //pull up RST, tRST>=2uS, Reset to CMD valid.
-                            begin oRAM_RST<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        4: //After reset, delay for a while for later operations.
-                            if(CNT_Delay==100) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                                else begin CNT_Delay<=CNT_Delay+1; end
-                        5:
-                            begin 
-                                CNT_SubStep<=0; CNT_Step<=CNT_Step+1; 
-                                cfg_No<=0; //Necessary, Initial value before next step.
-                            end
-                    endcase
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                5: //HyperRAM: Write Mode Registers.
-                    case(CNT_SubStep)
-                        0: //Pull down CLK.
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        1: //Prepare rising edge data.
-                            begin
-                                oRAM_CE<=0; //Pull down CE to start.
-                                oRAM_DQS<=0; oRAM_ADQ<=CMD_MODE_REG_WR; CNT_SubStep<=CNT_SubStep+1;  //output data.
-                            end
-                        2: //Pull up CLK. (1st Rising Edge)
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        3: //Prepare falling edge data.
-                            begin oRAM_ADQ<=CMD_MODE_REG_WR; CNT_SubStep<=CNT_SubStep+1; end
-                        4: //Pull down CLK. (1st Falling Edge)
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-////////////////////////////////////////////////////////////////////////////////////////////////////
-                        5: //Pull up CLK. (2nd Rising Edge)
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        6: //Pull down CLK. (2nd Falling Edge)
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end                           
-//////////////////////////////////////////////////////////////////////////////////////////
-                        7: //Pull up CLK. (3rd Rising Edge)
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        8: //Prepare data.
-                            begin oRAM_ADQ<=cfg_RegAddr; CNT_SubStep<=CNT_SubStep+1;end 
-                        9: //Pull down CLK. (3rd Falling Edge)
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-//////////////////////////////////////////////////////////////////////////////////////
-                        10: //Prepare data.
-                            begin oRAM_ADQ<=cfg_RegData; CNT_SubStep<=CNT_SubStep+1;end 
-                        11: //Pull up CLK. (4th Rising Edge).
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        12: //Pull down CLK. (4th Falling Edge)
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-/////////////////////////////////////////////////////////////////////////
-                        13: //pull up CE to end.
-                            begin oRAM_CE<=1; CNT_SubStep<=CNT_SubStep+1;end
-
-                        14: //Must keep minimum 3 clocks after next CE.
-                            if(CNT_Delay==6) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                            else begin CNT_Delay<=CNT_Delay+1; end
-                        15: //Loop to write all mode registers.
-                            if(cfg_No==3) begin CNT_SubStep<=CNT_SubStep+1; end
-                            else begin cfg_No<=cfg_No+1; CNT_SubStep<=0; end
-                        16: 
-                            begin CNT_SubStep<=0; CNT_Step<=CNT_Step+1; end
-                    endcase        
-//////////////////////////////////////////////////////////////////////////////////////////////
-                6: //Prepare burst write. //Write Latency=5.
-                    case(CNT_SubStep)
-                        0: //Pull down CLK.
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        1: //Prepare rising edge data.
-                            begin
-                                oRAM_CE<=0; //Pull down CE to start.
-                                oRAM_DQS<=0; oRAM_ADQ<=CMD_LINEAR_BURST_WR; CNT_SubStep<=CNT_SubStep+1; //output data.
-                            end
-    //////////////////////////////////////////////////////////////////////////
-                        2: //Pull up CLK. (1st Rising Edge)
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        3: //Prepare falling edge data.
-                            begin oRAM_ADQ<=CMD_LINEAR_BURST_WR; CNT_SubStep<=CNT_SubStep+1; end
-                        4: //Pull down CLK. (1st Falling Edge)
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end 
-    //////////////////////////////////////////////////////////////////////////////////////////
-                        5: //prepare rising edge data. /////////////iAddress[31:24]=0.
-                            begin oRAM_ADQ<=0; CNT_SubStep<=CNT_SubStep+1; end 
-                        6: //Pull up CLK. (2nd Rising Edge)
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        7: //Prepare falling edge data. ////////////iAddress[23:16]=0.
-                            begin oRAM_ADQ<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        8: //Pull down CLK. (2nd Falling Edge)
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-    ////////////////////////////////////////////////////////////////////////////////////////////
-                        9: //prepare rising edge data. //////////////iAddress[15:8]=0.
-                            begin oRAM_ADQ<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        10: //Pull up CLK. (3rd Rising Edge)
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        11: //Prepare falling edge data. ////////////iAddress[7:0]=0.
-                            begin oRAM_ADQ<=0; CNT_SubStep<=CNT_SubStep+1; end 
-                        12: //Pull down CLK. (3rd Falling Edge)
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end   //Latency=1.
-    //////////////////////////////////////////////////////////////////////////////
-                        13: //Latency=2.
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        14:
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-    ///////////////////////////////////////////////////////////////////////////
-                        15: //Latency=3.
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        16:
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-    ///////////////////////////////////////////////////////////////////////////
-                        17: //Latency=4.
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        18:
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-    ///////////////////////////////////////////////////////////////////////////
-                        19: //Latency=5.
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        20:
-                            begin oRAM_CLK<=0; HyperRAM_Fixed_Data<=96'h090110140323871986191620; CNT_SubStep<=CNT_SubStep+1; end
-    /////////////////////////////////////////////////////////////////////////////////////
-                        21: //We Write Fixed Data to HyperRAM so the reader can verity if it reads correctly.
-                            begin oRAM_ADQ<=HyperRAM_Fixed_Data[95:88];CNT_SubStep<=CNT_SubStep+1; end //ADQ[x]=1.
-                        22: //Generate Rising Edge.
-                            begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        23:
-                            begin oRAM_ADQ<=HyperRAM_Fixed_Data[87:80]; CNT_SubStep<=CNT_SubStep+1; end //ADQ[x]=0.
-                        24: //Generate Falling Edge.
-                            begin oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        25:
-                            if(CNT_Delay==9-1) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                            else begin 
-                                    CNT_Delay<=CNT_Delay+1; 
-                                    HyperRAM_Fixed_Data<={HyperRAM_Fixed_Data[79:0],16'd0}; 
-                                    CNT_SubStep<=CNT_SubStep-4; 
-                            end
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-                        26:
-                            //begin CNT_SubStep<=0; CNT_Step<=CNT_Step+1; end
-                            begin CNT_SubStep<=0; CNT_Step<=14; end
-                    endcase
-////////////////////////////////////////////////////////////////////////////////
-                7: //Waiting Rising Edge. (1st Clock)
+                0: //Waiting 100mS. //f=66MHz,t=15nS. //100mS=100_000uS=100_000_000nS/15nS=6666666.hex(666666)=0xA2C2A
                     `ifdef USING_MODELSIM
-                        if(1) begin CNT_Step<=CNT_Step+1; end //Enable this line in ModelSim.
+                        if(CNT_Delay==100) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end
                     `else
-                        if(IR_CLK_Rising_Edge) begin CNT_Step<=CNT_Step+1; end //Enable this line in Radiant.
+                        if(CNT_Delay=='hA2C2A) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end
                     `endif
-                8: //Sample at middle point. (2st Clock)
-                    begin
-                        Rx_DR3<=Rx_DR2; Rx_DR2<=Rx_DR1; Rx_DR1<=Rx_DR0;
-                        Rx_DR0<={IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
+                        else begin CNT_Delay<=CNT_Delay+1; end
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                1: //Waiting until ZDDRWriter initials DDR-PSRAM done.
+                    if(iRAM_Init_Done) begin 
+                        oWr_Which<=0;
+                        oWr_Addr<=0; oWr_Data<=0; oWr_En<=0; oRAM_Data_Valid<=0;
+                        CNT_Bytes<=0; Captured_Bytes<=0; oCap_Frame_Done<=0; 
                         CNT_Step<=CNT_Step+1; 
                     end
-                9: //Checking until we get FF 00 00 80 sync header bytes. (3rd Clock)
-                    `ifdef USING_MODELSIM //Enable this line in ModelSim.
-                        if(1) begin CNT_Step<=CNT_Step+1; end 
-                    `else //Enable this line in Radiant.
-                        if(Rx_DR3==8'hFF && Rx_DR2==8'h00 && Rx_DR1==8'h00 && Rx_DR0==8'h80) begin CNT_Step<=CNT_Step+1; end
-                        else begin CNT_Step<=CNT_Step-2; end//Continue to check.
-                    `endif
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                2: //Waiting Rising Edge. (all external input were delayed 2 clocks, so now is 3rd Clock)
+                    begin
+                        `ifdef USING_MODELSIM
+                            if(1) begin CNT_Step<=CNT_Step+1; end //Enable this line in ModelSim.
+                        `else
+                            if(IR_CLK_Rising_Edge) begin CNT_Step<=CNT_Step+1; end //Enable this line in Radiant.
+                        `endif
+                        /////////////////////////////////////////////////////////////
+                        oCap_Frame_Done<=0; oWr_En<=0; //Must disabled, or data will change.
+                    end
+                3: //Sample at middle point & check patten match. (4th Clock)
+                    begin 
+                        Rx_DR3<=Rx_DR2; Rx_DR2<=Rx_DR1; Rx_DR1<=Rx_DR0; Rx_DR0<=IR_Data_Bus; //Latch data in.
+                        //Rx_DR0<={IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
+
+                        //Checking until we get FF 00 00 80 sync header bytes. 
+                        `ifdef USING_MODELSIM //Enable this line in ModelSim.
+                            if(1) begin CNT_Step<=CNT_Step+1; end 
+                        `else //Enable this line in Radiant.
+                            if(Rx_DR3==8'hFF && Rx_DR2==8'h00 && Rx_DR1==8'h00 && IR_Data_Bus==8'h80) begin CNT_Step<=CNT_Step+1; end
+                            else begin CNT_Step<=CNT_Step-1; end//Continue to check next data.
+                        `endif
+                        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        CNT_Step<=CNT_Step+1; 
+                    end
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                10: //Already got FF 00 00 80 sync header bytes. (1st Clock)
+                4: //Already got FF 00 00 80 sync header bytes.  (all external input were delayed 2 clocks, so now is 3rd Clock)
+                    begin
+                        `ifdef USING_MODELSIM //Enable this line in ModelSim.
+                            if(1) begin CNT_Step<=CNT_Step+1; end 
+                        `else //Enable this line in Radiant.
+                            if(IR_CLK_Rising_Edge) begin CNT_Step<=CNT_Step+1; end 
+                        `endif
+                        ///////////////////////////////////////////////////////
+                        oWr_En<=0; //Must disabled, or data will change.
+                    end
+                5: //Sample at middle point and Save Image&Temperature data. (4th Clock)
+                    begin
+                        //Temp_DR<={Temp_DR[7:0],IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
+                        Temp_DR[15:8]<=IR_Data_Bus; CNT_Step<=CNT_Step+1; 
+                    end
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                6: //Single-Port-RAM data width is 16-bits, but Pixel data width is 8-bits, so here we capture two times and write once.
                     `ifdef USING_MODELSIM //Enable this line in ModelSim.
                         if(1) begin CNT_Step<=CNT_Step+1; end 
                     `else //Enable this line in Radiant.
                         if(IR_CLK_Rising_Edge) begin CNT_Step<=CNT_Step+1; end 
                     `endif
-                11: //Sample at middle point and Save Image&Temperature data. (2nd Clock)
+                7: //Sample at middle point and Save Image&Temperature data. (4th Clock)
                     begin
-                        //Prepare Rising Edge Data.
-                        oRAM_ADQ<={IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
-                        CNT_Bytes<=CNT_Bytes+1;
-                        CNT_Step<=CNT_Step+1; 
+                        //Temp_DR<={Temp_DR[7:0],IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
+                        Temp_DR[7:0]<=IR_Data_Bus; CNT_Step<=CNT_Step+1; 
                     end
-                12: //Generate Rising Edge. (3rd Clock)
-                    begin oRAM_CLK<=1; CNT_Step<=CNT_Step+1; end
-                13: //Generate Falling Edge. (4th Clock)
-                    begin 
-                        oRAM_CLK<=0; 
-                        if(CNT_Bytes==1024-1) begin
-                            CNT_Bytes<=0;
-                            //one frame contains 192 lines, check if we received 192 lines.
-                            if(CNT_Lines==192-1) begin CNT_Lines<=0; CNT_Step<=CNT_Step+1; end //Next Frame.
-                            else begin CNT_Lines<=CNT_Lines+1; CNT_Step<=7; end //Next Line.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                8: //Single-Port-RAM data width is 16-bits, but Pixel data width is 8-bits, so here we capture two times and write once.
+                    begin //(5th Clock)
+                        oWr_En<=1; oWr_Data<=Temp_DR; //Write into Single-Port-RAM.
+                        ////////////////////////////////////////////////////////////
+                        if(Captured_Bytes>=1022-1) begin  //512:0~511   =>1024: 0~1022. one line end?
+                            Captured_Bytes<=0; 
+                            oRAM_Data_Valid<=(oWr_Which)?(2'b10):(2'b01); //Now Single-Port-RAM data is valid for first time.
+                            oWr_Which<=~oWr_Which; //Change which Single-Port-RAM we will write periodically.
+                            oWr_Addr<=0;
+                            oCap_Frame_Done<=1; 
+                            CNT_Step<=2; //Go to capture next line.
                         end
                         else begin 
-                            CNT_Bytes<=CNT_Bytes+1; CNT_Step<=10; //Next byte within one line.
+                            Captured_Bytes<=Captured_Bytes+2; 
+                            oWr_Addr<=oWr_Addr+1; //Single-Port-RAM data width is 16-bits.
+                            CNT_Step<=CNT_Step-4; //continue to capture rest data.
                         end
                     end
-                14: //pull up CE to end.
-                    begin oRAM_CE<=1; CNT_Step<=CNT_Step+1;end
 ////////////////////////////////////////////////////////////////////////////////////////////////
-                15: //Write Done for HyperRAM.
-                    begin oWr_Done<=1; CNT_Step<=CNT_Step+1; end
-                16: //Expand signal width to x6 clocks periods to ensure be captured by Another FPGA. //48MHz=32'h2DC6C00
-                    if(CNT_Delay==6) begin CNT_Delay<=0; oWr_Done<=0; CNT_Step<=CNT_Step+1; end //Enable this line in Radiant.
-                    //if(CNT_Delay==10) begin CNT_Delay<=0; oWr_Done<=0; CNT_Step<=CNT_Step+1; end //Enable this line in ModelSim.
-                    else begin CNT_Delay<=CNT_Delay+1; end
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-                17: //Generate Done Signal.
-                    begin oFrame_Done<=1; CNT_Step<=CNT_Step+1; end
-                18: //only first time needed to wait for 15s. 
-                    begin oFrame_Done<=0; CNT_Step<=2; end
-                    //begin oFrame_Done<=0; CNT_Step<=7; end
-                
             endcase
     end
 end

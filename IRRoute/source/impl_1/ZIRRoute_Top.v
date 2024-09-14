@@ -226,18 +226,18 @@ else begin
 	case(CNT_i)
 		0: //Waiting device to be stable after power on.
 			begin 
-			whichWr<=0; //select, 0:Data1 from IR(FPGA) for writing, 1:Data2 from me for reading.
-			triState<=1; //Bidirectional control, 1=output direction, 0=input direction.
-			triState_DQS_DM<=1; //Bidirectional control, 1=output direction, 0=input direction.
-			RAM_CLK_i<=0; RAM_CE_i<=1; //CLK=0 at default, CE=1 at default.
-			Rd_Bytes<=0; Rd_Retry<=0; Rd_Data_Valid<=0;
-			////////////////////////////////////////////////////////////////
-			`ifdef USING_MODELSIM
-				if(CNT_Delay==1024) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
-			`else //Wait 2s. //48MHz=32'h2DC6C00
-				if(CNT_Delay==32'h2DC6C00) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
-			`endif
-				else begin CNT_Delay<=CNT_Delay+1; end
+				whichWr<=0; //select, 0:Data1 from IR(FPGA) for writing, 1:Data2 from me for reading.
+				triState<=1; //Bidirectional control, 1=output direction, 0=input direction.
+				triState_DQS_DM<=1; //Bidirectional control, 1=output direction, 0=input direction.
+				RAM_CLK_i<=0; RAM_CE_i<=1; //CLK=0 at default, CE=1 at default.
+				Rd_Bytes<=0; Rd_Retry<=0; Rd_Data_Valid<=0;
+				////////////////////////////////////////////////////////////////
+				`ifdef USING_MODELSIM
+					if(CNT_Delay==1024) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
+				`else //Wait 2s. //48MHz=32'h2DC6C00
+					if(CNT_Delay==32'h2DC6C00) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
+				`endif
+					else begin CNT_Delay<=CNT_Delay+1; end
 			end
 		1: //Configure IR Sensor, should be removed before distribution.
 			//ONLY NEED TO CONFIGURE ONCE,
@@ -274,12 +274,13 @@ else begin
 			// 		oLED1<=0;
 			// 		CNT_i<=CNT_i+1; 
 			// 	end
-			begin CNT_i<=CNT_i+1; end
+			begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		5: //Start to read from HyperRAM and upload via UART.
-			//delay 12s to wait for IR(FPGA) write done.
-			if(CNT_Delay==32'h22551000) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
-			else begin CNT_Delay<=CNT_Delay+1; end 
+		5: //if we detect iWr_Done is 1 over 20 clocks, it means FPGA(Capture) work done, we can read now.
+			if(iWr_Done) begin 
+				if(CNT_Delay==20-1) begin CNT_Delay<=0; oLED1<=1; Rd_Addr<=0; CNT_i<=CNT_i+1; end
+				else begin CNT_Delay<=CNT_Delay+1; end
+			end
 		6: //Prepare rising edge data. 
 			if(CNT_Delay==2) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
 			else begin
@@ -364,10 +365,10 @@ else begin
 			if(CNT_Delay==6) begin CNT_Delay<=0; RAM_CE_i<=1; CNT_i<=CNT_i+1; end
 			else begin CNT_Delay<=CNT_Delay+1; end
 ////////////////////////////////////////////////////////////////////
-		27:
+		27: //Tx one byte.
 			if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_i<=CNT_i+1; end
 			else begin UART_Tx_En<=1; UART_Tx_DR<=Temp_DR[95:88]; end
-		28: 
+		28: //Loop to Tx 12 times.
 			if(CNT_Delay==12-1) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
 			else begin CNT_Delay<=CNT_Delay+1; Temp_DR<={Temp_DR[87:0],8'd0}; CNT_i<=CNT_i-1; end
 /////////////////////////////////////////////////////////////////////////////////
@@ -376,11 +377,11 @@ else begin
 			//And now I measured with an oscilloscope, reading 12 bytes each time takes up 1.6uS.
 			//so we repeat 1024bytes/12bytes=85.3333 times, so we read 1032/12=86.
 			if(Rd_Data_Valid) begin
-				if(Rd_Addr>=1024) begin Rd_Addr<=0; CNT_i<=CNT_i+1; end
+				if(Rd_Addr>=1024) begin Rd_Addr<=0; oLED1<=0; CNT_i<=CNT_i+1; end
 				else begin Rd_Addr<=Rd_Addr+12; CNT_i<=6; end //read next address.
 			end
 			else begin
-					CNT_i<=6; //previous failed, try one more time.
+					CNT_i<=6; //previous reading failed, try one more time.
 			end
 ////////////////////////////////////////////////////////////////////////////////
 		30: //retry after 5s.

@@ -27,6 +27,12 @@
         <Source name="source/impl_1/ZPortableDefine.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="source/impl_1/ZSinglePortRAM.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZDDRWriter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
@@ -34,6 +40,9 @@
             <Options/>
         </Source>
         <Source name="source/impl_1/Timing_Constraints.sdc" type="Pre-Synthesis Constraints File" type_short="SDC">
+            <Options/>
+        </Source>
+        <Source name="source/impl_1/ZSinglePortRAM.ldc" type="LSE Design Constraints File" type_short="LDC" excluded="TRUE">
             <Options/>
         </Source>
     </Implementation>

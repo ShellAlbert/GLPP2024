@@ -1,8 +1,0 @@
--ver "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v"
--lib pmi -vhd "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd"
--ver "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZIRStore_Top.v" "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZIRCfg_Data.v" "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZUART_Tx.v" "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZIRSensor_Controller.v" "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZOctalRAMOperator.v" "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZOctalRAMCfg.v" "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZIRStore_Bottom.v" "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/ZSynReset.v"
--sdc "F:/MyTemporary/Github/GLPP2024/IRStore/source/impl_1/IRStore_Constraints.sdc"
--path "F:/MyTemporary/Github/GLPP2024/IRStore"
--top ZIRStore_Top
--isTop
--a "iCE40UP"

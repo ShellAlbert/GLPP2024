@@ -1,7 +1,0 @@
--ver "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.v"
--lib pmi -vhd "F:/MySoftware/Lattice/radiant/ip/pmi/pmi_iCE40UP.vhd"
--ver "F:/MyTemporary/Github/GLPP2024/IRStore/IPCores/ZRAM_DP/rtl/ZRAM_DP.v"
--sdc "F:/MyTemporary/Github/GLPP2024/IRStore/IPCores/ZRAM_DP/constraints/ZRAM_DP.ldc"
--path "F:/MyTemporary/Github/GLPP2024/IRStore/IPCores/ZRAM_DP" "F:/MyTemporary/Github/GLPP2024/IRStore"
--top ZRAM_DP
--a "iCE40UP"

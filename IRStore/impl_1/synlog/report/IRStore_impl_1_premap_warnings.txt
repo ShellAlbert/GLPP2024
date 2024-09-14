@@ -1,6 +1,0 @@
-@W: BN555 :"f:/mytemporary/github/glpp2024/irstore/impl_1/irstore_impl_1_cpe.ldc":5:0:5:0|Missing required -multiply_by, -divide_by, -combinational or -edges options for create_generated_clock -- assuming -divide_by 1.
-@W: BN555 :"f:/mytemporary/github/glpp2024/irstore/impl_1/irstore_impl_1_cpe.ldc":7:0:7:0|Missing required -multiply_by, -divide_by, -combinational or -edges options for create_generated_clock -- assuming -divide_by 1.
-@W: MT688 :"f:/mytemporary/github/glpp2024/irstore/impl_1/irstore_impl_1_cpe.ldc":5:0:5:0|No path from master pin (-source) to source of clock oPSRAM_CLK due to black box ic_PLL.lscc_pll_inst.u_PLL_B 
-@W: Z241 :"f:/mytemporary/github/glpp2024/irstore/impl_1/irstore_impl_1_cpe.ldc":7:0:7:0|Source for clock clk_Global should be moved to net ic_PLL.lscc_pll_inst.outglobal_o connected to driving cell pin ic_PLL.lscc_pll_inst.u_PLL_B.OUTGLOBAL 
-@W: MT688 :"f:/mytemporary/github/glpp2024/irstore/impl_1/irstore_impl_1_cpe.ldc":7:0:7:0|No path from master pin (-source) to source of clock clk_Global due to black box ic_PLL.lscc_pll_inst.u_PLL_B 
-@W: MF511 |Found issues with constraints. Please check constraint checker report "F:\MyTemporary\Github\GLPP2024\IRStore\impl_1\IRStore_impl_1_cck.rpt" .

@@ -1,6 +1,0 @@
-#Start recording tcl command: 9/12/2024 08:37:27
-#Project Location: F:/MyTemporary/Github/GLPP2024/IRCapture; Project name: IRCapture
-prj_open "F:/MyTemporary/Github/GLPP2024/IRCapture/IRCapture.rdf"
-prj_run Export -impl impl_1
-launch_programmer_prj "F:/MySoftware/Lattice/radiant"
-#Stop recording: 9/12/2024 08:41:08
