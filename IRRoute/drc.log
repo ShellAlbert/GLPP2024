@@ -1,8 +1,7 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2023.1.1.200.1
-Wed Sep 11 17:16:08 2024
+Thu Sep 19 17:35:42 2024
 
 WARNING <71003020> - Top module port 'iIR_UART_RxD' does not connect to anything.
 WARNING <71003020> - Top module port 'iUPLD_UART_RxD' does not connect to anything.
 WARNING <71003020> - Top module port 'iRAM_DQS_DM' does not connect to anything.
 WARNING <71003020> - Top module port 'iWr_Req' does not connect to anything.
-WARNING <71003020> - Top module port 'iWr_Done' does not connect to anything.

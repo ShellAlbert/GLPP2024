@@ -2,7 +2,7 @@
 <RadiantProject version="4.2" radiant="2023.1.1.200.1" title="IRRoute" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" default_implementation="impl_1">
     <Options/>
     <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="ZPLL" top="ZIRRoute_Top"/>
+        <Options def_top="ZResetGenerator" top="ZIRRoute_Top"/>
         <Source name="source/impl_1/ZIRRoute_Top.v" type="Verilog" type_short="Verilog">
             <Options top_module="ZIRRoute_Top"/>
         </Source>

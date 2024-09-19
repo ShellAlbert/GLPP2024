@@ -358,6 +358,7 @@ else begin
                                 oRAM_CE<=1; //Pull up CE to end writing.
                                 if(CNT_Repeat==4-1) begin //Wait 4 clocks before next CE.
                                     CNT_Repeat<=0; CNT_Delay<=0; Rd_Addr_Inc<=Rd_Addr_Inc+1; CNT_Step<=5; //start next CE.
+                                    DDR_PSRAM_Wr_Addr_Inc<=DDR_PSRAM_Wr_Addr_Inc+12;
                                 end
                                 else begin CNT_Repeat<=CNT_Repeat+1; end
                             end

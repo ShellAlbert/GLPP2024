@@ -217,7 +217,7 @@ else begin
                 11: //Sample at middle point and Save Image&Temperature data. (4th Clock)
                     begin
                         `ifdef USING_TEST_DATA
-                            Temp_DR[15:8]<=8'h20; 
+                            Temp_DR[15:8]<=8'h19; 
                         `else
                             //Temp_DR<={Temp_DR[7:0],IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
                             Temp_DR[15:8]<=IR_Data_Bus;
@@ -230,7 +230,7 @@ else begin
                 13: //Sample at middle point and Save Image&Temperature data. (4th Clock)
                     begin
                         `ifdef USING_TEST_DATA
-                            Temp_DR[7:0]<=8'h24;
+                            Temp_DR[7:0]<=8'h87;
                         `else
                             //Temp_DR<={Temp_DR[7:0],IR_Data7[1],IR_Data6[1],IR_Data5[1],IR_Data4[1],IR_Data3[1],IR_Data2[1],IR_Data1[1],IR_Data0[1]};
                             Temp_DR[7:0]<=IR_Data_Bus;

@@ -70,27 +70,33 @@ my_HSOSC(
 //WARNING!!!!!
 //If I configured PLL outputs 70MHz, it doesn't work correctly.
 //Then I slowed down to 66MHz, it starts to work.
-// wire rst_n;
-// wire clk_66MHz_Global;
-// wire clk_66MHz_Fabric;
-// ZPLL ic_pll(
-// 	.ref_clk_i(clk_48MHz), 
-// 	.rst_n_i(1'b1), 
-// 	.lock_o(rst_n), 
-// 	.outcore_o(clk_66MHz_Fabric), 
-// 	.outglobal_o(clk_66MHz_Global)
-// );
+//66MHz is not reliable, down to 48MHz.
+
+//ERROR <67201318> - 
+//When PLL.OUTCORE or PLL.OUTGLOBAL is used, the input IO at site 'PR13B' can only drive PLL.REFERENCECLK due to architecture constraint. 
+//When PLL is utilized in the design, the I/O site 'PR13B' can only be used exclusively as a PLL clock input. 
+//If PLL uses an internal clock, the I/O site 'PR13B' can be used as an output.
+wire rst_n;
+wire clk_48MHz_Global;
+wire clk_48MHz_Fabric;
+ZPLL ic_pll(
+	.ref_clk_i(clk_48MHz), 
+	.rst_n_i(1'b1), 
+	.lock_o(rst_n), 
+	.outcore_o(clk_48MHz_Fabric), 
+	.outglobal_o(clk_48MHz_Global)
+);
 
 // reg rst_n;
 // initial begin 
 // 	rst_n=0;
 // 	#100 rst_n=1;
 // end
-wire rst_n;
-ZResetGenerator ic_Reset(
-	.iClk(clk_48MHz), 
-	.oRst_N(rst_n)
-);
+// wire rst_n;
+// ZResetGenerator ic_Reset(
+// 	.iClk(clk_48MHz), 
+// 	.oRst_N(rst_n)
+// );
 
 /////////////////////////////////////////////////////
 reg [7:0] wrData_ADQ;
@@ -323,8 +329,7 @@ else begin
 		18: 
 			begin 
 				triState<=0; //Bidirectional control, 1=output direction, 0=input direction.
-				Temp_DR<=0; Rd_Bytes<=0; Rd_Retry<=0; Rd_Data_Valid<=0;
-				CNT_i<=CNT_i+1; 
+				Temp_DR<=0; Rd_Bytes<=0; Rd_Retry<=0; Rd_Data_Valid<=0; CNT_i<=CNT_i+1; 
 			end
 		19: //Pull up CLK. (Xth Rising Edge)
 			begin RAM_CLK_i<=1; CNT_i<=CNT_i+1; end
@@ -359,7 +364,7 @@ else begin
 		24: 
 			begin CNT_i<=CNT_i+1; end 
 		25: 
-			begin CNT_i<=CNT_i+1; end
+			begin CNT_i<=CNT_i+1; /*Temp_DR<=96'h0102030405060708090A0B0C;*/ end
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 		26: //pull up CE to end. Extend CE width to 6*clcoks.
 			if(CNT_Delay==6) begin CNT_Delay<=0; RAM_CE_i<=1; CNT_i<=CNT_i+1; end
@@ -376,8 +381,10 @@ else begin
 			//Because maximum CE Low Width is 2uS. 
 			//And now I measured with an oscilloscope, reading 12 bytes each time takes up 1.6uS.
 			//so we repeat 1024bytes/12bytes=85.3333 times, so we read 1032/12=86.
+			//FF0000XX, FF0000XX, FF0000XX, FF0000XX + 256*2Bytes+256*2Bytes=516*2Bytes.
+			//516*192Lines=
 			if(Rd_Data_Valid) begin
-				if(Rd_Addr>=1024) begin Rd_Addr<=0; oLED1<=0; CNT_i<=CNT_i+1; end
+				if(Rd_Addr>=5160) begin Rd_Addr<=0; oLED1<=0; CNT_i<=CNT_i+1; end
 				else begin Rd_Addr<=Rd_Addr+12; CNT_i<=6; end //read next address.
 			end
 			else begin
