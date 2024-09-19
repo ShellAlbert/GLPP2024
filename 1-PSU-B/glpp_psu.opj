@@ -1,6 +1,6 @@
 (ExpressProject "CameraOverUART"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[09/01/24]")
+  (SoftwareVersion "22.1 P001 (4063652)  [10/6/2022]-[09/18/24]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library"
@@ -239,22 +239,12 @@
       (Path "Design Resources" "Library")
       (Path "Outputs")
       (Path "Logs")
-      (Select "Design Resources" ".\glpp_psu.dsn" "SCHEMATIC1" "PSU"))
+      (Select "Design Resources" ".\glpp_psu.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -1 -1 0 200 0 623"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1290 24 641")
-        (Scroll "-213 0")
-        (Zoom "50")
-        (Occurrence "/"))
-      (Path "F:\MYTEMPORARY\GITHUB\GLPP2024\1-PSU-B\GLPP_PSU.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PSU")))
+      (Tab 0)))
   (LastUsedLibraryBrowseDirectory "F:\MySoftware\Cadence\tools\capture\library")
   (ISPCBBASICLICENSE "false"))

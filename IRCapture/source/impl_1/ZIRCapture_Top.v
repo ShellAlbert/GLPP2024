@@ -59,9 +59,12 @@ end
 //WARNING!!!!!
 //If I configured PLL outputs 70MHz, it doesn't work correctly.
 //Then I slowed down to 66MHz, it starts to work.
+//Along with FPGA logic gets larger, 66MHz is not also reliable. 
+//The maximum working frequency is 48MHz.
+//If over 48MHz, unreliable potential risk will occur.
 wire rst_n;
-wire clk_66MHz_Global;
-wire clk_66MHz_Fabric;
+wire clk_48MHz_Global;
+wire clk_48MHz_Fabric;
 ZPLL ic_pll(
 		.ref_clk_i(clk_48MHz), 
         
@@ -71,8 +74,8 @@ ZPLL ic_pll(
 			.rst_n_i(1'b1),  //Enable this line in Radiant.
 		`endif
         .lock_o(rst_n), 
-        .outcore_o(clk_66MHz_Fabric), 
-        .outglobal_o(clk_66MHz_Global)
+        .outcore_o(clk_48MHz_Fabric), 
+        .outglobal_o(clk_48MHz_Global)
 );
 
 
@@ -81,24 +84,7 @@ ZPLL ic_pll(
 // 	.oRst_N(rst_n)
 // );
 
-////////////////////////////////////////////////////////
-//UART Tx.
-reg [7:0] UART_Tx_DR; //Tx Data Register.
-reg UART_Tx_En;
-wire UART_Tx_Done;
-//generate 2MHz Clock. 
-//66MHz/2MHz=33.
-ZUART_Tx #(.Freq_divider(33)) ic_UART_Tx 
-(
-	.iClk(clk_66MHz_Global),
-	.iRst_N(rst_n),
-	.iData(UART_Tx_DR),
 
-	//pull down iEn to start transmition until pulse done oDone was issued.
-	.iEn(UART_Tx_En),
-	.oDone(UART_Tx_Done),
-	.oTxD(oIR_UPLD_DONE)
-);
 
 // always @(posedge clk_48MHz or negedge rst_n)
 // if(!rst_n) begin
@@ -124,7 +110,7 @@ wire SPRAM_Rd_En; //Read Enable. 1:Write, 0:Read.
 wire [15:0] SPRAM_Rd_Data; //Read out Data.
 ///////////////////////////////////////////////////////////
 ZSinglePortRAM ic_PingPongRAM(
-    .iClk(clk_66MHz_Global), //I, Clock.
+    .iClk(clk_48MHz_Global), //I, Clock.
 
     .iWr_Which(SPRAM_Wr_Which), //I, Write which SPRAM:0/1.
 
@@ -142,19 +128,30 @@ ZSinglePortRAM ic_PingPongRAM(
 //Capture DVP signals and write into EBR.
 reg Capture_En;
 wire SPRAM_Init_Done;
+wire Cap_Line_Done;
+wire Cap_Frame_Start;
 wire Cap_Frame_Done;
 wire [1:0] RAM_Data_Valid;
+reg PCLK_Simulate;
 ZCDS3_Capture ic_CDS3(
-    .iClk(clk_66MHz_Global),
+    .iClk(clk_48MHz_Global),
     .iRst_N(rst_n),
     .iEn(Capture_En),
 
     //input signals.
-    .iIR_PCLK(iIR_PCLK),
+	`ifdef USING_MODELSIM
+		.iIR_PCLK(PCLK_Simulate),
+	`else
+    	.iIR_PCLK(iIR_PCLK),
+	`endif
     .iIR_Data(iIR_Data[7:0]), //only 8-bits are used in CDS-3 Interface.
 
+	//Start to capture a new frame.
+    .oCap_Frame_Start(Cap_Frame_Start),
+    //End to capture a new frame.
+    .oCap_Frame_Done(Cap_Frame_Done),
     //Capture one frame done?
-	.oCap_Frame_Done(Cap_Frame_Done),
+	.oCap_Line_Done(Cap_Line_Done),
 
 	//Write Single-Port RAM Interfaces.
 	.oWr_Which(SPRAM_Wr_Which), //O, Write which SPRAM:0/1.
@@ -173,7 +170,7 @@ reg DDRWriter_En;
 wire Wr_Line_Done;
 wire Wr_Frame_Done;
 ZDDRWriter ic_DDRWriter(
-    .iClk(clk_66MHz_Global),
+    .iClk(clk_48MHz_Global),
     .iRst_N(rst_n),
     .iEn(DDRWriter_En),
 
@@ -187,8 +184,11 @@ ZDDRWriter ic_DDRWriter(
     //Notify Capture Module that DDR-PSRAM initial done.
     .oRAM_Init_Done(SPRAM_Init_Done),
 
-	//CDS3Capture captured one frame.
-	.iCap_Frame_Done(Cap_Frame_Done),
+	//Frame Start & End.
+    .iCap_Frame_Start(Cap_Frame_Start),
+    .iCap_Frame_Done(Cap_Frame_Done),
+	//CDS3Capture captured one line.
+	.iCap_Line_Done(Cap_Line_Done),
 
 	//Which Single-Port is in writing? 
     .iWr_Which(SPRAM_Wr_Which), //0/1.
@@ -200,17 +200,19 @@ ZDDRWriter ic_DDRWriter(
 	//indicate which Single-Port RAM data is valid.
     .iRAM_Data_Valid(RAM_Data_Valid), //I.
 	.oWr_Line_Done(Wr_Line_Done), //O, write one line from Single-Port-RAM to DDR-PSRAM done.
-	.oWr_Frame_Done(Wr_Frame_Done) //O, Means already written 1024 bytes to DDR-PSRAM.
+	.oWr_Frame_Done(Wr_Frame_Done), //O, Means already written 1024 bytes to DDR-PSRAM.
+
+	//Dump data from Single-Port-RAM to UART to check its correctness.
+    .oUART_TxD(oIR_UPLD_DONE)
 );
 ////////////////////////////////////////////////////////////
 reg [15:0] CNT_Step;
 reg [31:0] CNT_Delay;
 reg [7:0] Temp_DR;
-always @(posedge clk_66MHz_Global or negedge rst_n)
+always @(posedge clk_48MHz_Global or negedge rst_n)
 if(!rst_n) begin
 	CNT_Step<=0; CNT_Delay<=0;
 	Capture_En<=0; DDRWriter_En<=0; 
-	UART_Tx_En<=0; UART_Tx_DR<=0; 
 	oWr_Req<=0; oWr_Done<=0; 
 end
 else begin
@@ -225,7 +227,7 @@ else begin
 				else begin CNT_Delay<=CNT_Delay+1; end
 				///////////////////////////////
 				oWr_Done<=0; 
-				Capture_En<=0; DDRWriter_En<=0; UART_Tx_En<=0; 
+				Capture_En<=0; DDRWriter_En<=0;
 			end
 
 		1: //output Wr_Req for 6 clock periods to ensure StoreFPGA can capture it correctly.
@@ -234,22 +236,38 @@ else begin
 			begin CNT_Step<=CNT_Step+1; end
 		2: //Enable CD3Capture first because it waits for RAM_Init_Done from ZDDRWriter.
 			begin 
-				if(Cap_Frame_Done) begin Capture_En<=0; end
-				else begin Capture_En<=1; end
+				// if(Cap_Line_Done) begin Capture_En<=0; end
+				// else begin Capture_En<=1; end
 				///////////////////////////////////////////
-				if(Wr_Frame_Done) begin DDRWriter_En<=0; CNT_Step<=CNT_Step+1; end
-				else begin DDRWriter_En<=1; end
+				if(Wr_Frame_Done) begin DDRWriter_En<=0; Capture_En<=0; CNT_Step<=CNT_Step+1; end
+				else begin DDRWriter_En<=1; Capture_En<=1; end
 			end
 		3: //output Wr_Done to notify StoreFPGA it can read.
 			begin oWr_Done<=1; CNT_Step<=CNT_Step+1; end
-		4:
-			if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_Step<=CNT_Step+1; end
-			else begin UART_Tx_En<=1; UART_Tx_DR<=8'h55; end
-		5: //Stop Here.
+		4: //Stop Here.
 			begin CNT_Step<=CNT_Step; end
 	endcase
 end
 
+//Fmax=66MHz, PixelCLK=9.375MHz.
+//66MHz/9.375MHz=7.04
+//66MHz is not reliable, we use 48MHz.
+//48MHz/9.375MHz=5.12
+reg [7:0] CNT_PCLK;
+always @(posedge clk_48MHz_Global or negedge rst_n)
+if(!rst_n) begin
+	CNT_PCLK<=0;
+	PCLK_Simulate<=0;
+end
+else begin
+	if(CNT_PCLK==5-1) begin 
+		CNT_PCLK<=0;
+		PCLK_Simulate<=~PCLK_Simulate;
+	end
+	else begin 
+		CNT_PCLK<=CNT_PCLK+1;
+	end
+end
 /*
 //EBR 4K Write & Read Test Successfully.
 reg [7:0] CNT1;

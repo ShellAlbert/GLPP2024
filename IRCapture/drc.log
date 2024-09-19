@@ -1,7 +1,6 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2023.1.1.200.1
-Tue Sep 10 11:35:03 2024
+Thu Sep 19 09:46:27 2024
 
-WARNING <71003020> - Top module port 'iIR_PCLK' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_VSYNC' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_HSYNC' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_Data[13]' does not connect to anything.
@@ -10,11 +9,3 @@ WARNING <71003020> - Top module port 'iIR_Data[11]' does not connect to anything
 WARNING <71003020> - Top module port 'iIR_Data[10]' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_Data[9]' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_Data[8]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[7]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[6]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[5]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[4]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[3]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[2]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[1]' does not connect to anything.
-WARNING <71003020> - Top module port 'iIR_Data[0]' does not connect to anything.
