@@ -40,9 +40,17 @@ begin
         3:
             //Mode Register Address, MA[7:0]='h08; 
             //[OP7]=0, [OP6]=0, [OP5:OP4]=rsvd, [OP3]=RBX, [OP2]=Burst Type, [OP1:OP0]=Burst Length.
-            //0_0_xx_x_0_00
-            begin oRegAddr=8'h08; oRegData=8'h00; end
+            //2K Byte Wrap, [2,1:0]=111.
+            //Note that Linear Burst commands, 20h and A0h, ignore burst setting defined by MR8[2:0]. 
+            //Note that only Linear Burst Read command is capable of performing row boundary crossing (RBX) read function.  
+        
+            //This register setting applies to Linear Burst reads only on RBX enabled devices (MR3[7]=1).  
+            //Default write and read burst behavior is limited within 2K page (row) address space (CA=’h000 -> ‘h7FF). 
+            //Setting this bit high will allow Linear Burst Read command to cross over into the next Row (RA+1).
+            //MR8[3]=1, Allow reads cross page (row) boundary.
 
+            //0_0_xx_1_1_11
+            begin oRegAddr=8'h08; oRegData=8'h0F; end
         ////////////////////////////////////////////////////////////////////////
         //MA: Read Mode Register Address.
         4:

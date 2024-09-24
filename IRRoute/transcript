@@ -1,6 +1,5 @@
 # Reading pref.tcl
 # Loading project ZIRRoute
-# Compile of ZIRRoute_Top.v was successful.
 # Compile of ZHyperRAMMux_B.v was successful.
 # Compile of ZIRCfg_Data.v was successful.
 # Compile of ZIRRoute_Top.v was successful.
@@ -13,7 +12,7 @@
 # 9 compiles, 0 failed with no errors.
 vsim work.ZIRRoute_Top iCE40UP.HSOSC
 # vsim work.ZIRRoute_Top iCE40UP.HSOSC 
-# Start time: 09:20:34 on Sep 11,2024
+# Start time: 07:36:50 on Sep 24,2024
 # //  ModelSim - Lattice FPGA Edition 2021.4 Oct 14 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
@@ -33,11 +32,20 @@ vsim work.ZIRRoute_Top iCE40UP.HSOSC
 # Loading iCE40UP.HSOSC_CORE
 # Loading iCE40UP.HFOSC
 # Loading iCE40UP.HFOSC_CORE
-# Loading work.ZResetGenerator
-# Loading work.ZHyperRAMMux_B
+# Loading work.ZPLL
+# Loading work.ZPLL_ipgen_lscc_pll
+# Loading iCE40UP.PLL_B
+# Loading iCE40UP.PLL40_2F_CORE
 # Loading work.ZUART_Tx
 # Loading work.ZIRSensor_Controller
 # Loading work.ZIRCfg_Data
+# Loading work.ZHyperRAMMux_B
+# Loading iCE40UP.tSPLL40
+# Loading iCE40UP.ShiftReg427
+# Loading iCE40UP.mux4to1
+# Loading iCE40UP.FineDlyAdj
+# Loading iCE40UP.Delay4Buf
+# Loading iCE40UP.ABIWTCZ4
 add wave -position insertpoint  \
 sim:/ZIRRoute_Top/oIOMux \
 sim:/ZIRRoute_Top/oIR_UART_TxD \
@@ -54,19 +62,23 @@ sim:/ZIRRoute_Top/iRAM_CLK \
 sim:/ZIRRoute_Top/iRAM_CE \
 sim:/ZIRRoute_Top/iRAM_RST \
 sim:/ZIRRoute_Top/iRAM_DQS_DM \
-sim:/ZIRRoute_Top/iWr_Req \
-sim:/ZIRRoute_Top/iWr_Done \
+sim:/ZIRRoute_Top/iSample_Req \
+sim:/ZIRRoute_Top/iSample_Done \
 sim:/ZIRRoute_Top/oLED1 \
 sim:/ZIRRoute_Top/oLED2 \
 sim:/ZIRRoute_Top/clk_48MHz \
+sim:/ZIRRoute_Top/rst_POR_N \
 sim:/ZIRRoute_Top/rst_n \
+sim:/ZIRRoute_Top/clk_48MHz_Global \
+sim:/ZIRRoute_Top/clk_48MHz_Fabric \
 sim:/ZIRRoute_Top/wrData_ADQ \
 sim:/ZIRRoute_Top/whichWr \
 sim:/ZIRRoute_Top/triState \
 sim:/ZIRRoute_Top/rdData_ADQ \
-sim:/ZIRRoute_Top/triState_DQS_DM \
 sim:/ZIRRoute_Top/wrData_DQS_DM \
+sim:/ZIRRoute_Top/Data_DQS_DM \
 sim:/ZIRRoute_Top/rdData_DQS_DM \
+sim:/ZIRRoute_Top/triState_DQS_DM \
 sim:/ZIRRoute_Top/RAM_CLK_i \
 sim:/ZIRRoute_Top/RAM_CE_i \
 sim:/ZIRRoute_Top/UART_Tx_DR \
@@ -77,106 +89,46 @@ sim:/ZIRRoute_Top/IRSensor_OpReq \
 sim:/ZIRRoute_Top/IRSensor_OpDone \
 sim:/ZIRRoute_Top/CNT_i \
 sim:/ZIRRoute_Top/CNT_Delay \
-sim:/ZIRRoute_Top/Temp_DR
-run 100us
-# Compile of ZResetGenerator.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.ZResetGenerator
-run 20us
-# Compile of ZResetGenerator.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.ZResetGenerator
-run 10us
-# Compile of ZResetGenerator.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.ZResetGenerator
-run 10us
-# Compile of ZIRRoute_Top.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.ZIRRoute_Top
-run 100us
-# Compile of ZIRRoute_Top.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.ZIRRoute_Top
-run 100us
-# Compile of ZIRRoute_Top.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.ZIRRoute_Top
-# Warning in wave window restart: (vish-4014) No objects found matching '/ZIRRoute_Top/Temp_DR'. 
-restart
-add wave -position insertpoint  \
-sim:/ZIRRoute_Top/Temp_DR1 \
-sim:/ZIRRoute_Top/Temp_DR2 \
-sim:/ZIRRoute_Top/Temp_DR3 \
-sim:/ZIRRoute_Top/Temp_DR4
-restart
-run 100us
-quit -sim
-# End time: 09:38:59 on Sep 11,2024, Elapsed time: 0:18:25
-# Errors: 0, Warnings: 1
-# Compile of ZIRRoute_Top.v was successful.
-restart
-# No Design Loaded!
-
-vsim work.ZIRRoute_Top iCE40UP.HSOSC
-# vsim work.ZIRRoute_Top iCE40UP.HSOSC 
-# Start time: 09:40:10 on Sep 11,2024
-# Loading work.ZIRRoute_Top
-# Loading iCE40UP.HSOSC
-# Loading iCE40UP.VLO
-# Loading iCE40UP.HSOSC_CORE
-# Loading iCE40UP.HFOSC
-# Loading iCE40UP.HFOSC_CORE
-# Loading work.ZResetGenerator
-# Loading work.ZHyperRAMMux_B
-# Loading work.ZUART_Tx
-# Loading work.ZIRSensor_Controller
-# Loading work.ZIRCfg_Data
-add wave -position insertpoint  \
-sim:/ZIRRoute_Top/oIOMux \
-sim:/ZIRRoute_Top/oIR_UART_TxD \
-sim:/ZIRRoute_Top/iIR_UART_RxD \
-sim:/ZIRRoute_Top/oUPLD_UART_TxD \
-sim:/ZIRRoute_Top/iUPLD_UART_RxD \
-sim:/ZIRRoute_Top/ioPSRAM_ADQ \
-sim:/ZIRRoute_Top/oPSRAM_CLK \
-sim:/ZIRRoute_Top/oPSRAM_CE \
-sim:/ZIRRoute_Top/oPSRAM_RST \
-sim:/ZIRRoute_Top/ioPSRAM_DQS_DM \
-sim:/ZIRRoute_Top/iRAM_ADQ \
-sim:/ZIRRoute_Top/iRAM_CLK \
-sim:/ZIRRoute_Top/iRAM_CE \
-sim:/ZIRRoute_Top/iRAM_RST \
-sim:/ZIRRoute_Top/iRAM_DQS_DM \
-sim:/ZIRRoute_Top/iWr_Req \
-sim:/ZIRRoute_Top/iWr_Done \
-sim:/ZIRRoute_Top/oLED1 \
-sim:/ZIRRoute_Top/oLED2 \
-sim:/ZIRRoute_Top/clk_48MHz \
-sim:/ZIRRoute_Top/rst_n \
-sim:/ZIRRoute_Top/wrData_ADQ \
-sim:/ZIRRoute_Top/whichWr \
-sim:/ZIRRoute_Top/triState \
-sim:/ZIRRoute_Top/rdData_ADQ \
-sim:/ZIRRoute_Top/triState_DQS_DM \
-sim:/ZIRRoute_Top/wrData_DQS_DM \
-sim:/ZIRRoute_Top/rdData_DQS_DM \
-sim:/ZIRRoute_Top/RAM_CLK_i \
-sim:/ZIRRoute_Top/RAM_CE_i \
-sim:/ZIRRoute_Top/UART_Tx_DR \
-sim:/ZIRRoute_Top/UART_Tx_En \
-sim:/ZIRRoute_Top/UART_Tx_Done \
-sim:/ZIRRoute_Top/IRSensor_En \
-sim:/ZIRRoute_Top/IRSensor_OpReq \
-sim:/ZIRRoute_Top/IRSensor_OpDone \
-sim:/ZIRRoute_Top/CNT_i \
-sim:/ZIRRoute_Top/CNT_Delay
-run 100us
-# End time: 09:44:29 on Sep 11,2024, Elapsed time: 0:04:19
+sim:/ZIRRoute_Top/Temp_DR \
+sim:/ZIRRoute_Top/Rd_Addr \
+sim:/ZIRRoute_Top/Rd_Bytes \
+sim:/ZIRRoute_Top/Rd_Retry \
+sim:/ZIRRoute_Top/Rd_Data_Valid \
+sim:/ZIRRoute_Top/rowAddr \
+sim:/ZIRRoute_Top/colAddr \
+sim:/ZIRRoute_Top/DDR_RAM_Addr
+run 100ms
+# ************************SBT : Info*****************************
+# Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
+# ***************************************************************
+# ************************SBT : Attention***************************
+# Since FEEDBACK_PATH="SIMPLE", the FDA_FEEDBACK value will be ignored
+# ******************************************************************
+# 
+# 
+# ************************Attention************************
+# 
+#    The pulse of the RESET signal is too small! The min-  
+# 
+#    imum acceptable pulse width is 1us. The PLL verilog   
+# 
+#    model will continue to operate, but the current sim-  
+# 
+#    ulation results may not be accurate!                  
+# 
+# 
+# 
+#    Please check the RESET input signal, and rerun the    
+# 
+#    simulation.                                           
+# 
+# 
+# 
+#    Simulation time is                  100
+# 
+# ******************************************************** 
+# 
+# 
+# 
+# End time: 09:24:20 on Sep 24,2024, Elapsed time: 1:47:30
 # Errors: 0, Warnings: 2

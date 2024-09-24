@@ -131,7 +131,6 @@ wire SPRAM_Init_Done;
 wire Cap_Line_Done;
 wire Cap_Frame_Start;
 wire Cap_Frame_Done;
-wire [1:0] RAM_Data_Valid;
 reg PCLK_Simulate;
 ZCDS3_Capture ic_CDS3(
     .iClk(clk_48MHz_Global),
@@ -160,10 +159,7 @@ ZCDS3_Capture ic_CDS3(
     .oWr_En(SPRAM_Wr_En), //O, Write Enable. 1:Write, 0:Read.
 
 	//Notify me that DDR-Writer has done initilization.
-    .iRAM_Init_Done(SPRAM_Init_Done),
-
-	//indicate which Single-Port RAM data is valid.
-    .oRAM_Data_Valid(RAM_Data_Valid)
+    .iRAM_Init_Done(SPRAM_Init_Done)
 );
 /////////////////////////////////////////////////////////////////
 reg DDRWriter_En;
@@ -197,8 +193,6 @@ ZDDRWriter ic_DDRWriter(
     .oRd_En(SPRAM_Rd_En), //O, Read Enable. 1:Write, 0:Read.
     .iRd_Data(SPRAM_Rd_Data), //I, Read out Data from Single-Port-RAM.
 
-	//indicate which Single-Port RAM data is valid.
-    .iRAM_Data_Valid(RAM_Data_Valid), //I.
 	.oWr_Line_Done(Wr_Line_Done), //O, write one line from Single-Port-RAM to DDR-PSRAM done.
 	.oWr_Frame_Done(Wr_Frame_Done), //O, Means already written 1024 bytes to DDR-PSRAM.
 

@@ -13,12 +13,12 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	ZResetGenerator
 
-} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZHyperRAMMux_B.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZHyperRAMMux_B.v
+} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZUART_Tx.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZUART_Tx.v
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module ZHyperRAMMux_B
+-- Compiling module ZUART_Tx
 
 Top level modules:
-	ZHyperRAMMux_B
+	ZUART_Tx
 
 } {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZOctalRAMCfg.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZOctalRAMCfg.v
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
@@ -27,29 +27,12 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	ZOctalRAMCfg
 
-} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZUART_Tx.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZUART_Tx.v
+} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZHyperRAMMux_B.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZHyperRAMMux_B.v
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module ZUART_Tx
+-- Compiling module ZHyperRAMMux_B
 
 Top level modules:
-	ZUART_Tx
-
-} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRRoute_Top.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRRoute_Top.v
-Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module ZIRRoute_Top
-
-Top level modules:
-	ZIRRoute_Top
-
-} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZPortableDefine.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZPortableDefine.v
-Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
-
-} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRCfg_Data.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRCfg_Data.v
-Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module ZIRCfg_Data
-
-Top level modules:
-	ZIRCfg_Data
+	ZHyperRAMMux_B
 
 } {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRSensor_Controller.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRSensor_Controller.v
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
@@ -57,5 +40,12 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 
 Top level modules:
 	ZIRSensor_Controller
+
+} {} {}} F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRCfg_Data.v {1 {vlog -work work -stats=none F:/MyTemporary/Github/GLPP2024/IRRoute/source/impl_1/ZIRCfg_Data.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module ZIRCfg_Data
+
+Top level modules:
+	ZIRCfg_Data
 
 } {} {}}

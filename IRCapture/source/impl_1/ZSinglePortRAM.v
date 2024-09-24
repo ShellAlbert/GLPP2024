@@ -118,6 +118,8 @@ always @(*) begin
             SP_RAM1_Addr=iWr_Addr; SP_RAM1_En=iWr_En; SP_RAM1_WrDR=iWr_Data;
             SP_RAM0_Addr=iRd_Addr; SP_RAM0_En=iRd_En; oRd_Data=SP_RAM0_RdDR; 
           end
+      default:
+          
   endcase
 end
 endmodule
