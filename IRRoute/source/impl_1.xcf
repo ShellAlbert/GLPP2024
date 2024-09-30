@@ -18,12 +18,13 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/IRRoute_impl_1.bin</File>
-			<FileTime>09/11/24 12:19:43</FileTime>
+			<FileTime>09/29/24 15:12:49</FileTime>
 			<JedecChecksum>0x32DF</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<AccessMode>Direct Programming</AccessMode>
 			</Option>
 			<FPGALoader>
@@ -47,6 +48,7 @@
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>
@@ -81,6 +83,7 @@
 					</LocalChainList>
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 					</Option>
 				</Device>
 			</FPGADevice>
@@ -99,7 +102,7 @@
 	</ProjectOptions>
 	<CableOptions>
 		<CableName>USB2</CableName>
-		<PortAdd>FTUSB-0</PortAdd>
-		<USBID>Lattice HW-USBN-2B Ch A Location 0000 Serial VER00001A</USBID>
+		<PortAdd>FTUSB-4</PortAdd>
+		<USBID>Lattice HW-USBN-2B Ch A Location 0004 Serial VER00001A</USBID>
 	</CableOptions>
 </ispXCF>

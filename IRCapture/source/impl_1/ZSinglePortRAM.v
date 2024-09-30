@@ -1,6 +1,7 @@
 `timescale 1ps/1ps
 module ZSinglePortRAM(
     input iClk, //I, Clock.
+    input iRst_N,
 
     input iWr_Which, //I, Write which SPRAM:0/1/2/3.
 
@@ -106,20 +107,38 @@ SP256K SP_RAM3(
 /////////////////////////////////////////////////////////////////////////////////////////////
 //Exclusive Writing & Reading.
 //Can't write and read one SPRAM simultaneously.
-always @(*) begin 
+// always @(*) begin 
+//   case(iWr_Which)
+//       0: //Write 0, Read 1.
+//           begin 
+//             SP_RAM0_Addr=iWr_Addr; SP_RAM0_En=iWr_En; SP_RAM0_WrDR=iWr_Data; 
+//             SP_RAM1_Addr=iRd_Addr; SP_RAM1_En=iRd_En; oRd_Data=SP_RAM1_RdDR; 
+//           end
+//       1: //Write 1, Read 0.
+//           begin 
+//             SP_RAM1_Addr=iWr_Addr; SP_RAM1_En=iWr_En; SP_RAM1_WrDR=iWr_Data;
+//             SP_RAM0_Addr=iRd_Addr; SP_RAM0_En=iRd_En; oRd_Data=SP_RAM0_RdDR; 
+//           end
+//   endcase
+// end
+always @(posedge iClk or negedge iRst_N) 
+if(!iRst_N) begin
+  //Write 0, Read 1.
+  SP_RAM0_Addr<=iWr_Addr; SP_RAM0_En<=iWr_En; SP_RAM0_WrDR<=iWr_Data; 
+  SP_RAM1_Addr<=iRd_Addr; SP_RAM1_En<=iRd_En; oRd_Data<=SP_RAM1_RdDR; 
+end
+else begin
   case(iWr_Which)
-      0: //Write 0, Read 1.
+    0: //Write 0, Read 1.
           begin 
-            SP_RAM0_Addr=iWr_Addr; SP_RAM0_En=iWr_En; SP_RAM0_WrDR=iWr_Data; 
-            SP_RAM1_Addr=iRd_Addr; SP_RAM1_En=iRd_En; oRd_Data=SP_RAM1_RdDR; 
+            SP_RAM0_Addr<=iWr_Addr; SP_RAM0_En<=iWr_En; SP_RAM0_WrDR<=iWr_Data; 
+            SP_RAM1_Addr<=iRd_Addr; SP_RAM1_En<=iRd_En; oRd_Data<=SP_RAM1_RdDR; 
           end
-      1: //Write 1, Read 0.
+    1: //Write 1, Read 0.
           begin 
-            SP_RAM1_Addr=iWr_Addr; SP_RAM1_En=iWr_En; SP_RAM1_WrDR=iWr_Data;
-            SP_RAM0_Addr=iRd_Addr; SP_RAM0_En=iRd_En; oRd_Data=SP_RAM0_RdDR; 
+            SP_RAM1_Addr<=iWr_Addr; SP_RAM1_En<=iWr_En; SP_RAM1_WrDR<=iWr_Data;
+            SP_RAM0_Addr<=iRd_Addr; SP_RAM0_En<=iRd_En; oRd_Data<=SP_RAM0_RdDR; 
           end
-      default:
-          
   endcase
 end
 endmodule

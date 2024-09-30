@@ -1,5 +1,5 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2023.1.1.200.1
-Thu Sep 19 09:46:27 2024
+Sun Sep 29 16:29:37 2024
 
 WARNING <71003020> - Top module port 'iIR_VSYNC' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_HSYNC' does not connect to anything.
@@ -9,3 +9,6 @@ WARNING <71003020> - Top module port 'iIR_Data[11]' does not connect to anything
 WARNING <71003020> - Top module port 'iIR_Data[10]' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_Data[9]' does not connect to anything.
 WARNING <71003020> - Top module port 'iIR_Data[8]' does not connect to anything.
+WARNING <71003020> - Top module port 'iUpload_Done' does not connect to anything.
+WARNING <1027013> - No port matched 'oWr_Req'.
+WARNING <1014301> - Can't resolve object 'oWr_Req' in constraint 'ldc_set_port -iobuf {IO_TYPE=LVCMOS18 PULLMODE=NA} [get_ports oWr_Req]'.

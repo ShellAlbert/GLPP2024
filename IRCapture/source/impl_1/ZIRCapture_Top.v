@@ -14,8 +14,8 @@ module ZIRCapture_Top(
 	input [13:0] iIR_Data, //only 8-bits are used in CDS-3 Interface.
 
 	//Interfactive signals.
-	output reg oWr_Req, //Write Request for DDR-PSRAM.
-	output reg oWr_Done, //Write Done for DDR-PSRAM.
+	output reg oWr_Done, //Sample IR Image and Write into DDR-PSRAM Done.
+	input iUpload_Done, //Read from DDR-PSRAM and upload done.
 
 	//DDR-PSRAM physical write interface.
 	output oRAM_CLK,
@@ -85,20 +85,11 @@ ZPLL ic_pll(
 // );
 
 
-
-// always @(posedge clk_48MHz or negedge rst_n)
-// if(!rst_n) begin
-// 	oRAM_CLK<=0;
-// end
-// else begin
-// 	oRAM_CLK<=~oRAM_CLK; //Measured 24MHz 50% duty cycle waveform at Physical Pin.
-// end
-
-/////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 //In order to make PingPong Operation success, 
 //DDR-Writer must fast then CDS3Capture.
-//DDR-Writer must read out all data before CDS3Capture start to write.
-//////////////////////////////////////////////////////////////////
+//DDR-Writer must read out all data before next time of CDS3Capture writing.
+///////////////////////////////////////////////////////////////////////////
 //Write Operation from CDS3_Capture.
 wire SPRAM_Wr_Which; //Write which SPRAM:0/1.
 wire [13:0] SPRAM_Wr_Addr; //Write Address.
@@ -111,6 +102,7 @@ wire [15:0] SPRAM_Rd_Data; //Read out Data.
 ///////////////////////////////////////////////////////////
 ZSinglePortRAM ic_PingPongRAM(
     .iClk(clk_48MHz_Global), //I, Clock.
+	.iRst_N(rst_n),
 
     .iWr_Which(SPRAM_Wr_Which), //I, Write which SPRAM:0/1.
 
@@ -124,6 +116,7 @@ ZSinglePortRAM ic_PingPongRAM(
     .iRd_En(SPRAM_Rd_En), //I, Read Enable. 1:Write, 0:Read.
     .oRd_Data(SPRAM_Rd_Data) //O, Read out Data.
 );
+////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
 //Capture DVP signals and write into EBR.
 reg Capture_En;
@@ -203,43 +196,41 @@ ZDDRWriter ic_DDRWriter(
 reg [15:0] CNT_Step;
 reg [31:0] CNT_Delay;
 reg [7:0] Temp_DR;
+
 always @(posedge clk_48MHz_Global or negedge rst_n)
 if(!rst_n) begin
 	CNT_Step<=0; CNT_Delay<=0;
-	Capture_En<=0; DDRWriter_En<=0; 
-	oWr_Req<=0; oWr_Done<=0; 
+	Capture_En<=0; DDRWriter_En<=0; oWr_Done<=0; 
 end
 else begin
 	case(CNT_Step)
-		0: //delay for a while to be stable, without delay, UART will send random data when power on.//66MHz=32'h3EF1480
-				begin
-				`ifdef USING_MODELSIM
-					if(CNT_Delay==100) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end //Enable this line in ModelSim.
-				`else //66MHz, wait 6s to prepare the oscilloscope.
-					if(CNT_Delay==32'h179A7B00) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end //Enable this line in Radiant.
+		0: //Delay 1s to waiting for IC to be stable, without delay, UART will send random data when power on.
+			begin
+				`ifdef USING_MODELSIM //Enable this line in ModelSim.
+					if(CNT_Delay==100) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end 
+				`else //48MHz, hex(48000000)=0x2DC6C00
+					if(CNT_Delay==32'h2DC6C00) begin CNT_Delay<=0; CNT_Step<=CNT_Step+1; end 
 				`endif
 				else begin CNT_Delay<=CNT_Delay+1; end
-				///////////////////////////////
-				oWr_Done<=0; 
-				Capture_En<=0; DDRWriter_En<=0;
+				//////////////////////////////////////////////////////////////////////////////
+				oWr_Done<=0; Capture_En<=0; DDRWriter_En<=0; 
 			end
 
-		1: //output Wr_Req for 6 clock periods to ensure StoreFPGA can capture it correctly.
-			// if(CNT_Delay==6-1) begin oWr_Req<=0; CNT_Step<=CNT_Step+1; end
-			// else begin CNT_Delay<=CNT_Delay+1; oWr_Req<=1; end
-			begin CNT_Step<=CNT_Step+1; end
-		2: //Enable CD3Capture first because it waits for RAM_Init_Done from ZDDRWriter.
-			begin 
-				// if(Cap_Line_Done) begin Capture_En<=0; end
-				// else begin Capture_En<=1; end
-				///////////////////////////////////////////
-				if(Wr_Frame_Done) begin DDRWriter_En<=0; Capture_En<=0; CNT_Step<=CNT_Step+1; end
-				else begin DDRWriter_En<=1; Capture_En<=1; end
+		1: //Capture Two Frames and Disable!!!
+			if(Wr_Frame_Done) begin 
+				if(CNT_Delay==2-1) begin
+					CNT_Delay<=0; DDRWriter_En<=0; Capture_En<=0; CNT_Step<=CNT_Step+1; 
+				end
+				else begin CNT_Delay<=CNT_Delay+1; end
 			end
-		3: //output Wr_Done to notify StoreFPGA it can read.
-			begin oWr_Done<=1; CNT_Step<=CNT_Step+1; end
-		4: //Stop Here.
-			begin CNT_Step<=CNT_Step; end
+			else begin DDRWriter_En<=1; Capture_En<=1; end
+
+		2: //output Wr_Done 6 clocks to notify StoreFPGA can capture it completely!!!
+			if(CNT_Delay==6-1) begin CNT_Delay<=0; oWr_Done<=0; CNT_Step<=CNT_Step+1; end
+			else begin CNT_Delay<=CNT_Delay+1; oWr_Done<=1;end
+
+		3: //Waiting for upload done then sample next frame.
+			if(iUpload_Done) begin CNT_Step<=CNT_Step; end //Stop Here!!!!
 	endcase
 end
 

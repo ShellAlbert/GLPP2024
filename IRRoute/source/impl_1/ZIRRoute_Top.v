@@ -27,10 +27,11 @@ module ZIRRoute_Top(
 	input iRAM_RST,
 	input iRAM_DQS_DM,
 
-	//1: IR Image Sensor Request to write HyperRAM.
-	input iSample_Req, //SAMPLE_EN.
-	//1: IR Image Sensor write HyperRAM done.
+	//1: IR Image Sensor write DDR-PSRAM done.
 	input iSample_Done, //SAMPLE_DONE.
+
+	//1: FPGA Uploading done.
+	output reg oUpload_Done, //SAMPLE_EN.
 
 	//LED Indicator.
 	output reg oLED1,
@@ -250,6 +251,7 @@ if(!rst_n) begin
     //0: DB_IO_0 -> CFG_SPI_D0, DB_IO_1 -> CFG_SPI_D2, DB_IO_2 -> CFG_SPI_D1, DB_IO_3 -> CFG_SPI_D3
     //1: DB_IO_0 -> IR_UART_TX, DB_IO_1 -> IR_UART_RX, DB_IO_2 -> UPLD_UART_TX, DB_IO_3 -> UPLD_UART_RX
 	oIOMux<=1;
+	oUpload_Done<=0;
 end
 else begin
 	case(CNT_i)
@@ -261,6 +263,7 @@ else begin
 				RAM_CLK_i<=0; RAM_CE_i<=1; //CLK=0 at default, CE=1 at default.
 				Rd_Bytes<=0; Rd_Retry<=0; Rd_Data_Valid<=0; 
 				rowAddr<=0; colAddr<=0; 
+				oUpload_Done<=0;
 				////////////////////////////////////////////////////////////////
 				`ifdef USING_MODELSIM
 					if(CNT_Delay==1024) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
@@ -276,8 +279,9 @@ else begin
 			// else begin IRSensor_OpReq<=1; IRSensor_En<=1; end
 			begin CNT_i<=CNT_i+1; end
 		2: //Upload fixed bytes to indicate I start to work.
-			if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_i<=CNT_i+1; end
-			else begin UART_Tx_En<=1; UART_Tx_DR<=8'h66; end
+			// if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_i<=CNT_i+1; end
+			// else begin UART_Tx_En<=1; UART_Tx_DR<=8'h66; end
+			begin CNT_i<=CNT_i+1; end
 		3: //Waiting for IR Image Sensor Write Request.
 			//iWr_Req was issued by IR(FPGA) and extended 6 times clock period to ensure that I can capture it correctly.
 			// `ifdef USING_MODELSIM 
@@ -314,14 +318,16 @@ else begin
 						if(CNT_Delay==100-1) begin CNT_Delay<=0; oLED1<=1; Rd_Addr<=0; CNT_i<=CNT_i+1; end
 						else begin CNT_Delay<=CNT_Delay+1; end
 					end
-				`else //48MHz, hex(48000000)=0x2DC6C00
+				`else //IRCapture outputs Sample_Done 6 clocks, here we detect 3 clocks continusouly.
 					if(iSample_Done) begin  
-						if(CNT_Delay==32'h2DC6C00-1) begin CNT_Delay<=0; oLED1<=1; Rd_Addr<=0; CNT_i<=CNT_i+1; end
+						if(CNT_Delay==3-1) begin CNT_Delay<=0; oLED1<=1; Rd_Addr<=0; CNT_i<=CNT_i+1; end
 						else begin CNT_Delay<=CNT_Delay+1; end
 					end
 				`endif
 				/////////////////////////////////////////////////////////
-				rowAddr<=1; colAddr<=0;  //read from Page1, bypass Page0.
+				//rowAddr<=1; colAddr<=0;  //read from Page1, bypass Page0.
+				//rowAddr<=2; colAddr<=0;  //read from Page2.
+				rowAddr<=194; colAddr<=0;  //read from Page194 to bypass Frame1.
 			end
 		6: //Prepare rising edge data. 
 			if(CNT_Delay==6) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
@@ -433,7 +439,11 @@ else begin
 			//And now I measured with an oscilloscope, reading 10 bytes each time takes up 1.6uS.
 			//so we repeat 1040Bytes/10Bytes=104 times.
 			if(colAddr>=(1040-20)) begin 
-				if(rowAddr>=192) begin rowAddr<=0; colAddr<=0; oLED1<=0; CNT_i<=CNT_i+1; end
+				//if(rowAddr>=192) begin rowAddr<=0; colAddr<=0; oLED1<=0; CNT_i<=CNT_i+1; end
+				//We write two frames into DDR-PSRAM, so here we also read two frames from DDR-PSRAM.
+				//One frame is 192 lines, two frame is 192*2=384 lines.
+				//(00000001~000000BF) => (1~191).
+				if(rowAddr>=385) begin rowAddr<=0; colAddr<=0; oLED1<=0; CNT_i<=CNT_i+1; end
 				else begin 
 						rowAddr<=rowAddr+1; colAddr<=0; CNT_i<=6; //read next page.
 					end
@@ -442,12 +452,16 @@ else begin
 					colAddr<=colAddr+20; //10 clocks we read 20 bytes in two edges.
 					CNT_i<=6; //read next 20-Bytes within one page.
 				end
-////////////////////////////////////////////////////////////////////////////////
-		30: //retry after 5s.
-			// if(CNT_Delay==32'hE4E1C00) begin CNT_Delay<=0; CNT_i<=6; end
-			// else begin CNT_Delay<=CNT_Delay+1; end 
-			//stop here.
-			begin CNT_i<=CNT_i; end
+/////////////////////////////////////////////////////////////////////////////////////////////////
+		30: //After 10s to notify IRCapture to capture next frame.
+			//48MHz, hex(48000000)=0x2DC6C00, // hex(48000000*10)=0x1C9C3800
+			if(CNT_Delay==32'h1C9C3800) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
+			else begin CNT_Delay<=CNT_Delay+1; end
+		31: //output Upload_Done 6 clocks to ensure IR Image Sensor(FPGA) can capture it completely.
+			if(CNT_Delay==6-1) begin CNT_Delay<=0; oUpload_Done<=0; CNT_i<=CNT_i+1; end
+			else begin CNT_Delay<=CNT_Delay+1; oUpload_Done<=1; end
+		32:
+			begin oUpload_Done<=0; CNT_i<=0; end
 	endcase
 end
 //////////////////////////////////////////////////////////////////

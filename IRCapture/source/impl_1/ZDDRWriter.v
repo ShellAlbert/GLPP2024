@@ -81,7 +81,6 @@ reg [7:0] CNT_Step;
 reg [7:0] CNT_SubStep;
 reg [31:0] CNT_Delay;
 reg [7:0] CNT_Repeat;
-reg [7:0] CNT_WrDDR;
 
 reg [95:0] Correctness_Fixed_Data; //'h198709011986101420160323 (12bytes in total, 12*8=96bits)
 reg [15:0] Rd_Back_Data;
@@ -94,6 +93,7 @@ wire [31:0] DDR_RAM_Addr;
 assign DDR_RAM_Addr={7'd0, rowAddr, colAddr};
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 reg [15:0] CNT_Lines; //There are 192 lines in one frame.
+reg [7:0] CNT_WrFrames;
 /////////////////////////////////////////////////////////////////////////////////////////////////
 always @(posedge iClk or negedge iRst_N)
 if(!iRst_N) begin
@@ -102,48 +102,53 @@ if(!iRst_N) begin
     cfg_No<=0;
     oRAM_CLK<=0; oRAM_RST<=1; oRAM_CE<=1; oRAM_DQS<=0; oRAM_ADQ<=0;
 
-    oRd_Addr<=0; Rd_Back_Data<=0; Rd_Back_Bytes<=0; 
+    oRd_En<=0; oRd_Addr<=0; Rd_Back_Data<=0; Rd_Back_Bytes<=0; 
     rowAddr<=0; colAddr<=0; 
 
     oRAM_Init_Done<=0; oWr_Line_Done<=0;
     CNT_Lines<=0; oWr_Frame_Done<=0; 
     UART_Tx_En<=0; UART_Tx_DR<=0;
-    CNT_WrDDR<=0;
+    CNT_WrFrames<=0;
 end
 else begin
     if(iEn) begin 
             case(CNT_Step)
                 0: //DDR-PSRAM: Reset.
-                    case(CNT_SubStep)
-                        0: //At default, CE=1, RST=1, CLK=0.
-                            begin oRAM_CE<=1; oRAM_RST<=1; oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        1: //Device Initialization, tPU>150uS.
-                        //Wait for OctalRAM to be stable after power on.
-                        //f=66MHz, t=15nS.
-                        //Here we wait 2 times of tPU, 300uS/15nS=300_000ns/15ns=20000.
-                            `ifdef USING_MODELSIM
-                                if(CNT_Delay==20) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                            `else
-                                if(CNT_Delay==20000) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                            `endif
-                                else begin CNT_Delay<=CNT_Delay+1; end
-                        2:  //pull down RST while CE=1, tRP>1uS,
-                            begin oRAM_RST<=0; CNT_SubStep<=CNT_SubStep+1; end
-                        3: //pull up RST, tRST>=2uS, Reset to CMD valid.
-                            begin oRAM_RST<=1; CNT_SubStep<=CNT_SubStep+1; end
-                        4: //After reset, delay for a while for later operations.
-                            `ifdef USING_MODELSIM
-                                if(CNT_Delay==10) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                            `else
-                                if(CNT_Delay==1000) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
-                            `endif
-                                else begin CNT_Delay<=CNT_Delay+1; end
-                        5:
-                            begin 
-                                CNT_SubStep<=0; CNT_Step<=CNT_Step+1; 
-                                cfg_No<=0; //Necessary, Initial value before next step.
-                            end
-                    endcase
+                    begin
+                        oRAM_Init_Done<=0; oWr_Line_Done<=0; oWr_Frame_Done<=0; CNT_Lines<=0; 
+                        CNT_WrFrames<=0;
+                        ////////////////////////////////////////////////////////////////////////////////////
+                        case(CNT_SubStep)
+                            0: //At default, CE=1, RST=1, CLK=0.
+                                begin oRAM_CE<=1; oRAM_RST<=1; oRAM_CLK<=0; CNT_SubStep<=CNT_SubStep+1; end
+                            1: //Device Initialization, tPU>150uS.
+                            //Wait for OctalRAM to be stable after power on.
+                            //f=66MHz, t=15nS.
+                            //Here we wait 2 times of tPU, 300uS/15nS=300_000ns/15ns=20000.
+                                `ifdef USING_MODELSIM
+                                    if(CNT_Delay==20) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
+                                `else
+                                    if(CNT_Delay==20000) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
+                                `endif
+                                    else begin CNT_Delay<=CNT_Delay+1; end
+                            2:  //pull down RST while CE=1, tRP>1uS,
+                                begin oRAM_RST<=0; CNT_SubStep<=CNT_SubStep+1; end
+                            3: //pull up RST, tRST>=2uS, Reset to CMD valid.
+                                begin oRAM_RST<=1; CNT_SubStep<=CNT_SubStep+1; end
+                            4: //After reset, delay for a while for later operations.
+                                `ifdef USING_MODELSIM
+                                    if(CNT_Delay==10) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
+                                `else
+                                    if(CNT_Delay==1000) begin CNT_Delay<=0; CNT_SubStep<=CNT_SubStep+1; end
+                                `endif
+                                    else begin CNT_Delay<=CNT_Delay+1; end
+                            5:
+                                begin 
+                                    CNT_SubStep<=0; CNT_Step<=CNT_Step+1; 
+                                    cfg_No<=0; //Necessary, Initial value before next step.
+                                end
+                        endcase
+                    end
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 1: //DDR-PSRAM: Write Mode Registers.
                     case(CNT_SubStep)
@@ -186,16 +191,16 @@ else begin
                             else begin cfg_No<=cfg_No+1; CNT_SubStep<=0; end
 
                         15: //Write Mode Register done, move to next step.
-                            begin CNT_SubStep<=0; CNT_Step<=CNT_Step+1; end
+                            begin CNT_SubStep<=0; CNT_Step<=CNT_Step+1; 
+                                rowAddr<=0; colAddr<=0; //Page-0. Generate DDR_RAM_Addr.
+                            end
                     endcase        
 //////////////////////////////////////////////////////////////////////////////////////////////
                 2: //Write Sync Fixed Data to DDR-PSRAM(Addr:0~11) to verify writing correctness. //Write Latency=5.
                     case(CNT_SubStep)
                         0: //Prepare rising edge data. //Pull down CE to start. //DQS=0, no write mask.
                             begin 
-                                oRAM_CE<=0; oRAM_DQS<=0; oRAM_ADQ<=CMD_LINEAR_BURST_WR; 
-                                rowAddr<=0; colAddr<=0; //Page-0. Generate DDR_RAM_Addr.
-                                CNT_SubStep<=CNT_SubStep+1; 
+                                oRAM_CE<=0; oRAM_DQS<=0; oRAM_ADQ<=CMD_LINEAR_BURST_WR; CNT_SubStep<=CNT_SubStep+1; 
                             end
                         1: //Pull up CLK. (1st Rising Edge)
                             begin oRAM_CLK<=1; CNT_SubStep<=CNT_SubStep+1; end
@@ -262,17 +267,25 @@ else begin
                         25: 
                             begin 
                                 oRAM_CE<=1; //Pull up CE to end.
-                                //Progress Indicator.
-                                if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_SubStep<=CNT_SubStep+1; end
-                                else begin UART_Tx_En<=1; UART_Tx_DR<=8'h66; end
+                                if(colAddr==520) begin 
+                                    colAddr<=0; CNT_SubStep<=CNT_SubStep+1; 
+                                end
+                                else begin 
+                                    colAddr<=colAddr+20; 
+                                    CNT_SubStep<=0; //continue to write.
+                                end
                             end
-                        26: //Notify Capture Module that DDR-PSRAM Initial done, you can capture now. 
+                        26:
+                            //Progress Indicator.
+                            if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_SubStep<=CNT_SubStep+1; end
+                            else begin UART_Tx_En<=1; UART_Tx_DR<=8'h66; end
+                        27: //Notify Capture Module that DDR-PSRAM Initial done, you can capture now. 
                             begin 
                                 oRAM_Init_Done<=1; //Notify CDS3Capture Module to start capture.
                                 //96'h090110140323871986191620, 96bits/8=12 Bytes.
                                 //Address[0~11] are used for writing Sync Fixed Data. (12 Bytes)
                                 //Address[12~1035] are used for writing one line. (1024 Bytes)
-                                rowAddr<=1; colAddr<=0; CNT_Lines<=0; //Write Page-1. 
+                                rowAddr<=2; colAddr<=0; CNT_Lines<=0; //Write Page2. 
                                 CNT_SubStep<=0; CNT_Step<=CNT_Step+1;
                             end
                     endcase
@@ -280,13 +293,13 @@ else begin
                 3: //Waiting A New Frame.   
                     //First iCap_Line_Done means CD3Capture write SPRAM-0# done, it will start to write SPRAM-1#.
                     //So DDRWriter can read SPRAM-0# now.
-                    if(iCap_Line_Done) begin              
-                        //Read Enable. 1:Write, 0:Read.
-                        oRd_Addr<=0; oRd_En<=0; CNT_Step<=CNT_Step+1;
+                    begin
+                        if(iCap_Line_Done) begin CNT_Step<=CNT_Step+1; end
+                        //////////////////////////////////////////////////////////////
+                        oRd_Addr<=0; oRd_En<=0; oWr_Frame_Done<=0; //Read Enable. 1:Write, 0:Read.
                     end
                 4: //Prepare to write DDR-PSRAM. Send Command+Address first.
                     begin
-                        //oWr_Line_Done<=0; 
                         case(CNT_SubStep)
                             0: //Prepare rising edge data. //Pull down CE to start. //DQS=0, no write mask.
                                 begin oRAM_CE<=0; oRAM_DQS<=0; oRAM_ADQ<=CMD_LINEAR_BURST_WR; CNT_SubStep<=CNT_SubStep+1; end
@@ -347,36 +360,38 @@ else begin
 /////////////////////////////////////////////////////////////////////////////////////////
                 7: //Write data to DDR-SPRAM. (Rising Edge)
                     //begin oRAM_ADQ<=8'h55; CNT_Step<=CNT_Step+1; end 
-                    begin oRAM_ADQ<=Rd_Back_Data[15:8]; CNT_Step<=CNT_Step+1; end 
+                    //Single-Port-RAM can't output data within 2 clocks, so we update its address former many clocks!!!!!
+                    begin oRAM_ADQ<=iRd_Data[15:8]; CNT_Step<=CNT_Step+1; end 
                 8: //Generate Rising Edge.
                     begin oRAM_CLK<=1; CNT_Step<=CNT_Step+1; end
                 9: //Write data to DDR-SPRAM. (Rising Edge)
                     //begin oRAM_ADQ<=8'h44; CNT_Step<=CNT_Step+1; end
-                    begin oRAM_ADQ<=Rd_Back_Data[7:0]; CNT_Step<=CNT_Step+1; end
+                    begin oRAM_ADQ<=iRd_Data[7:0]; CNT_Step<=CNT_Step+1; end
                 10: //Generate Falling Edge.
-                    begin oRAM_CLK<=0; CNT_Step<=CNT_Step+1; end
+                    begin oRAM_CLK<=0; oRd_Addr<=oRd_Addr+1; CNT_Step<=CNT_Step+1; end
                 11: //Single-Port-RAM has FF0000B6,FF0000AB,FF00009D,FF000080,Pixel(256*2),Temperature(256*2)=1040 Bytes.
                     //Single-Port-RAM data width is 16-bits, we only need to read 1040/2=520 times.
-                    if(oRd_Addr>=520-1) begin //Read one frame done.
+                    if(oRd_Addr==520) begin //Read one frame done. if here is (520-1) then 519 can't be written to DDR-PSRAM.
                         oRd_Addr<=0; oWr_Line_Done<=1; oRAM_CE<=1; CNT_Step<=CNT_Step+1;
                     end
                     else begin //We can only write 10 clocks(10*2=20bytes) each time. because CE low width is limited within 2uS.
                         if(CNT_Delay==10-1) begin //10 times means (10*2Bytes=20Bytes).
                             oRAM_CE<=1; //Pull up CE to end writing.
-                            CNT_Delay<=0; 
-                            colAddr<=colAddr+20; //Next Write Position within one Page.
-                            oRd_Addr<=oRd_Addr+1; CNT_Step<=4; //start next CE.
+                            CNT_Delay<=0; colAddr<=colAddr+20; //Next Write Position within one Page.
+                            CNT_Step<=4; //start next CE.
                         end
                         else begin 
-                            CNT_Delay<=CNT_Delay+1; oRd_Addr<=oRd_Addr+1; //Addr+1.
-                            CNT_Step<=5; //Continue to read from Single-Port-RAM and write into DDR-PSRAM.
+                            CNT_Delay<=CNT_Delay+1; CNT_Step<=5; //Continue to read from Single-Port-RAM and write into DDR-PSRAM.
                         end
                     end
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 12: //One Frame Done or to start a new page and capture next line.
                     begin
-                        if(CNT_Lines>=192-1) begin CNT_Lines<=0; CNT_Step<=CNT_Step+1; end
-                        //if(CNT_Lines>=20-1) begin CNT_Lines<=0; CNT_Step<=CNT_Step+1; end
+                        `ifdef USING_MODELSIM
+                        if(CNT_Lines>=10-1) begin CNT_Lines<=0; rowAddr<=rowAddr+1; colAddr<=0; CNT_Step<=CNT_Step+1; end
+                        `else
+                        if(CNT_Lines>=192-1) begin CNT_Lines<=0; rowAddr<=rowAddr+1; colAddr<=0; CNT_Step<=CNT_Step+1; end
+                        `endif
                         else begin 
                             CNT_Lines<=CNT_Lines+1; 
                             rowAddr<=rowAddr+1; colAddr<=0; CNT_Step<=3; //Continue to read next line.
@@ -384,14 +399,14 @@ else begin
                         ///////////////////////////////////////////////////////////////////////////////////////
                         oWr_Line_Done<=0; CNT_Delay<=0; CNT_Repeat<=0; oRd_Addr<=0; //reset read address to 0.
                     end
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////      
-                13: //One Frame done, stop here!
-                    begin  //Always pull up Wr_Frame_Done to Notify another FPGA.
-                        oWr_Frame_Done<=1; //Always pull-up and stop here.
-                        CNT_Step<=CNT_Step;
+                13: //One Frame done!
+                    begin 
+                        oWr_Frame_Done<=1; CNT_Step<=3; //Go to write next frame.
                     end
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 14: //Dump the last line data from Single-Port-RAM to UART to check its correctness.
                     begin //Read Enable. 1:Write, 0:Read. //Read Address.
                         oRd_En<=0; CNT_Step<=CNT_Step+1; 
@@ -400,29 +415,21 @@ else begin
                     //https://github.com/damdoy/ice40_ultraplus_examples/blob/master/spram/top.v
                     begin CNT_Step<=CNT_Step+1; end
                 16:
-                    begin Rd_Back_Data<=iRd_Data; CNT_Step<=CNT_Step+1; end
+                    begin Rd_Back_Data<=iRd_Data; oRd_Addr<=oRd_Addr+1; CNT_Step<=CNT_Step+1; end
                 17: //Tx out - HIGH byte.
                     if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_Step<=CNT_Step+1; end
                     else begin UART_Tx_En<=1; UART_Tx_DR<=Rd_Back_Data[15:8]; end
                 18: //Tx out - LOW byte.
                     if(UART_Tx_Done) begin UART_Tx_En<=0; CNT_Step<=CNT_Step+1; end
                     else begin UART_Tx_En<=1; UART_Tx_DR<=Rd_Back_Data[7:0]; end
-                19: //One Single Line 256*2(Pixel)+256*2(Temperature)=1024 Bytes.
-                    //Single-Port-RAM data width is 16-bits, so we read 1024/2=512 times.
-                    if(oRd_Addr==512-1) begin oRd_Addr<=0; CNT_Step<=CNT_Step+1; end
-                    else begin oRd_Addr<=oRd_Addr+1; CNT_Step<=CNT_Step-5; end //continue to read next one.
-                20: 
-                    begin 
-                        //I found Single-Port-RAM does not output valid data at 1st time reading in ModelSim.
-                        //So here I read 3 frames from Single-Port-RAM.
-                        if(CNT_WrDDR>=3) begin CNT_WrDDR<=0; CNT_Step<=CNT_Step+1; end
-                        else begin CNT_WrDDR<=CNT_WrDDR+1; CNT_Step<=3; end
-                    end
-                21: //Stop Here.
-                    begin  //Always pull up Wr_Frame_Done to Notify another FPGA.
-                        oWr_Frame_Done<=1; //Always pull-up and stop here.
-                        CNT_Step<=CNT_Step;
-                    end
+                19: //One Single Line 16+256*2(Pixel)+256*2(Temperature)=1040 Bytes.
+                    //Single-Port-RAM data width is 16-bits, so we read 1040/2=520 times.
+                    if(oRd_Addr==520) begin oRd_Addr<=0; CNT_Step<=CNT_Step+1; end
+                    else begin CNT_Step<=CNT_Step-5; end //continue to read next one.
+                20: //HIGH.
+                    begin  oWr_Frame_Done<=1; CNT_Step<=CNT_Step+1; end
+                21: //LOW.
+                    begin  oWr_Frame_Done<=0; CNT_Step<=0; end
             endcase
     end
 end

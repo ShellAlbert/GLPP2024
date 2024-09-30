@@ -12,9 +12,11 @@
 # Compile of ZDDRWriter.v was successful.
 # Compile of ZSinglePortRAM.v was successful.
 # 11 compiles, 0 failed with no errors.
+
+
 vsim work.ZIRCapture_Top iCE40UP.HSOSC iCE40UP.PLL_B
 # vsim work.ZIRCapture_Top iCE40UP.HSOSC iCE40UP.PLL_B 
-# Start time: 10:19:21 on Sep 24,2024
+# Start time: 14:33:49 on Sep 27,2024
 # //  ModelSim - Lattice FPGA Edition 2021.4 Oct 14 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
@@ -54,82 +56,8 @@ vsim work.ZIRCapture_Top iCE40UP.HSOSC iCE40UP.PLL_B
 # Loading iCE40UP.FineDlyAdj
 # Loading iCE40UP.Delay4Buf
 # Loading iCE40UP.ABIWTCZ4
-add wave -position insertpoint  \
-sim:/ZIRCapture_Top/ic_CDS3/iClk \
-sim:/ZIRCapture_Top/ic_CDS3/iRst_N \
-sim:/ZIRCapture_Top/ic_CDS3/iEn \
-sim:/ZIRCapture_Top/ic_CDS3/iIR_PCLK \
-sim:/ZIRCapture_Top/ic_CDS3/iIR_Data \
-sim:/ZIRCapture_Top/ic_CDS3/oCap_Frame_Start \
-sim:/ZIRCapture_Top/ic_CDS3/oCap_Frame_Done \
-sim:/ZIRCapture_Top/ic_CDS3/oCap_Line_Done \
-sim:/ZIRCapture_Top/ic_CDS3/oWr_Which \
-sim:/ZIRCapture_Top/ic_CDS3/oWr_Addr \
-sim:/ZIRCapture_Top/ic_CDS3/oWr_Data \
-sim:/ZIRCapture_Top/ic_CDS3/oWr_En \
-sim:/ZIRCapture_Top/ic_CDS3/iRAM_Init_Done \
-sim:/ZIRCapture_Top/ic_CDS3/IR_PCLK_Delay \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data0 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data1 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data2 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data3 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data4 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data5 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data6 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data7 \
-sim:/ZIRCapture_Top/ic_CDS3/IR_CLK_Rising_Edge \
-sim:/ZIRCapture_Top/ic_CDS3/IR_CLK_Falling_Edge \
-sim:/ZIRCapture_Top/ic_CDS3/IR_Data_Bus \
-sim:/ZIRCapture_Top/ic_CDS3/CNT_Step \
-sim:/ZIRCapture_Top/ic_CDS3/CNT_SubStep \
-sim:/ZIRCapture_Top/ic_CDS3/CNT_Delay \
-sim:/ZIRCapture_Top/ic_CDS3/Rx_DR0 \
-sim:/ZIRCapture_Top/ic_CDS3/Rx_DR1 \
-sim:/ZIRCapture_Top/ic_CDS3/Rx_DR2 \
-sim:/ZIRCapture_Top/ic_CDS3/Rx_DR3 \
-sim:/ZIRCapture_Top/ic_CDS3/Temp_DR \
-sim:/ZIRCapture_Top/ic_CDS3/CNT_Bytes \
-sim:/ZIRCapture_Top/ic_CDS3/Captured_Bytes \
-sim:/ZIRCapture_Top/ic_CDS3/CNT_Lines \
-sim:/ZIRCapture_Top/ic_CDS3/Random_Data
-add wave -position insertpoint  \
-sim:/ZIRCapture_Top/ic_DDRWriter/iClk \
-sim:/ZIRCapture_Top/ic_DDRWriter/iRst_N \
-sim:/ZIRCapture_Top/ic_DDRWriter/iEn \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRAM_CLK \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRAM_RST \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRAM_CE \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRAM_DQS \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRAM_ADQ \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRAM_Init_Done \
-sim:/ZIRCapture_Top/ic_DDRWriter/iCap_Frame_Start \
-sim:/ZIRCapture_Top/ic_DDRWriter/iCap_Frame_Done \
-sim:/ZIRCapture_Top/ic_DDRWriter/iCap_Line_Done \
-sim:/ZIRCapture_Top/ic_DDRWriter/iWr_Which \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRd_Addr \
-sim:/ZIRCapture_Top/ic_DDRWriter/oRd_En \
-sim:/ZIRCapture_Top/ic_DDRWriter/iRd_Data \
-sim:/ZIRCapture_Top/ic_DDRWriter/oWr_Line_Done \
-sim:/ZIRCapture_Top/ic_DDRWriter/oWr_Frame_Done \
-sim:/ZIRCapture_Top/ic_DDRWriter/oUART_TxD \
-sim:/ZIRCapture_Top/ic_DDRWriter/UART_Tx_DR \
-sim:/ZIRCapture_Top/ic_DDRWriter/UART_Tx_En \
-sim:/ZIRCapture_Top/ic_DDRWriter/UART_Tx_Done \
-sim:/ZIRCapture_Top/ic_DDRWriter/cfg_No \
-sim:/ZIRCapture_Top/ic_DDRWriter/cfg_RegAddr \
-sim:/ZIRCapture_Top/ic_DDRWriter/cfg_RegData \
-sim:/ZIRCapture_Top/ic_DDRWriter/CNT_Step \
-sim:/ZIRCapture_Top/ic_DDRWriter/CNT_SubStep \
-sim:/ZIRCapture_Top/ic_DDRWriter/CNT_Delay \
-sim:/ZIRCapture_Top/ic_DDRWriter/CNT_Repeat \
-sim:/ZIRCapture_Top/ic_DDRWriter/CNT_WrDDR \
-sim:/ZIRCapture_Top/ic_DDRWriter/Correctness_Fixed_Data \
-sim:/ZIRCapture_Top/ic_DDRWriter/Rd_Back_Data \
-sim:/ZIRCapture_Top/ic_DDRWriter/Rd_Back_Bytes \
-sim:/ZIRCapture_Top/ic_DDRWriter/rowAddr \
-sim:/ZIRCapture_Top/ic_DDRWriter/colAddr \
-sim:/ZIRCapture_Top/ic_DDRWriter/DDR_RAM_Addr \
-sim:/ZIRCapture_Top/ic_DDRWriter/CNT_Lines
+add wave -position insertpoint sim:/ZIRCapture_Top/ic_CDS3/*
+add wave -position insertpoint sim:/ZIRCapture_Top/ic_DDRWriter/*
 run 100ms
 # ************************SBT : Info*****************************
 # Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
@@ -173,11 +101,11 @@ run 100ms
 # 
 # 
 # 
-# <<VIRL_MEM_ERR:WE unknown>> at time=           226975206; instance=ZIRCapture_Top.ic_PingPongRAM.SP_RAM0.vfb_b_inst.SRAM_inst.spram256k_core_inst.uut.report_unknown (RAMS1H)
-add wave -position insertpoint sim:/ZIRCapture_Top/ic_PingPongRAM/*
+add wave -position insertpoint  \
+sim:/ZIRCapture_Top/oWr_Done
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-run 100ms
+run 50ms
 # ************************SBT : Info*****************************
 # Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
 # ***************************************************************
@@ -220,71 +148,5 @@ run 100ms
 # 
 # 
 # 
-# Compile of ZCDS3_Capture.v was successful.
-# Compile of ZCDS3_Capture_Tb.v was successful.
-# Compile of ZIRCapture_Top.v was successful.
-# Compile of ZOctalRAMCfg.v was successful.
-# Compile of ZResetGenerator.v was successful.
-# Compile of ZUART_Tx.v was successful.
-# Compile of ZUART_Tx_TB.v was successful.
-# Compile of ZPLL.v was successful.
-# Compile of ZPortableDefine.v was successful.
-# Compile of ZDDRWriter.v was successful.
-# Compile of ZSinglePortRAM.v was successful.
-# 11 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.ZIRCapture_Top
-# Loading work.ZPLL
-# Loading work.ZPLL_ipgen_lscc_pll
-# Loading work.ZSinglePortRAM
-# Loading work.ZCDS3_Capture
-# Loading work.ZDDRWriter
-# Loading work.ZUART_Tx
-# Loading work.ZOctalRAMCfg
-run 100ms
-# ************************SBT : Info*****************************
-# Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
-# ***************************************************************
-# ************************SBT : Attention***************************
-# Since FEEDBACK_PATH="SIMPLE", the FDA_FEEDBACK value will be ignored
-# ******************************************************************
-# ************************SBT : Info*****************************
-# Note that signal connection to the EXTFEEDBACK port of the PLL must come from INTFBOUT port of PLL.
-# ***************************************************************
-# ************************SBT : Attention***************************
-# Since FEEDBACK_PATH="SIMPLE", the FDA_FEEDBACK value will be ignored
-# ******************************************************************
-# ************************SBT : Attention***************************
-# The PLL output frequency will be divided by 4 or 7 and phase shifted.
-# To avoid this, please set PLLOUT_SELECT_PORTA/B = "GENCLK" 
-# ******************************************************************
-# 
-# 
-# ************************Attention************************
-# 
-#    The pulse of the RESET signal is too small! The min-  
-# 
-#    imum acceptable pulse width is 1us. The PLL verilog   
-# 
-#    model will continue to operate, but the current sim-  
-# 
-#    ulation results may not be accurate!                  
-# 
-# 
-# 
-#    Please check the RESET input signal, and rerun the    
-# 
-#    simulation.                                           
-# 
-# 
-# 
-#    Simulation time is                  100
-# 
-# ******************************************************** 
-# 
-# 
-# 
-# <<VIRL_MEM_ERR:WE unknown>> at time=           226975206; instance=ZIRCapture_Top.ic_PingPongRAM.SP_RAM0.vfb_b_inst.SRAM_inst.spram256k_core_inst.uut.report_unknown (RAMS1H)
-# End time: 11:24:20 on Sep 24,2024, Elapsed time: 1:04:59
+# End time: 17:02:56 on Sep 27,2024, Elapsed time: 2:29:07
 # Errors: 0, Warnings: 1

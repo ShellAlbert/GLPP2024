@@ -17,13 +17,14 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>../../impl_1/IRCapture_impl_1.bin</File>
-			<FileTime>09/09/24 17:09:53</FileTime>
+			<File>F:/MyTemporary/Github/GLPP2024/IRCapture/impl_1/IRCapture_impl_1.bin</File>
+			<FileTime>09/26/24 15:47:32</FileTime>
 			<JedecChecksum>0x7224</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<AccessMode>Direct Programming</AccessMode>
 			</Option>
 			<FPGALoader>
@@ -47,6 +48,7 @@
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>
@@ -60,7 +62,7 @@
 					<IDCode>0x16</IDCode>
 					<Package>8-pin SOIC</Package>
 					<Operation>Erase,Program,Verify</Operation>
-					<File>../../impl_1/IRCapture_impl_1.bin</File>
+					<File>F:/MyTemporary/Github/GLPP2024/IRCapture/impl_1/IRCapture_impl_1.bin</File>
 					<AddressBase>0x00000000</AddressBase>
 					<EndAddress>0x00010000</EndAddress>
 					<DeviceSize>64</DeviceSize>
@@ -81,6 +83,7 @@
 					</LocalChainList>
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 					</Option>
 				</Device>
 			</FPGADevice>
@@ -99,7 +102,7 @@
 	</ProjectOptions>
 	<CableOptions>
 		<CableName>USB2</CableName>
-		<PortAdd>FTUSB-0</PortAdd>
-		<USBID>Lattice HW-USBN-2B Ch A Location 0000 Serial VER00001A</USBID>
+		<PortAdd>FTUSB-3</PortAdd>
+		<USBID>Lattice HW-USBN-2B Ch A Location 0004 Serial VER00001A</USBID>
 	</CableOptions>
 </ispXCF>
