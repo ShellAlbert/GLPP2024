@@ -17,8 +17,8 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>F:/MyTemporary/Github/GLPP2024/IRCapture/impl_1/IRCapture_impl_1.bin</File>
-			<FileTime>09/26/24 15:47:32</FileTime>
+			<File>../../impl_1/IRCapture_impl_1.bin</File>
+			<FileTime>10/08/24 11:21:43</FileTime>
 			<JedecChecksum>0x7224</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
@@ -62,7 +62,7 @@
 					<IDCode>0x16</IDCode>
 					<Package>8-pin SOIC</Package>
 					<Operation>Erase,Program,Verify</Operation>
-					<File>F:/MyTemporary/Github/GLPP2024/IRCapture/impl_1/IRCapture_impl_1.bin</File>
+					<File>../../impl_1/IRCapture_impl_1.bin</File>
 					<AddressBase>0x00000000</AddressBase>
 					<EndAddress>0x00010000</EndAddress>
 					<DeviceSize>64</DeviceSize>

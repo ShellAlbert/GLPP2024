@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,10 +28,14 @@ SOURCES += \
         zmainwidget.cpp \
     zrgb.cpp \
     zycbcr.cpp \
-    zimagecanvas.cpp
+    zimagecanvas.cpp \
+    zuartrecv.cpp \
+    zdialogpalette.cpp
 
 HEADERS += \
         zmainwidget.h \
     zrgb.h \
     zycbcr.h \
-    zimagecanvas.h
+    zimagecanvas.h \
+    zuartrecv.h \
+    zdialogpalette.h
