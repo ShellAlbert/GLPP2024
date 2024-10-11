@@ -9,17 +9,38 @@ ZMainWidget::ZMainWidget(QWidget *parent)
   : QWidget(parent)
 {
   this->setWindowTitle("Infrared Pixel Reveal - V0.0.1");
+  this->setWindowIcon(QIcon(":/icons/camera.png"));
   //Left Layout.
   this->m_btnOpenDir=new QToolButton;
   this->m_btnOpenDir->setText("Change Dir");
+  this->m_btnOpenDir->setIcon(QIcon(":/icons/change_dir.png"));
+  this->m_btnOpenDir->setIconSize(QSize(24,24));
+  this->m_btnOpenDir->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
   this->m_btnOpenUART=new QToolButton;
   this->m_btnOpenUART->setText("Open Port");
+  this->m_btnOpenUART->setIcon(QIcon(":/icons/open_port.png"));
+  this->m_btnOpenUART->setIconSize(QSize(24,24));
+  this->m_btnOpenUART->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
   this->m_btnSaveAs=new QToolButton;
   this->m_btnSaveAs->setText("Save As");
+  this->m_btnSaveAs->setIcon(QIcon(":/icons/save_as.png"));
+  this->m_btnSaveAs->setIconSize(QSize(24,24));
+  this->m_btnSaveAs->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
   this->m_btnExport=new QToolButton;
   this->m_btnExport->setText("Export");
+  this->m_btnExport->setIcon(QIcon(":/icons/export.png"));
+  this->m_btnExport->setIconSize(QSize(24,24));
+  this->m_btnExport->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
   this->m_btnPalette=new QToolButton;
   this->m_btnPalette->setText("Palette");
+  this->m_btnPalette->setIcon(QIcon(":/icons/palette.png"));
+  this->m_btnPalette->setIconSize(QSize(24,24));
+  this->m_btnPalette->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
   this->m_listWidget=new QListWidget;
   this->m_vLayout =new QVBoxLayout;
   this->m_vLayout->addWidget(this->m_btnOpenUART);

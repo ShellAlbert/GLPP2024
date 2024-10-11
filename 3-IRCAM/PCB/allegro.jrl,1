@@ -1,0 +1,17 @@
+\t (00:00:06) allegro 22.1 P001 Windows SPB 64-bit Edition
+\t (00:00:06)     Journal start - Fri Oct 11 14:24:20 2024
+\t (00:00:06)         Host=DESKTOP-R1EC6M9 User=SNIPER Pid=6504 CPUs=12
+\t (00:00:06) CmdLine= C:\Cadence\SPB_22.1\tools\bin\allegro.exe
+\t (00:00:06) 
+   (00:00:06) Loading axlcore.cxt 
+\t (00:00:07) Starting new design...
+\i (00:00:07) trapsize 116667
+\i (00:00:07) generaledit 
+\i (00:00:18) open 
+\i (00:00:29) fillin "F:/MyTemporary/Github/GLPP2024/1-PSU-B/PCB/PSU-A2-1.brd"
+\i (00:00:29) cd "F:/MyTemporary/Github/GLPP2024/1-PSU-B/PCB"
+\i (00:00:29) trapsize 685
+\i (00:00:29) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged unnamed
+\t (00:00:29) Opening existing design...
+\i (00:00:29) trapsize 9519
+\t (00:00:29)     Journal end - Fri Oct 11 14:24:43 2024

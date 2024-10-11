@@ -1,9 +1,11 @@
 #include "zdialogpalette.h"
 #include <QPainter>
 #include <QDebug>
+#include <QIcon>
 ZDialogPalette::ZDialogPalette()
 {
   this->setWindowTitle("Palette now in using");
+  this->setWindowIcon(QIcon(":/icons/palette.png"));
 }
 void ZDialogPalette::paintEvent(QPaintEvent *e)
 {

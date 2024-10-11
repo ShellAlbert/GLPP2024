@@ -432,7 +432,7 @@ else begin
 			else begin CNT_Delay<=CNT_Delay+1; Temp_DR<={Temp_DR[151:0],8'd0}; CNT_i<=CNT_i-1; end
 /////////////////////////////////////////////////////////////////////////////////
 		28: //Waiting 100ms to launch next reading operation. //48MHz, hex(48000000)=0x2DC6C00
-			if(CNT_Delay==32'hFFFF) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
+			if(CNT_Delay==10) begin CNT_Delay<=0; CNT_i<=CNT_i+1; end
 			else begin CNT_Delay<=CNT_Delay+1; end
 		29: 
 			//Because maximum CE Low Width is 2uS. 

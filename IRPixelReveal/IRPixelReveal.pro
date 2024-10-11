@@ -39,3 +39,6 @@ HEADERS += \
     zimagecanvas.h \
     zuartrecv.h \
     zdialogpalette.h
+
+RESOURCES += \
+    res_icons.qrc
